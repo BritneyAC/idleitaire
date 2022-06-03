@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import useRoboPlayer from "../hooks/useRoboPlayer"
 
 export default function UpgradesPage(props){
-  const {StartGame, gamePoints, count} = useRoboPlayer({...props})
+  const {StartGame, gamePoints} = useRoboPlayer({...props})
 
   useEffect(() => {
     if(props.userInfo.roboPlayer > 0){

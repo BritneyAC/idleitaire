@@ -3,22 +3,12 @@ import useGameLogic from "./useGameLogic";
 
 export default function useRoboPlayer(props){
   const {deck, 
-    cards,
     count,
     isGameRunning,
     setCount,
     gamePoints,
-    setGamePoints,
-    prevClicked,
     setPrevClicked,
     StartGame,
-    SndGame,
-    RestartGame,
-    NewDeck,
-    flidCard,
-    resetDeck,
-    searchPlaceable,
-    removeFromPile,
     playForYou} = useGameLogic({...props})
 
 
@@ -40,7 +30,7 @@ export default function useRoboPlayer(props){
     if(deck.length === 0){
       setPrevClicked([])
     }
-  }, [cards, deck, count])
+  }, [isGameRunning, props.userInfo.roboPlayer, count, deck.length, playForYou, setCount, setPrevClicked])
 
 
   return {StartGame, gamePoints, count}
