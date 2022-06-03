@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Board from "./board"
+import Stats from "./stats"
+import UpgradePage from "./upgradesPage"
+import useUserInfo from "./hooks/useUserInfo"
 
 function App() {
+  const {
+    gamesWonIncreased,
+    userInfo,
+    saveUserInfo,
+    roboPlayerIncreased,
+    playForYouIncreased
+  } = useUserInfo()
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
       </header>
+      <main>
+        <Board props={{gamesWonIncreased}}/>
+        <Stats props={{userInfo, saveUserInfo}}/>
+        <UpgradePage props={{roboPlayerIncreased, playForYouIncreased}}/>
+      </main>
     </div>
   );
 }
