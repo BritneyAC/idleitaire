@@ -14,8 +14,7 @@ export default function UpgradesPage(props){
     <div className="upgrades-page">
       <h1>Upgrades</h1>
       <div className="upgrades-page--upgrade">
-        <p>RoboPlayer</p>
-        <p>Owned: {props.userInfo.roboPlayer}</p>
+        <p>RoboPlayer (Owned: {props.userInfo.roboPlayer})</p>
         <p>Plays games for you in the backgroud</p>
         <p>cost {
           Math.ceil(
@@ -28,8 +27,7 @@ export default function UpgradesPage(props){
         <p>{gamePoints}</p>
       </div>
       <div className="upgrades-page--upgrade">
-        <p>Play For Me</p>
-        <p>Owned: {props.userInfo.playForYou}</p>
+        <p>Play For Me (Owned: {props.userInfo.playForYou})</p>
         <p>Plays the main game for you</p>
         <p>cost {
           Math.ceil(
