@@ -42,7 +42,7 @@ img {
   width: 100%;
   display: grid;
   grid-template-columns: 8fr 3fr;
-  grid-template-rows: 8fr 3fr;
+  grid-template-rows: 8fr 4fr;
   background: #111a22;
   color: white;
 }
@@ -349,10 +349,6 @@ img {
     padding-top: 0;
     height: 100%;
   }
-  .stats p, .stats h1 {
-    padding: 0;
-    margin: 0 0 0 -1rem;
-  }
   .stats button {
     margin: 0;
   }
@@ -371,13 +367,10 @@ img {
   }
   .upgrades-page--upgrade {
     height: 100%;
-    margin-top: -.5rem;
-  }
-  .upgrades-page--upgrade p {
-    margin: 0;
+    margin-top: -2rem;
   }
   .upgrades-page--upgrade button {
-    margin: .25rem auto 4rem;
+    margin: .25rem auto;
   }
   .board[data-info-shown="false"] {
     grid-row-end: -1;
