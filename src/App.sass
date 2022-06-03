@@ -1,0 +1,344 @@
+*
+  box-sizing: border-box
+  overflow: hidden
+  
+.app
+  height: 100vh
+  width: 100vw
+  position: relative
+
+h3 
+  margin: 0
+
+.app-header
+  padding: 0
+  margin: 0
+  height: 0
+  width: 0
+
+.show-info
+  color:  white
+  position: absolute
+  right: 1rem
+  top: .5rem 
+  z-index: 9999
+  cursor: pointer
+
+button
+  cursor: pointer
+
+img
+  aspect-ratio: 360/540
+
+.main
+  height: 100%
+  width: 100%
+  display: grid
+  grid-template-columns: 8fr 3fr
+  grid-template-rows: 8fr 3fr
+  background: hsl(210, 35, 10)
+  color: white
+
+.board
+  padding: 2rem 2rem 1rem
+  grid-row-start: 1
+  grid-row-end: -1
+  grid-column-start: 1
+  grid-column-end:  2
+  background-color: hsl(30, 90, 8)
+  position: relative
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr .15fr
+  box-shadow: 0 0 5px 0 hsla(0, 0, 0, 50%)
+
+.board[data-info-shown="false"]
+  grid-column-end: -1
+
+.board--playspace
+  position: relative
+  padding: 1rem 2rem
+  grid-row-start: 1
+  grid-row-end: 2
+  grid-column-start: 1
+  grid-column-end: -1 
+  background-color: hsl(100, 80%, 10%)
+  border-radius: 1rem
+  box-shadow: 0 0 .5rem 0 hsla(0, 0, 0, 25)
+  display: grid
+  grid-template-columns: repeat(7, 1fr)
+  grid-template-rows: 1fr 8fr 1fr
+  justify-content: space-around
+  gap: -1rem
+
+.board--top
+  grid-row-start: 1
+  grid-row-end: 2
+  grid-column-start: 1
+  grid-column-end: -1
+  height: 10vh
+  width: 100%
+  display: grid
+  grid-template-columns: .4fr 1fr .6fr
+
+.board--win-piles
+  position: relative
+  grid-column-start: 1
+  grid-column-end: 2
+  padding: 0
+  margin: 0
+  height: 100%
+  width: 30vw
+  margin-right: -20%
+
+.board--clubs, .board--spades, .board--hearts, .board--diamonds
+  position: absolute
+  display: flex
+  height: 100%
+  width: 25%
+
+.board--spades
+  left: 20%
+
+.board--hearts
+  left: 40%
+
+.board--diamonds
+  left: 60%
+
+.board--win-piles img
+  height: 100%
+  width: 100%
+  margin: auto 
+  border-radius: 5px
+
+.board--deck
+  grid-column-start: 2 
+  grid-column-end: 3
+  height: 100%
+  width: 100%
+  display: flex
+  padding: 0 1vw
+  position: relative
+
+.board--deck--card-0, .board--deck--card-1, .board--deck--card-2, .board--deck--card-3, .board--deck--card-4  
+  position: absolute
+  display: flex
+  height: 100%
+  width: 8vw
+
+.board--deck--card-0
+  left: 0
+
+.board--deck--card-1
+  left: 7%
+
+.board--deck--card-2
+  left: 14%
+
+.board--deck--card-3
+  left: 21%
+
+.board--deck--card-4
+  left: 28%
+
+.board--deck  .board--cardback
+  height: 100%
+  padding: 3px 
+  border-radius: 5px
+  background: black
+
+.board--deck-empty
+  position: absolute
+  left: 28%
+  aspect-ratio: 360/540
+  border: 3px solid white
+  height: 100%
+  padding: 3px 0
+  border-radius: 5px
+
+.board--playable
+  grid-column-start: 3
+  grid-column-end: -1
+  position: relative
+  height: 100%
+
+.board--playable-1, .board--playable-2, .board--playable-3
+  position: absolute
+  height: 10vh
+  width: 8vw
+
+.board--playable-1
+  right: 40%
+
+.board--playable-2
+  right: 20%
+
+.board--playable-3
+  right: 0
+
+.board--playable img
+
+  height: 100%
+  width: 100%
+  border-radius: 5px
+
+.board--main
+  grid-column-start: 1
+  grid-column-end: -1
+  grid-row-start: 2
+  grid-row-end: -1
+  display: flex
+  height: 100%
+  width: 100%
+
+
+.board--column
+  width: 13vw
+  padding-top: 15%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-self: start
+  justify-content: flex-start
+  z-index: 1000
+
+.board--column > .board--card-front
+  max-width: 100%
+  margin-top: -120%
+  border-radius: 5px
+  z-index: 1000
+
+.board--cardback
+  padding: 3.5px
+  background: black
+
+.board--column > .board--cardback
+  max-width: 80%
+  margin-top: -95%
+
+.board--points
+  position: absolute
+  bottom: 0
+  left: 1rem
+      
+
+.board--btn
+  grid-row-start: 2
+  grid-row-end: -1
+  grid-column-start: 1
+  grid-column-end: -1 
+  padding: 2rem
+  margin: 1rem 0 0
+  justify-self: center
+
+.info
+  grid-column-start: 2
+  grid-column-end: -1
+  grid-row-start: 1
+  grid-row-end: -1
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.stats
+  box-shadow: 0 0 .5px 0 hsl(0, 0, 0)
+  padding: 3rem 2rem 0
+  height: 40%
+
+.stats p, .stats h1
+  padding: 0 0 1rem 
+  margin: .5rem 0
+
+.stats > button
+  cursor: pointer
+
+.upgrades-page
+  box-shadow: 0 0 .2px 0 hsla(0, 0, 0, 50)
+  grid-row-start: 2
+  grid-row-end: -1
+  padding: 1rem 1rem 3rem
+  display: flex
+  flex-direction: column
+  height: 100%
+  width: 100%
+  justify-content: space-between
+
+.upgrades-page h1, .upgrades-page p
+  padding: 0
+  margin: .5rem 0
+
+.upgrades-page--upgrade
+  width: 100%
+  box-shadow: 0 0 5px 0 hsl(0, 0, 0)
+  padding: 0 1rem 1rem
+  background: hsl(210, 35, 12)
+
+@media(max-width: 720px) 
+  .show-info
+    top: initial
+    bottom: 1rem
+    right: initial
+    left: 1rem
+
+  .board
+    grid-column-end: -1
+    grid-row-end: 2
+
+  .board--deck
+    align-self: center
+    max-height: 40%
+
+  .board--deck .board--cardback
+    max-height: 100%
+
+  .info
+    grid-row-start: 2
+    grid-row-end: -1
+    grid-column-start: 1
+    grid-column-end: -1
+    flex-direction: row
+    padding-bottom: 0
+    margin-bottom: -2rem 
+
+  .stats
+    padding-top: 0
+
+  .stats p, .stats h1
+    padding: 0
+    margin: 0 0 0 -1rem
+
+  .stats button
+    margin: 0
+
+  .upgrades-page
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: .30fr 1fr
+    height: 100%
+    padding: 0
+    margin: -.5rem 0 0
+    justify-content: center
+
+  .upgrades-page h1
+    grid-column-start: 1
+    grid-column-end: -1
+
+  .upgrades-page--upgrade
+    height: 100%
+    margin-top: -.5rem
+
+  .upgrades-page--upgrade p
+    margin: 0
+
+  .upgrades-page--upgrade button
+    margin: .25rem auto 4rem
+  
+  .board[data-info-shown="false"]
+    grid-row-end: -1
+
+
+
+
+
+
