@@ -18,9 +18,6 @@ export default function useRoboPlayer(props){
       if(props.userInfo.roboPlayer > 0){
         const time = 5000 / props.userInfo.roboPlayer
         const playForYouTimer = setInterval(() => {
-          if(count % 12 === 1){
-            setPrevClicked([])
-          }
           playForYou()}, time)
           return () => clearInterval(playForYouTimer)
         }

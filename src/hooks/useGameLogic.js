@@ -310,6 +310,10 @@ export default function useGameLogic(props){
     setCount(prevCount => prevCount + 1)
     
     if(deck.length === 0){
+      if(count % 8 === 1){
+        setPrevClicked([])
+      }
+    } else if(count % 12 === 1){
       setPrevClicked([])
     }
     for(let i = 0; i < 7; i++){
@@ -343,9 +347,7 @@ export default function useGameLogic(props){
           const time = 5000 / props.userInfo.playForYou
           const playForYouTimer = setInterval(() => {
             
-            if(count % 12 === 1){
-              setPrevClicked([])
-            }
+            
             playForYou()}, time)
             return () => clearInterval(playForYouTimer)
           } else{
