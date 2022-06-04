@@ -42,13 +42,13 @@ export default function Board(props){
               </div>
             </div>
             <div className="board--main">
-              <div className="board--column">{Column1Elements}</div>
-              <div className="board--column">{Column2Elements}</div>
-              <div className="board--column">{Column3Elements}</div>
-              <div className="board--column">{Column4Elements}</div>
-              <div className="board--column">{Column5Elements}</div>
-              <div className="board--column">{Column6Elements}</div>
-              <div className="board--column">{Column7Elements}</div>
+              <div className="board--column-0">{Column1Elements}</div>
+              <div className="board--column-1">{Column2Elements}</div>
+              <div className="board--column-2">{Column3Elements}</div>
+              <div className="board--column-3">{Column4Elements}</div>
+              <div className="board--column-4">{Column5Elements}</div>
+              <div className="board--column-5">{Column6Elements}</div>
+              <div className="board--column-6">{Column7Elements}</div>
               <p className="board--points">Points: {gamePoints}</p>
             </div>
           </div>

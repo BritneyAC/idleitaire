@@ -27,8 +27,6 @@ h3
 button
   cursor: pointer
 
-img
-  aspect-ratio: 360/540
 
 .main
   height: 100%
@@ -150,7 +148,7 @@ img
 
 .board--deck-empty
   position: absolute
-  left: 28%
+  left: 0
   aspect-ratio: 360/540
   border: 3px solid white
   height: 100%
@@ -189,33 +187,135 @@ img
   grid-row-start: 2
   grid-row-end: -1
   display: flex
+  justify-content: space-between
   height: 100%
   width: 100%
+  padding:  0
 
 
 .board--column
-  width: 13vw
-  padding-top: 15%
-  display: flex
-  flex-direction: column
+  min-width: 10vw
+  max-width: 13vw
+  max-height: 100%
+  padding-top: 10%
+  
   align-items: center
   justify-self: start
   justify-content: flex-start
   z-index: 1000
 
-.board--column > .board--card-front
+.board--column-0, .board--column-1, .board--column-2, .board--column-3, .board--column-4, .board--column-5, .board--column-6 
+  width: 10vw
+  height: 100%
+  position: relative
+  display: block
+
+.board--column--card-0, .board--column--card-1, .board--column--card-2, .board--column--card-3, .board--column--card-4, .board--column--card-5, .board--column--card-6, .board--column--card-7, .board--column--card-8, .board--column--card-9, .board--column--card-10, .board--column--card-11, .board--column--card-12, .board--column--card-13, .board--column--card-14, .board--column--card-15, .board--column--card-16, .board--column--card-17, .board--column--card-18, .board--column--card-19, 
+  aspect-ratio: 2.5/3.5
+  overflow: initial
+  display: flex
+  justify-content: center
+  align-items: center
+  min-width: 60%
   max-width: 100%
-  margin-top: -120%
-  border-radius: 5px
+  position: absolute
+  left: 20%
+
+.board--column--card-0
   z-index: 1000
+  top: 0
+
+.board--column--card-1
+  z-index: 1001
+  top: 3vh
+
+.board--column--card-2
+  z-index: 1002
+  top: 6vh
+
+.board--column--card-3
+  z-index: 1003
+  top: 9vh
+
+.board--column--card-4
+  z-index: 1004
+  top: 12vh
+
+.board--column--card-5
+  z-index: 1005
+  top: 15vh
+
+.board--column--card-6
+  z-index: 1006
+  top: 18vh
+
+.board--column--card-7
+  z-index: 1007
+  top: 21vh
+
+.board--column--card-8
+  z-index: 1008
+  top: 24vh
+
+.board--column--card-9
+  z-index: 1009
+  top: 27vh
+
+.board--column--card-10
+  z-index: 1010
+  top: 30vh
+
+.board--column--card-11
+  z-index: 1011
+  top: 33vh
+
+.board--column--card-12
+  z-index: 1012
+  top: 36vh
+
+.board--column--card-13
+  z-index: 1013
+  top: 39vh
+
+.board--column--card-14
+  z-index: 1014
+  top: 42vh
+
+.board--column--card-15
+  z-index: 1015
+  top: 45vh
+
+.board--column--card-16
+  z-index: 1016
+  top: 48vh
+
+.board--column--card-17
+  z-index: 1017
+  top: 51vh
+
+.board--column--card-18
+  z-index: 1018
+  top: 54vh
+
+.board--column--card-19
+  z-index: 1019
+  top: 57vh
+
+.board--main .board--card-front
+  border-radius: 5px
+  min-width: 6vw
+  max-width: 10vw 
+  margin-top: -20%
+  object-fit: contain
 
 .board--cardback
   padding: 3.5px
   background: black
 
-.board--column > .board--cardback
-  max-width: 80%
-  margin-top: -95%
+.board--main .board--cardback
+  width: 4.8vw
+  margin: 3%
+  object-fit: contain
 
 .board--points
   position: absolute

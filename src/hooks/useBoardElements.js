@@ -3062,10 +3062,10 @@ export default function useBoardElements(props){
         />} 
     return <div className={`board--playable-${3}`}>{element}</div>
 }})
-  const Column1Elements = cards.Columns[0].map(C => {
+  const Column1Elements = cards.Columns[0].map((C, index) => {
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <img
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3073,8 +3073,8 @@ export default function useBoardElements(props){
           src={require("../cards/1.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 2){
-        return <img
+      /></div>}else if(C === 2){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3082,8 +3082,8 @@ export default function useBoardElements(props){
           src={require("../cards/2.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 3){
-        return <img
+      /></div>}else if(C === 3){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3091,8 +3091,8 @@ export default function useBoardElements(props){
           src={require("../cards/3.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 4){
-        return <img
+      /></div>}else if(C === 4){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3100,8 +3100,8 @@ export default function useBoardElements(props){
           src={require("../cards/4.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 5){
-        return <img
+      /></div>}else if(C === 5){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3109,8 +3109,8 @@ export default function useBoardElements(props){
           src={require("../cards/5.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 6){
-        return <img
+      /></div>}else if(C === 6){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3118,8 +3118,8 @@ export default function useBoardElements(props){
           src={require("../cards/6.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 7){
-        return <img
+      /></div>}else if(C === 7){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3127,8 +3127,8 @@ export default function useBoardElements(props){
           src={require("../cards/7.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 8){
-        return <img
+      /></div>}else if(C === 8){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3136,8 +3136,8 @@ export default function useBoardElements(props){
           src={require("../cards/8.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 9){
-        return <img
+      /></div>}else if(C === 9){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3145,8 +3145,8 @@ export default function useBoardElements(props){
           src={require("../cards/9.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 10){
-        return <img
+      /></div>}else if(C === 10){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3154,8 +3154,8 @@ export default function useBoardElements(props){
           src={require("../cards/10.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 11){
-        return <img
+      /></div>}else if(C === 11){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3163,8 +3163,8 @@ export default function useBoardElements(props){
           src={require("../cards/11.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 12){
-        return <img
+      /></div>}else if(C === 12){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3172,8 +3172,8 @@ export default function useBoardElements(props){
           src={require("../cards/12.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 13){
-        return <img
+      /></div>}else if(C === 13){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3181,8 +3181,8 @@ export default function useBoardElements(props){
           src={require("../cards/13.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 14){
-        return <img
+      /></div>}else if(C === 14){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3190,8 +3190,8 @@ export default function useBoardElements(props){
           src={require("../cards/14.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 15){
-        return <img
+      /></div>}else if(C === 15){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3199,8 +3199,8 @@ export default function useBoardElements(props){
           src={require("../cards/15.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 16){
-        return <img
+      /></div>}else if(C === 16){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3208,8 +3208,8 @@ export default function useBoardElements(props){
           src={require("../cards/16.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 17){
-        return <img
+      /></div>}else if(C === 17){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -3217,8 +3217,8 @@ export default function useBoardElements(props){
         src={require("../cards/17.svg").default}
         onClick={handleClick}
           alt={C}
-      />}else if(C === 18){
-        return <img
+      /></div>}else if(C === 18){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3226,8 +3226,8 @@ export default function useBoardElements(props){
           src={require("../cards/18.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 19){
-        return <img
+      /></div>}else if(C === 19){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3235,8 +3235,8 @@ export default function useBoardElements(props){
           src={require("../cards/19.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 20){
-        return <img
+      /></div>}else if(C === 20){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3244,8 +3244,8 @@ export default function useBoardElements(props){
           src={require("../cards/20.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 21){
-        return <img
+      /></div>}else if(C === 21){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3253,8 +3253,8 @@ export default function useBoardElements(props){
           src={require("../cards/21.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 22){
-        return <img
+      /></div>}else if(C === 22){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3262,8 +3262,8 @@ export default function useBoardElements(props){
           src={require("../cards/22.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 23){
-        return <img
+      /></div>}else if(C === 23){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3271,8 +3271,8 @@ export default function useBoardElements(props){
           src={require("../cards/23.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 24){
-        return <img
+      /></div>}else if(C === 24){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3280,8 +3280,8 @@ export default function useBoardElements(props){
           src={require("../cards/24.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 25){
-        return <img
+      /></div>}else if(C === 25){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3289,8 +3289,8 @@ export default function useBoardElements(props){
           src={require("../cards/25.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 26){
-        return <img
+      /></div>}else if(C === 26){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3298,8 +3298,8 @@ export default function useBoardElements(props){
           src={require("../cards/26.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 27){
-        return <img
+      /></div>}else if(C === 27){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3307,8 +3307,8 @@ export default function useBoardElements(props){
           src={require("../cards/27.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 28){
-        return <img
+      /></div>}else if(C === 28){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3316,8 +3316,8 @@ export default function useBoardElements(props){
           src={require("../cards/28.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 29){
-        return <img
+      /></div>}else if(C === 29){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3325,8 +3325,8 @@ export default function useBoardElements(props){
           src={require("../cards/29.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 30){
-        return <img
+      /></div>}else if(C === 30){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3334,8 +3334,8 @@ export default function useBoardElements(props){
           src={require("../cards/30.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 31){
-        return <img
+      /></div>}else if(C === 31){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3343,8 +3343,8 @@ export default function useBoardElements(props){
           src={require("../cards/31.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 32){
-        return <img
+      /></div>}else if(C === 32){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3352,8 +3352,8 @@ export default function useBoardElements(props){
           src={require("../cards/32.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 33){
-        return <img
+      /></div>}else if(C === 33){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3361,8 +3361,8 @@ export default function useBoardElements(props){
           src={require("../cards/33.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 34){
-        return <img
+      /></div>}else if(C === 34){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3370,8 +3370,8 @@ export default function useBoardElements(props){
           src={require("../cards/34.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 35){
-        return <img
+      /></div>}else if(C === 35){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -3379,8 +3379,8 @@ export default function useBoardElements(props){
           src={require("../cards/35.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 36){
-        return <img
+      /></div>}else if(C === 36){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3388,8 +3388,8 @@ export default function useBoardElements(props){
           src={require("../cards/36.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 37){
-        return <img
+      /></div>}else if(C === 37){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3397,8 +3397,8 @@ export default function useBoardElements(props){
           src={require("../cards/37.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 38){
-        return <img
+      /></div>}else if(C === 38){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3406,8 +3406,8 @@ export default function useBoardElements(props){
           src={require("../cards/38.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 39){
-        return <img
+      /></div>}else if(C === 39){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3415,8 +3415,8 @@ export default function useBoardElements(props){
           src={require("../cards/39.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 40){
-        return <img
+      /></div>}else if(C === 40){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3424,8 +3424,8 @@ export default function useBoardElements(props){
           src={require("../cards/40.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 41){
-        return <img
+      /></div>}else if(C === 41){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3433,8 +3433,8 @@ export default function useBoardElements(props){
           src={require("../cards/41.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 42){
-        return <img
+      /></div>}else if(C === 42){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3442,8 +3442,8 @@ export default function useBoardElements(props){
           src={require("../cards/42.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 43){
-        return <img
+      /></div>}else if(C === 43){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3451,8 +3451,8 @@ export default function useBoardElements(props){
           src={require("../cards/43.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 44){
-        return <img
+      /></div>}else if(C === 44){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3460,8 +3460,8 @@ export default function useBoardElements(props){
           src={require("../cards/44.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 45){
-        return <img
+      /></div>}else if(C === 45){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3469,8 +3469,8 @@ export default function useBoardElements(props){
           src={require("../cards/45.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 46){
-        return <img
+      /></div>}else if(C === 46){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3478,8 +3478,8 @@ export default function useBoardElements(props){
           src={require("../cards/46.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 47){
-        return <img
+      /></div>}else if(C === 47){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3487,8 +3487,8 @@ export default function useBoardElements(props){
           src={require("../cards/47.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 48){
-        return <img
+      /></div>}else if(C === 48){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3496,8 +3496,8 @@ export default function useBoardElements(props){
           src={require("../cards/48.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 49){
-        return <img
+      /></div>}else if(C === 49){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3505,8 +3505,8 @@ export default function useBoardElements(props){
           src={require("../cards/49.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 50){
-        return <img
+      /></div>}else if(C === 50){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3514,8 +3514,8 @@ export default function useBoardElements(props){
           src={require("../cards/50.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 51){
-        return <img
+      /></div>}else if(C === 51){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
           id={C}
@@ -3523,8 +3523,8 @@ export default function useBoardElements(props){
           src={require("../cards/51.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 52){
-        return <img
+      /></div>}else if(C === 52){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3532,18 +3532,18 @@ export default function useBoardElements(props){
           src={require("../cards/52.svg").default}
           onClick={handleClick}
           alt={C}
-      />}}else{
-        return <img
+      /></div>}}else{
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C} 
           className="board--cardback"
           src={require("../cards/cardback.svg").default}
           alt="cardback"
-  />}})
-  const Column2Elements = cards.Columns[1].map(C => {
+  /></div>}})
+  const Column2Elements = cards.Columns[1].map((C, index) => {
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <img
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3551,8 +3551,8 @@ export default function useBoardElements(props){
           src={require("../cards/1.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 2){
-        return <img
+      /></div>}else if(C === 2){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3560,8 +3560,8 @@ export default function useBoardElements(props){
           src={require("../cards/2.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 3){
-        return <img
+      /></div>}else if(C === 3){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3569,8 +3569,8 @@ export default function useBoardElements(props){
           src={require("../cards/3.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 4){
-        return <img
+      /></div>}else if(C === 4){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3578,8 +3578,8 @@ export default function useBoardElements(props){
           src={require("../cards/4.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 5){
-        return <img
+      /></div>}else if(C === 5){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3587,8 +3587,8 @@ export default function useBoardElements(props){
           src={require("../cards/5.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 6){
-        return <img
+      /></div>}else if(C === 6){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3596,8 +3596,8 @@ export default function useBoardElements(props){
           src={require("../cards/6.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 7){
-        return <img
+      /></div>}else if(C === 7){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3605,8 +3605,8 @@ export default function useBoardElements(props){
           src={require("../cards/7.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 8){
-        return <img
+      /></div>}else if(C === 8){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3614,8 +3614,8 @@ export default function useBoardElements(props){
           src={require("../cards/8.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 9){
-        return <img
+      /></div>}else if(C === 9){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3623,8 +3623,8 @@ export default function useBoardElements(props){
           src={require("../cards/9.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 10){
-        return <img
+      /></div>}else if(C === 10){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3632,8 +3632,8 @@ export default function useBoardElements(props){
           src={require("../cards/10.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 11){
-        return <img
+      /></div>}else if(C === 11){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3641,8 +3641,8 @@ export default function useBoardElements(props){
           src={require("../cards/11.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 12){
-        return <img
+      /></div>}else if(C === 12){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3650,8 +3650,8 @@ export default function useBoardElements(props){
           src={require("../cards/12.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 13){
-        return <img
+      /></div>}else if(C === 13){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3659,8 +3659,8 @@ export default function useBoardElements(props){
           src={require("../cards/13.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 14){
-        return <img
+      /></div>}else if(C === 14){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3668,8 +3668,8 @@ export default function useBoardElements(props){
           src={require("../cards/14.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 15){
-        return <img
+      /></div>}else if(C === 15){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3677,8 +3677,8 @@ export default function useBoardElements(props){
           src={require("../cards/15.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 16){
-        return <img
+      /></div>}else if(C === 16){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3686,8 +3686,8 @@ export default function useBoardElements(props){
           src={require("../cards/16.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 17){
-        return <img
+      /></div>}else if(C === 17){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -3695,8 +3695,8 @@ export default function useBoardElements(props){
         src={require("../cards/17.svg").default}
         onClick={handleClick}
           alt={C}
-      />}else if(C === 18){
-        return <img
+      /></div>}else if(C === 18){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3704,8 +3704,8 @@ export default function useBoardElements(props){
           src={require("../cards/18.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 19){
-        return <img
+      /></div>}else if(C === 19){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3713,8 +3713,8 @@ export default function useBoardElements(props){
           src={require("../cards/19.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 20){
-        return <img
+      /></div>}else if(C === 20){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3722,8 +3722,8 @@ export default function useBoardElements(props){
           src={require("../cards/20.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 21){
-        return <img
+      /></div>}else if(C === 21){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3731,8 +3731,8 @@ export default function useBoardElements(props){
           src={require("../cards/21.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 22){
-        return <img
+      /></div>}else if(C === 22){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3740,8 +3740,8 @@ export default function useBoardElements(props){
           src={require("../cards/22.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 23){
-        return <img
+      /></div>}else if(C === 23){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3749,8 +3749,8 @@ export default function useBoardElements(props){
           src={require("../cards/23.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 24){
-        return <img
+      /></div>}else if(C === 24){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3758,8 +3758,8 @@ export default function useBoardElements(props){
           src={require("../cards/24.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 25){
-        return <img
+      /></div>}else if(C === 25){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3767,8 +3767,8 @@ export default function useBoardElements(props){
           src={require("../cards/25.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 26){
-        return <img
+      /></div>}else if(C === 26){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3776,8 +3776,8 @@ export default function useBoardElements(props){
           src={require("../cards/26.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 27){
-        return <img
+      /></div>}else if(C === 27){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3785,8 +3785,8 @@ export default function useBoardElements(props){
           src={require("../cards/27.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 28){
-        return <img
+      /></div>}else if(C === 28){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3794,8 +3794,8 @@ export default function useBoardElements(props){
           src={require("../cards/28.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 29){
-        return <img
+      /></div>}else if(C === 29){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3803,8 +3803,8 @@ export default function useBoardElements(props){
           src={require("../cards/29.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 30){
-        return <img
+      /></div>}else if(C === 30){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3812,8 +3812,8 @@ export default function useBoardElements(props){
           src={require("../cards/30.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 31){
-        return <img
+      /></div>}else if(C === 31){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3821,8 +3821,8 @@ export default function useBoardElements(props){
           src={require("../cards/31.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 32){
-        return <img
+      /></div>}else if(C === 32){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3830,8 +3830,8 @@ export default function useBoardElements(props){
           src={require("../cards/32.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 33){
-        return <img
+      /></div>}else if(C === 33){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3839,8 +3839,8 @@ export default function useBoardElements(props){
           src={require("../cards/33.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 34){
-        return <img
+      /></div>}else if(C === 34){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3848,8 +3848,8 @@ export default function useBoardElements(props){
           src={require("../cards/34.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 35){
-        return <img
+      /></div>}else if(C === 35){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -3857,8 +3857,8 @@ export default function useBoardElements(props){
           src={require("../cards/35.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 36){
-        return <img
+      /></div>}else if(C === 36){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3866,8 +3866,8 @@ export default function useBoardElements(props){
           src={require("../cards/36.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 37){
-        return <img
+      /></div>}else if(C === 37){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3875,8 +3875,8 @@ export default function useBoardElements(props){
           src={require("../cards/37.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 38){
-        return <img
+      /></div>}else if(C === 38){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3884,8 +3884,8 @@ export default function useBoardElements(props){
           src={require("../cards/38.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 39){
-        return <img
+      /></div>}else if(C === 39){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3893,8 +3893,8 @@ export default function useBoardElements(props){
           src={require("../cards/39.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 40){
-        return <img
+      /></div>}else if(C === 40){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3902,8 +3902,8 @@ export default function useBoardElements(props){
           src={require("../cards/40.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 41){
-        return <img
+      /></div>}else if(C === 41){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3911,8 +3911,8 @@ export default function useBoardElements(props){
           src={require("../cards/41.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 42){
-        return <img
+      /></div>}else if(C === 42){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3920,8 +3920,8 @@ export default function useBoardElements(props){
           src={require("../cards/42.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 43){
-        return <img
+      /></div>}else if(C === 43){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3929,8 +3929,8 @@ export default function useBoardElements(props){
           src={require("../cards/43.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 44){
-        return <img
+      /></div>}else if(C === 44){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3938,8 +3938,8 @@ export default function useBoardElements(props){
           src={require("../cards/44.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 45){
-        return <img
+      /></div>}else if(C === 45){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3947,8 +3947,8 @@ export default function useBoardElements(props){
           src={require("../cards/45.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 46){
-        return <img
+      /></div>}else if(C === 46){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3956,8 +3956,8 @@ export default function useBoardElements(props){
           src={require("../cards/46.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 47){
-        return <img
+      /></div>}else if(C === 47){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3965,8 +3965,8 @@ export default function useBoardElements(props){
           src={require("../cards/47.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 48){
-        return <img
+      /></div>}else if(C === 48){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3974,8 +3974,8 @@ export default function useBoardElements(props){
           src={require("../cards/48.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 49){
-        return <img
+      /></div>}else if(C === 49){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3983,8 +3983,8 @@ export default function useBoardElements(props){
           src={require("../cards/49.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 50){
-        return <img
+      /></div>}else if(C === 50){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -3992,8 +3992,8 @@ export default function useBoardElements(props){
           src={require("../cards/50.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 51){
-        return <img
+      /></div>}else if(C === 51){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
           id={C}
@@ -4001,8 +4001,8 @@ export default function useBoardElements(props){
           src={require("../cards/51.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 52){
-        return <img
+      /></div>}else if(C === 52){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4010,18 +4010,18 @@ export default function useBoardElements(props){
           src={require("../cards/52.svg").default}
           onClick={handleClick}
           alt={C}
-      />}}else{
-        return <img
+      /></div>}}else{
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C} 
           className="board--cardback"
           src={require("../cards/cardback.svg").default}
           alt="cardback"
-  />}})
-  const Column3Elements = cards.Columns[2].map(C => {
+  /></div>}})
+  const Column3Elements = cards.Columns[2].map((C, index) => {
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <img
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4029,8 +4029,8 @@ export default function useBoardElements(props){
           src={require("../cards/1.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 2){
-        return <img
+      /></div>}else if(C === 2){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4038,8 +4038,8 @@ export default function useBoardElements(props){
           src={require("../cards/2.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 3){
-        return <img
+      /></div>}else if(C === 3){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4047,8 +4047,8 @@ export default function useBoardElements(props){
           src={require("../cards/3.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 4){
-        return <img
+      /></div>}else if(C === 4){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4056,8 +4056,8 @@ export default function useBoardElements(props){
           src={require("../cards/4.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 5){
-        return <img
+      /></div>}else if(C === 5){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4065,8 +4065,8 @@ export default function useBoardElements(props){
           src={require("../cards/5.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 6){
-        return <img
+      /></div>}else if(C === 6){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4074,8 +4074,8 @@ export default function useBoardElements(props){
           src={require("../cards/6.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 7){
-        return <img
+      /></div>}else if(C === 7){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4083,8 +4083,8 @@ export default function useBoardElements(props){
           src={require("../cards/7.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 8){
-        return <img
+      /></div>}else if(C === 8){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4092,8 +4092,8 @@ export default function useBoardElements(props){
           src={require("../cards/8.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 9){
-        return <img
+      /></div>}else if(C === 9){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4101,8 +4101,8 @@ export default function useBoardElements(props){
           src={require("../cards/9.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 10){
-        return <img
+      /></div>}else if(C === 10){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4110,8 +4110,8 @@ export default function useBoardElements(props){
           src={require("../cards/10.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 11){
-        return <img
+      /></div>}else if(C === 11){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4119,8 +4119,8 @@ export default function useBoardElements(props){
           src={require("../cards/11.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 12){
-        return <img
+      /></div>}else if(C === 12){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4128,8 +4128,8 @@ export default function useBoardElements(props){
           src={require("../cards/12.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 13){
-        return <img
+      /></div>}else if(C === 13){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4137,8 +4137,8 @@ export default function useBoardElements(props){
           src={require("../cards/13.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 14){
-        return <img
+      /></div>}else if(C === 14){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4146,8 +4146,8 @@ export default function useBoardElements(props){
           src={require("../cards/14.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 15){
-        return <img
+      /></div>}else if(C === 15){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4155,8 +4155,8 @@ export default function useBoardElements(props){
           src={require("../cards/15.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 16){
-        return <img
+      /></div>}else if(C === 16){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4164,8 +4164,8 @@ export default function useBoardElements(props){
           src={require("../cards/16.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 17){
-        return <img
+      /></div>}else if(C === 17){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -4173,8 +4173,8 @@ export default function useBoardElements(props){
         src={require("../cards/17.svg").default}
         onClick={handleClick}
           alt={C}
-      />}else if(C === 18){
-        return <img
+      /></div>}else if(C === 18){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4182,8 +4182,8 @@ export default function useBoardElements(props){
           src={require("../cards/18.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 19){
-        return <img
+      /></div>}else if(C === 19){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4191,8 +4191,8 @@ export default function useBoardElements(props){
           src={require("../cards/19.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 20){
-        return <img
+      /></div>}else if(C === 20){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4200,8 +4200,8 @@ export default function useBoardElements(props){
           src={require("../cards/20.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 21){
-        return <img
+      /></div>}else if(C === 21){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4209,8 +4209,8 @@ export default function useBoardElements(props){
           src={require("../cards/21.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 22){
-        return <img
+      /></div>}else if(C === 22){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4218,8 +4218,8 @@ export default function useBoardElements(props){
           src={require("../cards/22.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 23){
-        return <img
+      /></div>}else if(C === 23){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4227,8 +4227,8 @@ export default function useBoardElements(props){
           src={require("../cards/23.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 24){
-        return <img
+      /></div>}else if(C === 24){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4236,8 +4236,8 @@ export default function useBoardElements(props){
           src={require("../cards/24.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 25){
-        return <img
+      /></div>}else if(C === 25){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4245,8 +4245,8 @@ export default function useBoardElements(props){
           src={require("../cards/25.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 26){
-        return <img
+      /></div>}else if(C === 26){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4254,8 +4254,8 @@ export default function useBoardElements(props){
           src={require("../cards/26.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 27){
-        return <img
+      /></div>}else if(C === 27){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4263,8 +4263,8 @@ export default function useBoardElements(props){
           src={require("../cards/27.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 28){
-        return <img
+      /></div>}else if(C === 28){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4272,8 +4272,8 @@ export default function useBoardElements(props){
           src={require("../cards/28.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 29){
-        return <img
+      /></div>}else if(C === 29){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4281,8 +4281,8 @@ export default function useBoardElements(props){
           src={require("../cards/29.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 30){
-        return <img
+      /></div>}else if(C === 30){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4290,8 +4290,8 @@ export default function useBoardElements(props){
           src={require("../cards/30.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 31){
-        return <img
+      /></div>}else if(C === 31){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4299,8 +4299,8 @@ export default function useBoardElements(props){
           src={require("../cards/31.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 32){
-        return <img
+      /></div>}else if(C === 32){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4308,8 +4308,8 @@ export default function useBoardElements(props){
           src={require("../cards/32.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 33){
-        return <img
+      /></div>}else if(C === 33){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4317,8 +4317,8 @@ export default function useBoardElements(props){
           src={require("../cards/33.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 34){
-        return <img
+      /></div>}else if(C === 34){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4326,8 +4326,8 @@ export default function useBoardElements(props){
           src={require("../cards/34.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 35){
-        return <img
+      /></div>}else if(C === 35){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -4335,8 +4335,8 @@ export default function useBoardElements(props){
           src={require("../cards/35.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 36){
-        return <img
+      /></div>}else if(C === 36){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4344,8 +4344,8 @@ export default function useBoardElements(props){
           src={require("../cards/36.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 37){
-        return <img
+      /></div>}else if(C === 37){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4353,8 +4353,8 @@ export default function useBoardElements(props){
           src={require("../cards/37.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 38){
-        return <img
+      /></div>}else if(C === 38){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4362,8 +4362,8 @@ export default function useBoardElements(props){
           src={require("../cards/38.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 39){
-        return <img
+      /></div>}else if(C === 39){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4371,8 +4371,8 @@ export default function useBoardElements(props){
           src={require("../cards/39.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 40){
-        return <img
+      /></div>}else if(C === 40){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4380,8 +4380,8 @@ export default function useBoardElements(props){
           src={require("../cards/40.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 41){
-        return <img
+      /></div>}else if(C === 41){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4389,8 +4389,8 @@ export default function useBoardElements(props){
           src={require("../cards/41.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 42){
-        return <img
+      /></div>}else if(C === 42){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4398,8 +4398,8 @@ export default function useBoardElements(props){
           src={require("../cards/42.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 43){
-        return <img
+      /></div>}else if(C === 43){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4407,8 +4407,8 @@ export default function useBoardElements(props){
           src={require("../cards/43.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 44){
-        return <img
+      /></div>}else if(C === 44){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4416,8 +4416,8 @@ export default function useBoardElements(props){
           src={require("../cards/44.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 45){
-        return <img
+      /></div>}else if(C === 45){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4425,8 +4425,8 @@ export default function useBoardElements(props){
           src={require("../cards/45.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 46){
-        return <img
+      /></div>}else if(C === 46){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4434,8 +4434,8 @@ export default function useBoardElements(props){
           src={require("../cards/46.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 47){
-        return <img
+      /></div>}else if(C === 47){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4443,8 +4443,8 @@ export default function useBoardElements(props){
           src={require("../cards/47.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 48){
-        return <img
+      /></div>}else if(C === 48){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4452,8 +4452,8 @@ export default function useBoardElements(props){
           src={require("../cards/48.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 49){
-        return <img
+      /></div>}else if(C === 49){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4461,8 +4461,8 @@ export default function useBoardElements(props){
           src={require("../cards/49.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 50){
-        return <img
+      /></div>}else if(C === 50){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4470,8 +4470,8 @@ export default function useBoardElements(props){
           src={require("../cards/50.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 51){
-        return <img
+      /></div>}else if(C === 51){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
           id={C}
@@ -4479,8 +4479,8 @@ export default function useBoardElements(props){
           src={require("../cards/51.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 52){
-        return <img
+      /></div>}else if(C === 52){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4488,18 +4488,18 @@ export default function useBoardElements(props){
           src={require("../cards/52.svg").default}
           onClick={handleClick}
           alt={C}
-      />}}else{
-        return <img
+      /></div>}}else{
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C} 
           className="board--cardback"
           src={require("../cards/cardback.svg").default}
           alt="cardback"
-  />}})
-  const Column4Elements = cards.Columns[3].map(C => {
+  /></div>}})
+  const Column4Elements = cards.Columns[3].map((C, index) => {
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <img
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4507,8 +4507,8 @@ export default function useBoardElements(props){
           src={require("../cards/1.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 2){
-        return <img
+      /></div>}else if(C === 2){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4516,8 +4516,8 @@ export default function useBoardElements(props){
           src={require("../cards/2.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 3){
-        return <img
+      /></div>}else if(C === 3){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4525,8 +4525,8 @@ export default function useBoardElements(props){
           src={require("../cards/3.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 4){
-        return <img
+      /></div>}else if(C === 4){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4534,8 +4534,8 @@ export default function useBoardElements(props){
           src={require("../cards/4.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 5){
-        return <img
+      /></div>}else if(C === 5){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4543,8 +4543,8 @@ export default function useBoardElements(props){
           src={require("../cards/5.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 6){
-        return <img
+      /></div>}else if(C === 6){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4552,8 +4552,8 @@ export default function useBoardElements(props){
           src={require("../cards/6.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 7){
-        return <img
+      /></div>}else if(C === 7){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4561,8 +4561,8 @@ export default function useBoardElements(props){
           src={require("../cards/7.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 8){
-        return <img
+      /></div>}else if(C === 8){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4570,8 +4570,8 @@ export default function useBoardElements(props){
           src={require("../cards/8.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 9){
-        return <img
+      /></div>}else if(C === 9){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4579,8 +4579,8 @@ export default function useBoardElements(props){
           src={require("../cards/9.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 10){
-        return <img
+      /></div>}else if(C === 10){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4588,8 +4588,8 @@ export default function useBoardElements(props){
           src={require("../cards/10.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 11){
-        return <img
+      /></div>}else if(C === 11){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4597,8 +4597,8 @@ export default function useBoardElements(props){
           src={require("../cards/11.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 12){
-        return <img
+      /></div>}else if(C === 12){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4606,8 +4606,8 @@ export default function useBoardElements(props){
           src={require("../cards/12.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 13){
-        return <img
+      /></div>}else if(C === 13){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4615,8 +4615,8 @@ export default function useBoardElements(props){
           src={require("../cards/13.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 14){
-        return <img
+      /></div>}else if(C === 14){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4624,8 +4624,8 @@ export default function useBoardElements(props){
           src={require("../cards/14.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 15){
-        return <img
+      /></div>}else if(C === 15){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4633,8 +4633,8 @@ export default function useBoardElements(props){
           src={require("../cards/15.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 16){
-        return <img
+      /></div>}else if(C === 16){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4642,8 +4642,8 @@ export default function useBoardElements(props){
           src={require("../cards/16.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 17){
-        return <img
+      /></div>}else if(C === 17){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -4651,8 +4651,8 @@ export default function useBoardElements(props){
         src={require("../cards/17.svg").default}
         onClick={handleClick}
           alt={C}
-      />}else if(C === 18){
-        return <img
+      /></div>}else if(C === 18){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4660,8 +4660,8 @@ export default function useBoardElements(props){
           src={require("../cards/18.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 19){
-        return <img
+      /></div>}else if(C === 19){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4669,8 +4669,8 @@ export default function useBoardElements(props){
           src={require("../cards/19.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 20){
-        return <img
+      /></div>}else if(C === 20){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4678,8 +4678,8 @@ export default function useBoardElements(props){
           src={require("../cards/20.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 21){
-        return <img
+      /></div>}else if(C === 21){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4687,8 +4687,8 @@ export default function useBoardElements(props){
           src={require("../cards/21.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 22){
-        return <img
+      /></div>}else if(C === 22){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4696,8 +4696,8 @@ export default function useBoardElements(props){
           src={require("../cards/22.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 23){
-        return <img
+      /></div>}else if(C === 23){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4705,8 +4705,8 @@ export default function useBoardElements(props){
           src={require("../cards/23.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 24){
-        return <img
+      /></div>}else if(C === 24){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4714,8 +4714,8 @@ export default function useBoardElements(props){
           src={require("../cards/24.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 25){
-        return <img
+      /></div>}else if(C === 25){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4723,8 +4723,8 @@ export default function useBoardElements(props){
           src={require("../cards/25.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 26){
-        return <img
+      /></div>}else if(C === 26){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4732,8 +4732,8 @@ export default function useBoardElements(props){
           src={require("../cards/26.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 27){
-        return <img
+      /></div>}else if(C === 27){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4741,8 +4741,8 @@ export default function useBoardElements(props){
           src={require("../cards/27.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 28){
-        return <img
+      /></div>}else if(C === 28){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4750,8 +4750,8 @@ export default function useBoardElements(props){
           src={require("../cards/28.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 29){
-        return <img
+      /></div>}else if(C === 29){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4759,8 +4759,8 @@ export default function useBoardElements(props){
           src={require("../cards/29.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 30){
-        return <img
+      /></div>}else if(C === 30){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4768,8 +4768,8 @@ export default function useBoardElements(props){
           src={require("../cards/30.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 31){
-        return <img
+      /></div>}else if(C === 31){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4777,8 +4777,8 @@ export default function useBoardElements(props){
           src={require("../cards/31.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 32){
-        return <img
+      /></div>}else if(C === 32){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4786,8 +4786,8 @@ export default function useBoardElements(props){
           src={require("../cards/32.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 33){
-        return <img
+      /></div>}else if(C === 33){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4795,8 +4795,8 @@ export default function useBoardElements(props){
           src={require("../cards/33.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 34){
-        return <img
+      /></div>}else if(C === 34){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4804,8 +4804,8 @@ export default function useBoardElements(props){
           src={require("../cards/34.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 35){
-        return <img
+      /></div>}else if(C === 35){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -4813,8 +4813,8 @@ export default function useBoardElements(props){
           src={require("../cards/35.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 36){
-        return <img
+      /></div>}else if(C === 36){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4822,8 +4822,8 @@ export default function useBoardElements(props){
           src={require("../cards/36.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 37){
-        return <img
+      /></div>}else if(C === 37){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4831,8 +4831,8 @@ export default function useBoardElements(props){
           src={require("../cards/37.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 38){
-        return <img
+      /></div>}else if(C === 38){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4840,8 +4840,8 @@ export default function useBoardElements(props){
           src={require("../cards/38.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 39){
-        return <img
+      /></div>}else if(C === 39){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4849,8 +4849,8 @@ export default function useBoardElements(props){
           src={require("../cards/39.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 40){
-        return <img
+      /></div>}else if(C === 40){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4858,8 +4858,8 @@ export default function useBoardElements(props){
           src={require("../cards/40.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 41){
-        return <img
+      /></div>}else if(C === 41){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4867,8 +4867,8 @@ export default function useBoardElements(props){
           src={require("../cards/41.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 42){
-        return <img
+      /></div>}else if(C === 42){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4876,8 +4876,8 @@ export default function useBoardElements(props){
           src={require("../cards/42.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 43){
-        return <img
+      /></div>}else if(C === 43){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4885,8 +4885,8 @@ export default function useBoardElements(props){
           src={require("../cards/43.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 44){
-        return <img
+      /></div>}else if(C === 44){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4894,8 +4894,8 @@ export default function useBoardElements(props){
           src={require("../cards/44.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 45){
-        return <img
+      /></div>}else if(C === 45){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4903,8 +4903,8 @@ export default function useBoardElements(props){
           src={require("../cards/45.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 46){
-        return <img
+      /></div>}else if(C === 46){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4912,8 +4912,8 @@ export default function useBoardElements(props){
           src={require("../cards/46.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 47){
-        return <img
+      /></div>}else if(C === 47){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4921,8 +4921,8 @@ export default function useBoardElements(props){
           src={require("../cards/47.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 48){
-        return <img
+      /></div>}else if(C === 48){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4930,8 +4930,8 @@ export default function useBoardElements(props){
           src={require("../cards/48.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 49){
-        return <img
+      /></div>}else if(C === 49){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4939,8 +4939,8 @@ export default function useBoardElements(props){
           src={require("../cards/49.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 50){
-        return <img
+      /></div>}else if(C === 50){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4948,8 +4948,8 @@ export default function useBoardElements(props){
           src={require("../cards/50.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 51){
-        return <img
+      /></div>}else if(C === 51){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
           id={C}
@@ -4957,8 +4957,8 @@ export default function useBoardElements(props){
           src={require("../cards/51.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 52){
-        return <img
+      /></div>}else if(C === 52){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4966,18 +4966,18 @@ export default function useBoardElements(props){
           src={require("../cards/52.svg").default}
           onClick={handleClick}
           alt={C}
-      />}}else{
-        return <img
+      /></div>}}else{
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C} 
           className="board--cardback"
           src={require("../cards/cardback.svg").default}
           alt="cardback"
-  />}})
-  const Column5Elements = cards.Columns[4].map(C => {
+  /></div>}})
+  const Column5Elements = cards.Columns[4].map((C, index) => {
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <img
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4985,8 +4985,8 @@ export default function useBoardElements(props){
           src={require("../cards/1.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 2){
-        return <img
+      /></div>}else if(C === 2){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -4994,8 +4994,8 @@ export default function useBoardElements(props){
           src={require("../cards/2.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 3){
-        return <img
+      /></div>}else if(C === 3){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5003,8 +5003,8 @@ export default function useBoardElements(props){
           src={require("../cards/3.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 4){
-        return <img
+      /></div>}else if(C === 4){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5012,8 +5012,8 @@ export default function useBoardElements(props){
           src={require("../cards/4.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 5){
-        return <img
+      /></div>}else if(C === 5){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5021,8 +5021,8 @@ export default function useBoardElements(props){
           src={require("../cards/5.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 6){
-        return <img
+      /></div>}else if(C === 6){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5030,8 +5030,8 @@ export default function useBoardElements(props){
           src={require("../cards/6.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 7){
-        return <img
+      /></div>}else if(C === 7){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5039,8 +5039,8 @@ export default function useBoardElements(props){
           src={require("../cards/7.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 8){
-        return <img
+      /></div>}else if(C === 8){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5048,8 +5048,8 @@ export default function useBoardElements(props){
           src={require("../cards/8.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 9){
-        return <img
+      /></div>}else if(C === 9){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5057,8 +5057,8 @@ export default function useBoardElements(props){
           src={require("../cards/9.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 10){
-        return <img
+      /></div>}else if(C === 10){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5066,8 +5066,8 @@ export default function useBoardElements(props){
           src={require("../cards/10.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 11){
-        return <img
+      /></div>}else if(C === 11){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5075,8 +5075,8 @@ export default function useBoardElements(props){
           src={require("../cards/11.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 12){
-        return <img
+      /></div>}else if(C === 12){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5084,8 +5084,8 @@ export default function useBoardElements(props){
           src={require("../cards/12.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 13){
-        return <img
+      /></div>}else if(C === 13){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5093,8 +5093,8 @@ export default function useBoardElements(props){
           src={require("../cards/13.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 14){
-        return <img
+      /></div>}else if(C === 14){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5102,8 +5102,8 @@ export default function useBoardElements(props){
           src={require("../cards/14.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 15){
-        return <img
+      /></div>}else if(C === 15){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5111,8 +5111,8 @@ export default function useBoardElements(props){
           src={require("../cards/15.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 16){
-        return <img
+      /></div>}else if(C === 16){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5120,8 +5120,8 @@ export default function useBoardElements(props){
           src={require("../cards/16.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 17){
-        return <img
+      /></div>}else if(C === 17){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -5129,8 +5129,8 @@ export default function useBoardElements(props){
         src={require("../cards/17.svg").default}
         onClick={handleClick}
           alt={C}
-      />}else if(C === 18){
-        return <img
+      /></div>}else if(C === 18){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5138,8 +5138,8 @@ export default function useBoardElements(props){
           src={require("../cards/18.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 19){
-        return <img
+      /></div>}else if(C === 19){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5147,8 +5147,8 @@ export default function useBoardElements(props){
           src={require("../cards/19.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 20){
-        return <img
+      /></div>}else if(C === 20){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5156,8 +5156,8 @@ export default function useBoardElements(props){
           src={require("../cards/20.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 21){
-        return <img
+      /></div>}else if(C === 21){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5165,8 +5165,8 @@ export default function useBoardElements(props){
           src={require("../cards/21.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 22){
-        return <img
+      /></div>}else if(C === 22){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5174,8 +5174,8 @@ export default function useBoardElements(props){
           src={require("../cards/22.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 23){
-        return <img
+      /></div>}else if(C === 23){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5183,8 +5183,8 @@ export default function useBoardElements(props){
           src={require("../cards/23.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 24){
-        return <img
+      /></div>}else if(C === 24){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5192,8 +5192,8 @@ export default function useBoardElements(props){
           src={require("../cards/24.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 25){
-        return <img
+      /></div>}else if(C === 25){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5201,8 +5201,8 @@ export default function useBoardElements(props){
           src={require("../cards/25.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 26){
-        return <img
+      /></div>}else if(C === 26){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5210,8 +5210,8 @@ export default function useBoardElements(props){
           src={require("../cards/26.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 27){
-        return <img
+      /></div>}else if(C === 27){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5219,8 +5219,8 @@ export default function useBoardElements(props){
           src={require("../cards/27.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 28){
-        return <img
+      /></div>}else if(C === 28){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5228,8 +5228,8 @@ export default function useBoardElements(props){
           src={require("../cards/28.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 29){
-        return <img
+      /></div>}else if(C === 29){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5237,8 +5237,8 @@ export default function useBoardElements(props){
           src={require("../cards/29.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 30){
-        return <img
+      /></div>}else if(C === 30){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5246,8 +5246,8 @@ export default function useBoardElements(props){
           src={require("../cards/30.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 31){
-        return <img
+      /></div>}else if(C === 31){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5255,8 +5255,8 @@ export default function useBoardElements(props){
           src={require("../cards/31.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 32){
-        return <img
+      /></div>}else if(C === 32){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5264,8 +5264,8 @@ export default function useBoardElements(props){
           src={require("../cards/32.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 33){
-        return <img
+      /></div>}else if(C === 33){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5273,8 +5273,8 @@ export default function useBoardElements(props){
           src={require("../cards/33.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 34){
-        return <img
+      /></div>}else if(C === 34){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5282,8 +5282,8 @@ export default function useBoardElements(props){
           src={require("../cards/34.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 35){
-        return <img
+      /></div>}else if(C === 35){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -5291,8 +5291,8 @@ export default function useBoardElements(props){
           src={require("../cards/35.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 36){
-        return <img
+      /></div>}else if(C === 36){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5300,8 +5300,8 @@ export default function useBoardElements(props){
           src={require("../cards/36.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 37){
-        return <img
+      /></div>}else if(C === 37){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5309,8 +5309,8 @@ export default function useBoardElements(props){
           src={require("../cards/37.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 38){
-        return <img
+      /></div>}else if(C === 38){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5318,8 +5318,8 @@ export default function useBoardElements(props){
           src={require("../cards/38.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 39){
-        return <img
+      /></div>}else if(C === 39){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5327,8 +5327,8 @@ export default function useBoardElements(props){
           src={require("../cards/39.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 40){
-        return <img
+      /></div>}else if(C === 40){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5336,8 +5336,8 @@ export default function useBoardElements(props){
           src={require("../cards/40.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 41){
-        return <img
+      /></div>}else if(C === 41){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5345,8 +5345,8 @@ export default function useBoardElements(props){
           src={require("../cards/41.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 42){
-        return <img
+      /></div>}else if(C === 42){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5354,8 +5354,8 @@ export default function useBoardElements(props){
           src={require("../cards/42.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 43){
-        return <img
+      /></div>}else if(C === 43){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5363,8 +5363,8 @@ export default function useBoardElements(props){
           src={require("../cards/43.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 44){
-        return <img
+      /></div>}else if(C === 44){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5372,8 +5372,8 @@ export default function useBoardElements(props){
           src={require("../cards/44.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 45){
-        return <img
+      /></div>}else if(C === 45){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5381,8 +5381,8 @@ export default function useBoardElements(props){
           src={require("../cards/45.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 46){
-        return <img
+      /></div>}else if(C === 46){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5390,8 +5390,8 @@ export default function useBoardElements(props){
           src={require("../cards/46.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 47){
-        return <img
+      /></div>}else if(C === 47){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5399,8 +5399,8 @@ export default function useBoardElements(props){
           src={require("../cards/47.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 48){
-        return <img
+      /></div>}else if(C === 48){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5408,8 +5408,8 @@ export default function useBoardElements(props){
           src={require("../cards/48.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 49){
-        return <img
+      /></div>}else if(C === 49){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5417,8 +5417,8 @@ export default function useBoardElements(props){
           src={require("../cards/49.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 50){
-        return <img
+      /></div>}else if(C === 50){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5426,8 +5426,8 @@ export default function useBoardElements(props){
           src={require("../cards/50.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 51){
-        return <img
+      /></div>}else if(C === 51){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
           id={C}
@@ -5435,8 +5435,8 @@ export default function useBoardElements(props){
           src={require("../cards/51.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 52){
-        return <img
+      /></div>}else if(C === 52){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5444,18 +5444,18 @@ export default function useBoardElements(props){
           src={require("../cards/52.svg").default}
           onClick={handleClick}
           alt={C}
-      />}}else{
-        return <img
+      /></div>}}else{
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C} 
           className="board--cardback"
           src={require("../cards/cardback.svg").default}
           alt="cardback"
-  />}})
-  const Column6Elements = cards.Columns[5].map(C => {
+  /></div>}})
+  const Column6Elements = cards.Columns[5].map((C, index) => {
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <img
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5463,8 +5463,8 @@ export default function useBoardElements(props){
           src={require("../cards/1.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 2){
-        return <img
+      /></div>}else if(C === 2){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5472,8 +5472,8 @@ export default function useBoardElements(props){
           src={require("../cards/2.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 3){
-        return <img
+      /></div>}else if(C === 3){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5481,8 +5481,8 @@ export default function useBoardElements(props){
           src={require("../cards/3.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 4){
-        return <img
+      /></div>}else if(C === 4){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5490,8 +5490,8 @@ export default function useBoardElements(props){
           src={require("../cards/4.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 5){
-        return <img
+      /></div>}else if(C === 5){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5499,8 +5499,8 @@ export default function useBoardElements(props){
           src={require("../cards/5.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 6){
-        return <img
+      /></div>}else if(C === 6){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5508,8 +5508,8 @@ export default function useBoardElements(props){
           src={require("../cards/6.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 7){
-        return <img
+      /></div>}else if(C === 7){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5517,8 +5517,8 @@ export default function useBoardElements(props){
           src={require("../cards/7.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 8){
-        return <img
+      /></div>}else if(C === 8){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5526,8 +5526,8 @@ export default function useBoardElements(props){
           src={require("../cards/8.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 9){
-        return <img
+      /></div>}else if(C === 9){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5535,8 +5535,8 @@ export default function useBoardElements(props){
           src={require("../cards/9.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 10){
-        return <img
+      /></div>}else if(C === 10){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5544,8 +5544,8 @@ export default function useBoardElements(props){
           src={require("../cards/10.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 11){
-        return <img
+      /></div>}else if(C === 11){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5553,8 +5553,8 @@ export default function useBoardElements(props){
           src={require("../cards/11.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 12){
-        return <img
+      /></div>}else if(C === 12){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5562,8 +5562,8 @@ export default function useBoardElements(props){
           src={require("../cards/12.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 13){
-        return <img
+      /></div>}else if(C === 13){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5571,8 +5571,8 @@ export default function useBoardElements(props){
           src={require("../cards/13.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 14){
-        return <img
+      /></div>}else if(C === 14){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5580,8 +5580,8 @@ export default function useBoardElements(props){
           src={require("../cards/14.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 15){
-        return <img
+      /></div>}else if(C === 15){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5589,8 +5589,8 @@ export default function useBoardElements(props){
           src={require("../cards/15.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 16){
-        return <img
+      /></div>}else if(C === 16){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5598,8 +5598,8 @@ export default function useBoardElements(props){
           src={require("../cards/16.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 17){
-        return <img
+      /></div>}else if(C === 17){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -5607,8 +5607,8 @@ export default function useBoardElements(props){
         src={require("../cards/17.svg").default}
         onClick={handleClick}
           alt={C}
-      />}else if(C === 18){
-        return <img
+      /></div>}else if(C === 18){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5616,8 +5616,8 @@ export default function useBoardElements(props){
           src={require("../cards/18.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 19){
-        return <img
+      /></div>}else if(C === 19){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5625,8 +5625,8 @@ export default function useBoardElements(props){
           src={require("../cards/19.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 20){
-        return <img
+      /></div>}else if(C === 20){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5634,8 +5634,8 @@ export default function useBoardElements(props){
           src={require("../cards/20.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 21){
-        return <img
+      /></div>}else if(C === 21){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5643,8 +5643,8 @@ export default function useBoardElements(props){
           src={require("../cards/21.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 22){
-        return <img
+      /></div>}else if(C === 22){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5652,8 +5652,8 @@ export default function useBoardElements(props){
           src={require("../cards/22.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 23){
-        return <img
+      /></div>}else if(C === 23){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5661,8 +5661,8 @@ export default function useBoardElements(props){
           src={require("../cards/23.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 24){
-        return <img
+      /></div>}else if(C === 24){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5670,8 +5670,8 @@ export default function useBoardElements(props){
           src={require("../cards/24.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 25){
-        return <img
+      /></div>}else if(C === 25){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5679,8 +5679,8 @@ export default function useBoardElements(props){
           src={require("../cards/25.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 26){
-        return <img
+      /></div>}else if(C === 26){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5688,8 +5688,8 @@ export default function useBoardElements(props){
           src={require("../cards/26.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 27){
-        return <img
+      /></div>}else if(C === 27){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5697,8 +5697,8 @@ export default function useBoardElements(props){
           src={require("../cards/27.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 28){
-        return <img
+      /></div>}else if(C === 28){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5706,8 +5706,8 @@ export default function useBoardElements(props){
           src={require("../cards/28.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 29){
-        return <img
+      /></div>}else if(C === 29){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5715,8 +5715,8 @@ export default function useBoardElements(props){
           src={require("../cards/29.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 30){
-        return <img
+      /></div>}else if(C === 30){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5724,8 +5724,8 @@ export default function useBoardElements(props){
           src={require("../cards/30.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 31){
-        return <img
+      /></div>}else if(C === 31){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5733,8 +5733,8 @@ export default function useBoardElements(props){
           src={require("../cards/31.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 32){
-        return <img
+      /></div>}else if(C === 32){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5742,8 +5742,8 @@ export default function useBoardElements(props){
           src={require("../cards/32.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 33){
-        return <img
+      /></div>}else if(C === 33){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5751,8 +5751,8 @@ export default function useBoardElements(props){
           src={require("../cards/33.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 34){
-        return <img
+      /></div>}else if(C === 34){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5760,8 +5760,8 @@ export default function useBoardElements(props){
           src={require("../cards/34.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 35){
-        return <img
+      /></div>}else if(C === 35){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -5769,8 +5769,8 @@ export default function useBoardElements(props){
           src={require("../cards/35.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 36){
-        return <img
+      /></div>}else if(C === 36){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5778,8 +5778,8 @@ export default function useBoardElements(props){
           src={require("../cards/36.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 37){
-        return <img
+      /></div>}else if(C === 37){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5787,8 +5787,8 @@ export default function useBoardElements(props){
           src={require("../cards/37.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 38){
-        return <img
+      /></div>}else if(C === 38){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5796,8 +5796,8 @@ export default function useBoardElements(props){
           src={require("../cards/38.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 39){
-        return <img
+      /></div>}else if(C === 39){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5805,8 +5805,8 @@ export default function useBoardElements(props){
           src={require("../cards/39.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 40){
-        return <img
+      /></div>}else if(C === 40){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5814,8 +5814,8 @@ export default function useBoardElements(props){
           src={require("../cards/40.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 41){
-        return <img
+      /></div>}else if(C === 41){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5823,8 +5823,8 @@ export default function useBoardElements(props){
           src={require("../cards/41.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 42){
-        return <img
+      /></div>}else if(C === 42){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5832,8 +5832,8 @@ export default function useBoardElements(props){
           src={require("../cards/42.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 43){
-        return <img
+      /></div>}else if(C === 43){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5841,8 +5841,8 @@ export default function useBoardElements(props){
           src={require("../cards/43.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 44){
-        return <img
+      /></div>}else if(C === 44){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5850,8 +5850,8 @@ export default function useBoardElements(props){
           src={require("../cards/44.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 45){
-        return <img
+      /></div>}else if(C === 45){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5859,8 +5859,8 @@ export default function useBoardElements(props){
           src={require("../cards/45.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 46){
-        return <img
+      /></div>}else if(C === 46){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5868,8 +5868,8 @@ export default function useBoardElements(props){
           src={require("../cards/46.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 47){
-        return <img
+      /></div>}else if(C === 47){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5877,8 +5877,8 @@ export default function useBoardElements(props){
           src={require("../cards/47.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 48){
-        return <img
+      /></div>}else if(C === 48){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5886,8 +5886,8 @@ export default function useBoardElements(props){
           src={require("../cards/48.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 49){
-        return <img
+      /></div>}else if(C === 49){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5895,8 +5895,8 @@ export default function useBoardElements(props){
           src={require("../cards/49.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 50){
-        return <img
+      /></div>}else if(C === 50){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5904,8 +5904,8 @@ export default function useBoardElements(props){
           src={require("../cards/50.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 51){
-        return <img
+      /></div>}else if(C === 51){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
           id={C}
@@ -5913,8 +5913,8 @@ export default function useBoardElements(props){
           src={require("../cards/51.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 52){
-        return <img
+      /></div>}else if(C === 52){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5922,18 +5922,18 @@ export default function useBoardElements(props){
           src={require("../cards/52.svg").default}
           onClick={handleClick}
           alt={C}
-      />}}else{
-        return <img
+      /></div>}}else{
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C} 
           className="board--cardback"
           src={require("../cards/cardback.svg").default}
           alt="cardback"
-  />}})
-  const Column7Elements = cards.Columns[6].map(C => {
+  /></div>}})
+  const Column7Elements = cards.Columns[6].map((C, index) => {
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <img
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5941,8 +5941,8 @@ export default function useBoardElements(props){
           src={require("../cards/1.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 2){
-        return <img
+      /></div>}else if(C === 2){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5950,8 +5950,8 @@ export default function useBoardElements(props){
           src={require("../cards/2.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 3){
-        return <img
+      /></div>}else if(C === 3){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5959,8 +5959,8 @@ export default function useBoardElements(props){
           src={require("../cards/3.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 4){
-        return <img
+      /></div>}else if(C === 4){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5968,8 +5968,8 @@ export default function useBoardElements(props){
           src={require("../cards/4.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 5){
-        return <img
+      /></div>}else if(C === 5){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5977,8 +5977,8 @@ export default function useBoardElements(props){
           src={require("../cards/5.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 6){
-        return <img
+      /></div>}else if(C === 6){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5986,8 +5986,8 @@ export default function useBoardElements(props){
           src={require("../cards/6.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 7){
-        return <img
+      /></div>}else if(C === 7){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -5995,8 +5995,8 @@ export default function useBoardElements(props){
           src={require("../cards/7.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 8){
-        return <img
+      /></div>}else if(C === 8){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6004,8 +6004,8 @@ export default function useBoardElements(props){
           src={require("../cards/8.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 9){
-        return <img
+      /></div>}else if(C === 9){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6013,8 +6013,8 @@ export default function useBoardElements(props){
           src={require("../cards/9.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 10){
-        return <img
+      /></div>}else if(C === 10){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6022,8 +6022,8 @@ export default function useBoardElements(props){
           src={require("../cards/10.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 11){
-        return <img
+      /></div>}else if(C === 11){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6031,8 +6031,8 @@ export default function useBoardElements(props){
           src={require("../cards/11.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 12){
-        return <img
+      /></div>}else if(C === 12){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6040,8 +6040,8 @@ export default function useBoardElements(props){
           src={require("../cards/12.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 13){
-        return <img
+      /></div>}else if(C === 13){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6049,8 +6049,8 @@ export default function useBoardElements(props){
           src={require("../cards/13.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 14){
-        return <img
+      /></div>}else if(C === 14){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6058,8 +6058,8 @@ export default function useBoardElements(props){
           src={require("../cards/14.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 15){
-        return <img
+      /></div>}else if(C === 15){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6067,8 +6067,8 @@ export default function useBoardElements(props){
           src={require("../cards/15.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 16){
-        return <img
+      /></div>}else if(C === 16){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6076,8 +6076,8 @@ export default function useBoardElements(props){
           src={require("../cards/16.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 17){
-        return <img
+      /></div>}else if(C === 17){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -6085,8 +6085,8 @@ export default function useBoardElements(props){
         src={require("../cards/17.svg").default}
         onClick={handleClick}
           alt={C}
-      />}else if(C === 18){
-        return <img
+      /></div>}else if(C === 18){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6094,8 +6094,8 @@ export default function useBoardElements(props){
           src={require("../cards/18.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 19){
-        return <img
+      /></div>}else if(C === 19){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6103,8 +6103,8 @@ export default function useBoardElements(props){
           src={require("../cards/19.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 20){
-        return <img
+      /></div>}else if(C === 20){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6112,8 +6112,8 @@ export default function useBoardElements(props){
           src={require("../cards/20.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 21){
-        return <img
+      /></div>}else if(C === 21){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6121,8 +6121,8 @@ export default function useBoardElements(props){
           src={require("../cards/21.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 22){
-        return <img
+      /></div>}else if(C === 22){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6130,8 +6130,8 @@ export default function useBoardElements(props){
           src={require("../cards/22.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 23){
-        return <img
+      /></div>}else if(C === 23){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6139,8 +6139,8 @@ export default function useBoardElements(props){
           src={require("../cards/23.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 24){
-        return <img
+      /></div>}else if(C === 24){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6148,8 +6148,8 @@ export default function useBoardElements(props){
           src={require("../cards/24.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 25){
-        return <img
+      /></div>}else if(C === 25){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6157,8 +6157,8 @@ export default function useBoardElements(props){
           src={require("../cards/25.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 26){
-        return <img
+      /></div>}else if(C === 26){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6166,8 +6166,8 @@ export default function useBoardElements(props){
           src={require("../cards/26.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 27){
-        return <img
+      /></div>}else if(C === 27){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6175,8 +6175,8 @@ export default function useBoardElements(props){
           src={require("../cards/27.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 28){
-        return <img
+      /></div>}else if(C === 28){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6184,8 +6184,8 @@ export default function useBoardElements(props){
           src={require("../cards/28.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 29){
-        return <img
+      /></div>}else if(C === 29){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6193,8 +6193,8 @@ export default function useBoardElements(props){
           src={require("../cards/29.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 30){
-        return <img
+      /></div>}else if(C === 30){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6202,8 +6202,8 @@ export default function useBoardElements(props){
           src={require("../cards/30.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 31){
-        return <img
+      /></div>}else if(C === 31){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6211,8 +6211,8 @@ export default function useBoardElements(props){
           src={require("../cards/31.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 32){
-        return <img
+      /></div>}else if(C === 32){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6220,8 +6220,8 @@ export default function useBoardElements(props){
           src={require("../cards/32.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 33){
-        return <img
+      /></div>}else if(C === 33){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6229,8 +6229,8 @@ export default function useBoardElements(props){
           src={require("../cards/33.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 34){
-        return <img
+      /></div>}else if(C === 34){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6238,8 +6238,8 @@ export default function useBoardElements(props){
           src={require("../cards/34.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 35){
-        return <img
+      /></div>}else if(C === 35){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
         id={C}
@@ -6247,8 +6247,8 @@ export default function useBoardElements(props){
           src={require("../cards/35.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 36){
-        return <img
+      /></div>}else if(C === 36){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6256,8 +6256,8 @@ export default function useBoardElements(props){
           src={require("../cards/36.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 37){
-        return <img
+      /></div>}else if(C === 37){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6265,8 +6265,8 @@ export default function useBoardElements(props){
           src={require("../cards/37.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 38){
-        return <img
+      /></div>}else if(C === 38){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6274,8 +6274,8 @@ export default function useBoardElements(props){
           src={require("../cards/38.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 39){
-        return <img
+      /></div>}else if(C === 39){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6283,8 +6283,8 @@ export default function useBoardElements(props){
           src={require("../cards/39.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 40){
-        return <img
+      /></div>}else if(C === 40){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6292,8 +6292,8 @@ export default function useBoardElements(props){
           src={require("../cards/40.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 41){
-        return <img
+      /></div>}else if(C === 41){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6301,8 +6301,8 @@ export default function useBoardElements(props){
           src={require("../cards/41.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 42){
-        return <img
+      /></div>}else if(C === 42){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6310,8 +6310,8 @@ export default function useBoardElements(props){
           src={require("../cards/42.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 43){
-        return <img
+      /></div>}else if(C === 43){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6319,8 +6319,8 @@ export default function useBoardElements(props){
           src={require("../cards/43.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 44){
-        return <img
+      /></div>}else if(C === 44){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6328,8 +6328,8 @@ export default function useBoardElements(props){
           src={require("../cards/44.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 45){
-        return <img
+      /></div>}else if(C === 45){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6337,8 +6337,8 @@ export default function useBoardElements(props){
           src={require("../cards/45.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 46){
-        return <img
+      /></div>}else if(C === 46){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6346,8 +6346,8 @@ export default function useBoardElements(props){
           src={require("../cards/46.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 47){
-        return <img
+      /></div>}else if(C === 47){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6355,8 +6355,8 @@ export default function useBoardElements(props){
           src={require("../cards/47.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 48){
-        return <img
+      /></div>}else if(C === 48){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6364,8 +6364,8 @@ export default function useBoardElements(props){
           src={require("../cards/48.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 49){
-        return <img
+      /></div>}else if(C === 49){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6373,8 +6373,8 @@ export default function useBoardElements(props){
           src={require("../cards/49.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 50){
-        return <img
+      /></div>}else if(C === 50){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6382,8 +6382,8 @@ export default function useBoardElements(props){
           src={require("../cards/50.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 51){
-        return <img
+      /></div>}else if(C === 51){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
         key={C}
           id={C}
@@ -6391,8 +6391,8 @@ export default function useBoardElements(props){
           src={require("../cards/51.svg").default}
           onClick={handleClick}
           alt={C}
-      />}else if(C === 52){
-        return <img
+      /></div>}else if(C === 52){
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C}
           id={C}
@@ -6400,14 +6400,14 @@ export default function useBoardElements(props){
           src={require("../cards/52.svg").default}
           onClick={handleClick}
           alt={C}
-      />}}else{
-        return <img
+      /></div>}}else{
+        return <div className={`board--column--card-${index}`}><img
           lazy="true"
           key={C} 
           className="board--cardback"
           src={require("../cards/cardback.svg").default}
           alt="cardback"
-  />}})
+  /></div>}})
   
   return{
     ...props,

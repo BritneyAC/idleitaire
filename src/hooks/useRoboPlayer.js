@@ -30,7 +30,7 @@ export default function useRoboPlayer(props){
     if(deck.length === 0){
       setPrevClicked([])
     }
-  }, [isGameRunning, props.userInfo.roboPlayer, count, deck.length, playForYou, setCount, setPrevClicked])
+  }, [isGameRunning, props.userInfo.roboPlayer])
 
 
   return {StartGame, gamePoints, count}

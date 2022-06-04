@@ -353,7 +353,7 @@ export default function useGameLogic(props){
     if(deck.length === 0){
       setPrevClicked([])
     }
-  }, [isGameRunning, props.userInfo.playForYou, props.userInfo.playForYouToggle, count, deck.length])
+  }, [isGameRunning, props.userInfo.playForYou, props.userInfo.playForYouToggle])
 
   useEffect(()=>{
     if(count > 200){
