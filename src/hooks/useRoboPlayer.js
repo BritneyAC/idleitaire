@@ -3,6 +3,7 @@ import useGameLogic from "./useGameLogic";
 
 export default function useRoboPlayer(props){
   const {deck, 
+    cards,
     count,
     isGameRunning,
     setCount,
@@ -17,20 +18,15 @@ export default function useRoboPlayer(props){
       if(props.userInfo.roboPlayer > 0){
         const time = 5000 / props.userInfo.roboPlayer
         const playForYouTimer = setInterval(() => {
-          setCount(prevCount => prevCount + 1)
           if(count % 12 === 1){
             setPrevClicked([])
-            console.log("Robo", count)
           }
           playForYou()}, time)
           return () => clearInterval(playForYouTimer)
         }
       }
     
-    if(deck.length === 0){
-      setPrevClicked([])
-    }
-  }, [isGameRunning, props.userInfo.roboPlayer])
+  }, [isGameRunning, props.userInfo.roboPlayer, count, deck, cards])
 
 
   return {StartGame, gamePoints, count}

@@ -271,7 +271,6 @@ export default function useGameLogic(props){
 
   const handleClick = (event) => {
     searchPlaceable(Number(event.target.id))
-    console.log(cards)
   }
 
   const flipCard = () => {
@@ -308,6 +307,11 @@ export default function useGameLogic(props){
   // }
 
   const playForYou = () => {
+    setCount(prevCount => prevCount + 1)
+    
+    if(deck.length === 0){
+      setPrevClicked([])
+    }
     for(let i = 0; i < 7; i++){
       const shown = cards.Columns[i].filter((num) => cards.ShownCards.includes(num))
       for(let j = 0; j < shown.length; j++){
@@ -328,38 +332,39 @@ export default function useGameLogic(props){
     }
   }
 
-   // playForYou Upgrade
-
-  //add pause button the stores userInfo.playForYou temporaraly and the value to 0
-
+  
+  // playForYou Upgrade
   useEffect(() => {
+    let playForYouTimer
     if(isGameRunning){
       if(props.userInfo.playForYou > 0){
         if(props.userInfo.playForYouToggle){
 
           const time = 5000 / props.userInfo.playForYou
           const playForYouTimer = setInterval(() => {
-            setCount(prevCount => prevCount + 1)
+            
             if(count % 12 === 1){
               setPrevClicked([])
-              console.log("pfy",count)
             }
             playForYou()}, time)
             return () => clearInterval(playForYouTimer)
+          } else{
+            clearInterval(playForYouTimer)
           }
+        } else{
+          clearInterval(playForYouTimer)
         }
+      }else{
+        clearInterval(playForYouTimer)
       }
     
-    if(deck.length === 0){
-      setPrevClicked([])
-    }
-  }, [isGameRunning, props.userInfo.playForYou, props.userInfo.playForYouToggle])
+  }, [isGameRunning, props.userInfo.playForYou, props.userInfo.playForYouToggle, deck, cards, count])
 
   useEffect(()=>{
     if(count > 200){
       RestartGame()
     }
-  },[isGameRunning, count, RestartGame])
+  },[isGameRunning, count])
 
   return {
     ...props,
