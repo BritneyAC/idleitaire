@@ -372,6 +372,13 @@ button {
   object-fit: contain;
 }
 
+.board--undo {
+  position: absolute;
+  padding: 1rem;
+  bottom: 2.5rem;
+  left: 1rem;
+}
+
 .board--points {
   position: absolute;
   bottom: 0;

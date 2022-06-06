@@ -6,6 +6,7 @@ export default function Board(props){
     isGameRunning,
     RestartGame,
     StartGame,
+    undoMove,
     gamePoints,
     ClubsElements, 
     SpadesElements, 
@@ -49,6 +50,7 @@ export default function Board(props){
               <div className="board--column-4">{Column5Elements}</div>
               <div className="board--column-5">{Column6Elements}</div>
               <div className="board--column-6">{Column7Elements}</div>
+              <button className="board--undo" onClick={undoMove}>undo</button>
               <p className="board--points">Points: {gamePoints}</p>
             </div>
           </div>

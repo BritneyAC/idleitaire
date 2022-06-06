@@ -6,6 +6,7 @@ export default function useBoardElements(props){
     handleClick,
     flipCard,
     resetDeck,
+    undoMove,
     isGameRunning,
     RestartGame,
     StartGame,
@@ -6427,6 +6428,7 @@ export default function useBoardElements(props){
     isGameRunning,
     RestartGame,
     StartGame,
+    undoMove,
     gamePoints
   }
 }

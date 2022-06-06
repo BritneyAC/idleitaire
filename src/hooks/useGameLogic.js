@@ -18,6 +18,7 @@ export default function useGameLogic(props){
     Columns = [
       [],[],[],[],[],[],[]
     ] 
+    previousMoves = []
   }
 
   const newCard = new card()
@@ -137,22 +138,27 @@ export default function useGameLogic(props){
     const removedCards = []
     if(cards.Playable[cards.Playable.length - 1] === cardToRemove){
       removedCards.push(newCards.Playable.pop())
+      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 7})
       setCards(newCards)
       return removedCards
     }else if(cards.Clubs[cards.Clubs.length - 1] === cardToRemove){
       removedCards.push(newCards.Clubs.pop())
+      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 8})
       setCards(newCards)
       return removedCards
     }else if(cards.Spades[cards.Spades.length - 1] === cardToRemove){
       removedCards.push(newCards.Spades.pop())
+      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 9})
       setCards(newCards)
       return removedCards
     } else if (cards.Hearts[cards.Hearts.length - 1] === cardToRemove){
       removedCards.push(newCards.Hearts.pop())
+      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 10})
       setCards(newCards)
       return removedCards
     } else if(cards.Diamonds[cards.Diamonds.length - 1] === cardToRemove){
       removedCards.push(newCards.Diamonds.pop())
+      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 11})
       setCards(newCards)
       return removedCards
     }
@@ -166,10 +172,11 @@ export default function useGameLogic(props){
             indexOfCard, 
             spliceAmount
         ))
-        setCards(newCards)
+        newCards.previousMoves.push({cardsMoved: [...removedCards.flat()], location: index})
       }
     })
     if(removedCards.length !== 0){
+      setCards(newCards)
       return removedCards
     }
   }
@@ -270,6 +277,7 @@ export default function useGameLogic(props){
       }}}}
 
   const handleClick = (event) => {
+    console.log(cards)
     searchPlaceable(Number(event.target.id))
   }
 
@@ -278,6 +286,7 @@ export default function useGameLogic(props){
     const newCards = {...cards}
     newCards.Playable.push(newDeck.pop())
     newCards.ShownCards.push(newCards.Playable[newCards.Playable.length - 1])
+    newCards.previousMoves.push({cardsMoved: [newCards.Playable[newCards.Playable.length - 1]], location: 12})
     setDeck(newDeck)
     setCards(newCards)
   }
@@ -292,6 +301,44 @@ export default function useGameLogic(props){
       newDeck.push(remove)
     }
     setDeck(newDeck.reverse())
+    setCards(newCards)
+  }
+
+  const undoMove = () => {
+    const newCards = {...cards}
+    const {cardsMoved, location} = newCards.previousMoves.pop()
+    console.log(cardsMoved[0])
+    if(location < 7){
+      let removed = removeFromPile(cardsMoved[0]).flat()
+      if(newCards.ShownCards[newCards.ShownCards.length - 1] === newCards.Columns[location][newCards.Columns[location].length -1]){
+        newCards.ShownCards.pop()
+      }
+      for(let i = 0; i < removed.length; i++){
+        newCards.Columns[location].push(removed[i])
+      }
+    } else if(location === 7){
+      let removed = removeFromPile(cardsMoved[0]).flat()
+      newCards.Playable.push(removed[0])
+    } else if(location === 8){
+      let removed = removeFromPile(cardsMoved[0]).flat()
+      newCards.Clubs.push(removed[0])
+    } else if(location === 9){
+      let removed = removeFromPile(cardsMoved[0]).flat()
+      newCards.Spades.push(removed[0])
+    } else if(location === 10){
+      let removed = removeFromPile(cardsMoved[0]).flat()
+      newCards.Hearts.push(removed[0])
+    } else if(location === 11){
+      let removed = removeFromPile(cardsMoved[0]).flat()
+      newCards.Diamonds.push(removed[0])
+    } else if(location === 12){
+      let removed = removeFromPile(cardsMoved[0]).flat()
+      newCards.ShownCards.pop()
+      const newDeck = [deck]
+      newDeck.push(removed[0])
+      setDeck(newDeck)
+    }
+    newCards.previousMoves.pop()
     setCards(newCards)
   }
 
@@ -381,6 +428,7 @@ export default function useGameLogic(props){
     handleClick,
     flipCard,
     resetDeck,
+    undoMove,
     isGameRunning,
     RestartGame,
     StartGame,
