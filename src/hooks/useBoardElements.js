@@ -6429,6 +6429,7 @@ export default function useBoardElements(props){
     RestartGame,
     StartGame,
     undoMove,
-    gamePoints
+    gamePoints,
+    cards
   }
 }

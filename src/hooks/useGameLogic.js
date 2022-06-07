@@ -334,7 +334,7 @@ export default function useGameLogic(props){
     } else if(location === 12){
       let removed = removeFromPile(cardsMoved[0]).flat()
       newCards.ShownCards.pop()
-      const newDeck = [deck]
+      const newDeck = [...deck]
       newDeck.push(removed[0])
       setDeck(newDeck)
     }
