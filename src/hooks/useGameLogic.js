@@ -359,10 +359,10 @@ export default function useGameLogic(props){
     setCount(prevCount => prevCount + 1)
     
     if(deck.length === 0){
-      if(count % 8 === 1){
+      if(count % 12 === 1){
         setPrevClicked([])
       }
-    } else if(count % 12 === 1){
+    } else if(count % 16 === 1){
       setPrevClicked([])
     }
     for(let i = 0; i < 7; i++){
@@ -378,9 +378,6 @@ export default function useGameLogic(props){
       return true
     } else if(deck.length > 0){
       flipCard()
-      if(count % 3 === 1){
-        setPrevClicked([])
-      }
     } else{
       resetDeck()
     }
