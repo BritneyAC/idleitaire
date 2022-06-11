@@ -36,7 +36,7 @@ export default function UpgradesPage(props){
               (props.userInfo.playForYou + 1) * 80
         ) * 10}</p>
         <button onClick={props.playForYouIncreased}>Upgrade</button>
-        <button onClick={props.togglePFY}>toggle {props.userInfo.playForYouToggle ? "off" : "on"}</button>
+        {props.userInfo.playForYou > 0 && <button onClick={props.togglePFY}>toggle {props.userInfo.playForYouToggle ? "off" : "on"}</button>}
       </div>
     </div>
   )

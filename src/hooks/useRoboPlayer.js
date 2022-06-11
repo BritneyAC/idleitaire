@@ -6,9 +6,7 @@ export default function useRoboPlayer(props){
     cards,
     count,
     isGameRunning,
-    setCount,
     gamePoints,
-    setPrevClicked,
     StartGame,
     playForYou} = useGameLogic({...props})
 
@@ -16,7 +14,7 @@ export default function useRoboPlayer(props){
   useEffect(() => {
     if(isGameRunning){
       if(props.userInfo.roboPlayer > 0){
-        const time = 5000 / props.userInfo.roboPlayer
+        const time = 2500 / props.userInfo.roboPlayer
         const playForYouTimer = setInterval(() => {
           playForYou()}, time)
           return () => clearInterval(playForYouTimer)

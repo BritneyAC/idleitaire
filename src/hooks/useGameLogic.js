@@ -97,9 +97,7 @@ export default function useGameLogic(props){
       i > 2 && newCards.Columns[3].push(newDeck.pop())
       i > 3 && newCards.Columns[2].push(newDeck.pop())
       i > 4 && newCards.Columns[1].push(newDeck.pop())
-      if(i > 5){
-        newCards.Columns[0].push(newDeck.pop())   
-      }
+      i > 5 && newCards.Columns[0].push(newDeck.pop())
     }
     newCards.Columns.forEach(column => {
       newCards.ShownCards.push(column[column.length - 1])
@@ -277,7 +275,6 @@ export default function useGameLogic(props){
       }}}}
 
   const handleClick = (event) => {
-    console.log(cards)
     searchPlaceable(Number(event.target.id))
   }
 
@@ -307,7 +304,6 @@ export default function useGameLogic(props){
   const undoMove = () => {
     const newCards = {...cards}
     const {cardsMoved, location} = newCards.previousMoves.pop()
-    console.log(cardsMoved[0])
     if(location < 7){
       let removed = removeFromPile(cardsMoved[0]).flat()
       if(newCards.ShownCards[newCards.ShownCards.length - 1] === newCards.Columns[location][newCards.Columns[location].length -1]){
@@ -366,7 +362,9 @@ export default function useGameLogic(props){
     for(let i = 0; i < 7; i++){
       const shown = cards.Columns[i].filter((num) => cards.ShownCards.includes(num))
       for(let j = 0; j < shown.length; j++){
-        if( !prevClicked.includes(shown[j]) && searchPlaceable(shown[j])){
+        if((shown[j] === 13 || shown[j] === 26 || shown[j] === 39 || shown[j] === 52) && shown[j] === cards.Columns[i][0]){
+          return
+        } else if( !prevClicked.includes(shown[j]) && searchPlaceable(shown[j])){
           return true
         }
       }

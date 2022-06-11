@@ -1,26 +1,47 @@
 import { useEffect, useState } from "react"
+import useGameLogic from "./useGameLogic"
 
 export default function useUserInfo(){
+  const [savedRecently, setSavedRecently] = useState(false)
+  // const [movesToResume, setMovesToResume] = useState(0)
   const [userInfo, setUserInfo] = useState({
     userPoints: 0,
     gamesWon: 0,
     roboPlayer: 0,
     playForYou: 0,
-    playForYouToggle: true
+    playForYouToggle: true,
+    timeOfSave: 0
   })
-  useEffect(() => {
-    const save = JSON.parse(localStorage.getItem("userInfo"))
-    if(save !== null){
-      setUserInfo(save)
-    }
-  }, [])
-
   const increasePoints = (points) => {
     setUserInfo(prevInfo => ({
       ...prevInfo, 
       userPoints: prevInfo.userPoints + points
     }))
   }
+  // const {
+  //   StartGame,
+
+  //   playForYou} = useGameLogic({userInfo, increasePoints})
+
+  useEffect(() => {
+    const save = JSON.parse(localStorage.getItem("userInfo"))
+    if(save !== null){
+      setUserInfo(save)
+      // const time = new Date().getTime() 
+      // let movesPassed = 0
+      // if(save.roboPlayer > 0){
+      //   movesPassed = movesPassed + Math.round((time - save.timeOfSave) / (2500 / save.roboPlayer))
+      // }
+      // if(save.playForYou > 0){
+      //   movesPassed = movesPassed + Math.round((time - save.timeOfSave) / (5000 / save.playForYou))
+      // }
+      // setMovesToResume(movesPassed)
+    }
+  }, [])
+
+  // const decreaseMovesToResume = () => {
+  //   setMovesToResume(prevMoves => {if(prevMoves > 0){return prevMoves = prevMoves - 1}})
+  // }
 
 
   const gamesWonIncreased = () => {
@@ -54,7 +75,11 @@ export default function useUserInfo(){
   }
 
   const saveUserInfo = () => {
-    localStorage.setItem("userInfo", JSON.stringify(userInfo))
+    const time = new Date().getTime()
+    const newUserInfo = {...userInfo, timeOfSave: time}
+    localStorage.setItem("userInfo", JSON.stringify(newUserInfo))
+    setSavedRecently(true)
+    setTimeout(() => setSavedRecently(false), 5000)
   }
 
   return {userInfo, 
@@ -63,5 +88,11 @@ export default function useUserInfo(){
     roboPlayerIncreased, 
     playForYouIncreased, 
     togglePFY,
-    saveUserInfo}
+    saveUserInfo,
+    savedRecently,
+    // StartGame,
+    // movesToResume,
+    // playForYou,
+    // decreaseMovesToResume
+  }
 }
