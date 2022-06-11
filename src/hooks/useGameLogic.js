@@ -80,9 +80,7 @@ export default function useGameLogic(props){
   // win condition checker
   useEffect(() =>{
     if(cards.ShownCards.length === 53){
-      props.gamesWonIncreased()
-      setGamePoints(780)
-      RestartGame()
+      Win()
     }
   }, [cards])
   
@@ -128,6 +126,14 @@ export default function useGameLogic(props){
     setDeck([])
     setIsGameRunning(false)
     props.increasePoints(gamePoints)
+  }
+
+  const Win = () => {
+    setDeck([])
+    setIsGameRunning(false)
+    props.gamesWonIncreased()
+    props.increasePoints(780)
+    StartGame()
   }
 
   // Removes and returns the passed card from where it is currently stored 
@@ -363,7 +369,6 @@ export default function useGameLogic(props){
       const shown = cards.Columns[i].filter((num) => cards.ShownCards.includes(num))
       for(let j = 0; j < shown.length; j++){
         if((shown[j] === 13 || shown[j] === 26 || shown[j] === 39 || shown[j] === 52) && shown[j] === cards.Columns[i][0]){
-          return
         } else if( !prevClicked.includes(shown[j]) && searchPlaceable(shown[j])){
           return true
         }
