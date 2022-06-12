@@ -410,7 +410,7 @@ export default function useGameLogic(props){
   }, [isGameRunning, props.userInfo.playForYou, props.userInfo.playForYouToggle, deck, cards, count])
 
   useEffect(()=>{
-    if(count > 200){
+    if(count > 155){
       RestartGame()
     }
   },[isGameRunning, count])
