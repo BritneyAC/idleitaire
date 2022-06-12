@@ -16,6 +16,7 @@ function App() {
     roboPlayerIncreased,
     playForYouIncreased,
     togglePFY,
+    name,
     // StartGame,
     // playForYou,
     // movesToResume,
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <div className="app">
+      <head><title>{name}</title></head>
       <header className="app-header">
       </header>
       <main className="main" >

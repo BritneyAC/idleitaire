@@ -3,6 +3,7 @@ import useGameLogic from "./useGameLogic"
 
 export default function useUserInfo(){
   const [savedRecently, setSavedRecently] = useState(false)
+  const [name, setName] = useState("Idleitaire")
   // const [movesToResume, setMovesToResume] = useState(0)
   const [userInfo, setUserInfo] = useState({
     userPoints: 0,
@@ -18,6 +19,23 @@ export default function useUserInfo(){
       userPoints: prevInfo.userPoints + points
     }))
   }
+
+  useEffect(() => {
+    const roboPlayerCost = Math.ceil(
+      Math.log((userInfo.roboPlayer + 1) * 3) * 
+      (userInfo.roboPlayer + 1) * 40) * 10
+    const pFYCost = Math.ceil(
+      Math.log((userInfo.playForYou + 1) * 6) * 
+      (userInfo.playForYou + 1) * 80) * 10
+      if(userInfo.userPoints > pFYCost || userInfo.userPoints > roboPlayerCost){
+      console.log(pFYCost, roboPlayerCost)
+      const notification = setInterval(()=>{setName(prevName => prevName === "Idleitaire" ? "Upgrade Available" : "Idleitaire")},4000)
+      return () => clearInterval(notification)
+    } else if(name !== "Idleitaire"){
+      setName("Idleitaire")
+    }
+  },[userInfo])
+
   // const {
   //   StartGame,
 
@@ -90,6 +108,7 @@ export default function useUserInfo(){
     togglePFY,
     saveUserInfo,
     savedRecently,
+    name,
     // StartGame,
     // movesToResume,
     // playForYou,

@@ -10,6 +10,7 @@ export default function UpgradesPage(props){
     }
   }, [props.userInfo.roboPlayer])
 
+
   return(
     <div className="upgrades-page">
       <h1>Upgrades</h1>
