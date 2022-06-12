@@ -195,9 +195,8 @@ button
 
 .board--column
   min-width: 10vw
-  max-width: 13vw
+  max-width: 14vw
   max-height: 100%
-  padding-top: 10%
   
   align-items: center
   justify-self: start
@@ -205,10 +204,12 @@ button
   z-index: 1000
 
 .board--column-0, .board--column-1, .board--column-2, .board--column-3, .board--column-4, .board--column-5, .board--column-6 
-  width: 10vw
+  width: 14vw
   height: 100%
   position: relative
-  display: block
+  display: flex
+  justify-content: center
+  align-items: start
 
 .board--column--card-0, .board--column--card-1, .board--column--card-2, .board--column--card-3, .board--column--card-4, .board--column--card-5, .board--column--card-6, .board--column--card-7, .board--column--card-8, .board--column--card-9, .board--column--card-10, .board--column--card-11, .board--column--card-12, .board--column--card-13, .board--column--card-14, .board--column--card-15, .board--column--card-16, .board--column--card-17, .board--column--card-18, .board--column--card-19, 
   aspect-ratio: 2.5/3.5
@@ -216,10 +217,9 @@ button
   display: flex
   justify-content: center
   align-items: center
-  min-width: 60%
-  max-width: 100%
+  width: Clamp(4rem,14vw,65%)
   position: absolute
-  left: 20%
+  margin-top: 1vh
 
 .board--column--card-0
   z-index: 1000
@@ -227,85 +227,82 @@ button
 
 .board--column--card-1
   z-index: 1001
-  top: 3vh
-
+  top: Min(3vh, 4%)
 .board--column--card-2
   z-index: 1002
-  top: 6vh
-
+  top: Min(6vh, 8%)
 .board--column--card-3
   z-index: 1003
-  top: 9vh
-
+  top: Min(9vh, 12%)
 .board--column--card-4
   z-index: 1004
-  top: 12vh
+  top: Min(12vh, 16%)
 
 .board--column--card-5
   z-index: 1005
-  top: 15vh
+  top: Min(15vh, 20%)
 
 .board--column--card-6
   z-index: 1006
-  top: 18vh
+  top: Min(18vh, 24%)
 
 .board--column--card-7
   z-index: 1007
-  top: 21vh
+  top: Min(21vh, 28%)
 
 .board--column--card-8
   z-index: 1008
-  top: 24vh
+  top: Min(24vh, 32%)
 
 .board--column--card-9
   z-index: 1009
-  top: 27vh
+  top: Min(27vh, 36%)
 
 .board--column--card-10
   z-index: 1010
-  top: 30vh
+  top: Min(30vh, 40%)
 
 .board--column--card-11
   z-index: 1011
-  top: 33vh
+  top: Min(33vh, 44%)
 
 .board--column--card-12
   z-index: 1012
-  top: 36vh
+  top: Min(36vh, 48%)
 
 .board--column--card-13
   z-index: 1013
-  top: 39vh
+  top: Min(39vh, 52%)
 
 .board--column--card-14
   z-index: 1014
-  top: 42vh
+  top: Min(42vh, 56%)
 
 .board--column--card-15
   z-index: 1015
-  top: 45vh
+  top: Min(45vh, 60%)
 
 .board--column--card-16
   z-index: 1016
-  top: 48vh
+  top: Min(48vh, 64%)
 
 .board--column--card-17
   z-index: 1017
-  top: 51vh
+  top: Min(51vh, 68%)
 
 .board--column--card-18
   z-index: 1018
-  top: 54vh
+  top: Min(54vh, 72%)
 
 .board--column--card-19
   z-index: 1019
-  top: 57vh
+  top: Min(57vh, 76%)
 
 .board--main .board--card-front
   border-radius: 5px
-  min-width: 6vw
-  max-width: 10vw 
-  margin-top: -20%
+  min-width: 85%
+  max-width: 100% 
+  align-self: start
   object-fit: contain
 
 .board--cardback
@@ -313,8 +310,9 @@ button
   background: black
 
 .board--main .board--cardback
-  width: 4.8vw
-  margin: 3%
+  margin-top: -30%
+  min-width: 50%
+  max-width: 75%
   object-fit: contain
 
 .board--undo
