@@ -24,5 +24,5 @@ export default function useRoboPlayer(props){
   }, [isGameRunning, props.userInfo.roboPlayer, count, deck, cards])
 
 
-  return {StartGame, gamePoints, count}
+  return {StartGame, gamePoints, count, isGameRunning}
 }

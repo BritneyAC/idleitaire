@@ -60,8 +60,8 @@ export default function useGameLogic(props){
     const shuffled = []
     for(let i = 0; i < newDeck.length; i){
       let randnum = Math.floor(
-            Math.random() * newDeck.length
-          )
+        Math.random() * newDeck.length
+        )
       shuffled.push(
         newDeck.splice(
           randnum, 1
@@ -80,6 +80,8 @@ export default function useGameLogic(props){
   // win condition checker
   useEffect(() =>{
     if(cards.ShownCards.length === 53){
+      console.log(props.gamesWonIncreased)
+      props.gamesWonIncreased()
       Win()
     }
   }, [cards])
@@ -131,8 +133,8 @@ export default function useGameLogic(props){
   const Win = () => {
     setDeck([])
     setIsGameRunning(false)
-    props.gamesWonIncreased()
     props.increasePoints(780)
+    props.saveUserInfo()
     StartGame()
   }
 

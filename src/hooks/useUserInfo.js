@@ -4,7 +4,7 @@ import useGameLogic from "./useGameLogic"
 export default function useUserInfo(){
   const [savedRecently, setSavedRecently] = useState(false)
   const [name, setName] = useState("Idleitaire")
-  // const [movesToResume, setMovesToResume] = useState(0)
+  const [needToResume, setNeedToResume] = useState(false)
   const [userInfo, setUserInfo] = useState({
     userPoints: 0,
     gamesWon: 0,
@@ -28,7 +28,6 @@ export default function useUserInfo(){
       Math.log((userInfo.playForYou + 1) * 6) * 
       (userInfo.playForYou + 1) * 80) * 10
       if(userInfo.userPoints > pFYCost || userInfo.userPoints > roboPlayerCost){
-      console.log(pFYCost, roboPlayerCost)
       const notification = setInterval(()=>{setName(prevName => prevName === "Idleitaire" ? "Upgrade Available" : "Idleitaire")},4000)
       return () => clearInterval(notification)
     } else if(name !== "Idleitaire"){
@@ -36,30 +35,36 @@ export default function useUserInfo(){
     }
   },[userInfo])
 
-  // const {
-  //   StartGame,
-
-  //   playForYou} = useGameLogic({userInfo, increasePoints})
-
+    
   useEffect(() => {
     const save = JSON.parse(localStorage.getItem("userInfo"))
     if(save !== null){
       setUserInfo(save)
-      // const time = new Date().getTime() 
-      // let movesPassed = 0
-      // if(save.roboPlayer > 0){
-      //   movesPassed = movesPassed + Math.round((time - save.timeOfSave) / (2500 / save.roboPlayer))
-      // }
-      // if(save.playForYou > 0){
-      //   movesPassed = movesPassed + Math.round((time - save.timeOfSave) / (5000 / save.playForYou))
-      // }
-      // setMovesToResume(movesPassed)
+      setNeedToResume(true)
     }
   }, [])
-
-  // const decreaseMovesToResume = () => {
-  //   setMovesToResume(prevMoves => {if(prevMoves > 0){return prevMoves = prevMoves - 1}})
-  // }
+  
+  useEffect(() => {
+    if(needToResume){
+      ResumeGame()
+      setNeedToResume(false)
+    }
+    
+  }, [needToResume])
+  
+  const ResumeGame = () => {
+    const time = new Date().getTime() 
+    let movesToResume = 0
+    if(userInfo.roboPlayer > 0){
+      movesToResume = movesToResume + Math.round((time - userInfo.timeOfSave) / (2500 / userInfo.roboPlayer))
+    }
+    if(userInfo.playForYou > 0){
+      movesToResume = movesToResume + Math.round((time - userInfo.timeOfSave) / (5000 / userInfo.playForYou))
+    }
+    while(movesToResume > 100){
+      increasePoints(140)
+      movesToResume = movesToResume - 100
+  }}
 
 
   const gamesWonIncreased = () => {
@@ -109,9 +114,5 @@ export default function useUserInfo(){
     saveUserInfo,
     savedRecently,
     name,
-    // StartGame,
-    // movesToResume,
-    // playForYou,
-    // decreaseMovesToResume
   }
 }
