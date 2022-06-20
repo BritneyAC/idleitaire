@@ -1,0 +1,30 @@
+.stats {
+  box-shadow: 0 0 0.5px 0 black;
+  padding: 3rem 2rem 2rem;
+  height: 40%;
+}
+
+.stats p, .stats h1 {
+  padding: 0 0 1rem;
+  margin: .5rem 0;
+}
+
+.stats > button {
+  cursor: pointer;
+}
+
+.saveMarker {
+  display: inline;
+}
+
+
+@media (max-width: 820px) {
+  .stats {
+    padding-top: 0;
+    height: 80%;
+  }
+  .stats button {
+    margin: 0;
+  }
+
+}
