@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import "./App.css"
 import Board from "./components/Board"
 import Stats from "./components/Stats"
@@ -31,7 +31,7 @@ function App() {
         <header className="app-header">
         </header>
         <main className="main" >
-          <h3 className="show-info" onClick={toggleInfo}>{isInfoShown ? "hide-info" : "show-info"}</h3>
+          <h3 className="show-info" data-info-shown={isInfoShown ? "true" : "false"} onClick={toggleInfo}>{isInfoShown ? "hide-info" : "show-info"}</h3>
           <Board userInfo={userInfo} increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} isInfoShown={isInfoShown} saveUserInfo={saveUserInfo}/>
           <div className="info">
             <Stats userInfo={userInfo} saveUserInfo={saveUserInfo} savedRecently={savedRecently}/>

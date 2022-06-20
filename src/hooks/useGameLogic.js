@@ -80,7 +80,6 @@ export default function useGameLogic(props){
   // win condition checker
   useEffect(() =>{
     if(cards.ShownCards.length === 53){
-      console.log(props.gamesWonIncreased)
       props.gamesWonIncreased()
       Win()
     }
