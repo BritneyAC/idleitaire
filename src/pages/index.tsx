@@ -7,6 +7,7 @@ import Stats from "@/components/Stats"
 import UpgradePage from "@/components/UpgradesPage"
 import useUserInfo from "@/hooks/useUserInfo"
 import styles from "@/styles/Main.module.css"
+import AceOfSpades from "@/cards/14.svg"
 
 const Home: NextPage = () => {
   const [isInfoShown, setIsInfoShown] = useState(true)
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
           content="Idleitaire is a version of solitaire turned into an idle game.
           Play solitaire, buy upgrades, have solitaire play itself"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="14.svg" />
       </Head>
       <main className={styles.main}>
         <h3 className={styles.showInfo} data-info-shown={isInfoShown ? "true" : "false"} onClick={toggleInfo}>{isInfoShown ? "hide-info" : "show-info"}</h3>
