@@ -53,10 +53,10 @@ export default function useUserInfo(){
     const time = new Date().getTime() 
     let movesToResume = 0
     if(userInfo.roboPlayer > 0){
-      movesToResume = movesToResume + Math.min(200 * userInfo.roboPlayer, Math.round((time - userInfo.timeOfSave) / (2500 / userInfo.roboPlayer)))
+      movesToResume = movesToResume + Math.min((200 * userInfo.roboPlayer) + 500, Math.round((time - userInfo.timeOfSave) / (2500 / userInfo.roboPlayer)))
     }
     if(userInfo.playForYou > 0){
-      movesToResume = movesToResume + Math.min(200 * userInfo.playForYou, Math.round((time - userInfo.timeOfSave) / (5000 / userInfo.playForYou)))
+      movesToResume = movesToResume + Math.min((200 * userInfo.playForYou) + 500, Math.round((time - userInfo.timeOfSave) / (5000 / userInfo.playForYou)))
     }
     while(movesToResume > 100){
       increasePoints(140)

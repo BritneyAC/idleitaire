@@ -35,6 +35,8 @@
   .upgradesPage h1 {
     grid-column-start: 1;
     grid-column-end: -1;
+    margin: 0;
+    padding-top: 1rem;
   }
   .upgrade {
     height: 100%;
