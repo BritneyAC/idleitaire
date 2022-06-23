@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import useGameLogic from "./useGameLogic"
 import { trpc } from "@/utils/trpc"
 
 export class User {

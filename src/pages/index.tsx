@@ -1,13 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import { useState } from "react"
 import Board from "@/components/Board"
 import Stats from "@/components/Stats"
 import UpgradePage from "@/components/UpgradesPage"
 import useUserInfo from "@/hooks/useUserInfo"
 import styles from "@/styles/Main.module.css"
-import AceOfSpades from "@/cards/14.svg"
 
 const Home: NextPage = () => {
   const [isInfoShown, setIsInfoShown] = useState(true)
