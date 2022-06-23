@@ -25,7 +25,7 @@
   color: white;
   position: absolute;
   right: 1rem;
-  top: .5rem;
+  top: 0.5rem;
   z-index: 9999;
   cursor: pointer;
 }
@@ -47,9 +47,11 @@
     right: initial;
     left: 4vw;
   }
-  .main[data-info-shown="false"] .show-info {
+
+  .main[data-info-shown=false] .show-info {
     bottom: 4vh;
   }
+
   .info {
     grid-row-start: 2;
     grid-row-end: -1;

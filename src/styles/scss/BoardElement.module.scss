@@ -2,7 +2,7 @@
   position: absolute;
   display: flex;
   align-self: center;
-  height: 90%;
+  height: 100%;
   width: 30%;
 }
 
@@ -30,10 +30,10 @@
   position: absolute;
   align-self: center;
   left: 0;
-  aspect-ratio: 360/540;
+  aspect-ratio: 592/800;
   border: 3px solid white;
   height: 100%;
-  padding: 3px 0;
+  padding: 2px;
   border-radius: 5px;
 }
 
@@ -167,7 +167,7 @@
   top: Min(57vh, 76%);
 }
 
-.mainCardFront {
+.mainCard {
   border-radius: 5px;
   min-width: 85%;
   max-width: 100%;
@@ -175,28 +175,14 @@
   object-fit: contain;
 }
 
-.cardback {
-  padding: 3.5px;
-  background: black;
-  height: 100%;
-}
 
 .mainCardback{
   margin-top: -30%;
   width: 75%;
-  padding: 3px;
-  border-radius: 5px;
-  background: black;
 }
 
 @media(max-width: 820px) {
   .card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17, .card18, .card19 {
     margin-top: 0;
-  }
-  .deck0, .deck1, .deck2, .deck3, .deck4 {
-    height: calc(50% + 1rem);
-  }
-  .deckEmpty {
-    height: calc(50% + 1rem);
   }
 }

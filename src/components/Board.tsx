@@ -1,4 +1,3 @@
-import { card } from "@/hooks/useGameLogic"
 import type { User } from "@/hooks/useUserInfo"
 import useBoardElements from "../hooks/useBoardElements"
 import styles from "@/styles/Board.module.css"

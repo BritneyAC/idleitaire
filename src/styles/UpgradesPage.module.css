@@ -12,7 +12,7 @@
 
 .upgradesPage h1, .upgradesPage p {
   padding: 0;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .upgrade {
@@ -26,23 +26,26 @@
   .upgradesPage {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .30fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
     height: 100%;
     padding: 0;
-    margin: -.5rem 0 0;
+    margin: -0.5rem 0 0;
     justify-content: center;
   }
+
   .upgradesPage h1 {
     grid-column-start: 1;
     grid-column-end: -1;
     margin: 0;
     padding-top: 1rem;
   }
+
   .upgrade {
     height: 100%;
     margin-top: -2rem;
   }
+
   .upgrade button {
-    margin: .25rem auto;
+    margin: 0.25rem auto;
   }
 }

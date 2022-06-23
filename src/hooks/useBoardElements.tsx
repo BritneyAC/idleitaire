@@ -579,7 +579,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           <Cardback
             loading="lazy"
             key={C} 
-            className={styles.cardback}
+            className={styles.mainCardFront}
             onClick={flipCard}
             alt="cardback"
   /></div>}})} else{
@@ -1973,7 +1973,7 @@ if(C === 1){
         return <div className={style}><Cardback
           loading="lazy"
           key={C} 
-          className={styles.mainCardback}
+          className={styles.mainCardFront}
           alt="cardback"
   /></div>}})
   const Column2Elements = cards.Columns[1].map((C: number, index: number) => {
@@ -2440,7 +2440,7 @@ if(C === 1){
         return <div className={style}><Cardback
           loading="lazy"
           key={C} 
-          className={styles.mainCardback}
+          className={styles.mainCardFront}
           alt="cardback"
   /></div>}})
   const Column3Elements = cards.Columns[2].map((C: number, index: number) => {
@@ -2907,7 +2907,7 @@ if(C === 1){
         return <div className={style}><Cardback
           loading="lazy"
           key={C} 
-          className={styles.mainCardback}
+          className={styles.mainCardFront}
           alt="cardback"
   /></div>}})
   const Column4Elements = cards.Columns[3].map((C: number, index: number) => {
@@ -3374,7 +3374,7 @@ if(C === 1){
         return <div className={style}><Cardback
           loading="lazy"
           key={C} 
-          className={styles.mainCardback}
+          className={styles.mainCardFront}
           alt="cardback"
   /></div>}})
   const Column5Elements = cards.Columns[4].map((C: number, index: number) => {
@@ -3841,7 +3841,7 @@ if(C === 1){
         return <div className={style}><Cardback
           loading="lazy"
           key={C} 
-          className={styles.mainCardback}
+          className={styles.mainCardFront}
           alt="cardback"
   /></div>}})
   const Column6Elements = cards.Columns[5].map((C: number, index: number) => {
@@ -4308,7 +4308,7 @@ if(C === 1){
         return <div className={style}><Cardback
           loading="lazy"
           key={C} 
-          className={styles.mainCardback}
+          className={styles.mainCardFront}
           alt="cardback"
   /></div>}})
   const Column7Elements = cards.Columns[6].map((C: number, index: number) => {
@@ -4775,7 +4775,7 @@ if(C === 1){
         return <div className={style}><Cardback
           loading="lazy"
           key={C} 
-          className={styles.mainCardback}
+          className={styles.mainCardFront}
           alt="cardback"
   /></div>}})
   

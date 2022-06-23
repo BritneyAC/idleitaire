@@ -10,11 +10,11 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10fr .5fr;
   box-shadow: 0 0 5px 0 black;
-  & .cardback {
-    margin-top: -30%;
-    min-width: 50%;
-    max-width: 75%;
-    object-fit: contain;
+  & svg{
+    padding: 2px;
+    background-color: black;
+    box-shadow: 0 0 .25rem 0 hsla(0, 0%, 0%, 25%);
+    border-radius: .5rem;
   }
 }
 
@@ -86,7 +86,6 @@
   height: 100%;
   width: 100%;
   margin: auto;
-  border-radius: 5px;
 }
 
 .deck {
@@ -99,7 +98,6 @@
   & img{
     height: 100%;
     width: 100%;
-    border-radius: 5px;
   }
 }
 
@@ -115,7 +113,6 @@
 .playable img {
   height: 100%;
   width: 100%;
-  border-radius: 5px;
 }
 
 .main {
