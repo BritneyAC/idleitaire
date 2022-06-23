@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import useGameLogic from "./useGameLogic"
+import { trpc } from "@/utils/trpc"
 
 export class User {
   userPoints = 0
@@ -14,7 +15,11 @@ export default function useUserInfo(){
   const [name, setName] = useState("Idleitaire")
   const [needToResume, setNeedToResume] = useState(false)
   const [userInfo, setUserInfo] = useState(new User())
+  const {data, isLoading} = trpc.useQuery(["hello", {text: "britney"}])
 
+  if(data) {
+
+  }
   
   useEffect(() => {
     const roboPlayerCost = Math.ceil(
