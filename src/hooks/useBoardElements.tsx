@@ -589,47 +589,11 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     if(index > cards.Playable.length - 4 && index < cards.Playable.length - 1){ 
       let element
       let style
-      if(index === 0){
-        style = styles.card0
-      } else if(index === 1){
-        style = styles.card1
-      } else if(index === 2){
-        style = styles.card2
-      } else if(index === 3){
-        style = styles.card3
-      } else if(index === 4){
-        style = styles.card4
-      } else if(index === 5){
-        style = styles.card5
-      } else if(index === 6){
-        style = styles.card6
-      } else if(index === 7){
-        style = styles.card7
-      } else if(index === 8){
-        style = styles.card8
-      } else if(index === 9){
-        style = styles.card9
-      } else if(index === 10){
-        style = styles.card10
-      } else if(index === 11){
-        style = styles.card11
-      } else if(index === 12){
-        style = styles.card12
-      } else if(index === 13){
-        style = styles.card13
-      } else if(index === 14){
-        style = styles.card14
-      } else if(index === 15){
-        style = styles.card15
-      } else if(index === 16){
-        style = styles.card16
-      } else if(index === 17){
-        style = styles.card17
-      } else if(index === 18){
-        style = styles.card18
-      } else if(index === 19){
-        style = styles.card19
-      }
+      if(C === cards.Playable.length - 3){
+        style = styles.playable1
+      } else if(C === cards.Playable.length - 4){
+        style = styles.playable2
+      } 
       if(C === 1){
         element = <AceOfClubs
           loading="lazy"
@@ -994,52 +958,10 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           id={`${C}`}
           alt={`${C}`}
       />}
-      return <div className={`board--playable-${index - cards.Playable.length + 4}`}>{element}</div>
+      return <div className={style}>{element}</div>
 } else if(index === cards.Playable.length - 1){
       let element
-      let style
-if(index === 0){
-  style = styles.card0
-} else if(index === 1){
-  style = styles.card1
-} else if(index === 2){
-  style = styles.card2
-} else if(index === 3){
-  style = styles.card3
-} else if(index === 4){
-  style = styles.card4
-} else if(index === 5){
-  style = styles.card5
-} else if(index === 6){
-  style = styles.card6
-} else if(index === 7){
-  style = styles.card7
-} else if(index === 8){
-  style = styles.card8
-} else if(index === 9){
-  style = styles.card9
-} else if(index === 10){
-  style = styles.card10
-} else if(index === 11){
-  style = styles.card11
-} else if(index === 12){
-  style = styles.card12
-} else if(index === 13){
-  style = styles.card13
-} else if(index === 14){
-  style = styles.card14
-} else if(index === 15){
-  style = styles.card15
-} else if(index === 16){
-  style = styles.card16
-} else if(index === 17){
-  style = styles.card17
-} else if(index === 18){
-  style = styles.card18
-} else if(index === 19){
-  style = styles.card19
-}
-if(C === 1){
+      if(C === 1){
         element = <AceOfClubs
           loading="lazy"
           key={C}
@@ -1507,7 +1429,7 @@ if(C === 1){
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />} 
-    return <div className={`board--playable-${3}`}>{element}</div>
+    return <div className={styles.playable3}>{element}</div>
 }})
   const Column1Elements = cards.Columns[0].map((C: number, index: number) => {
     let style

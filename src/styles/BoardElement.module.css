@@ -1,9 +1,6 @@
 .deck0, .deck1, .deck2, .deck3, .deck4 {
   position: absolute;
-  display: flex;
-  align-self: center;
   height: 100%;
-  width: 30%;
 }
 
 .deck0 {
@@ -39,9 +36,7 @@
 
 .playable1, .playable2, .playable3 {
   position: absolute;
-  display: flex;
   height: 100%;
-  width: 50%;
 }
 
 .playable1 {
@@ -57,11 +52,6 @@
 }
 
 .card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17, .card18, .card19 {
-  aspect-ratio: 2.5/3.5;
-  overflow: initial;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: clamp(3rem, 18vw, 75%);
   position: absolute;
   margin-top: 1vh;
@@ -165,19 +155,6 @@
 .card19 {
   z-index: 1019;
   top: min(57vh, 76%);
-}
-
-.mainCard {
-  border-radius: 5px;
-  min-width: 85%;
-  max-width: 100%;
-  align-self: flex-start;
-  object-fit: contain;
-}
-
-.mainCardback {
-  margin-top: -30%;
-  width: 75%;
 }
 
 @media (max-width: 820px) {

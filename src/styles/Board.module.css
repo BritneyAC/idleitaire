@@ -12,6 +12,9 @@
   box-shadow: 0 0 5px 0 black;
 }
 .board svg {
+  aspect-ratio: 592/800;
+  height: 100%;
+  width: 100%;
   padding: 2px;
   background-color: black;
   box-shadow: 0 0 0.25rem 0 hsla(0deg, 0%, 0%, 0.25);
@@ -64,9 +67,7 @@
 
 .clubs, .spades, .hearts, .diamonds {
   position: absolute;
-  display: flex;
   height: 100%;
-  width: 30%;
 }
 
 .spades {
@@ -81,12 +82,6 @@
   left: 66%;
 }
 
-.win-piles img {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-}
-
 .deck {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -95,21 +90,11 @@
   display: flex;
   position: relative;
 }
-.deck img {
-  height: 100%;
-  width: 100%;
-}
 
 .playable {
   grid-column-start: 3;
   grid-column-end: -1;
   position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.playable img {
   height: 100%;
   width: 100%;
 }
@@ -121,6 +106,7 @@
   grid-row-end: -1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 100%;
   width: 100%;
   padding: 0;
@@ -130,10 +116,10 @@
   width: 14vw;
   height: 100%;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   transition: 0.15s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .undo {
@@ -177,5 +163,6 @@
 
   .top {
     height: calc(10vh - 2rem);
+    margin-top: -0.5rem;
   }
 }
