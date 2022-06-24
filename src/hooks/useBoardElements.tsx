@@ -589,16 +589,17 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     if(index > cards.Playable.length - 4 && index < cards.Playable.length - 1){ 
       let element
       let style
-      if(C === cards.Playable.length - 3){
-        style = styles.playable1
-      } else if(C === cards.Playable.length - 4){
+      if(index === cards.Playable.length - 2){
         style = styles.playable2
+      } else if(index === cards.Playable.length - 3){
+        style = styles.playable1
       } 
       if(C === 1){
         element = <AceOfClubs
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 2){
@@ -606,6 +607,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 3){
@@ -613,6 +615,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 4){
@@ -620,6 +623,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 5){
@@ -627,6 +631,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 6){
@@ -634,6 +639,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 7){
@@ -641,6 +647,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 8){
@@ -648,6 +655,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 9){
@@ -655,6 +663,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 10){
@@ -662,6 +671,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 11){
@@ -669,6 +679,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 12){
@@ -676,6 +687,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 13){
@@ -683,6 +695,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 14){
@@ -690,6 +703,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 15){
@@ -697,6 +711,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 16){
@@ -704,6 +719,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 17){
@@ -711,6 +727,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 18){
@@ -718,6 +735,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 19){
@@ -725,6 +743,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 20){
@@ -732,6 +751,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 21){
@@ -739,6 +759,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 22){
@@ -746,6 +767,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 23){
@@ -753,6 +775,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 24){
@@ -760,6 +783,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 25){
@@ -767,6 +791,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 26){
@@ -774,6 +799,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 27){
@@ -781,6 +807,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 28){
@@ -788,6 +815,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 29){
@@ -795,6 +823,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 30){
@@ -802,6 +831,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 31){
@@ -809,6 +839,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 32){
@@ -816,6 +847,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 33){
@@ -823,6 +855,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 34){
@@ -830,6 +863,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 35){
@@ -837,6 +871,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 36){
@@ -844,6 +879,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 37){
@@ -851,6 +887,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 38){
@@ -858,6 +895,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 39){
@@ -865,6 +903,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 40){
@@ -872,6 +911,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 41){
@@ -879,6 +919,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 42){
@@ -886,6 +927,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 43){
@@ -893,6 +935,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 44){
@@ -900,6 +943,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 45){
@@ -907,6 +951,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 46){
@@ -914,6 +959,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 47){
@@ -921,6 +967,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 48){
@@ -928,6 +975,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 49){
@@ -935,6 +983,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 50){
@@ -942,6 +991,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 51){
@@ -949,6 +999,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 52){
@@ -956,6 +1007,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           loading="lazy"
           key={C}
           id={`${C}`}
+          className={styles.cardFront}
           alt={`${C}`}
       />}
       return <div className={style}>{element}</div>
