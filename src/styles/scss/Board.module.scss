@@ -12,8 +12,9 @@
   box-shadow: 0 0 5px 0 black;
   & svg{
     aspect-ratio: 592/800;
-    height: 100%;
-    width: 100%;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
     padding: 2px;
     background-color: black;
     box-shadow: 0 0 .25rem 0 hsla(0, 0%, 0%, 25%);
@@ -47,10 +48,10 @@
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: -1;
-  height: 10vh;
+  height: 15vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 5fr 3fr;
+  grid-template-columns: 2fr 1.5fr 1fr;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -62,25 +63,35 @@
   padding: 0;
   margin: 0;
   height: 100%;
-  width: 30vw;
-  margin-right: -20%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 
 .clubs, .spades, .hearts, .diamonds {
-  position: absolute;
-  height: 100%;
+  max-height: 100%;
+  width: 100%;
 }
 
-.spades {
-  left: 22%;
+.clubs{
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
-.hearts {
-  left: 44%;
+.spades{
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
-.diamonds {
-  left: 66%;
+.hearts{
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.diamonds{
+  grid-column-start: 4;
+  grid-column-end: 5;
 }
 
 .deck {
@@ -88,14 +99,17 @@
   grid-column-end: 3;
   height: 100%;
   width: 100%;
-  display: flex;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 10%;
 }
 
 .playable {
   grid-column-start: 3;
   grid-column-end: -1;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
   width: 100%;
 }
@@ -160,6 +174,9 @@
   }
   .board[data-info-shown="false"] .btn {
     align-self: flex-start;
+  }
+  .playspace {
+    grid-template-rows: 1fr 14fr;
   }
   .top{
     height: calc(10vh - 2rem);

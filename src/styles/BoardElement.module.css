@@ -1,58 +1,70 @@
 .deck0, .deck1, .deck2, .deck3, .deck4 {
-  position: absolute;
-  height: 100%;
+  width: 166%;
 }
 
 .deck0 {
-  left: 3%;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .deck1 {
-  left: 9%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-left: -50%;
 }
 
 .deck2 {
-  left: 15%;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  margin-left: -100%;
 }
 
 .deck3 {
-  left: 21%;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  margin-left: -150%;
 }
 
 .deck4 {
-  left: 27%;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  margin-left: -200%;
 }
 
 .deckEmpty {
-  position: absolute;
-  align-self: center;
-  left: 0;
+  grid-column-start: 1;
+  grid-column-end: 2;
   aspect-ratio: 592/800;
   border: 3px solid white;
-  height: 100%;
+  max-height: 100%;
+  width: clamp(5vw, 166%, 11.1vh);
   padding: 2px;
   border-radius: 5px;
 }
 
 .playable1, .playable2, .playable3 {
-  position: absolute;
-  height: 100%;
+  width: 150%;
 }
 
 .playable1 {
-  right: 40%;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .playable2 {
-  right: 20%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-left: -25%;
 }
 
 .playable3 {
-  right: 0;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  margin-left: -50%;
 }
 
 .card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17, .card18, .card19 {
-  width: clamp(3rem, 18vw, 75%);
+  width: clamp(3rem, 60%, 12vh);
   position: absolute;
   margin-top: 1vh;
 }
