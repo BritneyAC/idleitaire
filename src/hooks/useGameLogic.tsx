@@ -33,6 +33,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
   const [count, setCount] = useState(0)
   const [prevClicked, setPrevClicked] = useState<number[]>([])
   const [cards, setCards] = useState(new card())
+  const [gameType, setGameType] = useState("normal")
   
   //points counter
   useEffect(() => {
@@ -95,7 +96,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
     }
   }, [cards])
   
-  const StartColumns = () => {
+  const StartColumns = (type: string = "normal") => {
     const newDeck: number[] = NewDeck()
     const newCards: card = {
       ...new card()
@@ -112,22 +113,31 @@ const useGameLogic = (props: UseGameLogicProps) => {
     newCards.Columns.forEach(column => {
       newCards.ShownCards.push(column[column.length - 1])
     })
-    newCards.Playable.push(Number(newDeck.pop()))
-    newCards.ShownCards.push(newCards.Playable[0])
+    if(type === "normal"){
+      newCards.Playable.push(Number(newDeck.pop()))
+      newCards.ShownCards.push(newCards.Playable[0])
+    } else if(type === "3card"){
+      newCards.Playable.push(Number(newDeck.pop()))
+      newCards.Playable.push(Number(newDeck.pop()))
+      newCards.Playable.push(Number(newDeck.pop()))
+      newCards.ShownCards.push(newCards.Playable[0])
+      newCards.ShownCards.push(newCards.Playable[0])
+      newCards.ShownCards.push(newCards.Playable[0])
+    }
     setDeck(newDeck)
     setCards(newCards)
   }
 
-  const StartGame = () => {
+  const StartGame = (type: string = "normal") => {
+    setGameType(type)
     NewDeck()
     setCards(new card())
     setIsGameRunning(true)
     setGamePoints(0)
-    StartColumns()
+    StartColumns(type)
     setPrevClicked([])
     setCount(0)
   }
-
 
   const RestartGame = () => {
     EndGame()
@@ -306,6 +316,32 @@ const useGameLogic = (props: UseGameLogicProps) => {
     setCards(newCards)
   }
 
+  const flip3Cards = () => {
+    const newDeck = [...deck]
+    const newCards = {...cards}
+    for(let i = 0; i < 3; i++){
+      newCards.Playable.push(Number(newDeck.pop()))
+      newCards.ShownCards.push(newCards.Playable[newCards.Playable.length - 1])
+      newCards.previousMoves.push({cardsMoved: [newCards.Playable[newCards.Playable.length - 1]], location: 12})
+    }
+    setDeck(newDeck)
+    setCards(newCards)
+  }
+
+  const flipSpider = () => {
+    const newDeck = [...deck]
+    const newCards = {...cards}
+    for(let i = 0; i < 7; i++){
+      newCards.Columns[i].push(Number(newDeck.pop()))
+      newCards.ShownCards.push(newCards.Columns[i][newCards.Columns[i].length - 1])
+      newCards.previousMoves.push({cardsMoved: [newCards.Columns[i][newCards.Columns[i].length - 1]], location: i})
+    }
+    setDeck(newDeck)
+    setCards(newCards)
+  }
+
+
+
   const resetDeck = () => {
     const newDeck = [...deck]
     const newCards = {...cards}
@@ -456,12 +492,15 @@ const useGameLogic = (props: UseGameLogicProps) => {
     setPrevClicked,
     handleClick,
     flipCard,
+    flip3Cards,
+    flipSpider,
     resetDeck,
     undoMove,
     isGameRunning,
     RestartGame,
     StartGame,
     EndGame,
+    gameType,
     NewDeck,
     StartColumns,
     searchPlaceable,

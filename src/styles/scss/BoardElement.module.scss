@@ -1,3 +1,37 @@
+.cardHolder{
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.randomCard, .randomCardTwo, .randomCardThree {
+  overflow: visible;
+  width: Clamp(3rem, 10%, 8vw);
+  position: absolute;
+  top: 10%;
+}
+
+.randomCard {
+  left: 38%;
+  z-index: 9999;
+
+}
+
+.randomCardTwo {
+  left: 52%;
+  transform: rotatez(13deg);
+  z-index: 9998;
+
+}
+
+.randomCardThree {
+  left: 24%;
+  transform: rotateZ(-13deg);
+  z-index: 9998;
+}
+
 .deck0, .deck1, .deck2, .deck3, .deck4 {
   width: 166%;
 }
@@ -30,6 +64,19 @@
   grid-column-end: 6;
   margin-left: -200%;
 }
+
+.spiderDeck {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  margin: 0 auto;
+  max-height: 100%;
+  width: auto;
+  & svg {
+    max-height: 100%;
+    width: auto;
+  }
+}
+
 
 .deckEmpty {
   grid-column-start: 1;

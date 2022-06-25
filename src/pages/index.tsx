@@ -37,6 +37,8 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="14.svg" />
       </Head>
+
+      
       <main className={styles.main}>
         <h3 className={styles.showInfo} data-info-shown={isInfoShown ? "true" : "false"} onClick={toggleInfo}>{isInfoShown ? "hide-info" : "show-info"}</h3>
           <Board userInfo={userInfo} increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} isInfoShown={isInfoShown} saveUserInfo={saveUserInfo}/>
