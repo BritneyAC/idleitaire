@@ -168,7 +168,7 @@
 
 .gameSelection {
   overflow: visible;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-content: space-between;
@@ -179,7 +179,7 @@
 
 .gameBtn, .ThreeCardBtn, .spiderBtn {
   position: relative;
-  width: 80%;
+  width: 40%;
   height: 40%;
   border-radius: 4rem;
   background-color: hsl(29deg, 90%, 8%);

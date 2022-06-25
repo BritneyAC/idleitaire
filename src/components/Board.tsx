@@ -92,7 +92,7 @@ const Board: React.FC<BoardProps> = (props) => {
             {ThreeRandCardElement}
             Start 3 Card Game
           </div>
-          <div className={styles.spiderBtn} onClick={()=>StartGame("spider")}>Start Spider Solitaire Game</div>
+          {/* <div className={styles.spiderBtn} onClick={()=>StartGame("spider")}>Start Spider Solitaire Game</div> */}
         </div>
       }
     </div>
