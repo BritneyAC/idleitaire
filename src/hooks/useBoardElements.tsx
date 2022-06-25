@@ -841,20 +841,19 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           style = styles.deck4
         }
         if(gameType === "normal"){
-
           return <div className={style} key={C}>
-          <Cardback
-            onClick={flipCard}
-            alt="cardback"
+            <Cardback
+              onClick={flipCard}
+              alt="cardback"
         /></div>} else if(gameType === "3card"){
           return <div className={style} key={C}>
-          <Cardback
-            onClick={flip3Cards}
-            alt="cardback"
+            <Cardback
+              onClick={flip3Cards}
+              alt="cardback"
           /></div>
         }
 }})}} else{
-    DeckElements = <div key="0" className={styles.deckEmpty} onClick={(() => {gameType !== "spider" && resetDeck()})}></div>
+    DeckElements = gameType !== "spider" && <div key={0} className={styles.deckEmpty} onClick={resetDeck}></div>
   }
   const PlayableElements = cards.Playable.map((C: number, index: number) => {
     if(index > cards.Playable.length - 4 && index < cards.Playable.length - 1){ 
