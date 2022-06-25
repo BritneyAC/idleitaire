@@ -84,118 +84,92 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     if(index === cards.Clubs.length - 1){ 
       if(C === 1){
         return <AceOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 2){
         return <TwoOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 3){
         return <ThreeOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 4){
         return <FourOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 5){
         return <FiveOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 6){
         return <SixOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 7){
         return <SevenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 8){
         return <EightOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 9){
         return <NineOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 10){
         return <TenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 11){
         return <JackOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 12){
         return <QueenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 13){
         return <KingOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
@@ -205,118 +179,92 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     if(index === cards.Spades.length - 1){
       if(C === 14){
         return <AceOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 15){
         return <TwoOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 16){
         return <ThreeOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 17){
         return <FourOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 18){
         return <FiveOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 19){
         return <SixOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 20){
         return <SevenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 21){
         return <EightOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 22){
         return <NineOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 23){
         return <TenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 24){
         return <JackOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 25){
         return <QueenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 26){
         return <KingOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
@@ -325,118 +273,92 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     if(index === cards.Hearts.length - 1){ 
       if(C === 27){
         return <AceOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 28){
         return <TwoOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 29){
         return <ThreeOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 30){
         return <FourOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 31){
         return <FiveOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 32){
         return <SixOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 33){
         return <SevenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 34){
         return <EightOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 35){
         return <NineOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 36){
         return <TenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 37){
         return <JackOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 38){
         return <QueenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 39){
         return <KingOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
@@ -445,118 +367,92 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     if(index === cards.Diamonds.length - 1){ 
       if(C === 40){
         return <AceOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 41){
         return <TwoOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 42){
         return <ThreeOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 43){
         return <FourOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 44){
         return <FiveOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 45){
         return <SixOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 46){
         return <SevenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 47){
         return <EightOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 48){
         return <NineOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 49){
         return <TenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 50){
         return <JackOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 51){
         return <QueenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 52){
         return <KingOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
   />}}})
@@ -575,15 +471,12 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         } else if(index === 4){
           style = styles.deck4
         }
-        return <div className={style}>
+        return <div className={style} key={C}>
           <Cardback
-            loading="lazy"
-            key={C} 
-            className={styles.mainCardFront}
             onClick={flipCard}
             alt="cardback"
   /></div>}})} else{
-    DeckElements = <div className={styles.deckEmpty} onClick={resetDeck}></div>
+    DeckElements = <div key="0" className={styles.deckEmpty} onClick={resetDeck}></div>
   }
   const PlayableElements = cards.Playable.map((C: number, index: number) => {
     if(index > cards.Playable.length - 4 && index < cards.Playable.length - 1){ 
@@ -596,418 +489,314 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       } 
       if(C === 1){
         element = <AceOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 2){
         element = <TwoOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 3){
         element = <ThreeOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 4){
         element = <FourOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 5){
         element = <FiveOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 6){
         element = <SixOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 7){
         element = <SevenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 8){
         element = <EightOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 9){
         element = <NineOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 10){
         element = <TenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 11){
         element = <JackOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 12){
         element = <QueenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 13){
         element = <KingOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 14){
         element = <AceOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 15){
         element = <TwoOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 16){
         element = <ThreeOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 17){
         element = <FourOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 18){
         element = <FiveOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 19){
         element = <SixOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 20){
         element = <SevenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 21){
         element = <EightOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 22){
         element = <NineOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 23){
         element = <TenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 24){
         element = <JackOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 25){
         element = <QueenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 26){
         element = <KingOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 27){
         element = <AceOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 28){
         element = <TwoOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 29){
         element = <ThreeOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 30){
         element = <FourOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 31){
         element = <FiveOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 32){
         element = <SixOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 33){
         element = <SevenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 34){
         element = <EightOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 35){
         element = <NineOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 36){
         element = <TenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 37){
         element = <JackOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 38){
         element = <QueenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 39){
         element = <KingOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 40){
         element = <AceOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 41){
         element = <TwoOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 42){
         element = <ThreeOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 43){
         element = <FourOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 44){
         element = <FiveOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 45){
         element = <SixOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 46){
         element = <SevenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 47){
         element = <EightOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 48){
         element = <NineOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 49){
         element = <TenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 50){
         element = <JackOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 51){
         element = <QueenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
         />
       }else if(C === 52){
         element = <KingOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           alt={`${C}`}
       />}
       return <div className={style}>{element}</div>
@@ -1015,469 +804,365 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       let element
       if(C === 1){
         element = <AceOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 2){
         element = <TwoOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 3){
         element = <ThreeOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 4){
         element = <FourOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 5){
         element = <FiveOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 6){
         element = <SixOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 7){
         element = <SevenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 8){
         element = <EightOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 9){
         element = <NineOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 10){
         element = <TenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 11){
         element = <JackOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 12){
         element = <QueenOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 13){
         element = <KingOfClubs
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 14){
         element = <AceOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 15){
         element = <TwoOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 16){
         element = <ThreeOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 17){
         element = <FourOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 18){
         element = <FiveOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 19){
         element = <SixOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 20){
         element = <SevenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 21){
         element = <EightOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 22){
         element = <NineOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 23){
         element = <TenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 24){
         element = <JackOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 25){
         element = <QueenOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 26){
         element = <KingOfSpades
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 27){
         element = <AceOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 28){
         element = <TwoOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 29){
         element = <ThreeOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 30){
         element = <FourOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 31){
         element = <FiveOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 32){
         element = <SixOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 33){
         element = <SevenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 34){
         element = <EightOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 35){
         element = <NineOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 36){
         element = <TenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 37){
         element = <JackOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 38){
         element = <QueenOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 39){
         element = <KingOfHearts
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 40){
         element = <AceOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 41){
         element = <TwoOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 42){
         element = <ThreeOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 43){
         element = <FourOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 44){
         element = <FiveOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 45){
         element = <SixOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 46){
         element = <SevenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 47){
         element = <EightOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 48){
         element = <NineOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 49){
         element = <TenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 50){
         element = <JackOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 51){
         element = <QueenOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />
       }else if(C === 52){
         element = <KingOfDiamonds
-          loading="lazy"
           key={C}
           id={`${C}`}
-          className={styles.cardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
         />} 
@@ -1528,426 +1213,267 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     }
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <div className={style}><AceOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 2){
-        return <div className={style}><TwoOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 3){
-        return <div className={style}><ThreeOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 4){
-        return <div className={style}><FourOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 5){
-        return <div className={style}><FiveOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 6){
-        return <div className={style}><SixOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 7){
-        return <div className={style}><SevenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 8){
-        return <div className={style}><EightOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 9){
-        return <div className={style}><NineOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 10){
-        return <div className={style}><TenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 11){
-        return <div className={style}><JackOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 12){
-        return <div className={style}><QueenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 13){
-        return <div className={style}><KingOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 14){
-        return <div className={style}><AceOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 15){
-        return <div className={style}><TwoOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 16){
-        return <div className={style}><ThreeOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 17){
-        return <div className={style}><FourOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
-        onClick={()=>handleClick(C)}
+          onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 18){
-        return <div className={style}><FiveOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 19){
-        return <div className={style}><SixOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 20){
-        return <div className={style}><SevenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 21){
-        return <div className={style}><EightOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 22){
-        return <div className={style}><NineOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 23){
-        return <div className={style}><TenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 24){
-        return <div className={style}><JackOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 25){
-        return <div className={style}><QueenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 26){
-        return <div className={style}><KingOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 27){
-        return <div className={style}><AceOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 28){
-        return <div className={style}><TwoOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 29){
-        return <div className={style}><ThreeOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 30){
-        return <div className={style}><FourOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 31){
-        return <div className={style}><FiveOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 32){
-        return <div className={style}><SixOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 33){
-        return <div className={style}><SevenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 34){
-        return <div className={style}><EightOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 35){
-        return <div className={style}><NineOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 36){
-        return <div className={style}><TenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 37){
-        return <div className={style}><JackOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 38){
-        return <div className={style}><QueenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 39){
-        return <div className={style}><KingOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 40){
-        return <div className={style}><AceOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 41){
-        return <div className={style}><TwoOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 42){
-        return <div className={style}><ThreeOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 43){
-        return <div className={style}><FourOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 44){
-        return <div className={style}><FiveOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 45){
-        return <div className={style}><SixOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 46){
-        return <div className={style}><SevenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 47){
-        return <div className={style}><EightOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 48){
-        return <div className={style}><NineOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 49){
-        return <div className={style}><TenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 50){
-        return <div className={style}><JackOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 51){
-        return <div className={style}><QueenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 52){
-        return <div className={style}><KingOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}}else{
-        return <div className={style}><Cardback
-          loading="lazy"
-          key={C} 
-          className={styles.mainCardFront}
+        return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
   const Column2Elements = cards.Columns[1].map((C: number, index: number) => {
@@ -1995,426 +1521,267 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     }
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <div className={style}><AceOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 2){
-        return <div className={style}><TwoOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 3){
-        return <div className={style}><ThreeOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 4){
-        return <div className={style}><FourOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 5){
-        return <div className={style}><FiveOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 6){
-        return <div className={style}><SixOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 7){
-        return <div className={style}><SevenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 8){
-        return <div className={style}><EightOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 9){
-        return <div className={style}><NineOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 10){
-        return <div className={style}><TenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 11){
-        return <div className={style}><JackOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 12){
-        return <div className={style}><QueenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 13){
-        return <div className={style}><KingOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 14){
-        return <div className={style}><AceOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 15){
-        return <div className={style}><TwoOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 16){
-        return <div className={style}><ThreeOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 17){
-        return <div className={style}><FourOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
-        onClick={()=>handleClick(C)}
+          onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 18){
-        return <div className={style}><FiveOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 19){
-        return <div className={style}><SixOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 20){
-        return <div className={style}><SevenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 21){
-        return <div className={style}><EightOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 22){
-        return <div className={style}><NineOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 23){
-        return <div className={style}><TenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 24){
-        return <div className={style}><JackOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 25){
-        return <div className={style}><QueenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 26){
-        return <div className={style}><KingOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 27){
-        return <div className={style}><AceOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 28){
-        return <div className={style}><TwoOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 29){
-        return <div className={style}><ThreeOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 30){
-        return <div className={style}><FourOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 31){
-        return <div className={style}><FiveOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 32){
-        return <div className={style}><SixOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 33){
-        return <div className={style}><SevenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 34){
-        return <div className={style}><EightOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 35){
-        return <div className={style}><NineOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 36){
-        return <div className={style}><TenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 37){
-        return <div className={style}><JackOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 38){
-        return <div className={style}><QueenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 39){
-        return <div className={style}><KingOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 40){
-        return <div className={style}><AceOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 41){
-        return <div className={style}><TwoOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 42){
-        return <div className={style}><ThreeOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 43){
-        return <div className={style}><FourOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 44){
-        return <div className={style}><FiveOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 45){
-        return <div className={style}><SixOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 46){
-        return <div className={style}><SevenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 47){
-        return <div className={style}><EightOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 48){
-        return <div className={style}><NineOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 49){
-        return <div className={style}><TenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 50){
-        return <div className={style}><JackOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 51){
-        return <div className={style}><QueenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 52){
-        return <div className={style}><KingOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}}else{
-        return <div className={style}><Cardback
-          loading="lazy"
-          key={C} 
-          className={styles.mainCardFront}
+        return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
   const Column3Elements = cards.Columns[2].map((C: number, index: number) => {
@@ -2462,426 +1829,267 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     }
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <div className={style}><AceOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 2){
-        return <div className={style}><TwoOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 3){
-        return <div className={style}><ThreeOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 4){
-        return <div className={style}><FourOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 5){
-        return <div className={style}><FiveOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 6){
-        return <div className={style}><SixOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 7){
-        return <div className={style}><SevenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 8){
-        return <div className={style}><EightOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 9){
-        return <div className={style}><NineOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 10){
-        return <div className={style}><TenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 11){
-        return <div className={style}><JackOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 12){
-        return <div className={style}><QueenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 13){
-        return <div className={style}><KingOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 14){
-        return <div className={style}><AceOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 15){
-        return <div className={style}><TwoOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 16){
-        return <div className={style}><ThreeOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 17){
-        return <div className={style}><FourOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
-        onClick={()=>handleClick(C)}
+          onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 18){
-        return <div className={style}><FiveOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 19){
-        return <div className={style}><SixOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 20){
-        return <div className={style}><SevenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 21){
-        return <div className={style}><EightOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 22){
-        return <div className={style}><NineOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 23){
-        return <div className={style}><TenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 24){
-        return <div className={style}><JackOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 25){
-        return <div className={style}><QueenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 26){
-        return <div className={style}><KingOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 27){
-        return <div className={style}><AceOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 28){
-        return <div className={style}><TwoOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 29){
-        return <div className={style}><ThreeOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 30){
-        return <div className={style}><FourOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 31){
-        return <div className={style}><FiveOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 32){
-        return <div className={style}><SixOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 33){
-        return <div className={style}><SevenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 34){
-        return <div className={style}><EightOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 35){
-        return <div className={style}><NineOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 36){
-        return <div className={style}><TenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 37){
-        return <div className={style}><JackOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 38){
-        return <div className={style}><QueenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 39){
-        return <div className={style}><KingOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 40){
-        return <div className={style}><AceOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 41){
-        return <div className={style}><TwoOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 42){
-        return <div className={style}><ThreeOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 43){
-        return <div className={style}><FourOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 44){
-        return <div className={style}><FiveOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 45){
-        return <div className={style}><SixOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 46){
-        return <div className={style}><SevenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 47){
-        return <div className={style}><EightOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 48){
-        return <div className={style}><NineOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 49){
-        return <div className={style}><TenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 50){
-        return <div className={style}><JackOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 51){
-        return <div className={style}><QueenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 52){
-        return <div className={style}><KingOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}}else{
-        return <div className={style}><Cardback
-          loading="lazy"
-          key={C} 
-          className={styles.mainCardFront}
+        return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
   const Column4Elements = cards.Columns[3].map((C: number, index: number) => {
@@ -2929,426 +2137,267 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     }
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <div className={style}><AceOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 2){
-        return <div className={style}><TwoOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 3){
-        return <div className={style}><ThreeOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 4){
-        return <div className={style}><FourOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 5){
-        return <div className={style}><FiveOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 6){
-        return <div className={style}><SixOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 7){
-        return <div className={style}><SevenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 8){
-        return <div className={style}><EightOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 9){
-        return <div className={style}><NineOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 10){
-        return <div className={style}><TenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 11){
-        return <div className={style}><JackOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 12){
-        return <div className={style}><QueenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 13){
-        return <div className={style}><KingOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 14){
-        return <div className={style}><AceOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 15){
-        return <div className={style}><TwoOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 16){
-        return <div className={style}><ThreeOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 17){
-        return <div className={style}><FourOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
-        onClick={()=>handleClick(C)}
+          onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 18){
-        return <div className={style}><FiveOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 19){
-        return <div className={style}><SixOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 20){
-        return <div className={style}><SevenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 21){
-        return <div className={style}><EightOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 22){
-        return <div className={style}><NineOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 23){
-        return <div className={style}><TenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 24){
-        return <div className={style}><JackOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 25){
-        return <div className={style}><QueenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 26){
-        return <div className={style}><KingOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 27){
-        return <div className={style}><AceOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 28){
-        return <div className={style}><TwoOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 29){
-        return <div className={style}><ThreeOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 30){
-        return <div className={style}><FourOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 31){
-        return <div className={style}><FiveOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 32){
-        return <div className={style}><SixOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 33){
-        return <div className={style}><SevenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 34){
-        return <div className={style}><EightOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 35){
-        return <div className={style}><NineOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 36){
-        return <div className={style}><TenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 37){
-        return <div className={style}><JackOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 38){
-        return <div className={style}><QueenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 39){
-        return <div className={style}><KingOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 40){
-        return <div className={style}><AceOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 41){
-        return <div className={style}><TwoOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 42){
-        return <div className={style}><ThreeOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 43){
-        return <div className={style}><FourOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 44){
-        return <div className={style}><FiveOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 45){
-        return <div className={style}><SixOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 46){
-        return <div className={style}><SevenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 47){
-        return <div className={style}><EightOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 48){
-        return <div className={style}><NineOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 49){
-        return <div className={style}><TenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 50){
-        return <div className={style}><JackOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 51){
-        return <div className={style}><QueenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 52){
-        return <div className={style}><KingOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}}else{
-        return <div className={style}><Cardback
-          loading="lazy"
-          key={C} 
-          className={styles.mainCardFront}
+        return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
   const Column5Elements = cards.Columns[4].map((C: number, index: number) => {
@@ -3396,426 +2445,267 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     }
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <div className={style}><AceOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 2){
-        return <div className={style}><TwoOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 3){
-        return <div className={style}><ThreeOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 4){
-        return <div className={style}><FourOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 5){
-        return <div className={style}><FiveOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 6){
-        return <div className={style}><SixOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 7){
-        return <div className={style}><SevenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 8){
-        return <div className={style}><EightOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 9){
-        return <div className={style}><NineOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 10){
-        return <div className={style}><TenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 11){
-        return <div className={style}><JackOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 12){
-        return <div className={style}><QueenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 13){
-        return <div className={style}><KingOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 14){
-        return <div className={style}><AceOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 15){
-        return <div className={style}><TwoOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 16){
-        return <div className={style}><ThreeOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 17){
-        return <div className={style}><FourOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
-        onClick={()=>handleClick(C)}
+          onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 18){
-        return <div className={style}><FiveOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 19){
-        return <div className={style}><SixOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 20){
-        return <div className={style}><SevenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 21){
-        return <div className={style}><EightOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 22){
-        return <div className={style}><NineOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 23){
-        return <div className={style}><TenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 24){
-        return <div className={style}><JackOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 25){
-        return <div className={style}><QueenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 26){
-        return <div className={style}><KingOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 27){
-        return <div className={style}><AceOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 28){
-        return <div className={style}><TwoOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 29){
-        return <div className={style}><ThreeOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 30){
-        return <div className={style}><FourOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 31){
-        return <div className={style}><FiveOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 32){
-        return <div className={style}><SixOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 33){
-        return <div className={style}><SevenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 34){
-        return <div className={style}><EightOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 35){
-        return <div className={style}><NineOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 36){
-        return <div className={style}><TenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 37){
-        return <div className={style}><JackOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 38){
-        return <div className={style}><QueenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 39){
-        return <div className={style}><KingOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 40){
-        return <div className={style}><AceOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 41){
-        return <div className={style}><TwoOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 42){
-        return <div className={style}><ThreeOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 43){
-        return <div className={style}><FourOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 44){
-        return <div className={style}><FiveOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 45){
-        return <div className={style}><SixOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 46){
-        return <div className={style}><SevenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 47){
-        return <div className={style}><EightOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 48){
-        return <div className={style}><NineOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 49){
-        return <div className={style}><TenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 50){
-        return <div className={style}><JackOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 51){
-        return <div className={style}><QueenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 52){
-        return <div className={style}><KingOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}}else{
-        return <div className={style}><Cardback
-          loading="lazy"
-          key={C} 
-          className={styles.mainCardFront}
+        return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
   const Column6Elements = cards.Columns[5].map((C: number, index: number) => {
@@ -3863,426 +2753,267 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     }
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <div className={style}><AceOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 2){
-        return <div className={style}><TwoOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 3){
-        return <div className={style}><ThreeOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 4){
-        return <div className={style}><FourOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 5){
-        return <div className={style}><FiveOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 6){
-        return <div className={style}><SixOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 7){
-        return <div className={style}><SevenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 8){
-        return <div className={style}><EightOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 9){
-        return <div className={style}><NineOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 10){
-        return <div className={style}><TenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 11){
-        return <div className={style}><JackOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 12){
-        return <div className={style}><QueenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 13){
-        return <div className={style}><KingOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 14){
-        return <div className={style}><AceOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 15){
-        return <div className={style}><TwoOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 16){
-        return <div className={style}><ThreeOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 17){
-        return <div className={style}><FourOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
-        onClick={()=>handleClick(C)}
+          onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 18){
-        return <div className={style}><FiveOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 19){
-        return <div className={style}><SixOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 20){
-        return <div className={style}><SevenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 21){
-        return <div className={style}><EightOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 22){
-        return <div className={style}><NineOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 23){
-        return <div className={style}><TenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 24){
-        return <div className={style}><JackOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 25){
-        return <div className={style}><QueenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 26){
-        return <div className={style}><KingOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 27){
-        return <div className={style}><AceOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 28){
-        return <div className={style}><TwoOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 29){
-        return <div className={style}><ThreeOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 30){
-        return <div className={style}><FourOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 31){
-        return <div className={style}><FiveOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 32){
-        return <div className={style}><SixOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 33){
-        return <div className={style}><SevenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 34){
-        return <div className={style}><EightOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 35){
-        return <div className={style}><NineOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 36){
-        return <div className={style}><TenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 37){
-        return <div className={style}><JackOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 38){
-        return <div className={style}><QueenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 39){
-        return <div className={style}><KingOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 40){
-        return <div className={style}><AceOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 41){
-        return <div className={style}><TwoOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 42){
-        return <div className={style}><ThreeOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 43){
-        return <div className={style}><FourOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 44){
-        return <div className={style}><FiveOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 45){
-        return <div className={style}><SixOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 46){
-        return <div className={style}><SevenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 47){
-        return <div className={style}><EightOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 48){
-        return <div className={style}><NineOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 49){
-        return <div className={style}><TenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 50){
-        return <div className={style}><JackOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 51){
-        return <div className={style}><QueenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 52){
-        return <div className={style}><KingOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}}else{
-        return <div className={style}><Cardback
-          loading="lazy"
-          key={C} 
-          className={styles.mainCardFront}
+        return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
   const Column7Elements = cards.Columns[6].map((C: number, index: number) => {
@@ -4330,426 +3061,267 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     }
     if(cards.ShownCards.includes(C)){
       if(C === 1){
-        return <div className={style}><AceOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 2){
-        return <div className={style}><TwoOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 3){
-        return <div className={style}><ThreeOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 4){
-        return <div className={style}><FourOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 5){
-        return <div className={style}><FiveOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 6){
-        return <div className={style}><SixOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 7){
-        return <div className={style}><SevenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 8){
-        return <div className={style}><EightOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 9){
-        return <div className={style}><NineOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 10){
-        return <div className={style}><TenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 11){
-        return <div className={style}><JackOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 12){
-        return <div className={style}><QueenOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 13){
-        return <div className={style}><KingOfClubs
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfClubs
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 14){
-        return <div className={style}><AceOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 15){
-        return <div className={style}><TwoOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 16){
-        return <div className={style}><ThreeOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 17){
-        return <div className={style}><FourOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
-        onClick={()=>handleClick(C)}
+          onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 18){
-        return <div className={style}><FiveOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 19){
-        return <div className={style}><SixOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 20){
-        return <div className={style}><SevenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 21){
-        return <div className={style}><EightOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 22){
-        return <div className={style}><NineOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 23){
-        return <div className={style}><TenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 24){
-        return <div className={style}><JackOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 25){
-        return <div className={style}><QueenOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 26){
-        return <div className={style}><KingOfSpades
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfSpades
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 27){
-        return <div className={style}><AceOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 28){
-        return <div className={style}><TwoOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 29){
-        return <div className={style}><ThreeOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 30){
-        return <div className={style}><FourOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 31){
-        return <div className={style}><FiveOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 32){
-        return <div className={style}><SixOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 33){
-        return <div className={style}><SevenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 34){
-        return <div className={style}><EightOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 35){
-        return <div className={style}><NineOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 36){
-        return <div className={style}><TenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 37){
-        return <div className={style}><JackOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 38){
-        return <div className={style}><QueenOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 39){
-        return <div className={style}><KingOfHearts
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfHearts
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 40){
-        return <div className={style}><AceOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><AceOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 41){
-        return <div className={style}><TwoOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TwoOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 42){
-        return <div className={style}><ThreeOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><ThreeOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 43){
-        return <div className={style}><FourOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FourOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 44){
-        return <div className={style}><FiveOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><FiveOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 45){
-        return <div className={style}><SixOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SixOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 46){
-        return <div className={style}><SevenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><SevenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 47){
-        return <div className={style}><EightOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><EightOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 48){
-        return <div className={style}><NineOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><NineOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 49){
-        return <div className={style}><TenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><TenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 50){
-        return <div className={style}><JackOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><JackOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 51){
-        return <div className={style}><QueenOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><QueenOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}else if(C === 52){
-        return <div className={style}><KingOfDiamonds
-          loading="lazy"
-          key={C}
+        return <div className={style} key={C}><KingOfDiamonds
           id={`${C}`}
-          className={styles.mainCardFront}
           onClick={()=>handleClick(C)}
           alt={`${C}`}
       /></div>}}else{
-        return <div className={style}><Cardback
-          loading="lazy"
-          key={C} 
-          className={styles.mainCardFront}
+        return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
   
