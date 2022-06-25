@@ -1,6 +1,8 @@
 .cardHolder{
   overflow: visible;
   display: flex;
+  align-self: center;
+  justify-self: center;
   align-items: center;
   justify-content: space-between;
 }
@@ -8,27 +10,27 @@
 
 .randomCard, .randomCardTwo, .randomCardThree {
   overflow: visible;
-  width: Clamp(3rem, 10%, 8vw);
+  width: 5vw;
   position: absolute;
   top: 10%;
 }
 
 .randomCard {
-  left: 38%;
+  left: calc(50% - 2.5vw);
   z-index: 9999;
 
 }
 
 .randomCardTwo {
-  left: 52%;
-  transform: rotatez(13deg);
+  left: calc(62% - 2.5vw);
+  transform: rotatez(28deg);
   z-index: 9998;
 
 }
 
 .randomCardThree {
-  left: 24%;
-  transform: rotateZ(-13deg);
+  left: calc(40% - 2.5vw);
+  transform: rotateZ(-18deg);
   z-index: 9998;
 }
 

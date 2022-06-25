@@ -407,17 +407,34 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     };
     const elementMaker = () => {
       const elements = [];
+      const randoms: number[] = []
       for(let i = 0; i < amount; i++) {
         let style: string
+        let random: number
         if(i === 0){
           style = styles.randomCard;
-          elements.push(cardMaker(Math.ceil(Math.random() * 52), style))
+          random = Math.ceil(Math.random() * 52)
+          while(randoms.includes(random)){
+            random = Math.ceil(Math.random() * 52)
+          }
+          randoms.push(random)
+          elements.push(cardMaker(randoms[randoms.length - 1], style))
         }else if(i === 1){
           style = styles.randomCardTwo;
-          elements.push(cardMaker(Math.ceil(Math.random() * 52), style))
+          random = Math.ceil(Math.random() * 52)
+          while(randoms.includes(random)){
+            random = Math.ceil(Math.random() * 52)
+          }
+          randoms.push(random)
+          elements.push(cardMaker(randoms[randoms.length - 1], style))
         }else if(i === 2){
           style = styles.randomCardThree;
-          elements.push(cardMaker(Math.ceil(Math.random() * 52), style))
+          random = Math.ceil(Math.random() * 52)
+          while(randoms.includes(random)){
+            random = Math.ceil(Math.random() * 52)
+          }
+          randoms.push(random)
+          elements.push(cardMaker(randoms[randoms.length - 1], style))
         }
       }
       return elements
