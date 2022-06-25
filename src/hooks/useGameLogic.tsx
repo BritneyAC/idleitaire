@@ -443,7 +443,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
     if(searchPlaceable(cards.Playable[cards.Playable.length - 1])){
       return true
     } else if(deck.length > 0){
-      console.log(gameType)
       if(gameType === "normal"){
         flipCard()
         return true
