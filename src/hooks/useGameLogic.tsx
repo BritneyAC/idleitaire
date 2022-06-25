@@ -160,7 +160,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
   }
 
   // Removes and returns the passed card from where it is currently stored 
-  const removeFromPile = (cardToRemove: number) => {
+  const removeFromPile: (card: number)=>number[] = (cardToRemove: number) => {
     const newCards: card = {...cards}
     const removedCards: number[] = []
     if(cards.Playable[cards.Playable.length - 1] === cardToRemove){
@@ -202,10 +202,9 @@ const useGameLogic = (props: UseGameLogicProps) => {
         newCards.previousMoves.push({cardsMoved: [...removedCards.flat()], location: index})
       }
     })
-    if(removedCards.length !== 0){
-      setCards(newCards)
-      return removedCards
-    }
+    setCards(newCards)
+    return removedCards
+    
   }
 
   // checks where the the card can be placed
@@ -320,11 +319,11 @@ const useGameLogic = (props: UseGameLogicProps) => {
   const flip3Cards = () => {
     const newDeck = [...deck]
     const newCards = {...cards}
-    for(let i = 0; i < 3; i++){
+    for(let i = 0; i < Math.min(3, newDeck.length); i++){
       newCards.Playable.push(Number(newDeck.pop()))
       newCards.ShownCards.push(newCards.Playable[newCards.Playable.length - 1])
-      newCards.previousMoves.push({cardsMoved: [newCards.Playable[newCards.Playable.length - 1]], location: 12})
     }
+    newCards.previousMoves.push({cardsMoved: [newCards.Playable[newCards.Playable.length - 1], newCards.Playable[newCards.Playable.length - 2], newCards.Playable[newCards.Playable.length - 3]], location: 12})
     setDeck(newDeck)
     setCards(newCards)
   }
@@ -335,8 +334,16 @@ const useGameLogic = (props: UseGameLogicProps) => {
     for(let i = 0; i < 7; i++){
       newCards.Columns[i].push(Number(newDeck.pop()))
       newCards.ShownCards.push(newCards.Columns[i][newCards.Columns[i].length - 1])
-      newCards.previousMoves.push({cardsMoved: [newCards.Columns[i][newCards.Columns[i].length - 1]], location: i})
     }
+    newCards.previousMoves.push({cardsMoved: [
+      newCards.Columns[0][newCards.Columns[0].length - 1],
+      newCards.Columns[1][newCards.Columns[1].length - 1],
+      newCards.Columns[2][newCards.Columns[2].length - 1],
+      newCards.Columns[3][newCards.Columns[3].length - 1],
+      newCards.Columns[4][newCards.Columns[4].length - 1],
+      newCards.Columns[5][newCards.Columns[5].length - 1],
+      newCards.Columns[6][newCards.Columns[6].length - 1],
+    ], location: 12})
     setDeck(newDeck)
     setCards(newCards)
   }
@@ -397,11 +404,26 @@ const useGameLogic = (props: UseGameLogicProps) => {
           Number(removed[0])
           )
         } else if(location === 12){
-          let removed = [removeFromPile(cardsMoved[0])].flat()
-          newCards.ShownCards.pop()
+          let removed: number[] = []
+          if(gameType === "normal"){
+            removed.push(removeFromPile(cardsMoved[0])[0])
+            newCards.ShownCards.pop()
+          }else if(gameType === "3card"){
+            removed.push(removeFromPile(cardsMoved[0])[2])
+            removed.push(removeFromPile(cardsMoved[0])[1])
+            removed.push(removeFromPile(cardsMoved[0])[0])
+            newCards.ShownCards.pop()
+            newCards.ShownCards.pop()
+            newCards.ShownCards.pop()            
+          }else if(gameType === "spider"){
+            for(let i = 0; i < 7; i++){
+              removed.push(removeFromPile(cardsMoved[0])[i])
+              newCards.ShownCards.pop()
+            }
+          }
         const newDeck = [...deck]
         newDeck.push(
-          Number(removed[0])
+          Number(...removed)
         )
         setDeck(newDeck)
       }
