@@ -442,8 +442,14 @@ const useGameLogic = (props: UseGameLogicProps) => {
     if(searchPlaceable(cards.Playable[cards.Playable.length - 1])){
       return true
     } else if(deck.length > 0){
-      flipCard()
-    } else{
+      if(gameType === "normal"){
+        flipCard()
+      }else if(gameType === "3cards"){
+        flip3Cards()
+      }else if(gameType === "spider"){
+        flipSpider()
+      }
+    } else if(gameType !== "spider"){
       resetDeck()
     }
   }
