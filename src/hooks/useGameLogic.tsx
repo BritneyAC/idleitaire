@@ -1,3 +1,4 @@
+import { type } from "os"
 import React, { useState, useEffect, MouseEventHandler, DetailedHTMLProps, ImgHTMLAttributes } from "react"
 import { User } from "./useUserInfo"
 
@@ -92,7 +93,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
   useEffect(() =>{
     if(cards.ShownCards.length === 53){
       props.gamesWonIncreased()
-      Win()
+      Win(gameType)
     }
   }, [cards])
   
@@ -139,9 +140,9 @@ const useGameLogic = (props: UseGameLogicProps) => {
     setCount(0)
   }
 
-  const RestartGame = () => {
+  const RestartGame = (type: string = "normal") => {
     EndGame()
-    StartGame()
+    StartGame(gameType)
   }
 
   const EndGame = () => {
@@ -150,12 +151,12 @@ const useGameLogic = (props: UseGameLogicProps) => {
     props.increasePoints(gamePoints)
   }
 
-  const Win = () => {
+  const Win = (type: string = "normal") => {
     setDeck([])
     setIsGameRunning(false)
     props.increasePoints(780)
     props.saveUserInfo()
-    StartGame()
+    StartGame(type)
   }
 
   // Removes and returns the passed card from where it is currently stored 
@@ -442,12 +443,16 @@ const useGameLogic = (props: UseGameLogicProps) => {
     if(searchPlaceable(cards.Playable[cards.Playable.length - 1])){
       return true
     } else if(deck.length > 0){
+      console.log(gameType)
       if(gameType === "normal"){
         flipCard()
-      }else if(gameType === "3cards"){
+        return true
+      }else if(gameType === "3card"){
         flip3Cards()
+        return true
       }else if(gameType === "spider"){
         flipSpider()
+        return true
       }
     } else if(gameType !== "spider"){
       resetDeck()
@@ -482,7 +487,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
   useEffect(()=>{
     if(count > 155){
-      RestartGame()
+      RestartGame(gameType)
     }
   },[isGameRunning, count])
 

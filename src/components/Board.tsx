@@ -79,7 +79,7 @@ const Board: React.FC<BoardProps> = (props) => {
           </div>
           {/* hopefully make a confirmation dialog box eventually */}
           <div className={styles.buttons}>
-            <button className={styles.btn} onClick={RestartGame}>Restart Game</button>
+            <button className={styles.btn} onClick={()=>RestartGame()}>Restart Game</button>
             <button className={styles.btn} onClick={EndGame}>End Game</button>
           </div>
         </> :
