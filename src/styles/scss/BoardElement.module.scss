@@ -10,26 +10,26 @@
 
 .randomCard, .randomCardTwo, .randomCardThree {
   overflow: visible;
-  width: 5vw;
+  width: clamp(1rem, 5vw, 8vh);
   position: absolute;
   top: 10%;
 }
 
 .randomCard {
-  left: calc(50% - 2.5vw);
+  left: calc(50% - clamp(.5rem, 2.5vw, 4vh));
   z-index: 9999;
 
 }
 
 .randomCardTwo {
-  left: calc(62% - 2.5vw);
+  left: calc(60% - clamp(.5rem, 2.5vw, 4vh));
   transform: rotatez(28deg);
   z-index: 9998;
 
 }
 
 .randomCardThree {
-  left: calc(40% - 2.5vw);
+  left: calc(40% - clamp(.5rem, 2.5vw, 4vh));
   transform: rotateZ(-18deg);
   z-index: 9998;
 }

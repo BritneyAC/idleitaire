@@ -154,7 +154,11 @@ const useGameLogic = (props: UseGameLogicProps) => {
   const Win = (type: string = "normal") => {
     setDeck([])
     setIsGameRunning(false)
-    props.increasePoints(780)
+    if(type === "normal"){
+      props.increasePoints(780)
+    } else{
+      props.increasePoints(1100)
+    }
     props.saveUserInfo()
     StartGame(type)
   }
