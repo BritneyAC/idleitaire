@@ -319,11 +319,13 @@ const useGameLogic = (props: UseGameLogicProps) => {
   const flip3Cards = () => {
     const newDeck = [...deck]
     const newCards = {...cards}
-    for(let i = 0; i < Math.min(3, newDeck.length); i++){
-      newCards.Playable.push(Number(newDeck.pop()))
-      newCards.ShownCards.push(newCards.Playable[newCards.Playable.length - 1])
+    const moved = []
+    for(let i = 0; i < Math.min(3, newDeck.length + i); i++){
+      moved.push(Number(newDeck.pop()))
+      newCards.Playable.push(moved[i])
+      newCards.ShownCards.push(moved[i])
     }
-    newCards.previousMoves.push({cardsMoved: [newCards.Playable[newCards.Playable.length - 1], newCards.Playable[newCards.Playable.length - 2], newCards.Playable[newCards.Playable.length - 3]], location: 12})
+    newCards.previousMoves.push({cardsMoved: moved, location: 12})
     setDeck(newDeck)
     setCards(newCards)
   }
@@ -409,25 +411,28 @@ const useGameLogic = (props: UseGameLogicProps) => {
             removed.push(removeFromPile(cardsMoved[0])[0])
             newCards.ShownCards.pop()
           }else if(gameType === "3card"){
-            removed.push(removeFromPile(cardsMoved[0])[2])
-            removed.push(removeFromPile(cardsMoved[0])[1])
-            removed.push(removeFromPile(cardsMoved[0])[0])
-            newCards.ShownCards.pop()
-            newCards.ShownCards.pop()
-            newCards.ShownCards.pop()            
+            while(cardsMoved.length > 0){
+              removed.push(removeFromPile(Number(cardsMoved.pop()))[0])
+              newCards.ShownCards.pop()
+              newCards.previousMoves.pop()
+            }
           }else if(gameType === "spider"){
             for(let i = 0; i < 7; i++){
               removed.push(removeFromPile(cardsMoved[0])[i])
               newCards.ShownCards.pop()
+              newCards.previousMoves.pop()
             }
           }
         const newDeck = [...deck]
-        newDeck.push(
-          Number(...removed)
-        )
+        while(removed.length > 0){
+          newDeck.push(
+            Number(removed.pop())
+          )
+
+        }
         setDeck(newDeck)
       }
-      newCards.previousMoves.pop()
+      gameType === "normal" && newCards.previousMoves.pop()
       setCards(newCards)
     }
   }
