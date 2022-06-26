@@ -328,6 +328,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
     newCards.previousMoves.push({cardsMoved: moved, location: 12})
     setDeck(newDeck)
     setCards(newCards)
+    console.log(newCards, newDeck)
   }
 
   const flipSpider = () => {
@@ -361,8 +362,10 @@ const useGameLogic = (props: UseGameLogicProps) => {
         newCards.ShownCards.indexOf(remove), 1)
       newDeck.push(remove)
     }
+    newCards.previousMoves.push({cardsMoved: [], location: 13})
     setDeck(newDeck.reverse())
     setCards(newCards)
+    console.log(newCards.previousMoves)
   }
 
   const undoMove = () => {
@@ -408,18 +411,27 @@ const useGameLogic = (props: UseGameLogicProps) => {
         } else if(location === 12){
           let removed: number[] = []
           if(gameType === "normal"){
-            removed.push(removeFromPile(cardsMoved[0])[0])
-            newCards.ShownCards.pop()
+            console.log(cardsMoved[cardsMoved.length - 1])
+            const CM = cardsMoved.pop()
+            if(typeof CM === "number"){
+              removed.push(removeFromPile(CM)[0])
+              newCards.ShownCards.pop()
+            }
+
           }else if(gameType === "3card"){
             while(cardsMoved.length > 0){
               removed.push(removeFromPile(Number(cardsMoved.pop()))[0])
               newCards.ShownCards.pop()
-              newCards.previousMoves.pop()
+              if(cardsMoved.length > 0){
+                newCards.previousMoves.pop()
+              }
             }
           }else if(gameType === "spider"){
             for(let i = 0; i < 7; i++){
               removed.push(removeFromPile(cardsMoved[0])[i])
               newCards.ShownCards.pop()
+            }
+            if(cardsMoved.length > 1){
               newCards.previousMoves.pop()
             }
           }
@@ -431,9 +443,18 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
         }
         setDeck(newDeck)
+      } else if(location === 13){
+        const newDeck = [...deck]
+        while(newDeck.length > 0){
+          newCards.Playable.push(Number(newDeck.pop()))
+        }
+        setDeck(newDeck)
       }
-      gameType === "normal" && newCards.previousMoves.pop()
+      if(location !== 13){
+        newCards.previousMoves.pop()
+      }
       setCards(newCards)
+      console.log(newCards.previousMoves)
     }
   }
 
