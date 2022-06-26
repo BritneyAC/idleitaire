@@ -332,7 +332,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
     newCards.previousMoves.push({cardsMoved: moved, location: 12})
     setDeck(newDeck)
     setCards(newCards)
-    console.log(newCards, newDeck)
   }
 
   const flipSpider = () => {
@@ -369,7 +368,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
     newCards.previousMoves.push({cardsMoved: [], location: 13})
     setDeck(newDeck.reverse())
     setCards(newCards)
-    console.log(newCards.previousMoves)
   }
 
   const undoMove = () => {
@@ -415,7 +413,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
         } else if(location === 12){
           let removed: number[] = []
           if(gameType === "normal"){
-            console.log(cardsMoved[cardsMoved.length - 1])
             const CM = cardsMoved.pop()
             if(typeof CM === "number"){
               removed.push(removeFromPile(CM)[0])
@@ -458,7 +455,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
         newCards.previousMoves.pop()
       }
       setCards(newCards)
-      console.log(newCards.previousMoves)
     }
   }
 
