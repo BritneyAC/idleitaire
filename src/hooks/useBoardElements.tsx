@@ -439,7 +439,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       }
       return elements
     }
-    return elementMaker().map(element => <div className={styles.cardHolder}>{element}</div>);
+    return elementMaker().map((element, index) => <div key={index + amount} className={styles.cardHolder}>{element}</div>);
   }
 
   const ClubsElements = cards.Clubs.map((C: number, index: number) => {

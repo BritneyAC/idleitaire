@@ -426,7 +426,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
         const newDeck = [...deck]
         while(removed.length > 0){
           newDeck.push(
-            Number(removed.pop())
+            Number(removed.shift())
           )
 
         }

@@ -1,5 +1,5 @@
 .board {
-  padding: 2rem 2rem 1rem;
+  padding: 1rem 1rem;
   grid-row-start: 1;
   grid-row-end: -1;
   grid-column-start: 1;
@@ -8,7 +8,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10fr 0.5fr;
+  grid-template-rows: 10fr 0.8fr;
   box-shadow: 0 0 5px 0 black;
 }
 .board svg {
@@ -153,12 +153,21 @@
 }
 
 .buttons {
-  align-self: center;
+  padding-top: 0.25rem;
+  align-self: flex-end;
+  justify-self: center;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  width: 80%;
+  display: flex;
 }
 
-.btn, .gameBtn, .ThreeCardBtn, .spiderBtn {
+.btn {
+  padding: 1rem;
+  margin: auto;
+}
+
+.gameBtn, .ThreeCardBtn, .spiderBtn {
   padding: 1rem;
   margin: auto;
   align-self: center;
