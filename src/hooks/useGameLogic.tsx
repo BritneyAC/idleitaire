@@ -127,8 +127,8 @@ const useGameLogic = (props: UseGameLogicProps) => {
       newCards.Playable.push(Number(newDeck.pop()))
       newCards.Playable.push(Number(newDeck.pop()))
       newCards.ShownCards.push(newCards.Playable[0])
-      newCards.ShownCards.push(newCards.Playable[0])
-      newCards.ShownCards.push(newCards.Playable[0])
+      newCards.ShownCards.push(newCards.Playable[1])
+      newCards.ShownCards.push(newCards.Playable[2])
     }
     setDeck(newDeck)
     setCards(newCards)
@@ -198,7 +198,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       setCards(newCards)
       return removedCards
     }
-    cards.Columns.forEach((column, index) => {
+    newCards.Columns.forEach((column, index) => {
       if(column.includes(cardToRemove)){
         const indexOfCard = cards.Columns[index].indexOf(cardToRemove)
         const spliceAmount = cards.Columns[index].length - cards.Columns[index].indexOf(cardToRemove)
@@ -209,6 +209,9 @@ const useGameLogic = (props: UseGameLogicProps) => {
             spliceAmount
         ))
         newCards.previousMoves.push({cardsMoved: [...removedCards.flat()], location: index})
+        if(!newCards.ShownCards.includes(column[column.length - 1])){
+          newCards.ShownCards.push(column[column.length - 1])
+        }
       }
     })
     setCards(newCards)
@@ -453,6 +456,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
         const newDeck = [...deck]
         while(newDeck.length > 0){
           newCards.Playable.push(Number(newDeck.pop()))
+          newCards.ShownCards.push(newCards.Playable[newCards.Playable.length - 1])
         }
         setDeck(newDeck)
       }

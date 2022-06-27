@@ -25,18 +25,12 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
   useEffect(() => {
     if(props.currentGame === "normal"){
       if(!isGameRunning){
-        if(props.userInfo.roboPlayer > 0){
+        if(props.roboPlayer > 0){
           StartGame()
         }
       }
-    }else if(props.currentGame === "3Card"){
-      if(!isGameRunning){
-        if(props.userInfo.robo3CardPlayer > 0){
-          StartGame("3Card")
-        }
-      }
     }
-  }, [props.userInfo.roboPlayer, props.userInfo.robo3CardPlayer])
+  }, [props.roboPlayer])
   const {
     roboPlayer,
     playForYou,

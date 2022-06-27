@@ -115,7 +115,7 @@ export default function useUserInfo(){
   }
   
   const roboPlayerIncreased = () => {
-      if(userInfo.userPoints > roboPlayerCost){
+      if(userInfo.userPoints >= roboPlayerCost){
         setUserInfo(prevInfo => ({
           ...prevInfo, 
           userPoints: prevInfo.userPoints - roboPlayerCost,
@@ -123,7 +123,7 @@ export default function useUserInfo(){
   }))}}
   
   const playForYouIncreased = () => {
-    if(userInfo.userPoints > playForYouCost){
+    if(userInfo.userPoints >= playForYouCost){
         setUserInfo(prevInfo => ({
           ...prevInfo, 
           userPoints: prevInfo.userPoints - playForYouCost,
@@ -176,24 +176,18 @@ export default function useUserInfo(){
   }
 
   const robo3CardPlayerIncreased = () => {
-    const cost = Math.ceil(
-      Math.log((userInfo.robo3CardPlayer + 1) * 3) * 
-      (userInfo.robo3CardPlayer + 1) * 40) * 10
-      if(userInfo.user3CardPoints > cost){
-        setUserInfo(prevInfo => ({
-          ...prevInfo, 
-          user3CardPoints: prevInfo.user3CardPoints - cost,
-          Robo3CardPlayer: prevInfo.robo3CardPlayer + 1
+    if(userInfo.user3CardPoints >= robo3CardPlayerCost){
+      setUserInfo(prevInfo => ({
+        ...prevInfo, 
+        user3CardPoints: prevInfo.user3CardPoints - robo3CardPlayerCost,
+        robo3CardPlayer: prevInfo.robo3CardPlayer + 1
   }))}}
 
   const play3CardForYouIncreased = () => {
-    const cost = Math.ceil(
-      Math.log((userInfo.play3CardForYou + 1) * 6) * 
-      (userInfo.play3CardForYou + 1) * 80) * 10
-    if(userInfo.user3CardPoints > cost){
+    if(userInfo.user3CardPoints >= play3CardForYouCost){
         setUserInfo(prevInfo => ({
           ...prevInfo, 
-          user3CardPoints: prevInfo.user3CardPoints - cost,
+          user3CardPoints: prevInfo.user3CardPoints - play3CardForYouCost,
           play3CardForYou: prevInfo.play3CardForYou + 1
   }))}}
 
