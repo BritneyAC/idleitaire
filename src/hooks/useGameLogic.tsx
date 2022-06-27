@@ -43,11 +43,15 @@ const useGameLogic = (props: UseGameLogicProps) => {
   //points counter
   useEffect(() => {
     if(isGameRunning){
+      let amount = 10
+      if(gameType !== "normal"){
+        amount = 15
+      }
       const points = (
         cards.Clubs.length + 
         cards.Spades.length + 
         cards.Hearts.length + 
-        cards.Diamonds.length) * 10 
+        cards.Diamonds.length) * amount
       setGamePoints(points)
     }
   }, [cards])
@@ -89,13 +93,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
     }
     return shuffled
   }
-
-  // const ShuffleDeck = () => {
-  //   const newDeck = []
-  //   const heldDeck = [...deck]
-    
-  //   setDeck(newDeck)
-  // }
 
   // win condition checker
   useEffect(() =>{
