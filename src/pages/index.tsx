@@ -62,7 +62,7 @@ const Home: NextPage = () => {
     }
     if(currentGame === "3card"){
       return (
-        <Board userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increase3CardPoints} gamesWonIncreased={gamesWon3CardIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
+        <Board userInfo={userInfo} roboPlayer={userInfo.robo3CardPlayer} playForYou={userInfo.play3CardForYou} playForYouToggle={userInfo.play3CardForYouToggle}  increasePoints={increase3CardPoints} gamesWonIncreased={gamesWon3CardIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
       )
     }
   }

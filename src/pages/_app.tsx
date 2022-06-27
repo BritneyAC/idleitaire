@@ -5,7 +5,7 @@ import { SessionProvider } from 'next-auth/react'
 import { withTRPC } from "@trpc/next"
 import type { AppRouter } from "@/backend/router"
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+export default function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
       <Component {...pageProps} />
@@ -14,13 +14,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 }
 
 
-export default withTRPC<AppRouter>({
-  config({ ctx }){
-    const url = process.env.NETLIFY_URL
-    ? `https://${process.env.NETLIFY_URL}/api/trpc`
-    : "http://localhost:3000/api/trpc"
+// export default withTRPC<AppRouter>({
+//   config({ ctx }){
+//     const url = process.env.NETLIFY_URL
+//     ? `https://${process.env.NETLIFY_URL}/api/trpc`
+//     : "http://localhost:3000/api/trpc"
 
-    return { url }
-  },
-  ssr: true
-})(MyApp)
+//     return { url }
+//   },
+//   ssr: true
+// })(MyApp)
