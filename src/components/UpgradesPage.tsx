@@ -8,50 +8,62 @@ interface UpgradesPageProps {
   gamesWonIncreased: ()=>void,
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
+  playForYou: number,
+  roboPlayer: number,
+  playForYouToggle: boolean,
+  roboPlayerCost: number,
+  playForYouCost: number,
   roboPlayerIncreased: ()=>void,
   playForYouIncreased: ()=>void,
   togglePFY: ()=>void
+  currentGame: string,
 }
 
 const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
-  const {StartGame, gamePoints, isGameRunning} = useRoboPlayer({...props})
+  const {StartGame, gamePoints, count, isGameRunning} = useRoboPlayer({...props})
 
   useEffect(() => {
-    if(!isGameRunning){
-      if(props.userInfo.roboPlayer > 0){
-        StartGame()
+    if(props.currentGame === "normal"){
+      if(!isGameRunning){
+        if(props.userInfo.roboPlayer > 0){
+          StartGame()
+        }
+      }
+    }else if(props.currentGame === "3Card"){
+      if(!isGameRunning){
+        if(props.userInfo.robo3CardPlayer > 0){
+          StartGame("3Card")
+        }
       }
     }
-  }, [props.userInfo.roboPlayer])
-
-
+  }, [props.userInfo.roboPlayer, props.userInfo.robo3CardPlayer])
+  const {
+    roboPlayer,
+    playForYou,
+    playForYouToggle,
+    roboPlayerIncreased, 
+    playForYouIncreased, 
+    togglePFY, 
+    roboPlayerCost, 
+    playForYouCost
+    } = props
   return(
     <div className={styles.upgradesPage}>
       <h1>Upgrades</h1>
       <div className={styles.upgrade}>
-        <p>RoboPlayer (Owned: {props.userInfo.roboPlayer})</p>
+        <p>RoboPlayer (Owned: {roboPlayer})</p>
         <p>Plays games for you in the backgroud</p>
-        <p>cost {
-          Math.ceil(
-            Math.log(
-              (props.userInfo.roboPlayer + 1) * 3) * 
-              (props.userInfo.roboPlayer + 1) * 40
-        ) * 10}</p>
-        <button onClick={props.roboPlayerIncreased}>Upgrade</button>
+        <p>cost {roboPlayerCost}</p>
+        <button onClick={roboPlayerIncreased}>Upgrade</button>
         <p>Points in current game</p>
         <p>{gamePoints}</p>
       </div>
       <div className={styles.upgrade}>
-        <p>Play For Me (Owned: {props.userInfo.playForYou})</p>
+        <p>Play For Me (Owned: {playForYou})</p>
         <p>Plays the main game for you</p>
-        <p>cost {
-          Math.ceil(
-            Math.log(
-              (props.userInfo.playForYou + 1) * 6) * 
-              (props.userInfo.playForYou + 1) * 80
-        ) * 10}</p>
-        <button onClick={props.playForYouIncreased}>Upgrade</button>
-        {props.userInfo.playForYou > 0 && <button onClick={props.togglePFY}>toggle {props.userInfo.playForYouToggle ? "off" : "on"}</button>}
+        <p>cost {playForYouCost}</p>
+        <button onClick={playForYouIncreased}>Upgrade</button>
+        {Number(playForYou) > 0 && <button onClick={togglePFY}>toggle {playForYouToggle ? "off" : "on"}</button>}
       </div>
     </div>
   )

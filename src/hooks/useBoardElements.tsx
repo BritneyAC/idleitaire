@@ -63,7 +63,8 @@ interface UseBoardElementsProps {
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void
   userInfo: User,
-  isInfoShown: boolean
+  isInfoShown: boolean,
+  currentGame: string
 }
 
 const useBoardElements= (props: UseBoardElementsProps) => {

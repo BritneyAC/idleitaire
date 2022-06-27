@@ -25,6 +25,10 @@ interface UseGameLogicProps {
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
   userInfo: User,
+  currentGame: string,
+  playForYou: number,
+  roboPlayer: number,
+  playForYouToggle: boolean,
 }
 
 const useGameLogic = (props: UseGameLogicProps) => {
@@ -34,7 +38,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
   const [count, setCount] = useState(0)
   const [prevClicked, setPrevClicked] = useState<number[]>([])
   const [cards, setCards] = useState(new card())
-  const [gameType, setGameType] = useState("normal")
+  const [gameType, setGameType] = useState(props.currentGame)
   
   //points counter
   useEffect(() => {
@@ -60,6 +64,10 @@ const useGameLogic = (props: UseGameLogicProps) => {
       }
     }
   }, [cards])
+
+  useEffect(() => {
+    StartGame(props.currentGame) 
+  }, [])
 
  
 
@@ -156,7 +164,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
     setIsGameRunning(false)
     if(type === "normal"){
       props.increasePoints(780)
-    } else{
+    } else if(type === "3card"){
       props.increasePoints(1100)
     }
     props.saveUserInfo()
@@ -511,26 +519,20 @@ const useGameLogic = (props: UseGameLogicProps) => {
   useEffect(() => {
     let playForYouTimer
     if(isGameRunning){
-      if(props.userInfo.playForYou > 0){
-        if(props.userInfo.playForYouToggle){
+      if(props.playForYou > 0){
+        if(props.playForYouToggle){
 
-          const time = 5000 / props.userInfo.playForYou
+          const time = 5000 / props.playForYou
           const playForYouTimer = setInterval(() => {
             
             
             playForYou()}, time)
             return () => clearInterval(playForYouTimer)
-          } else{
-            clearInterval(playForYouTimer)
           }
-        } else{
-          clearInterval(playForYouTimer)
         }
-      }else{
-        clearInterval(playForYouTimer)
       }
     
-  }, [isGameRunning, props.userInfo.playForYou, props.userInfo.playForYouToggle, deck, cards, count])
+  }, [isGameRunning, props.playForYou, props.playForYouToggle, deck, cards, count])
 
   useEffect(()=>{
     if(count > 155){
