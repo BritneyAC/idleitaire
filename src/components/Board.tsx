@@ -4,12 +4,15 @@ import styles from "@/styles/Board.module.css"
 import { useEffect, useState } from "react"
 
 interface BoardProps {
-  userInfo: User,
-  increasePoints: (points: number)=>void,
   gamesWonIncreased: ()=>void,
+  increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
+  userInfo: User,
   isInfoShown: boolean,
   currentGame: string,
+  playForYou: number,
+  roboPlayer: number,
+  playForYouToggle: boolean,
   changeCurrentGame: (game: string)=>void,
 }
 

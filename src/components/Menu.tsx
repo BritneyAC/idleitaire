@@ -4,13 +4,16 @@ import styles from "@/styles/Menu.module.css"
 import { useState, useEffect } from "react"
 
 interface MenuProps {
-  userInfo: User,
-  increasePoints: (points: number)=>void,
   gamesWonIncreased: ()=>void,
+  increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
+  userInfo: User,
   isInfoShown: boolean,
-  unlock3Card: ()=>void,
   currentGame: string,
+  playForYou: number,
+  roboPlayer: number,
+  playForYouToggle: boolean,
+  unlock3Card: ()=>void,
   changeCurrentGame: (game: string)=>void,
   unlockGameCost: number,
 }

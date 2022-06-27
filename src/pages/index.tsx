@@ -52,17 +52,17 @@ const Home: NextPage = () => {
   const boardToShow = () => {
     if(currentGame === "menu"){
       return (
-        <Menu userInfo={userInfo} increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} unlock3Card={unlock3Card} unlockGameCost={unlockGameCost} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
+        <Menu userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} unlock3Card={unlock3Card} unlockGameCost={unlockGameCost} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
       )
     }
     if(currentGame === "normal"){
       return (
-        <Board userInfo={userInfo} increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
+        <Board userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
       )
     }
     if(currentGame === "3card"){
       return (
-        <Board userInfo={userInfo} increasePoints={increase3CardPoints} gamesWonIncreased={gamesWon3CardIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
+        <Board userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increase3CardPoints} gamesWonIncreased={gamesWon3CardIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
       )
     }
   }

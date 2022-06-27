@@ -61,10 +61,14 @@ import { Style } from "util"
 interface UseBoardElementsProps {
   gamesWonIncreased: ()=>void,
   increasePoints: (points: number)=>void,
-  saveUserInfo: ()=>void
+  saveUserInfo: ()=>void,
   userInfo: User,
   isInfoShown: boolean,
-  currentGame: string
+  currentGame: string,
+  playForYou: number,
+  roboPlayer: number,
+  playForYouToggle: boolean,
+  changeCurrentGame: (game: string)=>void,
 }
 
 const useBoardElements= (props: UseBoardElementsProps) => {
