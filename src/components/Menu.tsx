@@ -41,7 +41,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       )
     }
     return (
-        <div className={`${styles.gameBtn} ${styles.locked} ${props.userInfo.userPoints < 25000 && styles.tooPoor}`} onClick={props.unlock3Card}>
+        <div className={`${styles.gameBtn} ${styles.locked} ${props.userInfo.userPoints <= props.unlockGameCost && styles.tooPoor}`} onClick={props.unlock3Card}>
           {ThreeRandCardElement}
           Start 3 Card Game
           <div className={styles.unlock}>Unlock this game for {props.unlockGameCost} points</div>
