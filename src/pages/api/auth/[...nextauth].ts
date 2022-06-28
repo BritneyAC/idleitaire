@@ -5,11 +5,11 @@ import { handleAuth } from "@auth0/nextjs-auth0"
 // const hndlAuth = () => handleAuth();
 // export hndlAuth
 
-export default NextAuth({
-  providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
-    }),
-  ],
-})
+// export default NextAuth({
+//   providers: [
+//     GithubProvider({
+//       clientId: process.env.GITHUB_ID,
+//       clientSecret: process.env.GITHUB_SECRET,
+//     }),
+//   ],
+// })

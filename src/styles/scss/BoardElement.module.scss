@@ -7,66 +7,65 @@
   justify-content: space-between;
 }
 
-
-.randomCard, .randomCardTwo, .randomCardThree {
-  overflow: visible;
-  width: clamp(3rem, 8vw, 8vh);
-  position: absolute;
-  top: 10%;
-}
-
 .randomCard {
+  &, &Two, &Three {
+    overflow: visible;
+    width: clamp(3rem, 8vw, 8vh);
+    position: absolute;
+    top: 10%;
+  }
+  
   left: calc(50% - clamp(1.5rem, 4vw, 4vh));
   z-index: 9999;
-
-}
-
-.randomCardTwo {
-  left: calc(60% - clamp(1.5rem, 4vw, 4vh));
-  transform: rotatez(28deg);
-  top: 8%;
-  z-index: 9998;
   
+  &Two {
+    left: calc(60% - clamp(1.5rem, 4vw, 4vh));
+    transform: rotatez(28deg);
+    top: 8%;
+    z-index: 9998;
+  }
+  
+  &Three {
+    left: calc(40% - clamp(1.5rem, 4vw, 4vh));
+    transform: rotateZ(-18deg);
+    top: 9%;
+    z-index: 9998;
+  } 
 }
 
-.randomCardThree {
-  left: calc(40% - clamp(1.5rem, 4vw, 4vh));
-  transform: rotateZ(-18deg);
-  top: 9%;
-  z-index: 9998;
-}
+.deck {
+  &0, &1, &2, &3, &4 {
+    width: 166%;
+  }
+  
+  &0 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 
-.deck0, .deck1, .deck2, .deck3, .deck4 {
-  width: 166%;
-}
+  &1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left: -50%;
+  }
 
-.deck0 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
+  &2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-left: -100%;
+  }
 
-.deck1 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin-left: -50%;
-}
+  &3 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    margin-left: -150%;
+  }
 
-.deck2 {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  margin-left: -100%;
-}
-
-.deck3 {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  margin-left: -150%;
-}
-
-.deck4 {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  margin-left: -200%;
+  &4 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    margin-left: -200%;
+  }
 }
 
 .spiderDeck {
@@ -81,7 +80,6 @@
   }
 }
 
-
 .deckEmpty {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -93,160 +91,166 @@
   border-radius: 5px;
 }
 
-.playable1, .playable2, .playable3 {
-  width: 150%;
+.playable {
+
+  &1, &2, &3 {
+    width: 150%;
+  }
+  
+  &1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  
+  &2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left: -25%;
+  }
+  
+  &3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-left: -50%;
+  }
 }
 
-.playable1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
+.card {
+  &0, &1, &2, &3, &4, &5, &6, &7, &8, &9, &10, &11, &12, &13, &14, &15, &16, &17, &18, &19 {
+    width: Clamp(3rem, 60%, 12vh);
+    position: absolute;
+    margin-top: 1vh;
+  }
+  
+  &0 {
+    z-index: 1000;
+    top: 0;
+  }
 
-.playable2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin-left: -25%;
-}
+  &1 {
+    z-index: 1001;
+    top: Min(3vh, 4%);
+  }
 
-.playable3 {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  margin-left: -50%;
-}
+  &2 {
+    z-index: 1002;
+    top: Min(6vh, 8%);
+  }
 
-.card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17, .card18, .card19 {
-  width: Clamp(3rem, 60%, 12vh);
-  position: absolute;
-  margin-top: 1vh;
-}
+  &3 {
+    z-index: 1003;
+    top: Min(9vh, 12%);
+  }
 
-.card0 {
-  z-index: 1000;
-  top: 0;
-}
+  &4 {
+    z-index: 1004;
+    top: Min(12vh, 16%);
+  }
 
-.card1 {
-  z-index: 1001;
-  top: Min(3vh, 4%);
-}
+  &5 {
+    z-index: 1005;
+    top: Min(15vh, 20%);
+  }
 
-.card2 {
-  z-index: 1002;
-  top: Min(6vh, 8%);
-}
+  &6 {
+    z-index: 1006;
+    top: Min(18vh, 24%);
+  }
 
-.card3 {
-  z-index: 1003;
-  top: Min(9vh, 12%);
-}
+  &7 {
+    z-index: 1007;
+    top: Min(21vh, 28%);
+  }
 
-.card4 {
-  z-index: 1004;
-  top: Min(12vh, 16%);
-}
+  &8 {
+    z-index: 1008;
+    top: Min(24vh, 32%);
+  }
 
-.card5 {
-  z-index: 1005;
-  top: Min(15vh, 20%);
-}
+  &9 {
+    z-index: 1009;
+    top: Min(27vh, 36%);
+  }
 
-.card6 {
-  z-index: 1006;
-  top: Min(18vh, 24%);
-}
+  &10 {
+    z-index: 1010;
+    top: Min(30vh, 40%);
+  }
 
-.card7 {
-  z-index: 1007;
-  top: Min(21vh, 28%);
-}
+  &11 {
+    z-index: 1011;
+    top: Min(33vh, 44%);
+  }
 
-.card8 {
-  z-index: 1008;
-  top: Min(24vh, 32%);
-}
+  &12 {
+    z-index: 1012;
+    top: Min(36vh, 48%);
+  }
 
-.card9 {
-  z-index: 1009;
-  top: Min(27vh, 36%);
-}
+  &13 {
+    z-index: 1013;
+    top: Min(39vh, 52%);
+  }
 
-.card10 {
-  z-index: 1010;
-  top: Min(30vh, 40%);
-}
+  &14 {
+    z-index: 1014;
+    top: Min(42vh, 56%);
+  }
 
-.card11 {
-  z-index: 1011;
-  top: Min(33vh, 44%);
-}
+  &15 {
+    z-index: 1015;
+    top: Min(45vh, 60%);
+  }
 
-.card12 {
-  z-index: 1012;
-  top: Min(36vh, 48%);
-}
+  &16 {
+    z-index: 1016;
+    top: Min(48vh, 64%);
+  }
 
-.card13 {
-  z-index: 1013;
-  top: Min(39vh, 52%);
-}
+  &17 {
+    z-index: 1017;
+    top: Min(51vh, 68%);
+  }
 
-.card14 {
-  z-index: 1014;
-  top: Min(42vh, 56%);
-}
+  &18 {
+    z-index: 1018;
+    top: Min(54vh, 72%);
+  }
 
-.card15 {
-  z-index: 1015;
-  top: Min(45vh, 60%);
-}
-
-.card16 {
-  z-index: 1016;
-  top: Min(48vh, 64%);
-}
-
-.card17 {
-  z-index: 1017;
-  top: Min(51vh, 68%);
-}
-
-.card18 {
-  z-index: 1018;
-  top: Min(54vh, 72%);
-}
-
-.card19 {
-  z-index: 1019;
-  top: Min(57vh, 76%);
+  &19 {
+    z-index: 1019;
+    top: Min(57vh, 76%);
+  }
 }
 
 
 @media(max-width: 820px) {
-  .card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17, .card18, .card19 {
-    margin-top: 0;
+  .card{
+    &0, &1, &2, &3, &4, &5, &6, &7, &8, &9, &10, &11, &12, &13, &14, &15, &16, &17, &18, &19 {
+      margin-top: 0;
+    }
   }
-  .randomCard, .randomCardTwo, .randomCardThree {
-    width: clamp(2rem, 10vw, 4vh);
-  }
-  
+
   .randomCard {
+    &, &Two, &Three {
+      width: clamp(2rem, 10vw, 4vh);
+    }
+
     left: calc(50% - clamp(1rem, 5vw, 2vh));
     z-index: 9999;
-  
-  }
-  
-  .randomCardTwo {
-    left: calc(60% - clamp(1rem, 5vw, 2vh));
-    transform: rotatez(28deg);
-    top: 8%;
-    z-index: 9998;
     
-  }
-  
-  .randomCardThree {
-    left: calc(40% - clamp(1rem, 5vw, 2vh));
-    transform: rotateZ(-18deg);
-    top: 9%;
-    z-index: 9998;
+    &Two {
+      left: calc(60% - clamp(1rem, 5vw, 2vh));
+      transform: rotatez(28deg);
+      top: 8%;
+      z-index: 9998;
+    }
+    
+    &Three {
+      left: calc(40% - clamp(1rem, 5vw, 2vh));
+      transform: rotateZ(-18deg);
+      top: 9%;
+      z-index: 9998;
+    }
   }
 }

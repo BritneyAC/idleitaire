@@ -41,8 +41,17 @@
   max-width: 100%;
   padding: 2px;
   background-color: black;
-  box-shadow: 0 0 0.5rem 0 hsla(0deg, 0%, 0%, 0.25);
   border-radius: 0.5rem;
+  position: relative;
+  isolation: isolate;
+}
+.board svg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 15rem 1rem hsl(0deg, 0%, 0%);
+  overflow: visible;
+  z-index: -1;
 }
 
 .board[data-info-shown=false] {
@@ -102,7 +111,7 @@
     grid-column-start: 1;
     grid-column-end: -1;
     flex-direction: row;
-    padding: 0;
+    padding: 0.2rem 0 0;
     margin-bottom: -2rem;
   }
 }

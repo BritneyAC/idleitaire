@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { trpc } from "@/utils/trpc"
+// import { trpc } from "@/utils/trpc"
 
 export class User {
   timeOfSave = 0
@@ -59,7 +59,12 @@ export default function useUserInfo(){
   useEffect(() => {
     const userData = localStorage.getItem("userInfo")
     if(!!userData){
-      const save = {...new User(), ...JSON.parse(userData)}
+      let save
+      try{
+        save = {...new User(), ...JSON.parse(userData)}
+      }catch{
+        save = new User()
+      }
       setUserInfo(save)
       setNeedToResume(true)
     }

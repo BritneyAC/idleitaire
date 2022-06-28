@@ -40,8 +40,17 @@
     max-width: 100%;
     padding: 2px;
     background-color: black;
-    box-shadow: 0 0 .5rem 0 hsla(0, 0%, 0%, 25%);
     border-radius: .5rem;
+    position: relative;
+    isolation: isolate;
+    &::after{
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: 0 0 15rem 1rem hsl(0, 0%, 0%);
+      overflow: visible;
+      z-index: -1;
+    }
   }
 }
 
@@ -99,7 +108,7 @@
     grid-column-start: 1;
     grid-column-end: -1;
     flex-direction: row;
-    padding: 0;
+    padding: .2rem 0 0;
     margin-bottom: -2rem;
   }
 }
