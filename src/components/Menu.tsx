@@ -52,7 +52,7 @@ const Menu: React.FC<MenuProps> = (props) => {
 
 
   return (
-    <div className={styles.board}>
+    <>
       <div className={styles.gameSelection}>
         <div className={styles.gameBtn} onClick={()=>props.changeCurrentGame("normal")}>
           {randCardElement}
@@ -60,7 +60,7 @@ const Menu: React.FC<MenuProps> = (props) => {
         </div>
         {BtnElement3Card()}
       </div>
-    </div>
+    </>
   )
 }
 

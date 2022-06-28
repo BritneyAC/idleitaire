@@ -74,6 +74,8 @@
   .board {
     grid-column-end: -1;
     grid-row-end: 2;
+    padding-bottom: 0;
+    grid-template-rows: 9fr 1fr;
   }
   .board[data-info-shown="false"] {
     grid-row-end: -1;
@@ -84,12 +86,12 @@
   }
   .showInfo {
     top: initial;
-    bottom: 14vh;
+    bottom: calc(26vh - 8rem);
     right: initial;
     left: 4vw;
   }
-  .main[data-info-shown="false"] .show-info {
-    bottom: 4vh;
+  .showInfo[data-info-shown="false"] {
+    left: 6vw;
   }
   .info {
     grid-row-start: 2;
@@ -97,7 +99,7 @@
     grid-column-start: 1;
     grid-column-end: -1;
     flex-direction: row;
-    padding-bottom: 0;
+    padding: 0;
     margin-bottom: -2rem;
   }
 }

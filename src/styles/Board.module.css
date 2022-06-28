@@ -148,4 +148,16 @@
     height: calc(10vh - 2rem);
     margin-top: -0.5rem;
   }
+
+  .buttons {
+    align-self: flex-start;
+  }
+  .buttons[data-info-shown=false] {
+    width: 80%;
+    justify-self: flex-end;
+  }
+
+  .btn {
+    padding: 0.5rem;
+  }
 }

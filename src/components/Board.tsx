@@ -73,7 +73,7 @@ const Board: React.FC<BoardProps> = (props) => {
           <p className={styles.points}>Points: {gamePoints}</p>
         </div>
       </div>
-      <div className={styles.buttons}>
+      <div className={styles.buttons} data-info-shown={props.isInfoShown ? "true" : "false"}>
         <button className={styles.btn} onClick={()=>RestartGame()}>Restart Game</button>
         <button className={styles.btn} onClick={()=>{
           props.changeCurrentGame("menu")

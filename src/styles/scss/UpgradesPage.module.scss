@@ -3,16 +3,20 @@
   grid-row-start: 2;
   grid-row-end: -1;
   padding: 0 1rem 3rem;
+  margin: 0;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   justify-content: space-between;
+  & h1{
+    text-align: center;
+  }
 }
 
 .upgradesPage h1, .upgradesPage p {
   padding: 0;
-  margin: .5rem 0;
+  margin: .5rem 0;;
 }
 
 .upgrade {
@@ -26,7 +30,7 @@
   .upgradesPage {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .30fr 1fr;
+    grid-template-rows: 5rem 1fr;
     height: 100%;
     padding: 0;
     margin: -.5rem 0 0;
@@ -36,7 +40,6 @@
     grid-column-start: 1;
     grid-column-end: -1;
     margin: 0;
-    padding-top: 1rem;
   }
   .upgrade {
     height: 100%;
