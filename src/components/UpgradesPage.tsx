@@ -1,10 +1,15 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import useRoboPlayer from "@/hooks/useRoboPlayer"
 import type {User} from "@/hooks/useUserInfo"
 import styles from "@/styles/UpgradesPage.module.css"
+import { FaQuestionCircle } from "react-icons/fa"
+import { GrClose } from "react-icons/gr"
 
 interface UpgradesPageProps {
   userInfo: User,
+  currentGame: string,
+  unlockGameCost: number,
+
   gamesWonIncreased: ()=>void,
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
@@ -15,12 +20,16 @@ interface UpgradesPageProps {
   playForYouCost: number,
   roboPlayerIncreased: ()=>void,
   playForYouIncreased: ()=>void,
-  togglePFY: ()=>void
-  currentGame: string,
+  togglePFY: ()=>void,
+  unlockAutoUpgrade: ()=>void,
+  autoUpgradeUnlocked: boolean,
+  autoUpgradeToggle: ()=>void,
+  autoUpgrade: boolean,
 }
 
 const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
   const {StartGame, gamePoints, count, isGameRunning} = useRoboPlayer({...props})
+  const [currentDescription, setCurrentDescription] = useState("none")
 
   useEffect(() => {
     if(props.currentGame === "normal"){
@@ -39,25 +48,81 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
     playForYouIncreased, 
     togglePFY, 
     roboPlayerCost, 
-    playForYouCost
+    playForYouCost,
+    unlockAutoUpgrade,
+    autoUpgradeUnlocked,
+    autoUpgradeToggle,
+    autoUpgrade,
+    unlockGameCost,
     } = props
+
+    const changeCurrentDesription = (description: string) => {
+      setCurrentDescription(description)
+    }
+
   return(
-    <div className={styles.upgradesPage}>
-      <h1>Upgrades</h1>
+    <div className={styles.upgrades}>
       <div className={styles.upgrade}>
-        <p>RoboPlayer (Owned: {roboPlayer})</p>
-        <p>Plays games for you in the backgroud</p>
-        <p>cost {roboPlayerCost}</p>
+        <h1>RoboPlayer</h1>
+        <h2>(Owned: {roboPlayer})</h2>
+        {currentDescription !== "robo" && <FaQuestionCircle onClick={() => changeCurrentDesription("robo")}/>}
+            {currentDescription === "robo" && 
+              <div className={styles.description}> 
+                <GrClose onClick={() => changeCurrentDesription("none")}/>
+                <h2>Plays games for you in the backgroud</h2>
+              </div>
+            }
+        <h3>cost {roboPlayerCost}</h3>
         <button onClick={roboPlayerIncreased}>Upgrade</button>
         <p>Points in current game</p>
         <p>{gamePoints}</p>
       </div>
+
+
       <div className={styles.upgrade}>
-        <p>Play For Me (Owned: {playForYou})</p>
-        <p>Plays the main game for you</p>
-        <p>cost {playForYouCost}</p>
+        <h1>Play For Me</h1>
+        <h2>(Owned: {playForYou})</h2>
+        {currentDescription !== "pFY" && <FaQuestionCircle onClick={() => changeCurrentDesription("pFY")}/>}
+        {currentDescription === "pFY" && 
+          <div className={styles.description}> 
+            <GrClose onClick={() => changeCurrentDesription("none")}/>
+            <h2>Plays the main game for you</h2>
+          </div>
+        }
+        <h3>cost {playForYouCost}</h3>
         <button onClick={playForYouIncreased}>Upgrade</button>
-        {Number(playForYou) > 0 && <button onClick={togglePFY}>toggle {playForYouToggle ? "off" : "on"}</button>}
+        {playForYou > 0 && 
+          <>
+            <div className={playForYouToggle ? styles.radioBtnOn : styles.radioBtnOff} onClick={togglePFY}>
+              <div className={styles.radioBtnCircle}></div>
+            </div>
+            <h4>{playForYouToggle ? "On" : "Off"}</h4>
+          </>
+        }
+      </div>
+
+
+      <div className={styles.upgrade}>
+        <h1>Auto Upgrade</h1>
+        {currentDescription !== "auto" && <FaQuestionCircle onClick={() => changeCurrentDesription("auto")}/>}
+        {currentDescription === "auto" && 
+          <div className={styles.description}>
+            <GrClose onClick={() => changeCurrentDesription("none")}/>
+            <p>Buys upgrades when you can afford them</p> 
+          </div>
+        }
+        {autoUpgradeUnlocked ? 
+          <>
+            <div className={autoUpgrade ? styles.radioBtnOn : styles.radioBtnOff} onClick={autoUpgradeToggle}>
+              <div className={styles.radioBtnCircle}></div>
+            </div>
+            <h4>{autoUpgrade ? "On" : "Off"}</h4>
+          </> :
+          <>
+            <h1>cost {unlockGameCost * 2}</h1>
+            <button onClick={unlockAutoUpgrade}>Buy</button>
+          </>
+        } 
       </div>
     </div>
   )

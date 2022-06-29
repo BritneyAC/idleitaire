@@ -8,7 +8,6 @@ interface MenuProps {
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
   userInfo: User,
-  isInfoShown: boolean,
   currentGame: string,
   playForYou: number,
   roboPlayer: number,
@@ -17,6 +16,7 @@ interface MenuProps {
   changeCurrentGame: (game: string)=>void,
   unlockGameCost: number,
 }
+
 
 const Menu: React.FC<MenuProps> = (props) => { 
   const {
@@ -41,7 +41,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       )
     }
     return (
-        <div className={`${styles.gameBtn} ${styles.locked}`} data-affordable={props.userInfo.userPoints <= props.unlockGameCost ? "false" : "true"} onClick={props.unlock3Card}>
+        <div className={`${styles.gameBtn} ${styles.locked}`} data-affordable={props.userInfo.userPoints < props.unlockGameCost ? "false" : "true"} onClick={props.unlock3Card}>
           {ThreeRandCardElement}
           Start 3 Card Game
           <div className={styles.unlock}>Unlock this game for {props.unlockGameCost} points</div>

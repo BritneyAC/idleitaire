@@ -63,7 +63,6 @@ interface UseBoardElementsProps {
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
   userInfo: User,
-  isInfoShown: boolean,
   currentGame: string,
   playForYou: number,
   roboPlayer: number,

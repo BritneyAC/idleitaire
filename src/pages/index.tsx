@@ -3,81 +3,101 @@ import Head from 'next/head'
 import { useEffect, useState } from "react"
 import Menu from '@/components/Menu'
 import Board from "@/components/Board"
-import Stats from "@/components/Stats"
-import UpgradePage from "@/components/UpgradesPage"
 import useUserInfo from "@/hooks/useUserInfo"
 import styles from "@/styles/Main.module.css"
+import Settings from '@/components/Settings'
+import Info from '@/components/Info'
 
 const Home: NextPage = () => {
-  const [isInfoShown, setIsInfoShown] = useState(false)  
+  const [whichInfoSettingShown, setWhichInfoSettingShown] = useState("settings")  
   const [currentGame, setCurrentGame] = useState("menu")
+  const toggleInfoSetting = (currentTab: string) => {
+    if(whichInfoSettingShown === "none"){
+      setWhichInfoSettingShown(currentTab)
+    }else if(currentTab === whichInfoSettingShown){
+      setWhichInfoSettingShown("none") 
+    } else {
+      setWhichInfoSettingShown(currentTab)
+    }
+  }
   const {
-    increasePoints,
-    gamesWonIncreased,
-    increase3CardPoints,
-    gamesWon3CardIncreased,
-    roboPlayerCost, 
-    playForYouCost, 
-    robo3CardPlayerCost, 
-    play3CardForYouCost, 
     userInfo,
     saveUserInfo,
+    autoSaveToggle,
+    priceSettingToggle,
+    unlockGameCost,
     savedRecently,
+    name,
+
+    increasePoints,
+    gamesWonIncreased,
+    roboPlayerCost, 
+    playForYouCost, 
     roboPlayerIncreased,
     playForYouIncreased,
     togglePFY,
-    toggle3CardPFY,
+    unlockAutoUpgrade,
+    autoUpgradeToggle,
+    
+    
     unlock3Card,
-    unlockGameCost,
+    increase3CardPoints,
+    gamesWon3CardIncreased,
+    robo3CardPlayerCost, 
+    play3CardForYouCost, 
     robo3CardPlayerIncreased,
     play3CardForYouIncreased,
-    name,
-  } = useUserInfo()
+    toggle3CardPFY,
+    unlockAutoUpgrade3Card,
+    autoUpgrade3CardToggle,
+  } = useUserInfo(toggleInfoSetting)
 
   useEffect(() => {
     if(currentGame === "menu"){
-      setIsInfoShown(false)
+      if(userInfo.timeOfSave > 0){
+        toggleInfoSetting("none")
+      }
     }
-  }, [currentGame])
+  }, [])
 
-  const toggleInfo = () => {
-    setIsInfoShown(prevShown => !prevShown)
-  }
+  
 
   const changeCurrentGame = (game: string) => {
     setCurrentGame(game)
-    setIsInfoShown(true)
+    toggleInfoSetting("none")
   }
 
   const boardToShow = () => {
     if(currentGame === "menu"){
       return (
-        <Menu userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} unlock3Card={unlock3Card} unlockGameCost={unlockGameCost} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
+        <Menu userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} unlock3Card={unlock3Card} unlockGameCost={unlockGameCost} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
       )
     }
     if(currentGame === "normal"){
       return (
-        <Board userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
+        <Board userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} currentGame={currentGame} changeCurrentGame={changeCurrentGame} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting}/>
       )
     }
     if(currentGame === "3card"){
       return (
-        <Board userInfo={userInfo} roboPlayer={userInfo.robo3CardPlayer} playForYou={userInfo.play3CardForYou} playForYouToggle={userInfo.play3CardForYouToggle}  increasePoints={increase3CardPoints} gamesWonIncreased={gamesWon3CardIncreased} saveUserInfo={saveUserInfo} isInfoShown={isInfoShown} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
+        <Board userInfo={userInfo} roboPlayer={userInfo.robo3CardPlayer} playForYou={userInfo.play3CardForYou} playForYouToggle={userInfo.play3CardForYouToggle}  increasePoints={increase3CardPoints} gamesWonIncreased={gamesWon3CardIncreased} saveUserInfo={saveUserInfo} currentGame={currentGame} changeCurrentGame={changeCurrentGame} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting}/>
       )
     }
   }
-  const upgradePageToShow = () => {
+  const infoPageToShow = () => {
     if(currentGame === "menu"){
-      return null
+      return (
+        <Info userInfo={userInfo} points={userInfo.userPoints + userInfo.user3CardPoints} saveUserInfo={saveUserInfo} savedRecently={savedRecently} currentGame={currentGame} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting} unlockGameCost={unlockGameCost} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} roboPlayerCost={roboPlayerCost} playForYouCost={playForYouCost} playForYouToggle={userInfo.playForYouToggle} roboPlayerIncreased={roboPlayerIncreased} playForYouIncreased={playForYouIncreased} gamesWonIncreased={gamesWonIncreased} increasePoints={increasePoints} togglePFY={togglePFY} autoUpgradeUnlocked={userInfo.autoUpgradeUnlocked} unlockAutoUpgrade={unlockAutoUpgrade} autoUpgradeToggle={autoUpgradeToggle} autoUpgrade={userInfo.autoUpgrade}/>
+      )
     }
     if(currentGame === "normal"){
       return (
-        <UpgradePage userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} roboPlayerCost={roboPlayerCost} playForYouCost={playForYouCost} playForYouToggle={userInfo.playForYouToggle} roboPlayerIncreased={roboPlayerIncreased} playForYouIncreased={playForYouIncreased} gamesWonIncreased={gamesWonIncreased} increasePoints={increasePoints} togglePFY={togglePFY} saveUserInfo={saveUserInfo} currentGame={currentGame}/>
+        <Info userInfo={userInfo} points={userInfo.userPoints} saveUserInfo={saveUserInfo} savedRecently={savedRecently} currentGame={currentGame} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting} unlockGameCost={unlockGameCost} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} roboPlayerCost={roboPlayerCost} playForYouCost={playForYouCost} playForYouToggle={userInfo.playForYouToggle} roboPlayerIncreased={roboPlayerIncreased} playForYouIncreased={playForYouIncreased} gamesWonIncreased={gamesWonIncreased} increasePoints={increasePoints} togglePFY={togglePFY} autoUpgradeUnlocked={userInfo.autoUpgradeUnlocked} unlockAutoUpgrade={unlockAutoUpgrade} autoUpgradeToggle={autoUpgradeToggle} autoUpgrade={userInfo.autoUpgrade}/>
       )
     }
     if(currentGame === "3card"){
       return (
-        <UpgradePage userInfo={userInfo}  roboPlayer={userInfo.robo3CardPlayer} playForYou={userInfo.play3CardForYou} roboPlayerCost={robo3CardPlayerCost} playForYouCost={play3CardForYouCost} playForYouToggle={userInfo.play3CardForYouToggle} roboPlayerIncreased={robo3CardPlayerIncreased} playForYouIncreased={play3CardForYouIncreased} gamesWonIncreased={gamesWon3CardIncreased} increasePoints={increase3CardPoints} togglePFY={toggle3CardPFY} saveUserInfo={saveUserInfo} currentGame={currentGame}/>
+        <Info userInfo={userInfo} points={userInfo.user3CardPoints} saveUserInfo={saveUserInfo} savedRecently={savedRecently} currentGame={currentGame} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting} unlockGameCost={unlockGameCost} roboPlayer={userInfo.robo3CardPlayer} playForYou={userInfo.play3CardForYou} roboPlayerCost={robo3CardPlayerCost} playForYouCost={play3CardForYouCost} playForYouToggle={userInfo.play3CardForYouToggle} roboPlayerIncreased={robo3CardPlayerIncreased} playForYouIncreased={play3CardForYouIncreased} gamesWonIncreased={gamesWon3CardIncreased} increasePoints={increase3CardPoints} togglePFY={toggle3CardPFY} autoUpgradeUnlocked={userInfo.autoUpgrade3CardUnlocked} unlockAutoUpgrade={unlockAutoUpgrade3Card} autoUpgradeToggle={autoUpgrade3CardToggle} autoUpgrade={userInfo.autoUpgrade3Card}/>
       )
     }
   }
@@ -96,14 +116,16 @@ const Home: NextPage = () => {
 
       
       <main className={styles.main}>
-        <h3 className={styles.showInfo} data-info-shown={isInfoShown ? "true" : "false"} onClick={toggleInfo}>{isInfoShown ? "hide-info" : "show-info"}</h3>
-        <div className={styles.board} data-info-shown={isInfoShown ? "true" : "false"}>
+        {whichInfoSettingShown !== "none" && <div className={styles.closeInfoSettings} onClick={()=>toggleInfoSetting("none")}></div>}
+        <div className={styles.board}>
           {boardToShow()}
         </div>
-        <div className={styles.info}>
-          <Stats userInfo={userInfo} saveUserInfo={saveUserInfo} savedRecently={savedRecently} currentGame={currentGame}/>
-          {upgradePageToShow()}
+        <div className={`${styles.infoSettingsTabs} ${whichInfoSettingShown !== "none" && styles.open}`}>
+          <h1 className={`${styles.header} ${whichInfoSettingShown === "info" && styles.current}`}  onClick={()=>{toggleInfoSetting("info")}}>{whichInfoSettingShown === "info" ? "Close" : "Info"}</h1>
+          <h1 className={`${styles.header} ${whichInfoSettingShown === "settings" && styles.current}`}  onClick={()=>{toggleInfoSetting("settings")}}>{whichInfoSettingShown === "settings" ? "Close" : "Settings"}</h1>
         </div>
+        {infoPageToShow()}
+        <Settings userInfo={userInfo} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting} autoSaveToggle={autoSaveToggle} priceSettingToggle={priceSettingToggle}/>
       </main>
     </div>
   )

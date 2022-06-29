@@ -8,8 +8,10 @@ interface BoardProps {
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
   userInfo: User,
-  isInfoShown: boolean,
   currentGame: string,
+  whichInfoSettingShown: string,
+  toggleInfoSetting: (currentTab: string)=>void,
+
   playForYou: number,
   roboPlayer: number,
   playForYouToggle: boolean,
@@ -17,8 +19,8 @@ interface BoardProps {
 }
 
 const Board: React.FC<BoardProps> = (props) => { 
+  const [confirmationShown, setConfirmationShown] = useState("none")
   const {
-    isInfoShown,
     cards,
     isGameRunning,
     RestartGame,
@@ -42,7 +44,49 @@ const Board: React.FC<BoardProps> = (props) => {
     Column7Elements,
   } = useBoardElements({...props})
 
+  const changeConfirmation = (description: string) => {
+    setConfirmationShown(description)
+  }
 
+
+  const confirmation = (confirmationShown: string) => {
+    let confirm
+    if(confirmationShown === "restart"){
+      confirm = <>
+      <h1>Are you sure you want to restart the game?</h1>
+    </>
+    } else if(confirmationShown === "end"){
+      confirm = <>
+        <h1>
+          Are you sure you want to end the game?
+          and go back to the main menu?
+        </h1>
+      </>
+    }
+    if(!!confirm){
+      const handeClick = (confirm: string = confirmationShown) => {
+        if(confirm === "restart"){
+          RestartGame()
+        } else if(confirm === "end"){
+          EndGame()
+          props.changeCurrentGame("menu")
+        }
+        changeConfirmation("none")
+      }
+      props.toggleInfoSetting("none")
+
+      return(    
+        <div className={styles.confirmation}>
+        {confirm}
+        <div className={styles.confirmBtn} onClick={()=>handeClick()}>
+          <h1>Yes</h1>
+        </div>
+        <div className={styles.confirmBtn} onClick={()=>setConfirmationShown("none")}>
+          <h1>No</h1>
+        </div>
+      </div>
+  )}
+}
   
   return(
     <>
@@ -73,12 +117,13 @@ const Board: React.FC<BoardProps> = (props) => {
           <p className={styles.points}>Points: {gamePoints}</p>
         </div>
       </div>
-      <div className={styles.buttons} data-info-shown={props.isInfoShown ? "true" : "false"}>
-        <button className={styles.btn} onClick={()=>RestartGame()}>Restart Game</button>
-        <button className={styles.btn} onClick={()=>{
-          props.changeCurrentGame("menu")
-        }}>End Game</button>
+      <div className={`${styles.buttons} ${props.whichInfoSettingShown !== "none" && styles.open}`}>
+        <div className={styles.btn} onClick={()=>changeConfirmation("restart")}>
+          <h1>Restart Game</h1>
+        </div>
+        <div className={styles.btn} onClick={()=>changeConfirmation("end")}><h1>End Game</h1></div>
       </div>
+      {confirmationShown !== "none" && confirmation(confirmationShown)}
     </>
   )
 }

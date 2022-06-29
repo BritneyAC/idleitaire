@@ -36,9 +36,8 @@ const Stats: React.FC<StatsProps> = (props) => {
   }
   return(
     <div className={styles.stats}>
-      <h1>Stats</h1>
       {statsToShow()}
-      <button onClick={props.saveUserInfo}>Save Info?</button>
+      <div onClick={props.saveUserInfo} className={styles.btn}>Save Info?</div>
       {props.savedRecently && <p className={styles.saveMarker}>  Saved!</p>}
     </div>
   )

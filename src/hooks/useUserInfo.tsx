@@ -1,38 +1,50 @@
 import { useEffect, useMemo, useState } from "react"
+import useAutoUpgrade from "@/hooks/useAutoUpgrade"
 // import { trpc } from "@/utils/trpc"
 
 export class User {
   timeOfSave = 0
+  autoSave = true
+  pricesSetting = "normal"
+
   userPoints = 0
   gamesWon = 0
   roboPlayer = 0
   playForYou = 0
   playForYouToggle = true
+  autoUpgradeUnlocked = false
+  autoUpgrade = true
+  
   unlocked3Card = false
   user3CardPoints = 0
   games3CardWon = 0
   robo3CardPlayer = 0
   play3CardForYou = 0
   play3CardForYouToggle = true
+  autoUpgrade3CardUnlocked = false
+  autoUpgrade3Card = true
 }
-export default function useUserInfo(){
+export default function useUserInfo(props: (infoSetting: string)=>void) {
   const [savedRecently, setSavedRecently] = useState(false)
   const [name, setName] = useState("Idleitaire")
   const [needToResume, setNeedToResume] = useState(false)
   const [userInfo, setUserInfo] = useState(new User())
-  const roboPlayerCost = useMemo(() => {return Math.ceil(
+  const [pricesMultiplier, setPricesMultiplier] = useState(1)
+
+  //prices setting
+  const roboPlayerCost = useMemo(() => {return pricesMultiplier * Math.ceil(
       Math.log((userInfo.roboPlayer + 1) * 3) * 
-      (userInfo.roboPlayer + 1) * 40) * 10}, [userInfo])
-  const playForYouCost = useMemo(() => {return Math.ceil(
+      (userInfo.roboPlayer + 1) * 40) * 10}, [userInfo, pricesMultiplier])
+  const playForYouCost = useMemo(() => {return pricesMultiplier * Math.ceil(
       Math.log((userInfo.playForYou + 1) * 6) * 
-      (userInfo.playForYou + 1) * 80) * 10}, [userInfo])
-  const robo3CardPlayerCost = useMemo(() => {return Math.ceil(
+      (userInfo.playForYou + 1) * 80) * 10}, [userInfo, pricesMultiplier])
+  const robo3CardPlayerCost = useMemo(() => {return pricesMultiplier * Math.ceil(
       Math.log((userInfo.robo3CardPlayer + 1) * 3) * 
-      (userInfo.robo3CardPlayer + 1) * 40) * 10}, [userInfo])
-  const play3CardForYouCost = useMemo(() => {return Math.ceil(
+      (userInfo.robo3CardPlayer + 1) * 40) * 10}, [userInfo, pricesMultiplier])
+  const play3CardForYouCost = useMemo(() => {return pricesMultiplier * Math.ceil(
       Math.log((userInfo.play3CardForYou + 1) * 6) * 
-      (userInfo.play3CardForYou + 1) * 80) * 10}, [userInfo])
-  const unlockGameCost = useMemo(() => {return 10000}, [])
+      (userInfo.play3CardForYou + 1) * 80) * 10}, [userInfo, pricesMultiplier])
+  const unlockGameCost = useMemo(() => {return pricesMultiplier * 10000}, [pricesMultiplier])
   
 
   //changes document title every 4 seconds if an upgrade is available
@@ -44,6 +56,18 @@ export default function useUserInfo(){
       setName("Idleitaire")
     }
   },[userInfo])
+
+  // write cheat behavior here
+  useEffect(() => {
+    if(userInfo.pricesSetting === "normal"){
+      setPricesMultiplier(1)
+    } else if(userInfo.pricesSetting === "half"){
+      setPricesMultiplier(0.5)
+    } else if(userInfo.pricesSetting === "free"){
+      setPricesMultiplier(0)
+    }
+  },[userInfo.pricesSetting])
+
   
   //changes document title every 4 seconds if an upgrade is available on 3 card game
   useEffect(() => {
@@ -76,8 +100,8 @@ export default function useUserInfo(){
       ResumeGame()
       userInfo.unlocked3Card === true && Resume3CardGame()
       setNeedToResume(false)
+      props("none")
     }
-    
   }, [needToResume])
 
   const saveUserInfo = () => {
@@ -88,9 +112,28 @@ export default function useUserInfo(){
     setTimeout(() => setSavedRecently(false), 5000)
   }
 
+  const autoSaveToggle = () => {
+    setUserInfo(prevUserInfo => ({...prevUserInfo, autoSave: !prevUserInfo.autoSave}))
+  }
 
+  const priceSettingToggle = () => {
+    setUserInfo(prevUserInfo => {
+      let newSetting = "normal"
+      if(prevUserInfo.pricesSetting === "normal"){
+        newSetting = "half"
+      } else if(prevUserInfo.pricesSetting === "half"){
+        newSetting = "free"
+      } else if(prevUserInfo.pricesSetting === "free"){
+        newSetting = "normal"
+      }
+      return ({
+        ...prevUserInfo, 
+        pricesSetting: newSetting
+      })
+    })
+  }
   // ----------------------------------
-  // info for 3 card game
+  // info for 1 card game
   // ----------------------------------
   
 
@@ -103,10 +146,8 @@ export default function useUserInfo(){
     if(userInfo.playForYou > 0){
       movesToResume = movesToResume + Math.min((200 * userInfo.playForYou) + 500, Math.round((time - userInfo.timeOfSave) / (5000 / userInfo.playForYou)))
     }
-    while(movesToResume > 100){
-      increasePoints(140)
-      movesToResume = movesToResume - 100
-  }}
+    increasePoints(Math.trunc(1.4 * (movesToResume / 10)) * 10)
+  }
 
   const increasePoints = (points: number) => {
     setUserInfo(prevInfo => ({
@@ -139,13 +180,29 @@ export default function useUserInfo(){
     setUserInfo(prevInfo => ({...prevInfo, playForYouToggle: !prevInfo.playForYouToggle}))
   }
 
+  userInfo.autoUpgradeUnlocked && userInfo.autoUpgrade && useAutoUpgrade({autoUpgrade: userInfo.autoUpgrade, points: userInfo.userPoints, playForYouCost, roboPlayerCost, playForYouIncreased, roboPlayerIncreased})
+
+  const unlockAutoUpgrade = () => {
+    if(userInfo.userPoints >= unlockGameCost * 2){
+      setUserInfo(prevInfo => ({
+        ...prevInfo, 
+        userPoints: prevInfo.userPoints - unlockGameCost * 2,
+        autoUpgradeUnlocked: true
+      }))
+    }
+  }
+
+  const autoUpgradeToggle = () => {
+    setUserInfo(prevInfo => ({...prevInfo, autoUpgrade: !prevInfo.autoUpgrade}))
+  }
+  
 
   // ----------------------------------
   // info for 3 card game
   // ----------------------------------
 
   const unlock3Card = () => {
-    if(userInfo.userPoints > unlockGameCost){
+    if(userInfo.userPoints >= unlockGameCost){
 
       setUserInfo(prevInfo => ({
         ...prevInfo, 
@@ -200,27 +257,53 @@ export default function useUserInfo(){
     setUserInfo(prevInfo => ({...prevInfo, play3CardForYouToggle: !prevInfo.play3CardForYouToggle}))
   }
 
+  userInfo.autoUpgrade3CardUnlocked && userInfo.autoUpgrade3Card && useAutoUpgrade({autoUpgrade: userInfo.autoUpgrade3Card, points: userInfo.user3CardPoints, playForYouCost: play3CardForYouCost, roboPlayerCost: robo3CardPlayerCost, playForYouIncreased: play3CardForYouIncreased, roboPlayerIncreased: robo3CardPlayerIncreased})
+
+  const unlockAutoUpgrade3Card = () => {
+    if(userInfo.user3CardPoints >= unlockGameCost * 2){
+      setUserInfo(prevInfo => ({
+        ...prevInfo, 
+        userPoints: prevInfo.user3CardPoints - unlockGameCost * 2,
+        autoUpgrade3CardUnlocked: true
+      }))
+    }
+  }
+
+  const autoUpgrade3CardToggle = () => {
+    setUserInfo(prevInfo => ({...prevInfo, autoUpgrade3Card: !prevInfo.autoUpgrade3Card}))
+  }
+
 
 
   return {userInfo, 
+    saveUserInfo,
+    savedRecently,
+    autoSaveToggle,
+    priceSettingToggle,
+    unlockGameCost,
+    name,
+
+
     increasePoints, 
     gamesWonIncreased,
     roboPlayerCost, 
     playForYouCost, 
-    robo3CardPlayerCost, 
-    play3CardForYouCost, 
     roboPlayerIncreased, 
     playForYouIncreased, 
     togglePFY,
+    unlockAutoUpgrade,
+    autoUpgradeToggle,
+    
+    
     unlock3Card,
-    unlockGameCost,
+    robo3CardPlayerCost, 
+    play3CardForYouCost, 
     increase3CardPoints,
     gamesWon3CardIncreased,
     robo3CardPlayerIncreased,
     play3CardForYouIncreased,
     toggle3CardPFY,
-    saveUserInfo,
-    savedRecently,
-    name,
+    unlockAutoUpgrade3Card,
+    autoUpgrade3CardToggle,
   }
 }

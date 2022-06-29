@@ -164,7 +164,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
     } else if(type === "3card"){
       props.increasePoints(1100)
     }
-    props.saveUserInfo()
+    props.userInfo.autoSave && props.saveUserInfo()
     StartGame(type)
   }
 

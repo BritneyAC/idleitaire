@@ -14,19 +14,17 @@
 .main {
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 8fr 2fr;
-  grid-template-rows: 8fr 7fr;
-  background: #111a22;
+  background: hsl(210, 33%, 10%);
   color: white;
+  position: relative;
 }
+
 
 .board {
   padding: 1rem 1rem;
-  grid-row-start: 1;
-  grid-row-end: -1;
-  grid-column-start: 1;
-  grid-column-end: 2;
+
+  height: 100%;
+  width: 100%;
   background-color: hsl(29, 90%, 8%);
   position: relative;
   display: grid;
@@ -54,61 +52,58 @@
   }
 }
 
-.board[data-info-shown="false"] {
-  grid-column-end: -1;
-}
 
-
-.showInfo {
-  color: white;
+.infoSettingsTabs {
   position: absolute;
-  right: 1.5rem;
-  top: 1rem;
-  z-index: 9999;
-  cursor: pointer;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 6000;
+  transform: translateY(0);
+  transition: transform .5s ease-in-out;
+  &.open {
+    transform: translateY(-46vh);
+    transition: transform .5s ease-in-out;
+  }
 }
 
 
-.info {
-  grid-column-start: 2;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: -1;
+.header {
+  height: 100%;
+  width: 21vw;
+  font-size: clamp(1rem, 4vw, 8vh);
+  background-color: hsl(210, 33%, 10%);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  border-radius: clamp(3vh,20%, 20vw) clamp(3vh,20%, 60vw) 0 0;
+  border: 1px solid white;
+  border-bottom: 1px solid hsl(210, 33%, 10%);
+  box-shadow: 0 0 .5rem 0 black;
+  z-index: 6001;
+  cursor: pointer;
+  & h1 {
+    margin: 0;
+  }
+  &.current {
+    background-color: hsl(210, 33%, 20%);
+  }
+}
+
+.closeInfoSettings {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5000;
+  background-color: hsla(0, 0%, 0%, 30%);
 }
 
 @media (max-width: 820px) {
   .board {
-    grid-column-end: -1;
-    grid-row-end: 2;
     padding-bottom: 0;
-    grid-template-rows: 9fr 1fr;
-  }
-  .board[data-info-shown="false"] {
-    grid-row-end: -1;
-    grid-template-rows: 10fr 2fr;
-  }
-  .board[data-info-shown="false"] .btn {
-    align-self: flex-start;
-  }
-  .showInfo {
-    top: initial;
-    bottom: calc(26vh - 8rem);
-    right: initial;
-    left: 4vw;
-  }
-  .showInfo[data-info-shown="false"] {
-    left: 6vw;
-  }
-  .info {
-    grid-row-start: 2;
-    grid-row-end: -1;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    flex-direction: row;
-    padding: .2rem 0 0;
-    margin-bottom: -2rem;
   }
 }

@@ -1,15 +1,13 @@
 import '@/styles/globals.css'
 import "@/styles/App.css"
 import type { AppProps } from 'next/app'
-import { SessionProvider } from 'next-auth/react'
+// import { SessionProvider } from 'next-auth/react'
 // import { withTRPC } from "@trpc/next"
 // import type { AppRouter } from "@/backend/router"
 
 export default function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <Component {...pageProps} />
   )
 }
 
