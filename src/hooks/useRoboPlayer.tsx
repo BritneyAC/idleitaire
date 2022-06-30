@@ -8,7 +8,6 @@ interface UseRoboPlayerProps{
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
   currentGame: string,
- 
   playForYou: number,
   roboPlayer: number,
   playForYouToggle: boolean,
@@ -27,10 +26,10 @@ const useRoboPlayer = (props: UseRoboPlayerProps) => {
     gamePoints,
     StartGame,
     EndGame,
-    playForYou} = useGameLogic({...props})
+    playForYou} = useGameLogic({...props, roboGame: true})
 
   useEffect(() => {
-    StartGame("robo")
+    StartGame(props.currentGame)
   }, [])
 
   return {StartGame, gamePoints, count, isGameRunning}

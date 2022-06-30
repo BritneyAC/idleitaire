@@ -26,6 +26,7 @@ interface UseGameLogicProps {
   saveUserInfo: ()=>void,
   userInfo: User,
   currentGame: string,
+  roboGame: boolean,
   playForYou: number,
   roboPlayer: number,
   playForYouToggle: boolean,
@@ -119,7 +120,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
     newCards.Columns.forEach(column => {
       newCards.ShownCards.push(column[column.length - 1])
     })
-    if(type === "normal"){
+    if(type === "normal" || type === "robo"){
       newCards.Playable.push(Number(newDeck.pop()))
       newCards.ShownCards.push(newCards.Playable[0])
     } else if(type === "3card"){
@@ -159,7 +160,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
   const Win = (type: string = "normal") => {
     setDeck([])
     setIsGameRunning(false)
-    if(type === "normal"){
+    if(type === "normal" || type === "robo"){
       props.increasePoints(780)
     } else if(type === "3card"){
       props.increasePoints(1100)
@@ -519,13 +520,13 @@ const useGameLogic = (props: UseGameLogicProps) => {
   // playForYou Upgrade
   useEffect(() => {
     if(isGameRunning){
-      if(gameType !== "robo"){
+      if(!props.roboGame){
         if(props.playForYou > 0){
           if(props.playForYouToggle){
             const time = 5000 / props.playForYou
 
             const playForYouTimer = setInterval(() => {
-            playForYou()}, time)
+              playForYou()}, time)
 
             return () => clearInterval(playForYouTimer)
           }
@@ -534,15 +535,14 @@ const useGameLogic = (props: UseGameLogicProps) => {
         if(props.roboPlayer > 0){
           const time = 2500 / props.roboPlayer
           const roboPlayerTimer = setInterval(() => {
-            
-            
             playForYou()}, time)
+
             return () => clearInterval(roboPlayerTimer)
         }   
       }
     }
     
-  }, [isGameRunning, props.playForYou, props.playForYouToggle, deck, cards, count])
+  }, [isGameRunning, props.playForYou, props.playForYouToggle, props.roboPlayer, deck, cards, count])
 
   useEffect(()=>{
     if(count > 155){

@@ -198,26 +198,27 @@
     margin: 0;
     height: 100%;
     width: 100%;
-  }
-  & h1 {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-    margin: 0;
-    padding-bottom: 1rem;
-    & + & {
-      padding-bottom: 2rem;
+    & h1 {
+      font-size: clamp(1.5rem, 4vw, 6vh);
+      line-height: 3.5rem;
+      margin: 0;
+      padding-bottom: 1rem;
+      & + & {
+        padding-bottom: 5%;
+      }
     }
   }
   
 }
 .confirmBtn {
   display: flex;
+  justify-self: center;
+  align-self: flex-start;
   justify-content: center;
   align-items: center;
   border-radius: 999%;
   aspect-ratio: 1;
   width: clamp(4rem, 20vw, 30vh);
-  margin: auto;
   background-color: hsl(210deg, 33%, 15%);
   cursor: pointer;
   & h1 {

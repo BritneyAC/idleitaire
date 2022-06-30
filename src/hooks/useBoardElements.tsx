@@ -84,8 +84,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     StartGame,
     EndGame,
     gameType,
-    gamePoints
-  } = useGameLogic({...props})
+    gamePoints,
+  } = useGameLogic({...props, roboGame: false})
   
   let DeckElements
   
