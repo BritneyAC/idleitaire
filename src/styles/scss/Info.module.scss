@@ -49,6 +49,7 @@ $currentTab-color: hsl(210deg, 33%, 15%);
   align-items: center;
   height: 6vh;
   cursor: pointer;
+  font-size: clamp(.4rem, 3vw, 2vh);
 
   &:not(:last-of-type) {
     border-right: 1px solid white;

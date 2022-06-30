@@ -43,6 +43,7 @@
   align-items: center;
   height: 6vh;
   cursor: pointer;
+  font-size: clamp(0.4rem, 3vw, 2vh);
 }
 .tab:not(:last-of-type) {
   border-right: 1px solid white;

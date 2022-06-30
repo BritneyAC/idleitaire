@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 8rem;
   text-align: center;
   &:not(:last-of-type) {
     border-right: 1px solid white;
@@ -69,11 +69,12 @@
 }
 
 
+
 .radioBtnOn, .radioBtnOff, .radioBtnHalf {
   background-color: hsl(210deg, 33%, 15%);
   display: flex;
   height: 2rem;
-  width: 40%;
+  width: clamp(4rem, 60%, 60vw);
   border-radius: 2rem;
   cursor: pointer;
 }
