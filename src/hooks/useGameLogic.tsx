@@ -518,7 +518,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
   
   // playForYou Upgrade
   useEffect(() => {
-    console.log(gameType)
     if(isGameRunning){
       if(gameType !== "robo"){
         if(props.playForYou > 0){
@@ -527,7 +526,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
             const playForYouTimer = setInterval(() => {
             playForYou()}, time)
-            
+
             return () => clearInterval(playForYouTimer)
           }
         }

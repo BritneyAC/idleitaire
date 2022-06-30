@@ -181,7 +181,6 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
   }
 
   const checkForUpgrades = () => {
-    console.log(userInfo.autoUpgrade)
     if(userInfo.userPoints >= playForYouCost){
       playForYouIncreased()
     }
@@ -277,7 +276,6 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
   }
 
   const checkFor3CardUpgrades = () => {
-    console.log(userInfo.autoUpgrade)
     if(userInfo.user3CardPoints >= play3CardForYouCost){
       play3CardForYouIncreased()
     }
