@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react"
-import useAutoUpgrade from "@/hooks/useAutoUpgrade"
 // import { trpc } from "@/utils/trpc"
 
 export class User {
@@ -181,14 +180,14 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
   }
 
   const checkForUpgrades = () => {
-    if(userInfo.userPoints >= playForYouCost){
+    if(userInfo.userPoints >= playForYouCost && userInfo.roboPlayer > userInfo.playForYou){
       playForYouIncreased()
-    }
-    if(userInfo.userPoints >= roboPlayerCost){
+    }else if(userInfo.userPoints >= roboPlayerCost){
       roboPlayerIncreased()
     }
   }
 
+  //autoUpgrade for normal game
   useEffect(()=>{
     if(userInfo.pricesSetting !== "free"){
       if(userInfo.autoUpgradeUnlocked){
@@ -276,14 +275,14 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
   }
 
   const checkFor3CardUpgrades = () => {
-    if(userInfo.user3CardPoints >= play3CardForYouCost){
+    if(userInfo.user3CardPoints >= play3CardForYouCost && userInfo.robo3CardPlayer > userInfo.play3CardForYou){
       play3CardForYouIncreased()
-    }
-    if(userInfo.user3CardPoints >= robo3CardPlayerCost){
+    }else if(userInfo.user3CardPoints >= robo3CardPlayerCost){
       robo3CardPlayerIncreased()
     }
   }
 
+  //autoUpgrade for normal game
   useEffect(()=>{
     if(userInfo.pricesSetting !== "free"){
       if(userInfo.autoUpgrade3CardUnlocked){
@@ -293,7 +292,7 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
 
       }
     }
-  },[userInfo.autoUpgrade, userInfo.autoUpgradeUnlocked, userInfo.userPoints, playForYouCost, roboPlayerCost])
+  },[userInfo.autoUpgrade3Card, userInfo.autoUpgrade3CardUnlocked, userInfo.user3CardPoints, play3CardForYouCost, robo3CardPlayerCost])
 
   const unlockAutoUpgrade3Card = () => {
     if(userInfo.user3CardPoints >= unlockGameCost * 2){
