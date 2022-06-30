@@ -131,6 +131,12 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
       })
     })
   }
+
+  const deleteSave = () => {
+    localStorage.removeItem("userInfo")
+    setUserInfo(new User())
+  }
+
   // ----------------------------------
   // info for 1 card game
   // ----------------------------------
@@ -316,6 +322,7 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
     autoSaveToggle,
     priceSettingToggle,
     unlockGameCost,
+    deleteSave,
     name,
 
 

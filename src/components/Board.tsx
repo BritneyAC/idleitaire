@@ -20,7 +20,6 @@ interface BoardProps {
 
 const Board: React.FC<BoardProps> = (props) => { 
   const [start, setStart] = useState(true)
-  const [confirmationShown, setConfirmationShown] = useState("none")
   const {
     cards,
     isGameRunning,
@@ -45,12 +44,7 @@ const Board: React.FC<BoardProps> = (props) => {
     Column7Elements,
   } = useBoardElements({...props})
 
-  const changeConfirmation = (description: string) => {
-    setConfirmationShown(description)
-  }
-
-
-  const confirmation = (confirmationShown: string) => {
+  const confirmation = (confirmationShown: string = props.whichInfoSettingShown) => {
     let confirm
     if(confirmationShown === "restart"){
       confirm = <div>
@@ -67,16 +61,15 @@ const Board: React.FC<BoardProps> = (props) => {
       </div>
     }
     if(!!confirm){
-      const handeClick = (confirm: string = confirmationShown) => {
+      const handeClick = (confirm: string = props.whichInfoSettingShown) => {
         if(confirm === "restart"){
           RestartGame()
         } else if(confirm === "end"){
           EndGame()
           props.changeCurrentGame("menu")
         }
-        changeConfirmation("none")
+        props.toggleInfoSetting("none")
       }
-      props.toggleInfoSetting("none")
 
       return(    
         <div className={styles.confirmation}>
@@ -84,7 +77,7 @@ const Board: React.FC<BoardProps> = (props) => {
         <div className={styles.confirmBtn} onClick={()=>handeClick()}>
           <h1>Yes</h1>
         </div>
-        <div className={styles.confirmBtn} onClick={()=>setConfirmationShown("none")}>
+        <div className={styles.confirmBtn} onClick={()=>props.toggleInfoSetting("none")}>
           <h1>No</h1>
         </div>
       </div>
@@ -92,13 +85,12 @@ const Board: React.FC<BoardProps> = (props) => {
 }
 
   const isOpen = () => {
-    open = styles.buttons
     if(!start && props.whichInfoSettingShown !== "none"){
-      open = `${styles.buttons} ${styles.open}`
+      return `${styles.buttons} ${styles.open}`
     }
-    return open
+    return styles.buttons
   }
-  let open: string
+
   useEffect(() =>{
     setStart(false)
   },[])
@@ -134,12 +126,12 @@ const Board: React.FC<BoardProps> = (props) => {
         </div>
       </div>
       <div className={isOpen()}>
-        <div className={styles.btn} onClick={()=>changeConfirmation("restart")}>
+        <div className={`${styles.btn} ${props.whichInfoSettingShown === "restart" && styles.current}`} onClick={()=>props.toggleInfoSetting("restart")}>
           <h1>Restart Game</h1>
         </div>
-        <div className={styles.btn} onClick={()=>changeConfirmation("end")}><h1>End Game</h1></div>
+        <div className={`${styles.btn} ${props.whichInfoSettingShown === "end" && styles.current}`} onClick={()=>props.toggleInfoSetting("end")}><h1>End Game</h1></div>
       </div>
-      {confirmationShown !== "none" && confirmation(confirmationShown)}
+      {(props.whichInfoSettingShown === "end" || props.whichInfoSettingShown === "restart") && confirmation()}
     </>
   )
 }

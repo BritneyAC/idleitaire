@@ -7,14 +7,14 @@
   width: 100%;
   transform: translateY(46vh);
   transition: transform 0.5s ease-in-out;
-  z-index: -1;
+  z-index: 6000;
 }
 .info.open {
   transform: translateY(0);
   transition: transform 0.5s ease-in-out;
 }
 .info.shown {
-  z-index: 9999999;
+  z-index: 7000;
 }
 .info * {
   text-transform: capitalize;

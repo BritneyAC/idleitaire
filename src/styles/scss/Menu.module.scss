@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-evenly;
   background-color: hsl(100, 80%, 10%);
+  box-shadow: 0 0 0.5rem 0 hsla(0deg, 0%, 0%, 70%);
   width: 100%;
   height: calc(100% - 1rem);
   grid-row: span 2;
@@ -23,6 +24,7 @@
   aspect-ratio: 1;
   border-radius: 4rem;
   background-color: hsl(30, 90%, 8%);
+  box-shadow: 0 0 0.5rem 0 hsla(0deg, 0%, 0%, 70%);
   display: flex;
   align-items: center;
   justify-content: center;

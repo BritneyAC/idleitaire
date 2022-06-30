@@ -19,10 +19,6 @@ a {
   text-shadow: 0.1rem 0.1rem 0 hsl(0deg, 0%, 0%), -0.1rem -0.1rem 0 hsl(0deg, 0%, 0%);
 }
 
-h3 {
-  margin: 0;
-}
-
 button {
   cursor: pointer;
 }

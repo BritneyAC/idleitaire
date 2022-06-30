@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 interface settingsProps {
   userInfo: User;
+  deleteSave: ()=>void;
   whichInfoSettingShown: string;
   toggleInfoSetting: (currentTab: string)=>void;
   autoSaveToggle: () => void;
@@ -12,22 +13,47 @@ interface settingsProps {
 
 const Settings = (props: settingsProps) => {
   const [currentTab, setCurrentTab] = useState("general");
+  const [isConfirmShown, setIsConfirmShown] = useState(false);
 
   const changeTab = (tab: string) => {
     setCurrentTab(tab);
   }
+
+  const confirmation = () => {
+    if(isConfirmShown){
+      return (
+        <div className={styles.confirmation}>
+          <p>Are you sure you want to delete your save?</p>
+          <div className={styles.confirmationButtons}>
+            <button className={styles.smallBtn} onClick={() => {
+              props.deleteSave();
+              setIsConfirmShown(false);
+            }}>Yes</button>
+            <button className={styles.smallBtn} onClick={() => setIsConfirmShown(false)}>No</button>
+          </div>
+        </div>
+      )
+    }
+  }
+
+
   const currentTabElement = () => {
     if(currentTab === "general"){
       return (
         <div className={styles.tabContent}>
           <div className={styles.setting}>
-            <h3>Auto save on win?</h3>
+            <h3>Auto save on win</h3>
             <div className={props.userInfo.autoSave ? styles.radioBtnOn : styles.radioBtnOff} onClick={props.autoSaveToggle}>
               <div className={styles.radioBtnCircle}></div>
             </div>
             <h4>{props.userInfo.autoSave ? "On" : "Off"}</h4>
           </div>
           <div className={styles.setting}>
+            <h3>Delete save</h3>
+            <div className={styles.btn} onClick={()=>setIsConfirmShown(true)}>
+              Delete
+            </div>
+            {isConfirmShown && confirmation()}
           </div>
         </div>
       )
@@ -48,8 +74,6 @@ const Settings = (props: settingsProps) => {
               <div className={styles.radioBtnCircle}></div>
             </div>
             <h4>{props.userInfo.pricesSetting}</h4>
-          </div>
-          <div className={styles.setting}>
           </div>
         </div>
       )
