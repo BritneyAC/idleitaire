@@ -7,6 +7,8 @@ interface UseRoboPlayerProps{
   gamesWonIncreased: ()=>void,
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
+  currentGame: string,
+ 
   playForYou: number,
   roboPlayer: number,
   playForYouToggle: boolean,
@@ -15,7 +17,6 @@ interface UseRoboPlayerProps{
   roboPlayerIncreased: ()=>void,
   playForYouIncreased: ()=>void,
   togglePFY: ()=>void
-  currentGame: string,
 }
 
 const useRoboPlayer = (props: UseRoboPlayerProps) => {
@@ -25,18 +26,12 @@ const useRoboPlayer = (props: UseRoboPlayerProps) => {
     isGameRunning,
     gamePoints,
     StartGame,
+    EndGame,
     playForYou} = useGameLogic({...props})
 
   useEffect(() => {
-    if(isGameRunning){
-      if(props.roboPlayer > 0){
-        const time = 2500 / props.roboPlayer
-        const playForYouTimer = setInterval(() => {
-          playForYou()}, time)
-          return () => clearInterval(playForYouTimer)
-      }
-    }
-  }, [isGameRunning, props.roboPlayer, count, deck, cards])
+    StartGame("robo")
+  }, [])
 
   return {StartGame, gamePoints, count, isGameRunning}
 }

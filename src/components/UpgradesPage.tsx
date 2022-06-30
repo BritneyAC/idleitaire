@@ -13,6 +13,8 @@ interface UpgradesPageProps {
   gamesWonIncreased: ()=>void,
   increasePoints: (points: number)=>void,
   saveUserInfo: ()=>void,
+
+
   playForYou: number,
   roboPlayer: number,
   playForYouToggle: boolean,
@@ -31,16 +33,9 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
   const {StartGame, gamePoints, count, isGameRunning} = useRoboPlayer({...props})
   const [currentDescription, setCurrentDescription] = useState("none")
 
-  useEffect(() => {
-    if(props.currentGame === "normal"){
-      if(!isGameRunning){
-        if(props.roboPlayer > 0){
-          StartGame()
-        }
-      }
-    }
-  }, [props.roboPlayer])
   const {
+    userInfo,
+    currentGame,
     roboPlayer,
     playForYou,
     playForYouToggle,
@@ -54,11 +49,12 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
     autoUpgradeToggle,
     autoUpgrade,
     unlockGameCost,
-    } = props
+  } = props
 
-    const changeCurrentDesription = (description: string) => {
-      setCurrentDescription(description)
-    }
+  
+  const changeCurrentDesription = (description: string) => {
+    setCurrentDescription(description)
+  }
 
   return(
     <div className={styles.upgrades}>

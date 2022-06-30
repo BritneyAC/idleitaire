@@ -1,6 +1,6 @@
 import { type } from "os"
 import React, { useState, useEffect, MouseEventHandler, DetailedHTMLProps, ImgHTMLAttributes } from "react"
-import { User } from "./useUserInfo"
+import { User } from "@/hooks/useUserInfo"
 
 interface previousMove {
   cardsMoved: number[],
@@ -44,7 +44,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
   useEffect(() => {
     if(isGameRunning){
       let amount = 10
-      if(gameType !== "normal"){
+      if(props.currentGame !== "normal"){
         amount = 15
       }
       const points = (
@@ -518,20 +518,30 @@ const useGameLogic = (props: UseGameLogicProps) => {
   
   // playForYou Upgrade
   useEffect(() => {
-    let playForYouTimer
+    console.log(gameType)
     if(isGameRunning){
-      if(props.playForYou > 0){
-        if(props.playForYouToggle){
+      if(gameType !== "robo"){
+        if(props.playForYou > 0){
+          if(props.playForYouToggle){
+            const time = 5000 / props.playForYou
 
-          const time = 5000 / props.playForYou
-          const playForYouTimer = setInterval(() => {
-            
-            
+            const playForYouTimer = setInterval(() => {
             playForYou()}, time)
+            
             return () => clearInterval(playForYouTimer)
           }
         }
+      }else {
+        if(props.roboPlayer > 0){
+          const time = 2500 / props.roboPlayer
+          const roboPlayerTimer = setInterval(() => {
+            
+            
+            playForYou()}, time)
+            return () => clearInterval(roboPlayerTimer)
+        }   
       }
+    }
     
   }, [isGameRunning, props.playForYou, props.playForYouToggle, deck, cards, count])
 

@@ -52,16 +52,18 @@ const Board: React.FC<BoardProps> = (props) => {
   const confirmation = (confirmationShown: string) => {
     let confirm
     if(confirmationShown === "restart"){
-      confirm = <>
+      confirm = <div>
       <h1>Are you sure you want to restart the game?</h1>
-    </>
+    </div>
     } else if(confirmationShown === "end"){
-      confirm = <>
+      confirm = <div>
         <h1>
           Are you sure you want to end the game?
-          and go back to the main menu?
         </h1>
-      </>
+        <h1>
+          And go back to the main menu?
+        </h1>
+      </div>
     }
     if(!!confirm){
       const handeClick = (confirm: string = confirmationShown) => {

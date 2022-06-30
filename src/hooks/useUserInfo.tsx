@@ -13,7 +13,7 @@ export class User {
   playForYou = 0
   playForYouToggle = true
   autoUpgradeUnlocked = false
-  autoUpgrade = true
+  autoUpgrade = false
   
   unlocked3Card = false
   user3CardPoints = 0
@@ -22,7 +22,7 @@ export class User {
   play3CardForYou = 0
   play3CardForYouToggle = true
   autoUpgrade3CardUnlocked = false
-  autoUpgrade3Card = true
+  autoUpgrade3Card = false
 }
 export default function useUserInfo(props: (infoSetting: string)=>void) {
   const [savedRecently, setSavedRecently] = useState(false)
@@ -180,7 +180,26 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
     setUserInfo(prevInfo => ({...prevInfo, playForYouToggle: !prevInfo.playForYouToggle}))
   }
 
-  userInfo.autoUpgradeUnlocked && userInfo.autoUpgrade && useAutoUpgrade({autoUpgrade: userInfo.autoUpgrade, points: userInfo.userPoints, playForYouCost, roboPlayerCost, playForYouIncreased, roboPlayerIncreased})
+  const checkForUpgrades = () => {
+    console.log(userInfo.autoUpgrade)
+    if(userInfo.userPoints >= playForYouCost){
+      playForYouIncreased()
+    }
+    if(userInfo.userPoints >= roboPlayerCost){
+      roboPlayerIncreased()
+    }
+  }
+
+  useEffect(()=>{
+    if(userInfo.pricesSetting !== "free"){
+      if(userInfo.autoUpgradeUnlocked){
+        if(userInfo.autoUpgrade){
+          checkForUpgrades()
+        }
+
+      }
+    }
+  },[userInfo.autoUpgrade, userInfo.autoUpgradeUnlocked, userInfo.userPoints, playForYouCost, roboPlayerCost])
 
   const unlockAutoUpgrade = () => {
     if(userInfo.userPoints >= unlockGameCost * 2){
@@ -257,7 +276,26 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
     setUserInfo(prevInfo => ({...prevInfo, play3CardForYouToggle: !prevInfo.play3CardForYouToggle}))
   }
 
-  userInfo.autoUpgrade3CardUnlocked && userInfo.autoUpgrade3Card && useAutoUpgrade({autoUpgrade: userInfo.autoUpgrade3Card, points: userInfo.user3CardPoints, playForYouCost: play3CardForYouCost, roboPlayerCost: robo3CardPlayerCost, playForYouIncreased: play3CardForYouIncreased, roboPlayerIncreased: robo3CardPlayerIncreased})
+  const checkFor3CardUpgrades = () => {
+    console.log(userInfo.autoUpgrade)
+    if(userInfo.user3CardPoints >= play3CardForYouCost){
+      play3CardForYouIncreased()
+    }
+    if(userInfo.user3CardPoints >= robo3CardPlayerCost){
+      robo3CardPlayerIncreased()
+    }
+  }
+
+  useEffect(()=>{
+    if(userInfo.pricesSetting !== "free"){
+      if(userInfo.autoUpgrade3CardUnlocked){
+        if(userInfo.autoUpgrade3Card){
+          checkFor3CardUpgrades()
+        }
+
+      }
+    }
+  },[userInfo.autoUpgrade, userInfo.autoUpgradeUnlocked, userInfo.userPoints, playForYouCost, roboPlayerCost])
 
   const unlockAutoUpgrade3Card = () => {
     if(userInfo.user3CardPoints >= unlockGameCost * 2){

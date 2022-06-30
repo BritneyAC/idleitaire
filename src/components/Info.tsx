@@ -45,7 +45,11 @@ const Info = (props: infoProps) => {
     whichInfoSettingShown,
     toggleInfoSetting,
 
-
+    roboPlayer,
+    playForYou,
+    playForYouToggle,
+    autoUpgradeUnlocked,
+    autoUpgrade,
     roboPlayerIncreased, 
     playForYouIncreased, 
     togglePFY, 
@@ -68,19 +72,27 @@ const Info = (props: infoProps) => {
         return null
       }
       return (
-        <UpgradesPage userInfo={userInfo} unlockGameCost={unlockGameCost} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} roboPlayerCost={roboPlayerCost} playForYouCost={playForYouCost} playForYouToggle={userInfo.playForYouToggle} roboPlayerIncreased={roboPlayerIncreased} playForYouIncreased={playForYouIncreased} gamesWonIncreased={gamesWonIncreased} increasePoints={increasePoints} togglePFY={togglePFY} autoUpgradeUnlocked={userInfo.autoUpgradeUnlocked} unlockAutoUpgrade={unlockAutoUpgrade} autoUpgradeToggle={autoUpgradeToggle} autoUpgrade={userInfo.autoUpgrade} saveUserInfo={saveUserInfo} currentGame={currentGame}/>
+        <UpgradesPage userInfo={userInfo} unlockGameCost={unlockGameCost} roboPlayer={roboPlayer} playForYou={playForYou} roboPlayerCost={roboPlayerCost} playForYouCost={playForYouCost} playForYouToggle={playForYouToggle} roboPlayerIncreased={roboPlayerIncreased} playForYouIncreased={playForYouIncreased} gamesWonIncreased={gamesWonIncreased} increasePoints={increasePoints} togglePFY={togglePFY} autoUpgradeUnlocked={autoUpgradeUnlocked} unlockAutoUpgrade={unlockAutoUpgrade} autoUpgradeToggle={autoUpgradeToggle} autoUpgrade={autoUpgrade} saveUserInfo={saveUserInfo} currentGame={currentGame}/>
       )     
     }
   }
 
+  useEffect(() => {
+    if(currentGame === "menu"){
+      changeTab("stats")
+    } else{
+      changeTab("upgrades")
+    }
+  }, [props.currentGame])
+
   return (
     <div className={`${styles.info} ${whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "settings" && styles.shown}`}>
       <div className={styles.tabs} data-game={currentGame}>
-        <div className={`${currentTab === "stats" && styles.tabCurrent} ${styles.tab}`} onClick={() => (changeTab("stats"))}>
-          <h2>Stats(points: {points})</h2>
-        </div>
         <div className={`${currentTab === "upgrades" && styles.tabCurrent} ${styles.tab}`} onClick={() => (changeTab("upgrades"))}>
           <h2>Upgrade</h2>
+        </div>
+        <div className={`${currentTab === "stats" && styles.tabCurrent} ${styles.tab}`} onClick={() => (changeTab("stats"))}>
+          <h2>Stats(points: {points})</h2>
         </div>
       </div>
       <div className={styles.tabContent}>

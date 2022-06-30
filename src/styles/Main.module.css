@@ -102,4 +102,8 @@
   .board {
     padding-bottom: 0;
   }
+
+  .infoSettingsTabs {
+    bottom: 4rem;
+  }
 }
