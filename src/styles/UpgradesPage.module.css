@@ -11,29 +11,29 @@
   grid-row: span 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 3rem 1rem 8rem;
+  padding: 3rem 1rem 6rem;
   text-align: center;
 }
 .upgrade:not(:last-of-type) {
   border-right: 1px solid white;
 }
 .upgrade h1, .upgrade h2, .upgrade h3, .upgrade p {
-  margin: -0.2rem 0;
+  margin: 0;
+  overflow: visible;
 }
 .upgrade h1 {
-  justify-self: flex-start;
-  font-size: clamp(1rem, 5vw, 4vh);
+  font-size: clamp(1rem, 2.5vw, 4vh);
 }
 .upgrade h2 {
-  font-size: clamp(1rem, 4vw, 3vh);
+  font-size: clamp(1rem, 2vw, 3vh);
 }
 .upgrade h3 {
-  font-size: clamp(1rem, 3vw, 2vh);
+  font-size: clamp(1rem, 2vw, 2vh);
 }
 .upgrade p {
-  font-size: clamp(0.8rem, 2vw, 2vh);
+  font-size: clamp(0.8rem, 1vw, 2vh);
 }
 .upgrade svg {
   position: absolute;

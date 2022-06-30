@@ -19,6 +19,7 @@ interface BoardProps {
 }
 
 const Board: React.FC<BoardProps> = (props) => { 
+  const [start, setStart] = useState(true)
   const [confirmationShown, setConfirmationShown] = useState("none")
   const {
     cards,
@@ -89,6 +90,19 @@ const Board: React.FC<BoardProps> = (props) => {
       </div>
   )}
 }
+
+  const isOpen = () => {
+    open = styles.buttons
+    if(!start && props.whichInfoSettingShown !== "none"){
+      open = `${styles.buttons} ${styles.open}`
+    }
+    return open
+  }
+  let open: string
+  useEffect(() =>{
+    setStart(false)
+  },[])
+  
   
   return(
     <>
@@ -119,7 +133,7 @@ const Board: React.FC<BoardProps> = (props) => {
           <p className={styles.points}>Points: {gamePoints}</p>
         </div>
       </div>
-      <div className={`${styles.buttons} ${props.whichInfoSettingShown !== "none" && styles.open}`}>
+      <div className={isOpen()}>
         <div className={styles.btn} onClick={()=>changeConfirmation("restart")}>
           <h1>Restart Game</h1>
         </div>

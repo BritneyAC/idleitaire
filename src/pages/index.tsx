@@ -64,7 +64,8 @@ const Home: NextPage = () => {
 
   const changeCurrentGame = (game: string) => {
     setCurrentGame(game)
-    toggleInfoSetting("none")
+    
+    game !== "menu" && toggleInfoSetting("info")
   }
 
   const boardToShow = () => {
