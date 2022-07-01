@@ -79,9 +79,7 @@ const Settings = (props: settingsProps) => {
       )
     }
   }
-    <div className={styles.setting}>
-      <h3></h3>
-    </div>
+  
   return (
     <div className={`${styles.settings} ${props.whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "info" && styles.shown}`}>
       <div className={styles.tabs}>

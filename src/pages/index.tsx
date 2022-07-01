@@ -51,7 +51,7 @@ const Home: NextPage = () => {
     toggle3CardPFY,
     unlockAutoUpgrade3Card,
     autoUpgrade3CardToggle,
-  } = useUserInfo(toggleInfoSetting)
+  } = useUserInfo({toggleInfoSetting, currentGame})
 
   useEffect(() => {
     if(currentGame === "menu"){

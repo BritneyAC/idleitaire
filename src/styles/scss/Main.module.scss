@@ -1,7 +1,12 @@
+@use "Mixins";
+
 .app {
   height: 100vh;
   width: 100vw;
   position: relative;
+  & *:not(button) {
+    text-shadow: 0.1rem 0.1rem 0 hsl(0deg, 0%, 0%), -0.1rem -0.1rem 0 hsl(0deg, 0%, 0%);
+  }
 }
 
 .app-header {
@@ -72,25 +77,7 @@
 
 
 .header {
-  height: 100%;
-  width: 21vw;
-  font-size: clamp(1rem, 4vw, 8vh);
-  background-color: hsl(210, 33%, 10%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: clamp(3vh,20%, 20vw) clamp(3vh,20%, 60vw) 0 0;
-  border: 1px solid white;
-  border-bottom: 1px solid hsl(210, 33%, 10%);
-  box-shadow: 0 0 .5rem 0 black;
-  z-index: 7003;
-  cursor: pointer;
-  & h1 {
-    margin: 0;
-  }
-  &.current {
-    background-color: hsl(210, 33%, 20%);
-  }
+  @include Minins.header;
 }
 
 .closeInfoSettings {

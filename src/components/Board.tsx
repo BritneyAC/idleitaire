@@ -20,6 +20,8 @@ interface BoardProps {
 
 const Board: React.FC<BoardProps> = (props) => { 
   const [start, setStart] = useState(true)
+  const [isConfirmShown, setIsConfirmShown] = useState(false)
+
   const {
     cards,
     isGameRunning,
@@ -71,16 +73,16 @@ const Board: React.FC<BoardProps> = (props) => {
         props.toggleInfoSetting("none")
       }
 
-      return(    
-        <div className={styles.confirmation}>
-        {confirm}
-        <div className={styles.confirmBtn} onClick={()=>handeClick()}>
-          <h1>Yes</h1>
-        </div>
-        <div className={styles.confirmBtn} onClick={()=>props.toggleInfoSetting("none")}>
-          <h1>No</h1>
-        </div>
-      </div>
+      return(
+        <>
+          {confirm}
+          <div className={styles.confirmBtn} onClick={()=>handeClick()}>
+            <h1>Yes</h1>
+          </div>
+          <div className={styles.confirmBtn} onClick={()=>props.toggleInfoSetting("none")}>
+            <h1>No</h1>
+          </div>
+        </>
   )}
 }
 
@@ -95,6 +97,17 @@ const Board: React.FC<BoardProps> = (props) => {
     setStart(false)
   },[])
   
+  const confirmOpen = () => {
+    if(props.whichInfoSettingShown === "restart" || props.whichInfoSettingShown === "end"){
+      return `${styles.confirmation} ${styles.shown}`
+    }
+    if(props.whichInfoSettingShown !== "none"){
+      return `${styles.confirmation} ${styles.open}`
+    } else {
+      return styles.confirmation
+    }
+  }
+
   
   return(
     <>
@@ -131,7 +144,9 @@ const Board: React.FC<BoardProps> = (props) => {
         </div>
         <div className={`${styles.btn} ${props.whichInfoSettingShown === "end" && styles.current}`} onClick={()=>props.toggleInfoSetting("end")}><h1>End Game</h1></div>
       </div>
-      {(props.whichInfoSettingShown === "end" || props.whichInfoSettingShown === "restart") && confirmation()}
+      <div className={confirmOpen()}>
+        {(props.whichInfoSettingShown === "end" || props.whichInfoSettingShown === "restart") && confirmation()}
+      </div>
     </>
   )
 }

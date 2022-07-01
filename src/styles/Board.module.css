@@ -131,6 +131,7 @@
   left: 20%;
   display: flex;
   width: 60%;
+  height: 10vh;
   z-index: 6001;
   transform: translateY(0);
   transition: transform 0.5s ease-in-out;
@@ -143,21 +144,25 @@
 }
 
 .btn {
-  height: 10vh;
+  height: 100%;
   width: 21vw;
+  font-size: clamp(1rem, 4vw, 8vh);
   background-color: hsl(210deg, 33%, 10%);
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   border-radius: clamp(3vh, 20%, 20vw) clamp(3vh, 20%, 60vw) 0 0;
   border: 1px solid white;
   border-bottom: 1px solid hsl(210deg, 33%, 10%);
+  box-shadow: 0 0 0.5rem 0 black;
   z-index: 7003;
   cursor: pointer;
 }
 .btn h1 {
   margin: 0;
+}
+.btn.current, .btn:hover {
+  background-color: hsl(210deg, 33%, 20%);
 }
 .btn:first-child {
   font-size: clamp(0.5rem, 1.5vw, 3vh);
@@ -166,9 +171,6 @@
 .btn:not(:first-child) {
   font-size: clamp(0.6rem, 2vw, 3vh);
   line-height: clamp(1rem, 4vw, 6vh);
-}
-.btn.current {
-  background-color: hsl(210deg, 33%, 20%);
 }
 
 .confirmation {
@@ -180,11 +182,20 @@
   position: absolute;
   bottom: 0;
   padding: 1rem clamp(1rem, 8vw, 20vh) 15vh;
-  z-index: 7002;
+  z-index: 6000;
   background-color: hsl(210deg, 33%, 10%);
   border-top: 1px solid white;
   margin: 0;
   text-align: center;
+  transform: translateY(46vh);
+  transition: transform 0.5s ease-in-out;
+}
+.confirmation.open, .confirmation.shown {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+.confirmation.shown {
+  z-index: 7005;
 }
 .confirmation div:first-of-type {
   grid-column: span 2;

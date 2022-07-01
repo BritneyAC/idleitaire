@@ -23,7 +23,13 @@ export class User {
   autoUpgrade3CardUnlocked = false
   autoUpgrade3Card = false
 }
-export default function useUserInfo(props: (infoSetting: string)=>void) {
+
+interface useUserInfoProps {
+  toggleInfoSetting: (currentTab: string)=>void,
+  currentGame: string,
+}
+
+export default function useUserInfo(props: useUserInfoProps) {
   const [savedRecently, setSavedRecently] = useState(false)
   const [name, setName] = useState("Idleitaire")
   const [needToResume, setNeedToResume] = useState(false)
@@ -48,15 +54,34 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
 
   //changes document title every 4 seconds if an upgrade is available
   useEffect(() => {
-      if(userInfo.userPoints > playForYouCost || userInfo.userPoints > roboPlayerCost){
-      const notification = setInterval(()=>{setName(prevName => prevName === "Idleitaire" ? "Upgrade Available" : "Idleitaire")},4000)
-      return () => clearInterval(notification)
-    } else if(name !== "Idleitaire"){
-      setName("Idleitaire")
+    if(props.currentGame === "normal"){
+      if(userInfo.pricesSetting !== "free") {
+        if(userInfo.userPoints > playForYouCost || userInfo.userPoints > roboPlayerCost){
+          const notification = setInterval(()=>{setName(prevName => prevName === "Idleitaire" ? "Upgrade Available" : "Idleitaire")}, 4000)
+          return () => clearInterval(notification)
+        }
+      }
     }
-  },[userInfo])
+    setName("Idleitaire")
+  },[userInfo, props.currentGame, playForYouCost, roboPlayerCost])
+  
+  
+  
+  //changes document title every 4 seconds if an upgrade is available on 3 card game
+  useEffect(() => {
+    if(props.currentGame !== "3card"){
+      if(userInfo.pricesSetting !== "free") {
+        if(userInfo.user3CardPoints > play3CardForYouCost || userInfo.user3CardPoints > robo3CardPlayerCost){
+          const notification = setInterval(()=>{setName(prevName => prevName === "Idleitaire" ? "Upgrade Available" : "Idleitaire")}, 4000)
+          return () => clearInterval(notification)
+        }
+      }
+    }
+    setName("Idleitaire")
+  },[userInfo, props.currentGame, play3CardForYouCost, robo3CardPlayerCost])
 
-  // write cheat behavior here
+
+  // price multiplier
   useEffect(() => {
     if(userInfo.pricesSetting === "normal"){
       setPricesMultiplier(1)
@@ -66,18 +91,7 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
       setPricesMultiplier(0)
     }
   },[userInfo.pricesSetting])
-
   
-  //changes document title every 4 seconds if an upgrade is available on 3 card game
-  useEffect(() => {
-      if(userInfo.user3CardPoints > play3CardForYouCost || userInfo.user3CardPoints > robo3CardPlayerCost){
-      const notification = setInterval(()=>{setName(prevName => prevName === "Idleitaire" ? "Upgrade Available" : "Idleitaire")},4000)
-      return () => clearInterval(notification)
-    } else if(name !== "Idleitaire"){
-      setName("Idleitaire")
-    }
-  },[userInfo])
-
   //retrieves user info from local storage    
   useEffect(() => {
     const userData = localStorage.getItem("userInfo")
@@ -99,7 +113,7 @@ export default function useUserInfo(props: (infoSetting: string)=>void) {
       ResumeGame()
       userInfo.unlocked3Card === true && Resume3CardGame()
       setNeedToResume(false)
-      props("none")
+      props.toggleInfoSetting("none")
     }
   }, [needToResume])
 
