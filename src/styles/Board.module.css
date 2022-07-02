@@ -146,7 +146,7 @@
 .btn {
   height: 100%;
   width: 21vw;
-  font-size: clamp(1.5rem, 10vw, 10vh);
+  font-size: clamp(1.25rem, 4vw, 8vh);
   background-color: hsl(210deg, 33%, 10%);
   display: flex;
   justify-content: center;
@@ -166,8 +166,8 @@
   background-color: hsl(210deg, 33%, 20%);
 }
 .btn:first-child {
-  font-size: clamp(0.75rem, 1.5vw, 3vh);
-  line-height: clamp(1.25rem, 3vw, 6vh);
+  font-size: clamp(0.5rem, 2vw, 2.5vh);
+  line-height: clamp(1rem, 4vw, 5vh);
 }
 .btn:not(:first-child) {
   font-size: clamp(0.6rem, 2vw, 3vh);
