@@ -1,6 +1,6 @@
 import type { User } from "@/hooks/useUserInfo"
 import useBoardElements from "../hooks/useBoardElements"
-import styles from "@/styles/Board.module.css"
+import styles from "@/styles/css/Board.module.css"
 import { useEffect, useState } from "react"
 
 interface BoardProps {

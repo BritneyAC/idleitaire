@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import useRoboPlayer from "@/hooks/useRoboPlayer"
 import type {User} from "@/hooks/useUserInfo"
-import styles from "@/styles/UpgradesPage.module.css"
+import styles from "@/styles/css/UpgradesPage.module.css"
 import { FaQuestionCircle } from "react-icons/fa"
 import { GrClose } from "react-icons/gr"
 
@@ -57,7 +57,7 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
   }
 
   return(
-    <div className={styles.upgrades}>
+    <>
       <div className={styles.upgrade}>
         <h1>RoboPlayer</h1>
         <h2>(Owned: {roboPlayer})</h2>
@@ -120,7 +120,7 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
           </>
         } 
       </div>
-    </div>
+    </>
   )
 }
 

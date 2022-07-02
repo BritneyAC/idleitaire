@@ -1,4 +1,4 @@
-.info {
+.menu {
   position: absolute;
   bottom: 0;
   display: grid;
@@ -9,14 +9,14 @@
   transition: transform 0.5s ease-in-out;
   z-index: 6000;
 }
-.info.open {
+.menu.open {
   transform: translateY(0);
   transition: transform 0.5s ease-in-out;
 }
-.info.shown {
+.menu.shown {
   z-index: 7000;
 }
-.info * {
+.menu * {
   text-transform: capitalize;
 }
 
@@ -29,13 +29,6 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
-.tabs[data-game=menu] {
-  grid-template-columns: 1fr;
-}
-.tabs[data-game=menu] .tab:last-of-type {
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
 
 .tab {
   display: flex;
@@ -43,20 +36,21 @@
   align-items: center;
   height: 6vh;
   cursor: pointer;
-  font-size: clamp(0.4rem, 3vw, 2vh);
 }
-.tab:not(:last-of-type) {
-  border-right: 1px solid white;
-}
-.tab.tabCurrent {
+.tab.current {
   background-color: hsl(210deg, 33%, 15%);
+}
+.tab:not(:nth-child(3)) {
+  border-right: 1px solid white;
 }
 
 .tabContent {
   background-color: hsl(210deg, 33%, 10%);
   height: 100%;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 33.33vw);
+  grid-template-rows: 1fr;
 }
 
 .setting {
@@ -73,11 +67,31 @@
   padding-bottom: 2rem;
 }
 
+.menu[data-game=menu] .tabs {
+  grid-template-columns: 1fr;
+}
+.menu[data-game=menu] .tabs .tab:last-of-type {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+.menu[data-game=menu] .tabContent {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
 .radioBtnOn, .radioBtnOff, .radioBtnHalf {
   background-color: hsl(210deg, 33%, 15%);
   display: flex;
   height: 2rem;
-  width: 60%;
+  width: clamp(4rem, 60%, 60vw);
   border-radius: 2rem;
   cursor: pointer;
 }

@@ -1,0 +1,147 @@
+@use "colors" as *;
+
+@mixin header {
+  height: 100%;
+  width: 21vw;
+  font-size: clamp(1.25rem, 4vw, 8vh);
+  background-color: hsl(210, 33%, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: clamp(3vh,20%, 20vw) clamp(3vh,20%, 60vw) 0 0;
+  border: 1px solid white;
+  border-bottom: 1px solid hsl(210, 33%, 10%);
+  box-shadow: 0 0 .5rem 0 black;
+  z-index: 7003;
+  cursor: pointer;
+  & h1 {
+    margin: 0;
+  }
+  &.current, &:hover {
+    background-color: hsl(210, 33%, 20%);
+  }
+}
+
+@mixin radioBtn {
+  .radioBtnOn, .radioBtnOff, .radioBtnHalf {
+    background-color: map-get($background-colors, "lighter-grey");
+    
+    display: flex;
+    height: 2rem;
+    width: clamp(4rem, 60%, 60vw);
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  
+  .radioBtnOn {
+    justify-content: flex-end;
+    & .radioBtnCircle {
+      background-color: white;
+    }
+  }
+  .radioBtnOff {
+    justify-content: flex-start;
+    & .radioBtnCircle {
+      background-color: hsl(0deg, 0%, 30%);
+    }
+  }
+  
+  .radioBtnHalf {
+    justify-content: center;
+    & .radioBtnCircle {
+      background-color: hsl(0deg, 0%, 60%);
+    }
+  }
+  
+  .radioBtnCircle {
+    aspect-ratio: 1;
+    height: 100%;
+    border-radius: 999%;
+  }
+}
+
+@mixin menu($columns: 1) {
+  .menu {
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 6vh 40vh;
+    width: 100%;
+    transform: translateY(46vh);
+    transition: transform .5s ease-in-out;
+    z-index: 6000;
+    &.open {
+      transform: translateY(0);
+      transition: transform .5s ease-in-out;
+    }
+  
+    &.shown {
+      z-index: 7000;
+    }
+    
+    & *{
+      text-transform: capitalize;
+    }
+  }
+  
+  .tabs {
+    background-color: map-get($background-colors, "grey");
+    height: 100%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    cursor: pointer;
+    &.current {
+      background-color: map-get($background-colors, "lighter-grey");
+    }
+  
+    &:not(:nth-child(#{$columns})) {
+      border-right: 1px solid white;
+    }
+  
+  }
+  
+  .tabContent {
+    background-color: map-get($background-colors, "grey");
+    height: 100%;
+    width: 100%;
+    display: grid;
+    @if($columns == 4){
+      grid-template-columns: repeat(auto-fill, 25vw);
+    }@else if($columns == 3){
+      grid-template-columns: repeat(auto-fill, 33.33vw);
+    }@else if($columns == 2){
+      grid-template-columns: repeat(auto-fill, 50vw);
+    }@else if($columns == 1){
+      grid-template-columns: 100vw;
+    }@else{
+      grid-template-columns: repeat(auto-fill, 25vw);
+    }
+    grid-template-rows: 1fr;
+  }
+
+  .setting {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem;
+    &:not(:last-of-type) {
+      border-right: 1px solid white;
+    }
+    & h3 {
+      padding-bottom: 2rem;
+    }
+  }
+}

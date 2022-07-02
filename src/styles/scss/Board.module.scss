@@ -1,4 +1,4 @@
-@use "Mixins";
+@use "abstracts" as *;
 
 .playspace {
   position: relative;
@@ -7,7 +7,7 @@
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: -1;
-  background-color: hsl(100, 80%, 10%);
+  background-color: map-get($background-colors, "green");
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem 0 hsla(0deg, 0%, 0%, 70%);
   display: grid;
@@ -153,7 +153,7 @@
 }
 
 .btn{
-  @include Mixins.header;
+  @include header;
 
 
   &:first-child{
@@ -177,7 +177,7 @@
   bottom: 0;
   padding: 1rem clamp(1rem, 8vw, 20vh) 15vh;
   z-index:  6000;
-  background-color: hsl(210deg, 33%, 10%);
+  background-color: map-get($background-colors, "grey");
   border-top: 1px solid white;
   margin: 0;
   text-align: center;
@@ -213,7 +213,7 @@
   border-radius: 999%;
   aspect-ratio: 1;
   width: clamp(4rem, 20vw, 20vh);
-  background-color: hsl(210deg, 33%, 15%);
+  background-color: map-get($background-colors, "lighter-grey");
   cursor: pointer;
   & h1 {
     margin: 0;
@@ -222,7 +222,7 @@
   }
 
   &:hover {
-    background-color: hsl(210deg, 33%, 20%);
+    background-color: map-get($background-colors, "highlighted-grey");
   }
 }
 

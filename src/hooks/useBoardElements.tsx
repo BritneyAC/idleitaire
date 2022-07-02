@@ -2,7 +2,9 @@ import React from "react"
 import Image from "next/image"
 import useGameLogic, { card } from "./useGameLogic"
 import { User } from "./useUserInfo"
-import styles from "@/styles/BoardElement.module.css"
+import styles from "@/styles/css/BoardElement.module.css"
+
+
 import Cardback from "@/cards/cardback.svg"
 import AceOfClubs from "@/cards/1.svg"
 import TwoOfClubs from "@/cards/2.svg"
@@ -56,7 +58,6 @@ import TenOfDiamonds from "@/cards/49.svg"
 import JackOfDiamonds from "@/cards/50.svg"
 import QueenOfDiamonds from "@/cards/51.svg"
 import KingOfDiamonds from "@/cards/52.svg"
-import { Style } from "util"
 
 interface UseBoardElementsProps {
   gamesWonIncreased: ()=>void,

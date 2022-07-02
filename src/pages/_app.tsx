@@ -1,5 +1,5 @@
-import '@/styles/globals.css'
-import "@/styles/App.css"
+import '@/styles/css/globals.css'
+import "@/styles/css/App.css"
 import type { AppProps } from 'next/app'
 // import { SessionProvider } from 'next-auth/react'
 // import { withTRPC } from "@trpc/next"

@@ -1,5 +1,5 @@
 import { User } from '@/hooks/useUserInfo';
-import styles from '@/styles/Info.module.css';
+import styles from '@/styles/css/Info.module.css';
 import { useEffect, useState } from 'react';
 import Stats from '@/components/Stats';
 import UpgradesPage from '@/components/UpgradesPage';
@@ -86,12 +86,12 @@ const Info = (props: infoProps) => {
   }, [props.currentGame])
 
   return (
-    <div className={`${styles.info} ${whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "settings" && styles.shown}`}>
-      <div className={styles.tabs} data-game={currentGame}>
-        <div className={`${currentTab === "upgrades" && styles.tabCurrent} ${styles.tab}`} onClick={() => (changeTab("upgrades"))}>
+    <div className={`${styles.menu} ${whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "settings" && styles.shown}`} data-game={currentGame}>
+      <div className={styles.tabs}>
+        <div className={`${currentTab === "upgrades" && styles.current} ${styles.tab}`} onClick={() => (changeTab("upgrades"))}>
           <h2>Upgrade</h2>
         </div>
-        <div className={`${currentTab === "stats" && styles.tabCurrent} ${styles.tab}`} onClick={() => (changeTab("stats"))}>
+        <div className={`${currentTab === "stats" && styles.current} ${styles.tab}`} onClick={() => (changeTab("stats"))}>
           <h2>Stats(points: {points})</h2>
         </div>
       </div>

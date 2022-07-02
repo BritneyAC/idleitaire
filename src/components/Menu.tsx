@@ -1,6 +1,6 @@
 import type {User} from "@/hooks/useUserInfo"
 import useBoardElements from "../hooks/useBoardElements"
-import styles from "@/styles/Menu.module.css"
+import styles from "@/styles/css/Menu.module.css"
 import { useState, useEffect } from "react"
 
 interface MenuProps {

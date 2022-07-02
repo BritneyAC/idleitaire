@@ -1,4 +1,3 @@
-import { type } from "os"
 import React, { useState, useEffect, MouseEventHandler, DetailedHTMLProps, ImgHTMLAttributes } from "react"
 import { User } from "@/hooks/useUserInfo"
 

@@ -1,5 +1,5 @@
 import { User } from '@/hooks/useUserInfo';
-import styles from '@/styles/Settings.module.css';
+import styles from '@/styles/css/Settings.module.css';
 import { useState } from 'react';
 
 interface settingsProps {
@@ -79,9 +79,9 @@ const Settings = (props: settingsProps) => {
       )
     }
   }
-  
+
   return (
-    <div className={`${styles.settings} ${props.whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "info" && styles.shown}`}>
+    <div className={`${styles.menu} ${props.whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "info" && styles.shown}`}>
       <div className={styles.tabs}>
         <div className={`${currentTab === "general" && styles.current} ${styles.tab}`} onClick={() => changeTab("general")}>
           <h2>general</h2>

@@ -1,4 +1,4 @@
-.settings {
+.menu {
   position: absolute;
   bottom: 0;
   display: grid;
@@ -9,14 +9,14 @@
   transition: transform 0.5s ease-in-out;
   z-index: 6000;
 }
-.settings.open {
+.menu.open {
   transform: translateY(0);
   transition: transform 0.5s ease-in-out;
 }
-.settings.shown {
+.menu.shown {
   z-index: 7000;
 }
-.settings * {
+.menu * {
   text-transform: capitalize;
 }
 
@@ -40,25 +40,34 @@
 .tab.current {
   background-color: hsl(210deg, 33%, 15%);
 }
-.tab:not(:last-of-type) {
+.tab:not(:nth-child(4)) {
   border-right: 1px solid white;
 }
 
 .tabContent {
   background-color: hsl(210deg, 33%, 10%);
   height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 25vw);
   grid-template-rows: 1fr;
 }
 
 .setting {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
+}
+.setting:not(:last-of-type) {
+  border-right: 1px solid white;
+}
+.setting h3 {
+  padding-bottom: 2rem;
+}
+
+.setting:not(:nth-child(4)) {
   border-right: 1px solid white;
 }
 .setting h3 {

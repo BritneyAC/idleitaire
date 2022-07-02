@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Menu from '@/components/Menu'
 import Board from "@/components/Board"
 import useUserInfo from "@/hooks/useUserInfo"
-import styles from "@/styles/Main.module.css"
+import styles from "@/styles/css/Main.module.css"
 import Settings from '@/components/Settings'
 import Info from '@/components/Info'
 
