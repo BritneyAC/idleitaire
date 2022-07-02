@@ -154,15 +154,18 @@
 
 .btn{
   @include Mixins.header;
+
+
   &:first-child{
-    font-size: clamp(.5rem, 1.5vw, 3vh);
-    line-height: clamp(1rem, 3vw, 6vh);
+    font-size: clamp(.75rem, 1.5vw, 3vh);
+    line-height: clamp(1.25rem, 3vw, 6vh);
   }
   &:not(:first-child){
     font-size: clamp(.6rem, 2vw, 3vh);
     line-height: clamp(1rem, 4vw, 6vh);
   }
 }
+
 
 .confirmation {
   width: 100vw;

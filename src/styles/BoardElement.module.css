@@ -8,26 +8,26 @@
 }
 
 .randomCard {
-  left: calc(50% - clamp(1.5rem, 4vw, 4vh));
-  z-index: 9999;
+  left: calc(50% - clamp(1.5rem, 5vw, 10vh));
+  z-index: 1003;
 }
 .randomCard, .randomCardTwo, .randomCardThree {
   overflow: visible;
-  width: clamp(3rem, 8vw, 8vh);
+  width: clamp(3rem, 10vw, 20vh);
   position: absolute;
   top: 10%;
 }
 .randomCardTwo {
-  left: calc(60% - clamp(1.5rem, 4vw, 4vh));
+  left: calc(60% - clamp(1.5rem, 5vw, 10vh));
   transform: rotatez(28deg);
   top: 8%;
-  z-index: 9998;
+  z-index: 1001;
 }
 .randomCardThree {
-  left: calc(40% - clamp(1.5rem, 4vw, 4vh));
+  left: calc(40% - clamp(1.5rem, 5vw, 10vh));
   transform: rotateZ(-18deg);
   top: 9%;
-  z-index: 9998;
+  z-index: 1002;
 }
 
 .deck0, .deck1, .deck2, .deck3, .deck4 {
@@ -191,22 +191,23 @@
   }
 
   .randomCard {
-    left: calc(50% - clamp(1rem, 5vw, 2vh));
-    z-index: 9999;
+    left: calc(50% - clamp(1.5rem, 5vw, 4vh));
+    z-index: 1003;
   }
   .randomCard, .randomCardTwo, .randomCardThree {
-    width: clamp(2rem, 10vw, 4vh);
+    width: clamp(3rem, 10vw, 8vh);
+    top: clamp(0rem, 2vh, 2vw);
   }
   .randomCardTwo {
-    left: calc(60% - clamp(1rem, 5vw, 2vh));
-    transform: rotatez(28deg);
+    left: calc(60% - clamp(1.5rem, 5vw, 4vh));
+    transform: rotateZ(28deg);
     top: 8%;
-    z-index: 9998;
+    z-index: 1001;
   }
   .randomCardThree {
-    left: calc(40% - clamp(1rem, 5vw, 2vh));
+    left: calc(40% - clamp(1.5rem, 5vw, 4vh));
     transform: rotateZ(-18deg);
     top: 9%;
-    z-index: 9998;
+    z-index: 1002;
   }
 }
