@@ -219,71 +219,68 @@ const useGameLogic = (props: UseGameLogicProps) => {
   }
 
   const searchInColumns = (card: number) => {
-    if(prevClicked.includes(card))return false
       for(let i = 0; i < cards.Columns.length; i++){
-        if(cards.ShownCards.includes(cards.Columns[i][cards.Columns[i].length - 2])){
-          const newCards: card = {...cards}
-          if( card < 27 ){
-            let testNum = card
-            if(card > 13){
-              testNum = card - 13
+        const newCards: card = {...cards}
+        if( card < 27 ){
+          let testNum = card
+          if(card > 13){
+            testNum = card - 13
+          }
+          for(let i = 0; i < 7; i++){
+            let destination = cards.Columns[i][cards.Columns[i].length - 1]
+            if(destination > 39){
+              destination = destination - 39
+            } else if(40 > destination && destination > 26){
+              destination = destination - 26
+            } else if(27 > destination && destination > 13){
+              destination = destination - 13
             }
-            for(let i = 0; i < 7; i++){
-              let destination = cards.Columns[i][cards.Columns[i].length - 1]
-              if(destination > 39){
-                destination = destination - 39
-              } else if(40 > destination && destination > 26){
-                destination = destination - 26
-              } else if(27 > destination && destination > 13){
-                destination = destination - 13
-              }
-              if(
-                destination - 1 === testNum
-                && cards.Columns[i][cards.Columns[i].length -1] > 26
-              ){
-                let removed = [removeFromPile(card)].flat()
-                for(let j = 0; j < removed.length; j++){
-                  newCards.Columns[i].push(
-                    Number(removed[j])
-                    )
-                  }
-              setPrevClicked(prev => [...prev, card])
-              setCards(newCards)
-              return true
-          }}}else if( card > 26 ){ 
-            let testNum = card
-            if(card > 39){
-              testNum = card - 39
-            } else{
-              testNum = card - 26
-            }
-            for(let i = 0; i < 7; i++){
-              let destination = cards.Columns[i][cards.Columns[i].length - 1]
-              if(destination > 39){
-                destination = destination - 39
-              } else if(40 > destination && destination > 26){
-                destination = destination - 26
-              } else if(27 > destination && destination > 13){
-                destination = destination - 13
-              }
-              if(
-                destination - 1 === testNum
-                && cards.Columns[i][cards.Columns[i].length -1] < 27
-              ){
-                let removed = [removeFromPile(card)].flat()
-                for(let j = 0; j < removed.length; j++){
-                  newCards.Columns[i].push(
-                    Number(removed[j])
+            if(
+              destination - 1 === testNum
+              && cards.Columns[i][cards.Columns[i].length -1] > 26
+            ){
+              let removed = [removeFromPile(card)].flat()
+              for(let j = 0; j < removed.length; j++){
+                newCards.Columns[i].push(
+                  Number(removed[j])
                   )
                 }
-              setPrevClicked(prev => [...prev, card])
-              setCards(newCards)
-              return true
-            }}}
+            setPrevClicked(prev => [...prev, card])
+            setCards(newCards)
+            return true
+        }}}else if( card > 26 ){ 
+          let testNum = card
+          if(card > 39){
+            testNum = card - 39
+          } else{
+            testNum = card - 26
+          }
+          for(let i = 0; i < 7; i++){
+            let destination = cards.Columns[i][cards.Columns[i].length - 1]
+            if(destination > 39){
+              destination = destination - 39
+            } else if(40 > destination && destination > 26){
+              destination = destination - 26
+            } else if(27 > destination && destination > 13){
+              destination = destination - 13
+            }
+            if(
+              destination - 1 === testNum
+              && cards.Columns[i][cards.Columns[i].length -1] < 27
+            ){
+              let removed = [removeFromPile(card)].flat()
+              for(let j = 0; j < removed.length; j++){
+                newCards.Columns[i].push(
+                  Number(removed[j])
+                )
+              }
+            setPrevClicked(prev => [...prev, card])
+            setCards(newCards)
+            return true
+          }}}
         }
-      }
       return false
-  }
+    }
 
 
   const searchForNewShown = () => {
@@ -338,9 +335,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
           }
           setCards(newCards)
           return true
-    }})}else if(searchForNewShown()){
-      return true
-    }return searchInColumns(clickedCard)
+    }})}return searchInColumns(clickedCard)
   }
 
   const handleClick = (id: number) => {
