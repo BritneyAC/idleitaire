@@ -39,6 +39,8 @@ const useGameLogic = (props: UseGameLogicProps) => {
   const [prevClicked, setPrevClicked] = useState<number[]>([])
   const [cards, setCards] = useState(new card())
   const [gameType, setGameType] = useState(props.currentGame)
+  const [deckFlipped, setDeckFlipped] = useState(false)
+  const [prevClickedCount, setPrevClickedCount] = useState(0)
   
   //points counter
   useEffect(() => {
@@ -70,12 +72,21 @@ const useGameLogic = (props: UseGameLogicProps) => {
   }, [cards])
 
   useEffect(() => {
-    StartGame(props.currentGame) 
+    if(!isGameRunning){
+      StartGame(props.currentGame) 
+    }
   }, [])
 
   // win condition checker
   useEffect(() =>{
-    if(cards.ShownCards.length === 53){
+    let win = true
+    for(let i = 0; i < 7; i++){
+      if(!cards.ShownCards.includes(cards.Columns[i][0])){
+        win = false
+        return
+      }
+    }
+    if(win){
       props.gamesWonIncreased()
       Win(gameType)
     }
@@ -284,14 +295,20 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
   const searchForNewShown = () => {
     for(let j = 0; j < cards.Columns.length; j++){
-      const card = cards.Columns[j][cards.Columns[j].length - 1]
-      for(let i = 0; i < cards.Columns.length; i++){
-        if(!cards.ShownCards.includes(cards.Columns[i][cards.Columns[i].length - 2])){
-          return searchInColumns(card)
+      for(let k = cards.Columns[j].length - 1; k >= 0; k--){
+        if(cards.Columns[j].length > 1 && !cards.ShownCards.includes(cards.Columns[j][k - 1])){
+          const card = cards.Columns[j][k]
+          if(!prevClicked.includes(card) && cards.ShownCards.includes(card)){
+            for(let i = 0; i < cards.Columns.length; i++){
+              if(searchPlaceable(card)){
+                return true
+              }
+            }
+          }
         }
       }
-    return false
     }
+    return false
   }
 
 
@@ -306,21 +323,25 @@ const useGameLogic = (props: UseGameLogicProps) => {
           let removed = [removeFromPile(clickedCard)].flat()
           newCards.Clubs.push(Number(removed[0]))
           setCards(newCards)
+          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
           return true
         } else if( clickedCard === 14 || cards.Spades[cards.Spades.length - 1] + 1 === clickedCard ){
           let removed = [removeFromPile(clickedCard)].flat()
           newCards.Spades.push(Number(removed[0]))
           setCards(newCards)
+          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
           return true
         } else if( clickedCard === 27 || cards.Hearts[cards.Hearts.length - 1] + 1 === clickedCard ){
           let removed = [removeFromPile(clickedCard)].flat()
           newCards.Hearts.push(Number(removed[0]))
           setCards(newCards)
+          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
           return true
         } else if( clickedCard === 40 || cards.Diamonds[cards.Diamonds.length - 1] + 1 === clickedCard ){
           let removed = [removeFromPile(clickedCard)].flat()
           newCards.Diamonds.push(Number(removed[0]))
           setCards(newCards)
+          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
           return true
     }}}
     if( clickedCard === 13 || clickedCard === 26 || clickedCard === 39 || clickedCard === 52 ){
@@ -503,25 +524,25 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
   const playForYou = () => {
     setCount(prevCount => prevCount + 1)
-    
-    if(deck.length === 0){
-      if(count % 12 === 1){
-        setPrevClicked([])
-      }
-    } else if(count % 16 === 1){
-      setPrevClicked([])
+
+    if(searchForNewShown()){
+      prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+      setDeckFlipped(false)
+      return true
     }
-    if(searchForNewShown())return true
     for(let i = 0; i < 7; i++){
       const shown = cards.Columns[i].filter((num) => cards.ShownCards.includes(num))
       for(let j = 0; j < shown.length; j++){
         if((shown[j] === 13 || shown[j] === 26 || shown[j] === 39 || shown[j] === 52) && shown[j] === cards.Columns[i][0]){
         } else if( !prevClicked.includes(shown[j]) && searchPlaceable(shown[j])){
+          setDeckFlipped(false)
           return true
         }
       }
     }
     if(searchPlaceable(cards.Playable[cards.Playable.length - 1])){
+      prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+      setDeckFlipped(false)
       return true
     } else if(deck.length > 0){
       if(gameType === "normal"){
@@ -535,7 +556,15 @@ const useGameLogic = (props: UseGameLogicProps) => {
         return true
       }
     } else if(gameType !== "spider"){
-      resetDeck()
+      if(cards.Playable.length > 0 && !deckFlipped){
+        resetDeck()
+        setDeckFlipped(true)
+      } else if(prevClicked.length > 0 && prevClickedCount < 2){
+        setPrevClicked([])
+        setPrevClickedCount(prevCount => prevCount + 1)
+      } else{
+        RestartGame()
+      }
     }
   }
 
@@ -566,12 +595,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
     }
     
   }, [isGameRunning, props.playForYou, props.playForYouToggle, props.roboPlayer, deck, cards, count])
-
-  useEffect(()=>{
-    if(count > 155){
-      RestartGame(gameType)
-    }
-  },[isGameRunning, count])
 
   return {
     ...props,

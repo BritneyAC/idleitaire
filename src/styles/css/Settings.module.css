@@ -139,33 +139,28 @@
   background-color: hsl(210deg, 33%, 15%);
   display: flex;
   height: 2rem;
-  width: clamp(4rem, 60%, 60vw);
+  width: clamp(4rem, 20vw, 12rem);
   border-radius: 2rem;
   cursor: pointer;
 }
 
-.radioBtnOn {
-  justify-content: flex-end;
-}
 .radioBtnOn .radioBtnCircle {
+  transform: translateX(clamp(2rem, 20vw - 2rem, 10rem));
   background-color: white;
 }
 
-.radioBtnOff {
-  justify-content: flex-start;
-}
 .radioBtnOff .radioBtnCircle {
+  transform: translateX(0);
   background-color: hsl(0deg, 0%, 30%);
 }
 
-.radioBtnHalf {
-  justify-content: center;
-}
 .radioBtnHalf .radioBtnCircle {
+  transform: translateX(clamp(1rem, 10vw - 1rem, 5rem));
   background-color: hsl(0deg, 0%, 60%);
 }
 
 .radioBtnCircle {
+  transition: transform 0.5s ease-in-out;
   aspect-ratio: 1;
   height: 100%;
   border-radius: 999%;
