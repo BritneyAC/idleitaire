@@ -38,16 +38,16 @@ export default function useUserInfo(props: useUserInfoProps) {
 
   //prices setting
   const roboPlayerCost = useMemo(() => {return pricesMultiplier * Math.ceil(
-      Math.log((userInfo.roboPlayer + 1) * 3) * 
+      Math.log((userInfo.roboPlayer + 1) * 2) * 
       (userInfo.roboPlayer + 1) * 40) * 10}, [userInfo, pricesMultiplier])
   const playForYouCost = useMemo(() => {return pricesMultiplier * Math.ceil(
-      Math.log((userInfo.playForYou + 1) * 6) * 
+      Math.log((userInfo.playForYou + 1) * 4) * 
       (userInfo.playForYou + 1) * 80) * 10}, [userInfo, pricesMultiplier])
   const robo3CardPlayerCost = useMemo(() => {return pricesMultiplier * Math.ceil(
-      Math.log((userInfo.robo3CardPlayer + 1) * 3) * 
+      Math.log((userInfo.robo3CardPlayer + 1) * 2) * 
       (userInfo.robo3CardPlayer + 1) * 40) * 10}, [userInfo, pricesMultiplier])
   const play3CardForYouCost = useMemo(() => {return pricesMultiplier * Math.ceil(
-      Math.log((userInfo.play3CardForYou + 1) * 6) * 
+      Math.log((userInfo.play3CardForYou + 1) * 4) * 
       (userInfo.play3CardForYou + 1) * 80) * 10}, [userInfo, pricesMultiplier])
   const unlockGameCost = useMemo(() => {return pricesMultiplier * 10000}, [pricesMultiplier])
   

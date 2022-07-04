@@ -556,7 +556,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
         return true
       }
     } else if(gameType !== "spider"){
-      if(cards.Playable.length > 0 && !deckFlipped){
+      if(cards.Playable.length > (gameType === "normal" ? 1 : 3) && !deckFlipped){
         resetDeck()
         setDeckFlipped(true)
       } else if(prevClicked.length > 0 && prevClickedCount < 2){
@@ -575,7 +575,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       if(!props.roboGame){
         if(props.playForYou > 0){
           if(props.playForYouToggle){
-            const time = 5000 / props.playForYou
+            const time = 3000 / props.playForYou
 
             const playForYouTimer = setInterval(() => {
               playForYou()}, time)
@@ -585,7 +585,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
         }
       }else {
         if(props.roboPlayer > 0){
-          const time = 2500 / props.roboPlayer
+          const time = 1500 / props.roboPlayer
           const roboPlayerTimer = setInterval(() => {
             playForYou()}, time)
 
