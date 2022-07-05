@@ -1,12 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useEffect, useState } from "react"
-import Menu from '@/components/Menu'
-import Board from "@/components/Board"
-import useUserInfo from "@/hooks/useUserInfo"
 import styles from "@/styles/css/Main.module.css"
+import dynamic from 'next/dynamic'
+
+const Menu = dynamic(()=>import("@/components/Menu"))
+const Board = dynamic(()=>import("@/components/Board"))
+import useUserInfo from "@/hooks/useUserInfo"
 import Settings from '@/components/Settings'
 import Info from '@/components/Info'
+
 
 const Home: NextPage = () => {
   const [whichInfoSettingShown, setWhichInfoSettingShown] = useState("settings")  

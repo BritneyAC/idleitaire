@@ -1,5 +1,5 @@
 import type { User } from "@/hooks/useUserInfo"
-import useBoardElements from "../hooks/useBoardElements"
+import useBoardElements from "@/hooks/useBoardElements"
 import styles from "@/styles/css/Board.module.css"
 import { useEffect, useState } from "react"
 
@@ -20,7 +20,6 @@ interface BoardProps {
 
 const Board: React.FC<BoardProps> = (props) => { 
   const [start, setStart] = useState(true)
-  const [isConfirmShown, setIsConfirmShown] = useState(false)
 
   const {
     cards,
