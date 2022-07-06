@@ -22,10 +22,8 @@ const Board: React.FC<BoardProps> = (props) => {
   const [start, setStart] = useState(true)
 
   const {
-    cards,
-    isGameRunning,
+    gameCards,
     RestartGame,
-    StartGame,
     EndGame,
     gameType,
     undoMove,
@@ -133,7 +131,7 @@ const Board: React.FC<BoardProps> = (props) => {
           <div className={styles.column4}>{Column5Elements}</div>
           <div className={styles.column5}>{Column6Elements}</div>
           <div className={styles.column6}>{Column7Elements}</div>
-          {cards.previousMoves.length > 0 && <button className={styles.undo} onClick={undoMove}>undo</button>}
+          {gameCards.previousMoves.length > 0 && <button className={styles.undo} onClick={undoMove}>undo</button>}
           <p className={styles.points}>Points: {gamePoints}</p>
         </div>
       </div>

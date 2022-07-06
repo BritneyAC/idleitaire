@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react"
+import { useState } from "react"
+import type React from "react"
 import useRoboPlayer from "@/hooks/useRoboPlayer"
 import type {User} from "@/hooks/useUserInfo"
 import styles from "@/styles/css/UpgradesPage.module.css"

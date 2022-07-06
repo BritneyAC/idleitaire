@@ -1,6 +1,5 @@
 import type {User} from "@/hooks/useUserInfo"
 import styles from "@/styles/css/Stats.module.css"
-import { useUser } from "@auth0/nextjs-auth0"
 
 interface StatsProps {
   userInfo: User,

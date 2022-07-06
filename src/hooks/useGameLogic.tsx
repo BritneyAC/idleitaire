@@ -1,22 +1,33 @@
-import React, { useState, useEffect, MouseEventHandler, DetailedHTMLProps, ImgHTMLAttributes } from "react"
+import { useState, useEffect} from "react"
 import { User } from "@/hooks/useUserInfo"
 
 interface previousMove {
-  cardsMoved: number[],
-  location: number
+  cardsMoved: card[],
+  location: string
 }
 
 export class card {
-  Playable: number[] = []
-  Clubs: number[] = []
-  Spades: number[] = []
-  Hearts: number[] = []
-  Diamonds: number[] = []
-  ShownCards: number[] = []
-  Columns: number[][] = [
+  constructor(value: number, shown: boolean, location: string){
+    this.value = value;
+    this.shown = shown;
+    this.location = location;
+  }
+  value: number;
+  shown: boolean = false;
+  location: string;
+}
+
+export class cards {
+  Playable: card[] = [];
+  Clubs: card[] = [];
+  Spades: card[] = [];
+  Hearts: card[] = [];
+  Diamonds: card[] = [];
+  Columns: card[][] = [
     [],[],[],[],[],[],[]
-  ] 
-  previousMoves: previousMove[] = []
+  ] ;
+  AllCards: card[] = [];
+  previousMoves: previousMove[] = [];
 }
 
 interface UseGameLogicProps {
@@ -33,11 +44,11 @@ interface UseGameLogicProps {
 
 const useGameLogic = (props: UseGameLogicProps) => {
   const [isGameRunning, setIsGameRunning] = useState(false)
-  const [deck, setDeck] = useState<number[]>([])
+  const [deck, setDeck] = useState<card[]>([])
   const [gamePoints, setGamePoints] = useState(0)
   const [count, setCount] = useState(0)
-  const [prevClicked, setPrevClicked] = useState<number[]>([])
-  const [cards, setCards] = useState(new card())
+  const [prevClicked, setPrevClicked] = useState<card[]>([])
+  const [gameCards, setGameCards] = useState(new cards())
   const [gameType, setGameType] = useState(props.currentGame)
   const [deckFlipped, setDeckFlipped] = useState(false)
   const [prevClickedCount, setPrevClickedCount] = useState(0)
@@ -50,26 +61,14 @@ const useGameLogic = (props: UseGameLogicProps) => {
         amount = 15
       }
       const points = (
-        cards.Clubs.length + 
-        cards.Spades.length + 
-        cards.Hearts.length + 
-        cards.Diamonds.length) * amount
+        gameCards.Clubs.length + 
+        gameCards.Spades.length + 
+        gameCards.Hearts.length + 
+        gameCards.Diamonds.length) * amount
       setGamePoints(points)
     }
-  }, [cards])
+  }, [gameCards])
 
-  //Show new card if end of column has none showing
-  useEffect(() => {
-    for(let i = 0; i < 7; i++){
-      const column = cards.Columns[i]
-      if(!cards.ShownCards.includes(column[column.length - 1])){
-        setCards(prevCards => ({
-          ...prevCards,
-          ShownCards: [...prevCards.ShownCards, column[column.length - 1]]
-        }))
-      }
-    }
-  }, [cards])
 
   useEffect(() => {
     if(!isGameRunning){
@@ -81,24 +80,26 @@ const useGameLogic = (props: UseGameLogicProps) => {
   useEffect(() =>{
     let win = true
     for(let i = 0; i < 7; i++){
-      if(!cards.ShownCards.includes(cards.Columns[i][0])){
-        win = false
-        return
+      if(gameCards.Columns[i].length > 0){
+        if(!gameCards.Columns[i][0].shown){
+          win = false
+          return
+        }
       }
     }
     if(win){
       props.gamesWonIncreased()
       Win(gameType)
     }
-  }, [cards])
+  }, [gameCards])
 
   //makes an array of 52 cards and shuffles the order
-  const NewDeck = (): number[] => {
-    const newDeck: number[] = []
+  const NewDeck = (): card[] => {
+    const newDeck: card[] = []
     for(let i = 1; i <= 52; i++){
-      newDeck.push(i)
+      newDeck.push({...new card(i, false, "deck")})
     }
-    const shuffled: number[] = []
+    const shuffled: card[] = []
     for(let i = 0; i < newDeck.length; i){
       let randnum = Math.floor(
         Math.random() * newDeck.length
@@ -112,41 +113,91 @@ const useGameLogic = (props: UseGameLogicProps) => {
   }
 
   const StartColumns = (type: string = "normal") => {
-    const newDeck: number[] = NewDeck()
-    const newCards: card = {
-      ...new card()
-    }
+    const newDeck: card[] = NewDeck()
+    const newGameCards: cards = {...new cards()}
+    newGameCards.AllCards.push(...newDeck)
+    
     for(let i = 0; i < 7; i++){
-      newCards.Columns[6].push(Number(newDeck.pop()))
-      i > 0 && newCards.Columns[5].push(Number(newDeck.pop()))
-      i > 1 && newCards.Columns[4].push(Number(newDeck.pop()))
-      i > 2 && newCards.Columns[3].push(Number(newDeck.pop()))
-      i > 3 && newCards.Columns[2].push(Number(newDeck.pop()))
-      i > 4 && newCards.Columns[1].push(Number(newDeck.pop()))
-      i > 5 && newCards.Columns[0].push(Number(newDeck.pop()))
+      const newCard = newDeck.pop()
+      if(!!newCard){
+        newCard.location = `column6`
+        newGameCards.Columns[6].push(newCard)
+      }
+        if(i > 0){
+        const newCard = newDeck.pop()
+        if(!!newCard){
+          newCard.location = `column5`
+          newGameCards.Columns[5].push(newCard)
+        }
+      }
+      if(i > 1){
+        const newCard = newDeck.pop()
+        if(!!newCard){
+          newCard.location = `column4`
+          newGameCards.Columns[4].push(newCard)
+        }
+      }
+      if(i > 2){
+        const newCard = newDeck.pop()
+        if(!!newCard){
+          newCard.location = `column3`
+          newGameCards.Columns[3].push(newCard)
+        }
+      }
+      if(i > 3){
+        const newCard = newDeck.pop()
+        if(!!newCard){
+          newCard.location = `column2`
+          newGameCards.Columns[2].push(newCard)
+        }
+      }
+      if(i > 4){
+        const newCard = newDeck.pop()
+        if(!!newCard){
+          newCard.location = `column1`
+          newGameCards.Columns[1].push(newCard)
+        }
+      }
+      if(i > 5){
+        const newCard = newDeck.pop()
+        if(!!newCard){
+          newCard.location = `column0`
+          newGameCards.Columns[0].push(newCard)
+        }
+      }
     }
-    newCards.Columns.forEach(column => {
-      newCards.ShownCards.push(column[column.length - 1])
+    newGameCards.Columns.forEach((column, index) => {
+      column[column.length - 1].shown = true
     })
     if(type === "normal" || type === "robo"){
-      newCards.Playable.push(Number(newDeck.pop()))
-      newCards.ShownCards.push(newCards.Playable[0])
+      const newCard = newDeck.pop()
+      if(!!newCard){
+        newCard.shown = true
+        newCard.location = "playable"
+        newGameCards.Playable.push(newCard)
+      }
     } else if(type === "3card"){
-      newCards.Playable.push(Number(newDeck.pop()))
-      newCards.Playable.push(Number(newDeck.pop()))
-      newCards.Playable.push(Number(newDeck.pop()))
-      newCards.ShownCards.push(newCards.Playable[0])
-      newCards.ShownCards.push(newCards.Playable[1])
-      newCards.ShownCards.push(newCards.Playable[2])
+      const newCard = newDeck.pop()
+      const newCardTwo = newDeck.pop()
+      const newCardThree = newDeck.pop()
+      if(!!newCard && !!newCardTwo && !!newCardThree){
+        newCard.shown = true
+        newCard.location = "playable"
+        newGameCards.Playable.push(newCard)
+        newCardTwo.shown = true
+        newCardTwo.location = "playable"
+        newGameCards.Playable.push(newCardTwo)
+        newCardThree.shown = true
+        newCardThree.location = "playable"
+        newGameCards.Playable.push(newCardThree)
+      }
     }
     setDeck(newDeck)
-    setCards(newCards)
+    setGameCards(newGameCards)
   }
 
   const StartGame = (type: string = "normal") => {
     setGameType(type)
-    NewDeck()
-    setCards(new card())
     setIsGameRunning(true)
     setGamePoints(0)
     StartColumns(type)
@@ -178,128 +229,148 @@ const useGameLogic = (props: UseGameLogicProps) => {
   }
 
   // Removes and returns the passed card from where it is currently stored 
-  const removeFromPile: (card: number)=>number[] = (cardToRemove: number) => {
-    const newCards: card = {...cards}
-    const removedCards: number[] = []
-    if(cards.Playable[cards.Playable.length - 1] === cardToRemove){
-      removedCards.push(Number(newCards.Playable.pop()))
-      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 7})
-      setCards(newCards)
-      return removedCards
-    }else if(cards.Clubs[cards.Clubs.length - 1] === cardToRemove){
-      removedCards.push(Number(newCards.Clubs.pop()))
-      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 8})
-      setCards(newCards)
-      return removedCards
-    }else if(cards.Spades[cards.Spades.length - 1] === cardToRemove){
-      removedCards.push(Number(newCards.Spades.pop()))
-      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 9})
-      setCards(newCards)
-      return removedCards
-    } else if (cards.Hearts[cards.Hearts.length - 1] === cardToRemove){
-      removedCards.push(Number(newCards.Hearts.pop()))
-      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 10})
-      setCards(newCards)
-      return removedCards
-    } else if(cards.Diamonds[cards.Diamonds.length - 1] === cardToRemove){
-      removedCards.push(Number(newCards.Diamonds.pop()))
-      newCards.previousMoves.push({cardsMoved: [...removedCards], location: 11})
-      setCards(newCards)
-      return removedCards
-    }
-    newCards.Columns.forEach((column, index) => {
-      if(column.includes(cardToRemove)){
-        const indexOfCard = cards.Columns[index].indexOf(cardToRemove)
-        const spliceAmount = cards.Columns[index].length - cards.Columns[index].indexOf(cardToRemove)
-
-        removedCards.push(
-          ...newCards.Columns[index].splice(
-            indexOfCard, 
-            spliceAmount
-        ))
-        newCards.previousMoves.push({cardsMoved: [...removedCards.flat()], location: index})
-        if(!newCards.ShownCards.includes(column[column.length - 1])){
-          newCards.ShownCards.push(column[column.length - 1])
-        }
+  const removeFromPile: (card: card)=>card[] = (cardToRemove: card) => {
+    const newGameCards: cards = {...gameCards}
+    const removedCards: card[] = []
+    if(gameCards.Playable[gameCards.Playable.length - 1] === cardToRemove){
+      let removedCard = newGameCards.Playable.pop()
+      if(!!removedCard){
+        removedCards.push(removedCard)
+        newGameCards.previousMoves.push({cardsMoved: [...removedCards], location: "playable"})
+        setGameCards(newGameCards)
+        return removedCards
       }
-    })
-    setCards(newCards)
+    }else if(gameCards.Clubs[gameCards.Clubs.length - 1] === cardToRemove){
+      let removedCard = newGameCards.Clubs.pop()
+      if(!!removedCard){
+        removedCards.push(removedCard)
+        newGameCards.previousMoves.push({cardsMoved: [...removedCards], location: "clubs"})
+        setGameCards(newGameCards)
+        return removedCards
+      }
+    }else if(gameCards.Spades[gameCards.Spades.length - 1] === cardToRemove){
+      let removedCard = newGameCards.Spades.pop()
+      if(!!removedCard){
+        removedCards.push(removedCard)
+        newGameCards.previousMoves.push({cardsMoved: [...removedCards], location: "spades"})
+        setGameCards(newGameCards)
+        return removedCards
+      }
+    } else if (gameCards.Hearts[gameCards.Hearts.length - 1] === cardToRemove){
+      let removedCard = newGameCards.Hearts.pop()
+      if(!!removedCard){
+        removedCards.push(removedCard)
+        newGameCards.previousMoves.push({cardsMoved: [...removedCards], location: "hearts"})
+        setGameCards(newGameCards)
+        return removedCards
+      }
+    } else if(gameCards.Diamonds[gameCards.Diamonds.length - 1] === cardToRemove){
+      let removedCard = newGameCards.Diamonds.pop()
+      if(!!removedCard){
+        removedCards.push(removedCard)
+        newGameCards.previousMoves.push({cardsMoved: [...removedCards], location: "diamonds"})
+        setGameCards(newGameCards)
+        return removedCards
+      } 
+    }
+    if(cardToRemove.location.slice(0,6) === "column"){
+      let columnNum = Number(cardToRemove.location.slice(6, 7))
+      const indexOfCard = gameCards.Columns[columnNum].indexOf(cardToRemove)
+      const spliceAmount = gameCards.Columns[columnNum].length - gameCards.Columns[columnNum].indexOf(cardToRemove)
+
+      removedCards.push(
+        ...newGameCards.Columns[columnNum].splice(
+          indexOfCard, 
+          spliceAmount
+      ))
+      newGameCards.previousMoves.push({cardsMoved: [...removedCards.flat()], location: `column${columnNum}`})
+      if(newGameCards.Columns[columnNum].length > 0){
+        newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1].shown = true
+      }
+    }
+    setGameCards(newGameCards)
     return removedCards
     
   }
 
-  const searchInColumns = (card: number) => {
-      for(let i = 0; i < cards.Columns.length; i++){
-        const newCards: card = {...cards}
-        if( card < 27 ){
-          let testNum = card
-          if(card > 13){
-            testNum = card - 13
+  const searchInColumns = (card: card) => {
+    if(card){
+      for(let i = 0; i < 7; i++){
+        const newGameCards: cards = {...gameCards}
+        if( card.value < 27 ){
+          let testNum = card.value
+          if(card.value > 13){
+            testNum = card.value - 13
           }
           for(let i = 0; i < 7; i++){
-            let destination = cards.Columns[i][cards.Columns[i].length - 1]
-            if(destination > 39){
-              destination = destination - 39
-            } else if(40 > destination && destination > 26){
-              destination = destination - 26
-            } else if(27 > destination && destination > 13){
-              destination = destination - 13
-            }
-            if(
-              destination - 1 === testNum
-              && cards.Columns[i][cards.Columns[i].length -1] > 26
-            ){
-              let removed = [removeFromPile(card)].flat()
-              for(let j = 0; j < removed.length; j++){
-                newCards.Columns[i].push(
-                  Number(removed[j])
-                  )
-                }
-            setPrevClicked(prev => [...prev, card])
-            setCards(newCards)
-            return true
-        }}}else if( card > 26 ){ 
-          let testNum = card
-          if(card > 39){
-            testNum = card - 39
-          } else{
-            testNum = card - 26
-          }
-          for(let i = 0; i < 7; i++){
-            let destination = cards.Columns[i][cards.Columns[i].length - 1]
-            if(destination > 39){
-              destination = destination - 39
-            } else if(40 > destination && destination > 26){
-              destination = destination - 26
-            } else if(27 > destination && destination > 13){
-              destination = destination - 13
-            }
-            if(
-              destination - 1 === testNum
-              && cards.Columns[i][cards.Columns[i].length -1] < 27
-            ){
-              let removed = [removeFromPile(card)].flat()
-              for(let j = 0; j < removed.length; j++){
-                newCards.Columns[i].push(
-                  Number(removed[j])
-                )
+            if(newGameCards.Columns[i].length > 0){
+              let destination = gameCards.Columns[i][gameCards.Columns[i].length - 1].value
+              if(destination > 39){
+                destination = destination - 39
+              } else if(40 > destination && destination > 26){
+                destination = destination - 26
               }
-            setPrevClicked(prev => [...prev, card])
-            setCards(newCards)
-            return true
+              if(
+                destination - 1 === testNum
+                && gameCards.Columns[i][gameCards.Columns[i].length -1].value > 26
+              ){
+                let removed = removeFromPile(card)
+                for(let j = 0; j < removed.length; j++){
+                  const rmvd = removed[j]
+                  if(!!rmvd){
+                    rmvd.shown = true
+                    rmvd.location = `column${i}`
+                    newGameCards.Columns[i].push(rmvd)
+                  }
+                }
+              setPrevClicked(prev => [...prev, card])
+              setGameCards(newGameCards)
+              return true
+        }}}}else if( card.value > 26 ){ 
+          let testNum = card.value
+          if(card.value > 39){
+            testNum = card.value - 39
+          } else{
+            testNum = card.value - 26
+          }
+          for(let i = 0; i < 7; i++){
+            if(gameCards.Columns[i].length > 0){
+              let destination = gameCards.Columns[i][gameCards.Columns[i].length - 1].value
+              if(27 > destination && destination > 13){
+                destination = destination - 13
+              }
+              if(
+                destination - 1 === testNum
+                && gameCards.Columns[i][gameCards.Columns[i].length -1].value < 27
+                ){
+                  let removed = removeFromPile(card).flat()
+                  for(let j = 0; j < removed.length; j++){
+                    const rmvd = removed[j]
+                    if(!!rmvd){
+                      rmvd.shown = true
+                      rmvd.location = `column${i}`
+                      newGameCards.Columns[i].push(rmvd)
+                    }
+                  }
+                  setPrevClicked(prev => [...prev, card])
+                  setGameCards(newGameCards)
+                  return true
+                }
           }}}
         }
-      return false
     }
+    return false
+  }
 
 
   const searchForNewShown = () => {
-    for(let j = 0; j < cards.Columns.length; j++){
-      for(let k = cards.Columns[j].length - 1; k >= 0; k--){
-        if(cards.Columns[j].length > 1 && !cards.ShownCards.includes(cards.Columns[j][k - 1])){
-          const card = cards.Columns[j][k]
-          if(!prevClicked.includes(card) && cards.ShownCards.includes(card)){
-            for(let i = 0; i < cards.Columns.length; i++){
+    for(let j = 0; j < gameCards.Columns.length; j++){
+      for(let k = gameCards.Columns[j].length - 1; k >= 0; k--){
+        
+        if(gameCards.Columns[j].length > 1 && !gameCards.Columns[j][k - 1]?.shown){
+          const card = gameCards.Columns[j][k]
+          if(!prevClicked.includes(card) && card.shown){
+            for(let i = 0; i < gameCards.Columns.length; i++){
               if(searchPlaceable(card)){
                 return true
               }
@@ -315,199 +386,256 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
 
   // checks where the the card can be placed
-  const searchPlaceable = (clickedCard: number) => {
-    const newCards = {...cards}
-    for(let i = 0; i < 7; i++){
-      if(clickedCard === cards.Columns[i][cards.Columns[i].length - 1] || clickedCard === cards.Playable[cards.Playable.length - 1]){
-        if( clickedCard === 1 || cards.Clubs[cards.Clubs.length - 1] + 1 === clickedCard ){
-          let removed = [removeFromPile(clickedCard)].flat()
-          newCards.Clubs.push(Number(removed[0]))
-          setCards(newCards)
-          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
-          return true
-        } else if( clickedCard === 14 || cards.Spades[cards.Spades.length - 1] + 1 === clickedCard ){
-          let removed = [removeFromPile(clickedCard)].flat()
-          newCards.Spades.push(Number(removed[0]))
-          setCards(newCards)
-          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
-          return true
-        } else if( clickedCard === 27 || cards.Hearts[cards.Hearts.length - 1] + 1 === clickedCard ){
-          let removed = [removeFromPile(clickedCard)].flat()
-          newCards.Hearts.push(Number(removed[0]))
-          setCards(newCards)
-          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
-          return true
-        } else if( clickedCard === 40 || cards.Diamonds[cards.Diamonds.length - 1] + 1 === clickedCard ){
-          let removed = [removeFromPile(clickedCard)].flat()
-          newCards.Diamonds.push(Number(removed[0]))
-          setCards(newCards)
-          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
-          return true
-    }}}
-    if( clickedCard === 13 || clickedCard === 26 || clickedCard === 39 || clickedCard === 52 ){
-      cards.Columns.forEach((column, index) => {
-        if(cards.Columns[index].length === 0){
-          let removed = [removeFromPile(clickedCard)].flat()
-          for(let j = 0; j < removed.length; j++){
-            newCards.Columns[index].push(
-              Number(removed[j])
-            )
-          }
-          setCards(newCards)
-          return true
-    }})}return searchInColumns(clickedCard)
+  const searchPlaceable = (clickedCard: card) => {
+    const newGameCards: cards = {...gameCards}
+    if(clickedCard){
+      for(let i = 0; i < 7; i++){
+        if(newGameCards.Columns[i].length > 0){
+          if(clickedCard === gameCards.Columns[i][gameCards.Columns[i].length - 1] || clickedCard === gameCards.Playable[gameCards.Playable.length - 1]){
+            if( clickedCard.value === 1 || (gameCards.Clubs.length > 0 && gameCards.Clubs[gameCards.Clubs.length - 1].value + 1 === clickedCard.value) ){
+              let removed = [removeFromPile(clickedCard)].flat()[0]
+              removed.location = `clubs`
+              newGameCards.Clubs.push(removed)
+              setGameCards(newGameCards)
+              prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+              return true
+            } else if( clickedCard.value === 14 || (gameCards.Spades.length > 0 && gameCards.Spades[gameCards.Spades.length - 1].value + 1 === clickedCard.value) ){
+              let removed = [removeFromPile(clickedCard)].flat()[0]
+              removed.location = `spades`
+              newGameCards.Spades.push(removed)
+              setGameCards(newGameCards)
+              prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+              return true
+            } else if( clickedCard.value === 27 || (gameCards.Hearts.length > 0 && gameCards.Hearts[gameCards.Hearts.length - 1].value + 1 === clickedCard.value) ){
+              let removed = [removeFromPile(clickedCard)].flat()[0]
+              removed.location = `hearts`
+              newGameCards.Hearts.push(removed)
+              setGameCards(newGameCards)
+              prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+              return true
+            } else if( clickedCard.value === 40 || (gameCards.Diamonds.length > 0 && gameCards.Diamonds[gameCards.Diamonds.length - 1].value + 1 === clickedCard.value) ){
+              let removed = [removeFromPile(clickedCard)].flat()[0]
+              removed.location = `diamonds`
+              newGameCards.Diamonds.push(removed)
+              setGameCards(newGameCards)
+              prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+              return true
+            }
+      }}}
+      if( (clickedCard.value === 13 || clickedCard.value === 26 || clickedCard.value === 39 || clickedCard.value === 52 )
+        && (clickedCard.location.slice(0,6) !== "column" || gameCards.Columns[Number(clickedCard.location.slice(6))].indexOf(clickedCard) !== 0)
+      ){
+        gameCards.Columns.forEach((column, index) => {
+          if(column.length === 0){
+            let removed = removeFromPile(clickedCard).flat()
+            for(let j = 0; j < removed.length; j++){
+              removed[j].shown = true
+              removed[j].location = `column${index}`
+              newGameCards.Columns[index].push(removed[j])
+            }
+            setGameCards(newGameCards)
+            return true
+      }})
+    }
+    }
+    return searchInColumns(clickedCard)
   }
 
   const handleClick = (id: number) => {
-    searchPlaceable(id)
+    const clickedCard: card = gameCards.AllCards.filter(card => card.value === id)[0]
+    if(!!clickedCard){
+      searchPlaceable(clickedCard)
+    }
+    console.log(gameCards.previousMoves)
   }
+
+
 
   const flipCard = () => {
     const newDeck = [...deck]
-    const newCards = {...cards}
-    newCards.Playable.push(Number(newDeck.pop()))
-    newCards.ShownCards.push(newCards.Playable[newCards.Playable.length - 1])
-    newCards.previousMoves.push({cardsMoved: [newCards.Playable[newCards.Playable.length - 1]], location: 12})
+    const newGameCards = {...gameCards}
+    const newCard = newDeck.pop()
+    if(newCard){
+      newCard.shown = true
+      newCard.location = "playable"
+      newGameCards.Playable.push(newCard)
+      newGameCards.previousMoves.push({cardsMoved: [newCard], location: "deck"})
+    } 
     setDeck(newDeck)
-    setCards(newCards)
+    setGameCards(newGameCards)
   }
 
   const flip3Cards = () => {
     const newDeck = [...deck]
-    const newCards = {...cards}
+    const newGameCards = {...gameCards}
     const moved = []
     for(let i = 0; i < Math.min(3, newDeck.length + i); i++){
-      moved.push(Number(newDeck.pop()))
-      newCards.Playable.push(moved[i])
-      newCards.ShownCards.push(moved[i])
+      const newCard = newDeck.pop()
+      if(!!newCard){
+        newCard.shown = true
+        newCard.location = "playable"
+        moved.push(newCard)
+        newGameCards.Playable.push(newCard)
+      } 
+
     }
-    newCards.previousMoves.push({cardsMoved: moved, location: 12})
+    newGameCards.previousMoves.push({cardsMoved: moved, location: "deck"})
     setDeck(newDeck)
-    setCards(newCards)
+    setGameCards(newGameCards)
   }
 
   const flipSpider = () => {
     const newDeck = [...deck]
-    const newCards = {...cards}
+    const newGameCards = {...gameCards}
     for(let i = 0; i < 7; i++){
-      newCards.Columns[i].push(Number(newDeck.pop()))
-      newCards.ShownCards.push(newCards.Columns[i][newCards.Columns[i].length - 1])
+      const newCard = newDeck.pop()
+      !!newCard && newGameCards.Columns[i].push(newCard)
+      newGameCards.Columns[i][newGameCards.Columns[i].length - 1].shown = true
+      newGameCards.Columns[i][newGameCards.Columns[i].length - 1].location = "playable"
     }
-    newCards.previousMoves.push({cardsMoved: [
-      newCards.Columns[0][newCards.Columns[0].length - 1],
-      newCards.Columns[1][newCards.Columns[1].length - 1],
-      newCards.Columns[2][newCards.Columns[2].length - 1],
-      newCards.Columns[3][newCards.Columns[3].length - 1],
-      newCards.Columns[4][newCards.Columns[4].length - 1],
-      newCards.Columns[5][newCards.Columns[5].length - 1],
-      newCards.Columns[6][newCards.Columns[6].length - 1],
-    ], location: 12})
+    newGameCards.previousMoves.push({cardsMoved: [
+      newGameCards.Columns[0][newGameCards.Columns[0].length - 1],
+      newGameCards.Columns[1][newGameCards.Columns[1].length - 1],
+      newGameCards.Columns[2][newGameCards.Columns[2].length - 1],
+      newGameCards.Columns[3][newGameCards.Columns[3].length - 1],
+      newGameCards.Columns[4][newGameCards.Columns[4].length - 1],
+      newGameCards.Columns[5][newGameCards.Columns[5].length - 1],
+      newGameCards.Columns[6][newGameCards.Columns[6].length - 1],
+    ], location: "deck"})
     setDeck(newDeck)
-    setCards(newCards)
+    setGameCards(newGameCards)
   }
 
 
 
   const resetDeck = () => {
     const newDeck = [...deck]
-    const newCards = {...cards}
-    while(newCards.Playable.length > 0){
-      const remove: number = Number(newCards.Playable.shift())
-      newCards.ShownCards.splice(
-        newCards.ShownCards.indexOf(remove), 1)
-      newDeck.push(remove)
+    const newGameCards = {...gameCards}
+    while(newGameCards.Playable.length > 0){
+      const remove = newGameCards.Playable.shift()
+      if(!!remove){
+        remove.location = "deck"
+        remove.shown = false
+        newDeck.unshift(remove)
+      }
     }
-    newCards.previousMoves.push({cardsMoved: [], location: 13})
-    setDeck(newDeck.reverse())
-    setCards(newCards)
+    newGameCards.previousMoves.push({cardsMoved: [], location: "reset"})
+    setDeck(newDeck)
+    setGameCards(newGameCards)
   }
 
   const undoMove = () => {
-    const newCards = {...cards}
-    const previousMove = newCards.previousMoves.pop()
+    const newGameCards = {...gameCards}
+    const previousMove = newGameCards.previousMoves.pop()
     if(previousMove){
       const {cardsMoved, location} = previousMove
-      if(location < 7){
-      let removed = [removeFromPile(cardsMoved[0])].flat()
-      if(newCards.ShownCards[newCards.ShownCards.length - 1] === newCards.Columns[location][newCards.Columns[location].length -1]){
-        newCards.ShownCards.pop()
-      }
-      for(let i = 0; i < removed.length; i++){
-        newCards.Columns[location].push(
-          Number(removed[i])
-          )
+      if(location.slice(0, 6) === "column"){
+        let removed = [removeFromPile(cardsMoved[0])].flat()
+        let testNum = removed[0].value
+        while(testNum > 13){
+          testNum -= 13
         }
-      } else if(location === 7){
+        const columnNum = Number(location.slice(6,7))
+
+
+        if(newGameCards.Columns[columnNum].length > 0){
+          let lastOfColumn = newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1].value
+          while(lastOfColumn > 13){
+            lastOfColumn -= 13
+          }
+          if(lastOfColumn !== testNum + 1){
+            newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1].shown = false
+          }
+        } 
+        //hide card if it was the last card in the column
+        
+
+        for(let i = 0; i < removed.length; i++){
+          removed[i].location = `column${columnNum}`
+          newGameCards.Columns[columnNum].push(removed[i])
+        }
+      } else if(location === "playable"){
         let removed = [removeFromPile(cardsMoved[0])].flat()
-        newCards.Playable.push(
-          Number(removed[0])
-        )
-      } else if(location === 8){
+        removed[0].location = "playable"
+        newGameCards.Playable.push(removed[0])
+
+      } else if(location === "clubs"){
         let removed = [removeFromPile(cardsMoved[0])].flat()
-        newCards.Clubs.push(
-          Number(removed[0])
-        )
-      } else if(location === 9){
+        removed[0].location = "clubs"
+        newGameCards.Clubs.push(removed[0])
+
+      } else if(location === "spades"){
         let removed = [removeFromPile(cardsMoved[0])].flat()
-        newCards.Spades.push(
-          Number(removed[0])
-        )
-      } else if(location === 10){
+        removed[0].location = "spades"
+        newGameCards.Spades.push(removed[0])
+
+      } else if(location === "hearts"){
         let removed = [removeFromPile(cardsMoved[0])].flat()
-        newCards.Hearts.push(
-          Number(removed[0])
-          )
-      } else if(location === 11){
+        removed[0].location = "hearts"
+        newGameCards.Hearts.push(removed[0])
+
+      } else if(location === "diamonds"){
         let removed = [removeFromPile(cardsMoved[0])].flat()
-        newCards.Diamonds.push(
-          Number(removed[0])
-          )
-        } else if(location === 12){
-          let removed: number[] = []
+        removed[0].location = "diamonds"
+        newGameCards.Diamonds.push(removed[0])
+
+        } else if(location === "deck"){
+          let removed: card[] = []
           if(gameType === "normal"){
             const CM = cardsMoved.pop()
-            if(typeof CM === "number"){
+            if(!!CM){
+              CM.location = "deck"
+              CM.shown = false
               removed.push(removeFromPile(CM)[0])
-              newCards.ShownCards.pop()
             }
-
           }else if(gameType === "3card"){
             while(cardsMoved.length > 0){
-              removed.push(removeFromPile(Number(cardsMoved.pop()))[0])
-              newCards.ShownCards.pop()
+              const CM = cardsMoved.pop()
+              if(!!CM){
+                CM.location = "deck"
+                CM.shown = false
+                removed.push(removeFromPile(CM)[0])
+              }
               if(cardsMoved.length > 0){
-                newCards.previousMoves.pop()
+                newGameCards.previousMoves.pop()
               }
             }
           }else if(gameType === "spider"){
             for(let i = 0; i < 7; i++){
-              removed.push(removeFromPile(cardsMoved[0])[i])
-              newCards.ShownCards.pop()
+              const CM = cardsMoved.pop()
+              if(!!CM){
+                CM.location = "deck"
+                CM.shown = false
+                removed.push(removeFromPile(CM)[0])
+              }
             }
             if(cardsMoved.length > 1){
-              newCards.previousMoves.pop()
+              newGameCards.previousMoves.pop()
             }
           }
         const newDeck = [...deck]
         while(removed.length > 0){
-          newDeck.push(
-            Number(removed.shift())
-          )
+          const newCard = removed.pop()
+          !!newCard && newDeck.push(newCard)
 
         }
         setDeck(newDeck)
-      } else if(location === 13){
+      } else if(location === "reset"){
         const newDeck = [...deck]
         while(newDeck.length > 0){
-          newCards.Playable.push(Number(newDeck.pop()))
-          newCards.ShownCards.push(newCards.Playable[newCards.Playable.length - 1])
+          const newCard = newDeck.pop()
+          if(!!newCard){
+            newCard.location = "playable"
+            newCard.shown = true
+            newGameCards.Playable.push(newCard)
+          }
         }
         setDeck(newDeck)
       }
-      if(location !== 13){
-        newCards.previousMoves.pop()
+      if(location !== "reset"){
+        newGameCards.previousMoves.pop()
       }
-      setCards(newCards)
+      setGameCards(newGameCards)
     }
   }
 
@@ -515,7 +643,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
   //   // Check to see if dragged card is one less than where you are dragging it or if one higher if in win piles
   //   event.target
   //   if(event.target === targetColumn[targetColumn.length - 1] - 1){
-    //     setCards(prevCards => ({
+    //     setGameCards(prevCards => ({
       //       ...prevCards,
       //       targetColumn: [...targetColumn, target] 
   //     }))
@@ -531,16 +659,18 @@ const useGameLogic = (props: UseGameLogicProps) => {
       return true
     }
     for(let i = 0; i < 7; i++){
-      const shown = cards.Columns[i].filter((num) => cards.ShownCards.includes(num))
+      const shown = gameCards.Columns[i].filter((C) => C.shown)
       for(let j = 0; j < shown.length; j++){
-        if((shown[j] === 13 || shown[j] === 26 || shown[j] === 39 || shown[j] === 52) && shown[j] === cards.Columns[i][0]){
-        } else if( !prevClicked.includes(shown[j]) && searchPlaceable(shown[j])){
+        if(!(shown[j].value === 13 || shown[j].value === 26 || shown[j].value === 39 || shown[j].value === 52)
+          && !prevClicked.includes(shown[j]) 
+          && searchPlaceable(shown[j])
+        ){
           setDeckFlipped(false)
           return true
         }
       }
     }
-    if(searchPlaceable(cards.Playable[cards.Playable.length - 1])){
+    if(searchPlaceable(gameCards.Playable[gameCards.Playable.length - 1])){
       prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
       setDeckFlipped(false)
       return true
@@ -556,7 +686,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
         return true
       }
     } else if(gameType !== "spider"){
-      if(cards.Playable.length > (gameType === "normal" ? 1 : 3) && !deckFlipped){
+      if(gameCards.Playable.length > (gameType === "normal" ? 1 : 3) && !deckFlipped){
         resetDeck()
         setDeckFlipped(true)
       } else if(prevClicked.length > 0 && prevClickedCount < 2){
@@ -575,7 +705,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       if(!props.roboGame){
         if(props.playForYou > 0){
           if(props.playForYouToggle){
-            const time = 3000 / props.playForYou
+            const time = 2000 / props.playForYou
 
             const playForYouTimer = setInterval(() => {
               playForYou()}, time)
@@ -585,7 +715,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
         }
       }else {
         if(props.roboPlayer > 0){
-          const time = 1500 / props.roboPlayer
+          const time = 1000 / props.roboPlayer
           const roboPlayerTimer = setInterval(() => {
             playForYou()}, time)
 
@@ -594,12 +724,12 @@ const useGameLogic = (props: UseGameLogicProps) => {
       }
     }
     
-  }, [isGameRunning, props.playForYou, props.playForYouToggle, props.roboPlayer, deck, cards, count])
+  }, [isGameRunning, props.playForYou, props.playForYouToggle, props.roboPlayer, deck, gameCards, count])
 
   return {
     ...props,
     deck,
-    cards,
+    gameCards,
     gamePoints,
     setGamePoints,
     count,

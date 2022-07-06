@@ -1,5 +1,3 @@
-import React from "react"
-import Image from "next/image"
 import useGameLogic, { card } from "./useGameLogic"
 import { User } from "./useUserInfo"
 import styles from "@/styles/css/BoardElement.module.css"
@@ -73,7 +71,7 @@ interface UseBoardElementsProps {
 
 const useBoardElements= (props: UseBoardElementsProps) => {
   const {deck, 
-    cards, 
+    gameCards, 
     handleClick,
     flipCard,
     flip3Cards,
@@ -447,8 +445,9 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     return elementMaker().map((element, index) => <div key={index + amount} className={styles.cardHolder}>{element}</div>);
   }
 
-  const ClubsElements = cards.Clubs.map((C: number, index: number) => {
-    if(index === cards.Clubs.length - 1){ 
+  const ClubsElements = gameCards.Clubs.map((Card: card, index: number) => {
+    const C = Card.value
+    if(index === gameCards.Clubs.length - 1){ 
       if(C === 1){
         return <AceOfClubs
           key={C}
@@ -542,8 +541,9 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         />
       }
   }})
-  const SpadesElements = cards.Spades.map((C: number, index: number) => {
-    if(index === cards.Spades.length - 1){
+  const SpadesElements = gameCards.Spades.map((Card: card, index: number) => {
+    const C = Card.value
+    if(index === gameCards.Spades.length - 1){
       if(C === 14){
         return <AceOfSpades
           key={C}
@@ -636,8 +636,9 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           alt={`${C}`}
         />
       }}})
-  const HeartsElements = cards.Hearts.map((C: number, index: number) => {
-    if(index === cards.Hearts.length - 1){ 
+  const HeartsElements = gameCards.Hearts.map((Card: card, index: number) => {
+    const C = Card.value
+    if(index === gameCards.Hearts.length - 1){ 
       if(C === 27){
         return <AceOfHearts
           key={C}
@@ -730,8 +731,9 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           alt={`${C}`}
         />
       }}})
-  const DiamondsElements = cards.Diamonds.map((C: number, index: number) => {
-    if(index === cards.Diamonds.length - 1){ 
+  const DiamondsElements = gameCards.Diamonds.map((Card: card, index: number) => {
+    const C = Card.value
+    if(index === gameCards.Diamonds.length - 1){ 
       if(C === 40){
         return <AceOfDiamonds
           key={C}
@@ -831,7 +833,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         alt="cardback"
       /></div>
     }else {
-    DeckElements = deck.map((C: number, index: number) => {
+    DeckElements = deck.map((Card: card, index: number) => {
+  const C = Card.value
       if(index < 5){
         let style
         if(index === 0){
@@ -860,13 +863,14 @@ const useBoardElements= (props: UseBoardElementsProps) => {
 }})}} else{
     DeckElements = gameType !== "spider" && <div key={0} className={styles.deckEmpty} onClick={resetDeck}></div>
   }
-  const PlayableElements = cards.Playable.map((C: number, index: number) => {
-    if(index > cards.Playable.length - 4 && index < cards.Playable.length - 1){ 
+  const PlayableElements = gameCards.Playable.map((Card: card, index: number) => {
+  const C = Card.value
+    if(index > gameCards.Playable.length - 4 && index < gameCards.Playable.length - 1){ 
       let element
       let style
-      if(index === cards.Playable.length - 2){
+      if(index === gameCards.Playable.length - 2){
         style = styles.playable2
-      } else if(index === cards.Playable.length - 3){
+      } else if(index === gameCards.Playable.length - 3){
         style = styles.playable1
       } 
       if(C === 1){
@@ -1182,7 +1186,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           alt={`${C}`}
       />}
       return <div className={style}>{element}</div>
-} else if(index === cards.Playable.length - 1){
+} else if(index === gameCards.Playable.length - 1){
       let element
       if(C === 1){
         element = <AceOfClubs
@@ -1550,7 +1554,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         />} 
     return <div className={styles.playable3}>{element}</div>
 }})
-  const Column1Elements = cards.Columns[0].map((C: number, index: number) => {
+  const Column1Elements = gameCards.Columns[0].map((Card: card, index: number) => {
+    const C = Card.value
     let style
     if(index === 0){
       style = styles.card0
@@ -1593,7 +1598,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     } else if(index === 19){
       style = styles.card19
     }
-    if(cards.ShownCards.includes(C)){
+    if(!!Card.shown){
       if(C === 1){
         return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
@@ -1858,7 +1863,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
-  const Column2Elements = cards.Columns[1].map((C: number, index: number) => {
+  const Column2Elements = gameCards.Columns[1].map((Card: card, index: number) => {
+    const C = Card.value
     let style
     if(index === 0){
       style = styles.card0
@@ -1901,7 +1907,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     } else if(index === 19){
       style = styles.card19
     }
-    if(cards.ShownCards.includes(C)){
+    if(!!Card.shown){
       if(C === 1){
         return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
@@ -2166,7 +2172,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
-  const Column3Elements = cards.Columns[2].map((C: number, index: number) => {
+  const Column3Elements = gameCards.Columns[2].map((Card: card, index: number) => {
+  const C = Card.value
     let style
     if(index === 0){
       style = styles.card0
@@ -2209,7 +2216,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     } else if(index === 19){
       style = styles.card19
     }
-    if(cards.ShownCards.includes(C)){
+    if(!!Card.shown){
       if(C === 1){
         return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
@@ -2474,7 +2481,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
-  const Column4Elements = cards.Columns[3].map((C: number, index: number) => {
+  const Column4Elements = gameCards.Columns[3].map((Card: card, index: number) => {
+  const C = Card.value
     let style
     if(index === 0){
       style = styles.card0
@@ -2517,7 +2525,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     } else if(index === 19){
       style = styles.card19
     }
-    if(cards.ShownCards.includes(C)){
+    if(!!Card.shown){
       if(C === 1){
         return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
@@ -2782,7 +2790,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
-  const Column5Elements = cards.Columns[4].map((C: number, index: number) => {
+  const Column5Elements = gameCards.Columns[4].map((Card: card, index: number) => {
+  const C = Card.value
     let style
     if(index === 0){
       style = styles.card0
@@ -2825,7 +2834,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     } else if(index === 19){
       style = styles.card19
     }
-    if(cards.ShownCards.includes(C)){
+    if(!!Card.shown){
       if(C === 1){
         return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
@@ -3090,7 +3099,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
-  const Column6Elements = cards.Columns[5].map((C: number, index: number) => {
+  const Column6Elements = gameCards.Columns[5].map((Card: card, index: number) => {
+  const C = Card.value
     let style
     if(index === 0){
       style = styles.card0
@@ -3133,7 +3143,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     } else if(index === 19){
       style = styles.card19
     }
-    if(cards.ShownCards.includes(C)){
+    if(!!Card.shown){
       if(C === 1){
         return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
@@ -3398,7 +3408,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={style} key={C}><Cardback
           alt="cardback"
   /></div>}})
-  const Column7Elements = cards.Columns[6].map((C: number, index: number) => {
+  const Column7Elements = gameCards.Columns[6].map((Card: card, index: number) => {
+  const C = Card.value
     let style
     if(index === 0){
       style = styles.card0
@@ -3441,7 +3452,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     } else if(index === 19){
       style = styles.card19
     }
-    if(cards.ShownCards.includes(C)){
+    if(!!Card.shown){
       if(C === 1){
         return <div className={style} key={C}><AceOfClubs
           id={`${C}`}
@@ -3730,7 +3741,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     gameType,
     undoMove,
     gamePoints,
-    cards
+    gameCards
   }
 }
 

@@ -19,14 +19,11 @@ interface UseRoboPlayerProps{
 }
 
 const useRoboPlayer = (props: UseRoboPlayerProps) => {
-  const {deck, 
-    cards,
+  const {
     count,
     isGameRunning,
     gamePoints,
-    StartGame,
-    EndGame,
-    playForYou} = useGameLogic({...props, roboGame: true})
+    StartGame,} = useGameLogic({...props, roboGame: true})
 
   useEffect(() => {
     StartGame(props.currentGame)

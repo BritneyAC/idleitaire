@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react"
-// import { trpc } from "@/utils/trpc"
 
 export class User {
   timeOfSave = 0
