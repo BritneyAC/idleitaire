@@ -53,7 +53,7 @@
   position: absolute;
   margin: auto;
   inset: 0;
-  background: map-get($background-colors, "lighter-grey");
+  background: $lighter-grey;
   border: 1px solid white;
   box-shadow: 0 0 1rem 0 hsla(0, 0%, 0%, .5);
   width: 90%;

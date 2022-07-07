@@ -92,7 +92,7 @@ const Info = (props: infoProps) => {
           <h2>Upgrade</h2>
         </div>
         <div className={`${currentTab === "stats" && styles.current} ${styles.tab}`} onClick={() => (changeTab("stats"))}>
-          <h2>Stats(points: {points})</h2>
+          <h2 className={styles.statsTab}>Stats(points: {points})</h2>
         </div>
       </div>
       <div className={styles.tabContent}>

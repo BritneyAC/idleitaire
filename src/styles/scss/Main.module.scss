@@ -19,7 +19,7 @@
 .main {
   height: 100%;
   width: 100%;
-  background: map-get($background-colors, "grey");
+  background: $grey;
   color: white;
   position: relative;
 }
@@ -30,7 +30,7 @@
 
   height: 100%;
   width: 100%;
-  background-color: map-get($background-colors, "brown");
+  background-color: $brown;
   position: relative;
   display: grid;
   grid-template-columns: 1fr;

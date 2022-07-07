@@ -3,7 +3,7 @@
   bottom: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 6vh 40vh;
+  grid-auto-rows: 10vh 36vh;
   width: 100%;
   transform: translateY(46vh);
   transition: transform 0.5s ease-in-out;
@@ -32,16 +32,22 @@
 
 .tab {
   display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  height: 6vh;
+  font-size: clamp(1.15rem, 2.5vw, 6vh);
   cursor: pointer;
+  text-align: center;
 }
 .tab.current {
   background-color: hsl(210deg, 33%, 15%);
 }
 .tab:not(:nth-child(3)) {
   border-right: 1px solid white;
+}
+
+.statsTab {
+  font-size: clamp(1.25rem, 2.5vw, 6vh);
 }
 
 .tabContent {

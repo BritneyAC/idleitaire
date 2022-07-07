@@ -129,8 +129,10 @@ const Home: NextPage = () => {
           <h1 className={`${styles.header} ${whichInfoSettingShown === "info" && styles.current}`}  onClick={()=>{toggleInfoSetting("info")}}>{whichInfoSettingShown === "info" ? "Close" : "Info"}</h1>
           <h1 className={`${styles.header} ${whichInfoSettingShown === "settings" && styles.current}`}  onClick={()=>{toggleInfoSetting("settings")}}>{whichInfoSettingShown === "settings" ? "Close" : "Settings"}</h1>
         </div>
-        {infoPageToShow()}
-        <Settings userInfo={userInfo} deleteSave={deleteSave} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting} autoSaveToggle={autoSaveToggle} priceSettingToggle={priceSettingToggle}/>
+        <div className={`${styles.menus} ${whichInfoSettingShown !== "none" && styles.open}`}>
+          {infoPageToShow()}
+          <Settings userInfo={userInfo} deleteSave={deleteSave} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting} autoSaveToggle={autoSaveToggle} priceSettingToggle={priceSettingToggle}/>
+        </div>
       </main>
     </div>
   )
