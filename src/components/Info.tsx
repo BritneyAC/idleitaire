@@ -83,7 +83,7 @@ const Info = (props: infoProps) => {
     } else{
       changeTab("upgrades")
     }
-  }, [props.currentGame])
+  }, [currentGame])
 
   return (
     <div className={`${styles.menu} ${whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "settings" && styles.shown}`} data-game={currentGame}>

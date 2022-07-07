@@ -69,10 +69,13 @@ const useGameLogic = (props: UseGameLogicProps) => {
       setGamePoints(points)
     }
     
+  }, [gameCards])
+  
+  useEffect(() => {
     const ShownCards = gameCards.AllCards.filter(card => card.shown).filter(card => gameCards.ShownCards.includes(card) === false)
     setGameCards(prevCards => ({...prevCards, ShownCards: [...prevCards.ShownCards, ...ShownCards]}))
-  }, [gameCards])
-
+  }
+  , [gameCards.Columns, deck])
 
   useEffect(() => {
     if(!isGameRunning){
@@ -706,7 +709,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       if(!props.roboGame){
         if(props.playForYou > 0){
           if(props.playForYouToggle){
-            const time = 2000 / props.playForYou
+            const time = 3000 / props.playForYou
 
             const playForYouTimer = setInterval(() => {
               playForYou()}, time)
@@ -716,7 +719,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
         }
       }else {
         if(props.roboPlayer > 0){
-          const time = 1000 / props.roboPlayer
+          const time = 1500 / props.roboPlayer
           const roboPlayerTimer = setInterval(() => {
             playForYou()}, time)
 
