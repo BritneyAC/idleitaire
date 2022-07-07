@@ -25,11 +25,16 @@ const Settings = (props: settingsProps) => {
         <div className={styles.confirmation}>
           <p>Are you sure you want to delete your save?</p>
           <div className={styles.confirmationButtons}>
-            <button className={styles.smallBtn} onClick={() => {
-              props.deleteSave();
-              setIsConfirmShown(false);
+            
+            <button className={styles.smallBtn} 
+              onClick={() => {
+                props.deleteSave();
+                setIsConfirmShown(false);
             }}>Yes</button>
-            <button className={styles.smallBtn} onClick={() => setIsConfirmShown(false)}>No</button>
+
+            <button className={styles.smallBtn} 
+              onClick={() => setIsConfirmShown(false)}
+            >No</button>
           </div>
         </div>
       )
