@@ -85,8 +85,7 @@
   grid-column-end: 2;
   aspect-ratio: 592/800;
   border: 3px solid white;
-  max-height: 100%;
-  width: Clamp(5vw, 166%, 11.1vh);
+  height: clamp(2rem, 100%, 14vw);
   padding: 2px;
   border-radius: 5px;
 }

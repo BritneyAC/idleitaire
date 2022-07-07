@@ -27,6 +27,7 @@ export class cards {
     [],[],[],[],[],[],[]
   ] ;
   AllCards: card[] = [];
+  ShownCards: card[] = [];
   previousMoves: previousMove[] = [];
 }
 
@@ -67,6 +68,9 @@ const useGameLogic = (props: UseGameLogicProps) => {
         gameCards.Diamonds.length) * amount
       setGamePoints(points)
     }
+    
+    const ShownCards = gameCards.AllCards.filter(card => card.shown).filter(card => gameCards.ShownCards.includes(card) === false)
+    setGameCards(prevCards => ({...prevCards, ShownCards: [...prevCards.ShownCards, ...ShownCards]}))
   }, [gameCards])
 
 
@@ -91,6 +95,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       props.gamesWonIncreased()
       Win(gameType)
     }
+    
   }, [gameCards])
 
   //makes an array of 52 cards and shuffles the order
@@ -198,6 +203,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
   const StartGame = (type: string = "normal") => {
     setGameType(type)
+    setDeck(NewDeck())
     setIsGameRunning(true)
     setGamePoints(0)
     StartColumns(type)
@@ -455,7 +461,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
     const newDeck = [...deck]
     const newGameCards = {...gameCards}
     const newCard = newDeck.pop()
-    if(newCard){
+    if(typeof newCard !== "undefined"){
       newCard.shown = true
       newCard.location = "playable"
       newGameCards.Playable.push(newCard)
@@ -489,9 +495,11 @@ const useGameLogic = (props: UseGameLogicProps) => {
     const newGameCards = {...gameCards}
     for(let i = 0; i < 7; i++){
       const newCard = newDeck.pop()
-      !!newCard && newGameCards.Columns[i].push(newCard)
-      newGameCards.Columns[i][newGameCards.Columns[i].length - 1].shown = true
-      newGameCards.Columns[i][newGameCards.Columns[i].length - 1].location = "playable"
+      if(typeof newCard !== "undefined"){
+        newCard.shown = true
+        newCard.location = `column${i}`
+        newGameCards.Columns[i].push(newCard)
+      }
     }
     newGameCards.previousMoves.push({cardsMoved: [
       newGameCards.Columns[0][newGameCards.Columns[0].length - 1],
@@ -531,22 +539,15 @@ const useGameLogic = (props: UseGameLogicProps) => {
       const {cardsMoved, location} = previousMove
       if(location.slice(0, 6) === "column"){
         let removed = [removeFromPile(cardsMoved[0])].flat()
-        let testNum = removed[0].value
-        while(testNum > 13){
-          testNum -= 13
-        }
         const columnNum = Number(location.slice(6,7))
+        const newGameCards = {...gameCards}
+        const ShownCards = newGameCards.AllCards.filter(card => card.shown)
 
 
-        if(newGameCards.Columns[columnNum].length > 0){
-          let lastOfColumn = newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1].value
-          while(lastOfColumn > 13){
-            lastOfColumn -= 13
-          }
-          if(lastOfColumn !== testNum + 1){
+        if(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1] 
+          === ShownCards[ShownCards.length - 1]){
             newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1].shown = false
-          }
-        } 
+        }
         //hide card if it was the last card in the column
         
 
