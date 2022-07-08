@@ -85,10 +85,12 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
   // win condition checker
   useEffect(() =>{
-    let win = true
-    for(let i = 0; i < 7; i++){
-      if(gameCards.Columns[i].length > 0){
-        if(!gameCards.Columns[i][0].shown){
+    if(isGameRunning){
+
+      let win = true
+      for(let i = 0; i < 7; i++){
+        if(gameCards.Columns[i].length > 0){
+          if(!gameCards.Columns[i][0].shown){
           win = false
           return
         }
@@ -99,6 +101,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       Win(gameType)
     }
     
+  }
   }, [gameCards])
 
   //makes an array of 52 cards and shuffles the order
