@@ -73,9 +73,11 @@ const useGameLogic = (props: UseGameLogicProps) => {
   
   useEffect(() => {
     const ShownCards = gameCards.AllCards.filter(card => card.shown).filter(card => gameCards.ShownCards.includes(card) === false)
-    setGameCards(prevCards => ({...prevCards, ShownCards: [...prevCards.ShownCards, ...ShownCards]}))
+    if(ShownCards.length > 0){
+      setGameCards(prevCards => ({...prevCards, ShownCards: [...prevCards.ShownCards, ...ShownCards]}))
+    }
   }
-  , [gameCards.Columns, deck])
+  , [gameCards, deck])
 
   useEffect(() => {
     if(!isGameRunning){
@@ -458,7 +460,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
     if(!!clickedCard){
       searchPlaceable(clickedCard)
     }
-    console.log(gameCards.previousMoves)
   }
 
 
@@ -547,13 +548,14 @@ const useGameLogic = (props: UseGameLogicProps) => {
         let removed = [removeFromPile(cardsMoved[0])].flat()
         const columnNum = Number(location.slice(6,7))
         const newGameCards = {...gameCards}
-        const ShownCards = newGameCards.AllCards.filter(card => card.shown)
 
-
+        console.log(gameCards.ShownCards[gameCards.ShownCards.length - 1], newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1])
         if(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1] 
-          === ShownCards[ShownCards.length - 1]){
-            newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1].shown = false
+          === gameCards.ShownCards[gameCards.ShownCards.length - 1]){
+            newGameCards.ShownCards[gameCards.ShownCards.length - 1].shown = false
+            newGameCards.ShownCards.pop()
         }
+
         //hide card if it was the last card in the column
         
 
@@ -588,8 +590,10 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
         } else if(location === "deck"){
           let removed: card[] = []
+          newGameCards.ShownCards.pop()
           if(gameType === "normal"){
             const CM = cardsMoved.pop()
+            
             if(!!CM){
               CM.location = "deck"
               CM.shown = false
