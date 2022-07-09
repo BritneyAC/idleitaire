@@ -652,17 +652,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
     }
   }
 
-  // const PlaceinColum = (event) => {
-  //   // Check to see if dragged card is one less than where you are dragging it or if one higher if in win piles
-  //   event.target
-  //   if(event.target === targetColumn[targetColumn.length - 1] - 1){
-    //     setGameCards(prevCards => ({
-      //       ...prevCards,
-      //       targetColumn: [...targetColumn, target] 
-  //     }))
-  //   }
-  // }
-
   const playForYou = () => {
     setCount(prevCount => prevCount + 1)
 

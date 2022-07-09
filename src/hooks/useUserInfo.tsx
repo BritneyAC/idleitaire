@@ -55,8 +55,14 @@ export default function useUserInfo(props: useUserInfoProps) {
   useEffect(() => {
     if(props.currentGame === "normal"){
       if(userInfo.pricesSetting !== "free") {
-        if(userInfo.userPoints > playForYouCost || userInfo.userPoints > roboPlayerCost){
-          const notification = setInterval(()=>{setName(prevName => prevName === "Idleitaire" ? "Upgrade Available" : "Idleitaire")}, 4000)
+        if(userInfo.userPoints > playForYouCost 
+          || userInfo.userPoints > roboPlayerCost){
+
+          const notification = setInterval(()=>{
+            setName(prevName => 
+              prevName === "Idleitaire" 
+              ? "Upgrade Available" 
+              : "Idleitaire")}, 8000)
           return () => clearInterval(notification)
         }
       }
@@ -70,8 +76,14 @@ export default function useUserInfo(props: useUserInfoProps) {
   useEffect(() => {
     if(props.currentGame !== "3card"){
       if(userInfo.pricesSetting !== "free") {
-        if(userInfo.user3CardPoints > play3CardForYouCost || userInfo.user3CardPoints > robo3CardPlayerCost){
-          const notification = setInterval(()=>{setName(prevName => prevName === "Idleitaire" ? "Upgrade Available" : "Idleitaire")}, 4000)
+        if(userInfo.user3CardPoints > play3CardForYouCost 
+          || userInfo.user3CardPoints > robo3CardPlayerCost){
+
+          const notification = setInterval(()=>{
+            setName(prevName => 
+              prevName === "Idleitaire" 
+              ? "Upgrade Available" 
+              : "Idleitaire")}, 8000)
           return () => clearInterval(notification)
         }
       }
