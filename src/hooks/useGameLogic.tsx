@@ -549,7 +549,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
         const columnNum = Number(location.slice(6,7))
         const newGameCards = {...gameCards}
 
-        console.log(gameCards.ShownCards[gameCards.ShownCards.length - 1], newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1])
         if(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1] 
           === gameCards.ShownCards[gameCards.ShownCards.length - 1]){
             newGameCards.ShownCards[gameCards.ShownCards.length - 1].shown = false
