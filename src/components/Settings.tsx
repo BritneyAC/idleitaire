@@ -1,6 +1,6 @@
 import { User } from '@/hooks/useUserInfo';
 import styles from '@/styles/css/Settings.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface settingsProps {
   userInfo: User;
@@ -18,6 +18,12 @@ const Settings = (props: settingsProps) => {
   const changeTab = (tab: string) => {
     setCurrentTab(tab);
   }
+
+  useEffect(() => {
+    if(props.whichInfoSettingShown === "none"){
+      changeTab("general")
+    }
+  }, [props.whichInfoSettingShown])
 
   const confirmation = () => {
     if(isConfirmShown){

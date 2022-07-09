@@ -80,6 +80,10 @@
   @include header;
 }
 
+.upgradeNotif {
+  font-size: clamp(1rem, 2vw, 4vh);
+}
+
 .closeInfoSettings {
   position: absolute;
   inset: 0;

@@ -64,6 +64,15 @@ const Home: NextPage = () => {
     }
   }, [])
 
+  const infoTabTitle = () => {
+    if(whichInfoSettingShown === "info"){
+      return"Close"
+    } else if(name === "Upgrade Available"){
+      return"Upgrade Available"
+    }
+    return "Info"
+  }
+
   
 
   const changeCurrentGame = (game: string) => {
@@ -126,7 +135,7 @@ const Home: NextPage = () => {
           {boardToShow()}
         </div>
         <div className={`${styles.infoSettingsTabs} ${whichInfoSettingShown !== "none" && styles.open}`}>
-          <h1 className={`${styles.header} ${whichInfoSettingShown === "info" && styles.current}`}  onClick={()=>{toggleInfoSetting("info")}}>{whichInfoSettingShown === "info" ? "Close" : "Info"}</h1>
+          <h1 className={`${styles.header} ${whichInfoSettingShown === "info" && styles.current} ${whichInfoSettingShown !== "info" && name === "Upgrade Available" && styles.upgradeNotif}`}  onClick={()=>{toggleInfoSetting("info")}}>{infoTabTitle()}</h1>
           <h1 className={`${styles.header} ${whichInfoSettingShown === "settings" && styles.current}`}  onClick={()=>{toggleInfoSetting("settings")}}>{whichInfoSettingShown === "settings" ? "Close" : "Settings"}</h1>
         </div>
         <div className={`${styles.menus} ${whichInfoSettingShown !== "none" && styles.open}`}>

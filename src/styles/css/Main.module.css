@@ -93,6 +93,10 @@
   background-color: hsl(210deg, 33%, 20%);
 }
 
+.upgradeNotif {
+  font-size: clamp(1rem, 2vw, 4vh);
+}
+
 .closeInfoSettings {
   position: absolute;
   inset: 0;

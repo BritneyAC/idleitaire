@@ -83,14 +83,14 @@ const Info = (props: infoProps) => {
     } else{
       changeTab("upgrades")
     }
-  }, [currentGame])
+  }, [currentGame, whichInfoSettingShown])
 
   return (
     <div className={`${styles.menu} ${whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "settings" && styles.shown}`} data-game={currentGame}>
       <div className={styles.tabs}>
-        <div className={`${currentTab === "upgrades" && styles.current} ${styles.tab}`} onClick={() => (changeTab("upgrades"))}>
+        {currentGame !== "menu" && <div className={`${currentTab === "upgrades" && styles.current} ${styles.tab}`} onClick={() => (changeTab("upgrades"))}>
           <h2>Upgrade</h2>
-        </div>
+        </div>}
         <div className={`${currentTab === "stats" && styles.current} ${styles.tab}`} onClick={() => (changeTab("stats"))}>
           <h2 className={styles.statsTab}>Stats(points: {points})</h2>
         </div>

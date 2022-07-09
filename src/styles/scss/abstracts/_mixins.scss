@@ -1,5 +1,7 @@
 @use "colors" as *;
 
+
+
 @mixin header {
   height: 100%;
   width: 21vw;
@@ -22,6 +24,9 @@
     background-color: hsl(210, 33%, 20%);
   }
 }
+
+
+
 
 @mixin radioBtn {
   .radioBtnOn, .radioBtnOff, .radioBtnHalf {
@@ -63,6 +68,10 @@
     border-radius: 999%;
   }
 }
+
+
+
+
 
 @mixin menu($columns: 1) {
   .menu {
