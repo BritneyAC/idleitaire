@@ -589,7 +589,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
         } else if(location === "deck"){
           let removed: card[] = []
-          newGameCards.ShownCards.pop()
           if(gameType === "normal"){
             const CM = cardsMoved.pop()
             
@@ -623,11 +622,14 @@ const useGameLogic = (props: UseGameLogicProps) => {
               newGameCards.previousMoves.pop()
             }
           }
-        const newDeck = [...deck]
-        while(removed.length > 0){
-          const newCard = removed.pop()
-          !!newCard && newDeck.push(newCard)
-
+          const newDeck = [...deck]
+          while(removed.length > 0){
+            const newCard = removed.pop()
+            if(typeof newCard !== "undefined"){
+              newDeck.push(newCard)
+              newGameCards.ShownCards.pop()
+            }
+            
         }
         setDeck(newDeck)
       } else if(location === "reset"){
@@ -638,6 +640,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
             newCard.location = "playable"
             newCard.shown = true
             newGameCards.Playable.push(newCard)
+            !newGameCards.ShownCards.includes(newCard) && newGameCards.ShownCards.push(newCard)
           }
         }
         setDeck(newDeck)
