@@ -65,6 +65,9 @@
   top: 0;
   right: 0;
 }
+.description svg * {
+  stroke: white;
+}
 
 .radioBtnOn, .radioBtnOff, .radioBtnHalf {
   background-color: hsl(210deg, 33%, 15%);

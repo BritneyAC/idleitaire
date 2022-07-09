@@ -66,6 +66,9 @@
   & svg {
     top: 0;
     right: 0;
+    & *{
+      stroke: white;
+    }
   }
 }
 
