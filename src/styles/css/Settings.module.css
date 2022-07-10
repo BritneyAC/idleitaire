@@ -42,7 +42,7 @@
 .tab.current {
   background-color: hsl(210deg, 33%, 15%);
 }
-.tab:not(:nth-child(4)) {
+.tab:not(:nth-child(2)) {
   border-right: 1px solid white;
 }
 
@@ -55,7 +55,7 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 25vw);
+  grid-template-columns: repeat(auto-fill, 50vw);
   grid-template-rows: 1fr;
 }
 
@@ -96,8 +96,16 @@
 .setting:not(:nth-child(4)) {
   border-right: 1px solid white;
 }
-.setting h3 {
+.setting h3, .setting h4 {
+  margin: 0;
   padding-bottom: 1rem;
+  text-align: center;
+}
+.setting h3 {
+  font-size: clamp(1.25rem, 6vw, 6vh);
+}
+.setting h4 {
+  font-size: clamp(1rem, 3vw, 4vh);
 }
 
 .confirmation {

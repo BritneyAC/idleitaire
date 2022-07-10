@@ -1,6 +1,6 @@
 @use "abstracts" as *;
 
-@include menu(4);
+@include menu(2);
 
 .setting {
 
@@ -9,8 +9,16 @@
   }
 
 
-  & h3 {
+  & h3, & h4 {
+    margin: 0;
     padding-bottom: 1rem;
+    text-align: center;
+  }
+  & h3 {
+    font-size: clamp(1.25rem, 6vw, 6vh);
+  }
+  & h4 {
+    font-size: clamp(1rem, 3vw, 4vh);
   }
 }
 
