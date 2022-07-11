@@ -91,7 +91,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     setPrevClicked,
     prevClickedCount,
     setPrevClickedCount,
-  } = useGameLogic({...props, roboGame: false, cardDragged: props.cardDragged})
+  } = useGameLogic({...props, roboGame: false})
   
   let DeckElements
   

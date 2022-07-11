@@ -48,9 +48,6 @@ const Board: React.FC<BoardProps> = (props) => {
   }
 
   const handleDragEnd = () => {
-    const dropped = isDropped.current 
-    const drggdTo = Number(draggedTo.current)
-    const crrntHm = Number(currentHome.current)
     cardDragged.current = null
     draggedTo.current = null
     undone.current = false

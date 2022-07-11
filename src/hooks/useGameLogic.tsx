@@ -41,7 +41,6 @@ interface UseGameLogicProps {
   playForYou: number,
   roboPlayer: number,
   playForYouToggle: boolean,
-  cardDragged: any,
 }
 
 const useGameLogic = (props: UseGameLogicProps) => {
