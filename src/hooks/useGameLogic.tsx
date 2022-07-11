@@ -546,7 +546,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
   const undoMove = () => {
     const newGameCards = {...gameCards}
-    console.log(newGameCards.ShownCards)
     const previousMove = newGameCards.previousMoves.pop()
     if(previousMove){
       const {cardsMoved, location} = previousMove
