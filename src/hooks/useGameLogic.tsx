@@ -41,6 +41,7 @@ interface UseGameLogicProps {
   playForYou: number,
   roboPlayer: number,
   playForYouToggle: boolean,
+  cardDragged: any,
 }
 
 const useGameLogic = (props: UseGameLogicProps) => {
@@ -455,6 +456,10 @@ const useGameLogic = (props: UseGameLogicProps) => {
     return searchInColumns(clickedCard)
   }
 
+
+
+
+
   const handleClick = (id: number) => {
     const clickedCard: card = gameCards.AllCards.filter(card => card.value === id)[0]
     if(!!clickedCard){
@@ -541,6 +546,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
 
   const undoMove = () => {
     const newGameCards = {...gameCards}
+    console.log(newGameCards.ShownCards)
     const previousMove = newGameCards.previousMoves.pop()
     if(previousMove){
       const {cardsMoved, location} = previousMove
@@ -648,12 +654,53 @@ const useGameLogic = (props: UseGameLogicProps) => {
       if(location !== "reset"){
         newGameCards.previousMoves.pop()
       }
+      setPrevClicked(prev => {
+        prev.pop()
+        return [...prev]
+      })
       setGameCards(newGameCards)
     }
   }
 
+  const winPileCheck = (cardToCheck: card) => {
+    const newGameCards = {...gameCards}
+    if( cardToCheck.value === 1 || (gameCards.Clubs.length > 0 && gameCards.Clubs[gameCards.Clubs.length - 1].value + 1 === cardToCheck.value) ){
+      let removed = [removeFromPile(cardToCheck)].flat()[0]
+      removed.location = `clubs`
+      newGameCards.Clubs.push(removed)
+      setGameCards(newGameCards)
+      prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+    } else if( cardToCheck.value === 14 || (gameCards.Spades.length > 0 && gameCards.Spades[gameCards.Spades.length - 1].value + 1 === cardToCheck.value) ){
+      let removed = [removeFromPile(cardToCheck)].flat()[0]
+      removed.location = `spades`
+      newGameCards.Spades.push(removed)
+      setGameCards(newGameCards)
+      prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+    } else if( cardToCheck.value === 27 || (gameCards.Hearts.length > 0 && gameCards.Hearts[gameCards.Hearts.length - 1].value + 1 === cardToCheck.value) ){
+      let removed = [removeFromPile(cardToCheck)].flat()[0]
+      removed.location = `hearts`
+      newGameCards.Hearts.push(removed)
+      setGameCards(newGameCards)
+      prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+    } else if( cardToCheck.value === 40 || (gameCards.Diamonds.length > 0 && gameCards.Diamonds[gameCards.Diamonds.length - 1].value + 1 === cardToCheck.value) ){
+      let removed = [removeFromPile(cardToCheck)].flat()[0]
+      removed.location = `diamonds`
+      newGameCards.Diamonds.push(removed)
+      setGameCards(newGameCards)
+      prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+    }
+    return true
+  }
+
   const playForYou = () => {
     setCount(prevCount => prevCount + 1)
+    const newGameCards = {...gameCards}
+    for(let i = 0; i < 7; i++){
+      if(newGameCards.Columns[i].length > 0){
+        winPileCheck(newGameCards.Columns[i][newGameCards.Columns[i].length - 1])
+
+      }
+    }
 
     if(searchForNewShown()){
       prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
@@ -738,6 +785,8 @@ const useGameLogic = (props: UseGameLogicProps) => {
     setCount,
     prevClicked,
     setPrevClicked,
+    prevClickedCount,
+    setPrevClickedCount,
     handleClick,
     flipCard,
     flip3Cards,
@@ -753,7 +802,8 @@ const useGameLogic = (props: UseGameLogicProps) => {
     StartColumns,
     searchPlaceable,
     removeFromPile,
-    playForYou}
+    playForYou,
+    setGameCards,}
 }
 
 export default useGameLogic
