@@ -86,7 +86,7 @@ const Board: React.FC<BoardProps> = (props) => {
     Column5Elements,
     Column6Elements,
     Column7Elements,
-  } = useBoardElements({...props, cardDragged, handleDragStart, handleDragEnd})
+  } = useBoardElements({...props})
   
   const [cards, setCards] = useState<NodeListOf<Element>>()
   useEffect(()=>{

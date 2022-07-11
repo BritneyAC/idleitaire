@@ -67,9 +67,6 @@ interface UseBoardElementsProps {
   roboPlayer: number,
   playForYouToggle: boolean,
   changeCurrentGame: (game: string)=>void,
-  cardDragged: any,
-  handleDragStart: (column: number)=>void,
-  handleDragEnd: ()=>void,
 }
 
 const useBoardElements= (props: UseBoardElementsProps) => {
@@ -95,9 +92,6 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     prevClickedCount,
     setPrevClickedCount,
   } = useGameLogic({...props, roboGame: false, cardDragged: props.cardDragged})
-  
-  const {handleDragStart, handleDragEnd} = props
-
   
   let DeckElements
   
