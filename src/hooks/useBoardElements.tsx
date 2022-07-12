@@ -454,384 +454,291 @@ const useBoardElements= (props: UseBoardElementsProps) => {
 
   const ClubsElements = gameCards.Clubs.map((Card: card, index: number) => {
     const C = Card.value
+    let element
     if(index === gameCards.Clubs.length - 1){ 
       if(C === 1){
-        return <AceOfClubs
-          key={C}
+        element = <AceOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 2){
-        return <TwoOfClubs
-          key={C}
+        element = <TwoOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 3){
-        return <ThreeOfClubs
-          key={C}
+        element = <ThreeOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 4){
-        return <FourOfClubs
-          key={C}
+        element = <FourOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 5){
-        return <FiveOfClubs
-          key={C}
+        element = <FiveOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 6){
-        return <SixOfClubs
-          key={C}
+        element = <SixOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 7){
-        return <SevenOfClubs
-          key={C}
+        element = <SevenOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 8){
-        return <EightOfClubs
-          key={C}
+        element = <EightOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 9){
-        return <NineOfClubs
-          key={C}
+        element = <NineOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 10){
-        return <TenOfClubs
-          key={C}
+        element = <TenOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 11){
-        return <JackOfClubs
-          key={C}
+        element = <JackOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 12){
-        return <QueenOfClubs
-          key={C}
+        element = <QueenOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 13){
-        return <KingOfClubs
-          key={C}
+        element = <KingOfClubs
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
-      }
-  }})
+      }} return <div className={`${styles.clubs} card`} id={C.toString()} key={C} draggable="true">{element}</div> 
+  })
   const SpadesElements = gameCards.Spades.map((Card: card, index: number) => {
     const C = Card.value
+    let element
     if(index === gameCards.Spades.length - 1){
       if(C === 14){
-        return <AceOfSpades
-          key={C}
+        element = <AceOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 15){
-        return <TwoOfSpades
-          key={C}
+        element = <TwoOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 16){
-        return <ThreeOfSpades
-          key={C}
+        element = <ThreeOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 17){
-        return <FourOfSpades
-          key={C}
+        element = <FourOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 18){
-        return <FiveOfSpades
-          key={C}
+        element = <FiveOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 19){
-        return <SixOfSpades
-          key={C}
+        element = <SixOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 20){
-        return <SevenOfSpades
-          key={C}
+        element = <SevenOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 21){
-        return <EightOfSpades
-          key={C}
+        element = <EightOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 22){
-        return <NineOfSpades
-          key={C}
+        element = <NineOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 23){
-        return <TenOfSpades
-          key={C}
+        element = <TenOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 24){
-        return <JackOfSpades
-          key={C}
+        element = <JackOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 25){
-        return <QueenOfSpades
-          key={C}
+        element = <QueenOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 26){
-        return <KingOfSpades
-          key={C}
+        element = <KingOfSpades
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
-      }}})
+      }} return <div className={`${styles.spades} card`} id={C.toString()} key={C} draggable="true">{element}</div>
+    })
   const HeartsElements = gameCards.Hearts.map((Card: card, index: number) => {
     const C = Card.value
-    if(index === gameCards.Hearts.length - 1){ 
+    let element 
+    if(index === gameCards.Hearts.length - 1){
       if(C === 27){
-        return <AceOfHearts
-          key={C}
+        element = <AceOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 28){
-        return <TwoOfHearts
-          key={C}
+        element = <TwoOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 29){
-        return <ThreeOfHearts
-          key={C}
+        element = <ThreeOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 30){
-        return <FourOfHearts
-          key={C}
+        element = <FourOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 31){
-        return <FiveOfHearts
-          key={C}
+        element = <FiveOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 32){
-        return <SixOfHearts
-          key={C}
+        element = <SixOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 33){
-        return <SevenOfHearts
-          key={C}
+        element = <SevenOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 34){
-        return <EightOfHearts
-          key={C}
+        element = <EightOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 35){
-        return <NineOfHearts
-          key={C}
+        element = <NineOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 36){
-        return <TenOfHearts
-          key={C}
+        element = <TenOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 37){
-        return <JackOfHearts
-          key={C}
+        element = <JackOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 38){
-        return <QueenOfHearts
-          key={C}
+        element = <QueenOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 39){
-        return <KingOfHearts
-          key={C}
+        element = <KingOfHearts
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
-      }}})
+      }} return <div className={`${styles.hearts} card`} id={C.toString()} draggable="true" key={C}>{element}</div>
+    })
   const DiamondsElements = gameCards.Diamonds.map((Card: card, index: number) => {
     const C = Card.value
+    let element
     if(index === gameCards.Diamonds.length - 1){ 
       if(C === 40){
-        return <AceOfDiamonds
-          key={C}
+        element = <AceOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 41){
-        return <TwoOfDiamonds
-          key={C}
+        element = <TwoOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 42){
-        return <ThreeOfDiamonds
-          key={C}
+        element = <ThreeOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 43){
-        return <FourOfDiamonds
-          key={C}
+        element = <FourOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 44){
-        return <FiveOfDiamonds
-          key={C}
+        element = <FiveOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 45){
-        return <SixOfDiamonds
-          key={C}
+        element = <SixOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 46){
-        return <SevenOfDiamonds
-          key={C}
+        element = <SevenOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 47){
-        return <EightOfDiamonds
-          key={C}
+        element = <EightOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 48){
-        return <NineOfDiamonds
-          key={C}
+        element = <NineOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 49){
-        return <TenOfDiamonds
-          key={C}
+        element = <TenOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 50){
-        return <JackOfDiamonds
-          key={C}
+        element = <JackOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 51){
-        return <QueenOfDiamonds
-          key={C}
+        element = <QueenOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 52){
-        return <KingOfDiamonds
-          key={C}
+        element = <KingOfDiamonds
           onClick={()=>handleClick(C)}
-          draggable="true"
           alt={`${C}`}
-  />}}})
+    />}} return <div className={`${styles.diamonds} card`} id={C.toString()} key={C} draggable="true">{element}</div>
+  })
+
+
+
+
   if(deck.length > 0){
     if(gameType === "spider"){
       DeckElements = <div className={styles.spiderDeck} key={999}>
@@ -870,6 +777,10 @@ const useBoardElements= (props: UseBoardElementsProps) => {
 }})}} else{
     DeckElements = gameType !== "spider" && <div key={0} className={styles.deckEmpty} onClick={resetDeck}></div>
   }
+
+
+
+
   const PlayableElements = gameCards.Playable.map((Card: card, index: number) => {
   const C = Card.value
     if(index > gameCards.Playable.length - 4 && index < gameCards.Playable.length - 1){ 
@@ -1509,6 +1420,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         />} 
     return <div className={`${styles.playable3} card`} id={C.toString()} key={C} draggable="true">{element}</div>
 }})
+
+
   const Column1Elements = gameCards.Columns[0].map((Card: card, index: number) => {
     const C = Card.value
     let style
@@ -1818,6 +1731,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
           alt="cardback"
   /></div>}})
+
+
   const Column2Elements = gameCards.Columns[1].map((Card: card, index: number) => {
     const C = Card.value
     let style
@@ -2127,6 +2042,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
           alt="cardback"
   /></div>}})
+
+
   const Column3Elements = gameCards.Columns[2].map((Card: card, index: number) => {
   const C = Card.value
     let style
@@ -2436,6 +2353,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
           alt="cardback"
   /></div>}})
+
+
   const Column4Elements = gameCards.Columns[3].map((Card: card, index: number) => {
   const C = Card.value
     let style
@@ -2745,6 +2664,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
           alt="cardback"
   /></div>}})
+
+
   const Column5Elements = gameCards.Columns[4].map((Card: card, index: number) => {
   const C = Card.value
     let style
@@ -3054,6 +2975,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
           alt="cardback"
   /></div>}})
+
+
   const Column6Elements = gameCards.Columns[5].map((Card: card, index: number) => {
   const C = Card.value
     let style
@@ -3363,6 +3286,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
           alt="cardback"
   /></div>}})
+
+  
   const Column7Elements = gameCards.Columns[6].map((Card: card, index: number) => {
   const C = Card.value
     let style

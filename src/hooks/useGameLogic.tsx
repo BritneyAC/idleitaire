@@ -736,7 +736,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       if(gameCards.Playable.length > (gameType === "normal" ? 1 : 3) && !deckFlipped){
         resetDeck()
         setDeckFlipped(true)
-      } else if(prevClicked.length > 0 && prevClickedCount < 2){
+      } else if(prevClicked.length > 0 && prevClickedCount < 1){
         setPrevClicked([])
         setPrevClickedCount(prevCount => prevCount + 1)
       } else{

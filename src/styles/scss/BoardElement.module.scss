@@ -33,6 +33,17 @@
   } 
 }
 
+.clubs, .spades, .hearts, .diamonds {
+  & svg {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    inset: 0;
+  }
+  width: fit-content;
+  height: 100%;
+}
+
 .deck {
   &0, &1, &2, &3, &4 {
     width: 166%;

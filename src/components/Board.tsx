@@ -1,7 +1,7 @@
 import type { User } from "@/hooks/useUserInfo"
 import useBoardElements from "@/hooks/useBoardElements"
 import styles from "@/styles/css/Board.module.css"
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import type {card} from "@/hooks/useGameLogic"
 
 interface BoardProps {
@@ -66,7 +66,6 @@ const Board: React.FC<BoardProps> = (props) => {
     gamePoints,
     removeFromPile,
     setGameCards,
-    prevClicked,
     setPrevClicked,
     prevClickedCount,
     setPrevClickedCount,
@@ -165,34 +164,36 @@ const Board: React.FC<BoardProps> = (props) => {
     const card = cardDragged.current
     const newGameCards = {...gameCards}
     if(!!card){
-      if( location === 7 && card.value === 1 || (gameCards.Clubs.length > 0 && gameCards.Clubs[gameCards.Clubs.length - 1].value + 1 === card.value) ){
-        let removed = [removeFromPile(card)].flat()[0]
+      if(card.location.slice(0,6) !== "column" || (newGameCards.Columns[Number(card.location.slice(6,7))][newGameCards.Columns[Number(card.location.slice(6,7))].length - 1].value === card.value)){
+        if( location === 7 && card.value === 1 || (gameCards.Clubs.length > 0 && gameCards.Clubs[gameCards.Clubs.length - 1].value + 1 === card.value) ){
+          let removed = [removeFromPile(card)].flat()[0]
         removed.location = `clubs`
         newGameCards.Clubs.push(removed)
         setGameCards(newGameCards)
         prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
         return true
-      } else if( location === 7 && card.value === 14 || (gameCards.Spades.length > 0 && gameCards.Spades[gameCards.Spades.length - 1].value + 1 === card.value) ){
-        let removed = [removeFromPile(card)].flat()[0]
-        removed.location = `spades`
-        newGameCards.Spades.push(removed)
-        setGameCards(newGameCards)
-        prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
-        return true
-      } else if( location === 7 && card.value === 27 || (gameCards.Hearts.length > 0 && gameCards.Hearts[gameCards.Hearts.length - 1].value + 1 === card.value) ){
-        let removed = [removeFromPile(card)].flat()[0]
-        removed.location = `hearts`
-        newGameCards.Hearts.push(removed)
-        setGameCards(newGameCards)
-        prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
-        return true
-      } else if( location === 7 && card.value === 40 || (gameCards.Diamonds.length > 0 && gameCards.Diamonds[gameCards.Diamonds.length - 1].value + 1 === card.value) ){
-        let removed = [removeFromPile(card)].flat()[0]
-        removed.location = `diamonds`
-        newGameCards.Diamonds.push(removed)
-        setGameCards(newGameCards)
-        prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
-        return true
+        } else if( location === 7 && card.value === 14 || (gameCards.Spades.length > 0 && gameCards.Spades[gameCards.Spades.length - 1].value + 1 === card.value) ){
+          let removed = [removeFromPile(card)].flat()[0]
+          removed.location = `spades`
+          newGameCards.Spades.push(removed)
+          setGameCards(newGameCards)
+          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+          return true
+        } else if( location === 7 && card.value === 27 || (gameCards.Hearts.length > 0 && gameCards.Hearts[gameCards.Hearts.length - 1].value + 1 === card.value) ){
+          let removed = [removeFromPile(card)].flat()[0]
+          removed.location = `hearts`
+          newGameCards.Hearts.push(removed)
+          setGameCards(newGameCards)
+          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+          return true
+        } else if( location === 7 && card.value === 40 || (gameCards.Diamonds.length > 0 && gameCards.Diamonds[gameCards.Diamonds.length - 1].value + 1 === card.value) ){
+          let removed = [removeFromPile(card)].flat()[0]
+          removed.location = `diamonds`
+          newGameCards.Diamonds.push(removed)
+          setGameCards(newGameCards)
+          prevClickedCount > 0 && setPrevClickedCount(prevCount => prevCount - 1)
+          return true
+        }
       }
       if(location < 7){
         if( card.value === 13 || card.value === 26 || card.value === 39 || card.value === 52 

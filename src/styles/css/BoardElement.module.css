@@ -30,6 +30,17 @@
   z-index: 1002;
 }
 
+.clubs, .spades, .hearts, .diamonds {
+  width: fit-content;
+  height: 100%;
+}
+.clubs svg, .spades svg, .hearts svg, .diamonds svg {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  inset: 0;
+}
+
 .deck0, .deck1, .deck2, .deck3, .deck4 {
   width: 166%;
 }
