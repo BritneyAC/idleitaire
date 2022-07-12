@@ -459,66 +459,79 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(C === 1){
         element = <AceOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 2){
         element = <TwoOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 3){
         element = <ThreeOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 4){
         element = <FourOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 5){
         element = <FiveOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 6){
         element = <SixOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 7){
         element = <SevenOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 8){
         element = <EightOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 9){
         element = <NineOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 10){
         element = <TenOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 11){
         element = <JackOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 12){
         element = <QueenOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 13){
         element = <KingOfClubs
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }} return <div className={`${styles.clubs} card`} id={C.toString()} key={C} draggable="true">{element}</div> 
@@ -530,66 +543,79 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(C === 14){
         element = <AceOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 15){
         element = <TwoOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 16){
         element = <ThreeOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 17){
         element = <FourOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 18){
         element = <FiveOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 19){
         element = <SixOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 20){
         element = <SevenOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 21){
         element = <EightOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 22){
         element = <NineOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 23){
         element = <TenOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 24){
         element = <JackOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 25){
         element = <QueenOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 26){
         element = <KingOfSpades
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }} return <div className={`${styles.spades} card`} id={C.toString()} key={C} draggable="true">{element}</div>
@@ -601,66 +627,79 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(C === 27){
         element = <AceOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 28){
         element = <TwoOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 29){
         element = <ThreeOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 30){
         element = <FourOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 31){
         element = <FiveOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 32){
         element = <SixOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 33){
         element = <SevenOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 34){
         element = <EightOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 35){
         element = <NineOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 36){
         element = <TenOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 37){
         element = <JackOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 38){
         element = <QueenOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 39){
         element = <KingOfHearts
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }} return <div className={`${styles.hearts} card`} id={C.toString()} draggable="true" key={C}>{element}</div>
@@ -672,66 +711,79 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(C === 40){
         element = <AceOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 41){
         element = <TwoOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 42){
         element = <ThreeOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 43){
         element = <FourOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 44){
         element = <FiveOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 45){
         element = <SixOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 46){
         element = <SevenOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 47){
         element = <EightOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 48){
         element = <NineOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 49){
         element = <TenOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 50){
         element = <JackOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 51){
         element = <QueenOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
         />
       }else if(C === 52){
         element = <KingOfDiamonds
           onClick={()=>handleClick(C)}
+          draggable="true"
           alt={`${C}`}
     />}} return <div className={`${styles.diamonds} card`} id={C.toString()} key={C} draggable="true">{element}</div>
   })

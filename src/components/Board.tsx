@@ -322,10 +322,10 @@ const Board: React.FC<BoardProps> = (props) => {
       <div className={styles.playspace}>
         <div data-game-type={gameType} className={styles.top}>
           <div className={styles.winPiles} onDragOver={() => handleDragOver(7)}>
-            <div className={styles.clubs}>{ClubsElements}</div>
-            <div className={styles.spades}>{SpadesElements}</div>
-            <div className={styles.hearts}>{HeartsElements}</div>
-            <div className={styles.diamonds}>{DiamondsElements}</div>
+            <div className={styles.clubs} draggable="true">{ClubsElements}</div>
+            <div className={styles.spades} draggable="true">{SpadesElements}</div>
+            <div className={styles.hearts} draggable="true">{HeartsElements}</div>
+            <div className={styles.diamonds} draggable="true">{DiamondsElements}</div>
           </div>
           <div className={styles.deck}>
             {DeckElements}
