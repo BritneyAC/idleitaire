@@ -55,34 +55,34 @@ const Board: React.FC<BoardProps> = (props) => {
     
   }
 
+    const {
+      gameCards,
+      deck,
+      RestartGame,
+      EndGame,
+      gameType,
+      undoMove,
+      gamePoints,
+      removeFromPile,
+      setGameCards,
+      setPrevClicked,
+      prevClickedCount,
+      setPrevClickedCount,
+      ClubsElements,
+      SpadesElements, 
+      HeartsElements, 
+      DiamondsElements, 
+      DeckElements,
+      PlayableElements,
+      Column1Elements,
+      Column2Elements,
+      Column3Elements,
+      Column4Elements,
+      Column5Elements,
+      Column6Elements,
+      Column7Elements,
+    } = useBoardElements({...props})
   
-  const {
-    gameCards,
-    deck,
-    RestartGame,
-    EndGame,
-    gameType,
-    undoMove,
-    gamePoints,
-    removeFromPile,
-    setGameCards,
-    setPrevClicked,
-    prevClickedCount,
-    setPrevClickedCount,
-    ClubsElements, 
-    SpadesElements, 
-    HeartsElements, 
-    DiamondsElements, 
-    DeckElements,
-    PlayableElements,
-    Column1Elements,
-    Column2Elements,
-    Column3Elements,
-    Column4Elements,
-    Column5Elements,
-    Column6Elements,
-    Column7Elements,
-  } = useBoardElements({...props})
   
   const [cards, setCards] = useState<NodeListOf<Element>>()
   useEffect(()=>{
@@ -315,7 +315,7 @@ const Board: React.FC<BoardProps> = (props) => {
       isDropped.current = true
     }
   }
-
+  
   
   return(
     <>

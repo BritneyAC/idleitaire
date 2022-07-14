@@ -1,5 +1,5 @@
 import type {User} from "@/hooks/useUserInfo"
-import useBoardElements from "@/hooks/useBoardElements"
+import useMenuElements from "@/hooks/useMenuElements"
 import styles from "@/styles/css/Menu.module.css"
 import { useState, useEffect } from "react"
 
@@ -21,7 +21,7 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = (props) => { 
   const {
     randomCardElement,
-  } = useBoardElements({...props})
+  } = useMenuElements({...props})
 
   const [randCardElement, setRandCardElement] = useState<JSX.Element[]>()
   const [ThreeRandCardElement, setThreeRandCardElement] = useState<JSX.Element[]>()

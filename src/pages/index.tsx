@@ -95,8 +95,11 @@ const Home: NextPage = () => {
     if(currentGame === "3card"){
       return (
         <Board userInfo={userInfo} roboPlayer={userInfo.robo3CardPlayer} playForYou={userInfo.play3CardForYou} playForYouToggle={userInfo.play3CardForYouToggle}  increasePoints={increase3CardPoints} gamesWonIncreased={gamesWon3CardIncreased} saveUserInfo={saveUserInfo} currentGame={currentGame} changeCurrentGame={changeCurrentGame} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting}/>
-      )
-    }
+        )
+      }
+    return (
+      <Menu userInfo={userInfo} roboPlayer={userInfo.roboPlayer} playForYou={userInfo.playForYou} playForYouToggle={userInfo.playForYouToggle}  increasePoints={increasePoints} gamesWonIncreased={gamesWonIncreased} saveUserInfo={saveUserInfo} unlock3Card={unlock3Card} unlockGameCost={unlockGameCost} currentGame={currentGame} changeCurrentGame={changeCurrentGame}/>
+    )
   }
   const infoPageToShow = () => {
     if(currentGame === "menu"){

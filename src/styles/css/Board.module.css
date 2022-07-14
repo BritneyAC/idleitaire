@@ -215,27 +215,22 @@
   .playspace {
     grid-template-rows: 1fr 14fr;
   }
-
   .top {
     height: 15vw;
     margin-top: -0.5rem;
   }
-
   .buttons {
     align-self: flex-start;
     bottom: 4rem;
   }
-
   .points {
     bottom: 5rem;
     left: 1rem;
   }
-
   .undo {
     bottom: 8rem;
     left: 1rem;
   }
-
   .confirmation {
     height: calc(46vh + 4rem);
   }
