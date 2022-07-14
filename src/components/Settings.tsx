@@ -105,7 +105,7 @@ const Settings = (props: settingsProps) => {
           <h2>cheats</h2>
         </div>
       </div>
-      <CurrentTabElement/>
+      {CurrentTabElement()}
     </div>
   )
 }

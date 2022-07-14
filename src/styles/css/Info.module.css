@@ -142,6 +142,7 @@
 
 .radioBtnCircle {
   transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
   aspect-ratio: 1;
   height: 100%;
   border-radius: 999%;

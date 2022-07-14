@@ -100,7 +100,7 @@ const Info = (props: infoProps) => {
         </div>
       </div>
       <div className={styles.tabContent}>
-        <CurrentTabElement/>
+        {CurrentTabElement()}
       </div>
     </div>
   )
