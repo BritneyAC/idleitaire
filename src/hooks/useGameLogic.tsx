@@ -752,7 +752,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       if(!props.roboGame){
         if(props.playForYou > 0){
           if(props.playForYouToggle){
-            const time = 3000 / props.playForYou
+            const time = 4000 / props.playForYou
 
             const playForYouTimer = setInterval(() => {
               playForYou()}, time)
@@ -762,7 +762,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
         }
       }else {
         if(props.roboPlayer > 0){
-          const time = 1500 / props.roboPlayer
+          const time = 2000 / props.roboPlayer
           const roboPlayerTimer = setInterval(() => {
             playForYou()}, time)
 
