@@ -60,7 +60,7 @@ const Menu: React.FC<MenuProps> = (props) => {
           {randCardElement}
           Start 1 Card Game
         </div>
-        {BtnElement3Card()}
+        <BtnElement3Card/>
       </div>
     </>
   )

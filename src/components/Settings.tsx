@@ -25,7 +25,7 @@ const Settings = (props: settingsProps) => {
     }
   }, [props.whichInfoSettingShown])
 
-  const confirmation = () => {
+  const Confirmation = () => {
     if(isConfirmShown){
       return (
         <div className={styles.confirmation}>
@@ -44,11 +44,13 @@ const Settings = (props: settingsProps) => {
           </div>
         </div>
       )
+    }else{
+      return null;
     }
   }
 
 
-  const currentTabElement = () => {
+  const CurrentTabElement = () => {
     if(currentTab === "general"){
       return (
         <div className={styles.tabContent}>
@@ -64,7 +66,7 @@ const Settings = (props: settingsProps) => {
             <div className={styles.btn} onClick={()=>setIsConfirmShown(true)}>
               Delete
             </div>
-            {isConfirmShown && confirmation()}
+            {isConfirmShown && <Confirmation/>}
           </div>
         </div>
       )
@@ -88,6 +90,8 @@ const Settings = (props: settingsProps) => {
           </div>
         </div>
       )
+    }else{
+      return null;
     }
   }
 
@@ -101,7 +105,7 @@ const Settings = (props: settingsProps) => {
           <h2>cheats</h2>
         </div>
       </div>
-      {currentTabElement()}
+      <CurrentTabElement/>
     </div>
   )
 }

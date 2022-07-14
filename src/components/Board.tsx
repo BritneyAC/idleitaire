@@ -19,6 +19,7 @@ interface BoardProps {
   changeCurrentGame: (game: string)=>void,
 }
 
+
 const Board: React.FC<BoardProps> = (props) => { 
   const [start, setStart] = useState(true)
   const isDropped = useRef<boolean>(false)
@@ -97,7 +98,9 @@ const Board: React.FC<BoardProps> = (props) => {
         card.addEventListener("dragend", handleDragEnd)
   })}}, [cards])
 
-  const confirmation = (confirmationShown: string = props.whichInfoSettingShown) => {
+
+  const Confirmation = () => {
+    const confirmationShown: string = props.whichInfoSettingShown
     let confirm
     if(confirmationShown === "restart"){
       confirm = <div>
@@ -135,6 +138,7 @@ const Board: React.FC<BoardProps> = (props) => {
           </div>
         </>
   )}
+  return null;
 }
 
   const isOpen = () => {
@@ -353,7 +357,7 @@ const Board: React.FC<BoardProps> = (props) => {
         <div className={`${styles.btn} ${props.whichInfoSettingShown === "end" && styles.current}`} onClick={()=>props.toggleInfoSetting("end")}><h1>End Game</h1></div>
       </div>
       <div className={confirmOpen()}>
-        {(props.whichInfoSettingShown === "end" || props.whichInfoSettingShown === "restart") && confirmation()}
+        {(props.whichInfoSettingShown === "end" || props.whichInfoSettingShown === "restart") && <Confirmation/>}
       </div>
     </>
   )

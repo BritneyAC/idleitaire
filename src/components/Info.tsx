@@ -62,7 +62,7 @@ const Info = (props: infoProps) => {
   const changeTab = (tab: string) => {
     setCurrentTab(tab);
   }
-  const currentTabElement = () => {
+  const CurrentTabElement = () => {
     if(currentTab === "stats"){
       return (
         <Stats userInfo={userInfo} saveUserInfo={saveUserInfo} savedRecently={savedRecently} currentGame={currentGame}/>
@@ -73,7 +73,11 @@ const Info = (props: infoProps) => {
       }
       return (
         <UpgradesPage userInfo={userInfo} unlockGameCost={unlockGameCost} roboPlayer={roboPlayer} playForYou={playForYou} roboPlayerCost={roboPlayerCost} playForYouCost={playForYouCost} playForYouToggle={playForYouToggle} roboPlayerIncreased={roboPlayerIncreased} playForYouIncreased={playForYouIncreased} gamesWonIncreased={gamesWonIncreased} increasePoints={increasePoints} togglePFY={togglePFY} autoUpgradeUnlocked={autoUpgradeUnlocked} unlockAutoUpgrade={unlockAutoUpgrade} autoUpgradeToggle={autoUpgradeToggle} autoUpgrade={autoUpgrade} saveUserInfo={saveUserInfo} currentGame={currentGame}/>
-      )     
+        )     
+    }else{
+      return (
+        <Stats userInfo={userInfo} saveUserInfo={saveUserInfo} savedRecently={savedRecently} currentGame={currentGame}/>
+      )
     }
   }
 
@@ -96,7 +100,7 @@ const Info = (props: infoProps) => {
         </div>
       </div>
       <div className={styles.tabContent}>
-        {currentTabElement()}
+        <CurrentTabElement/>
       </div>
     </div>
   )

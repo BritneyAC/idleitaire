@@ -9,7 +9,7 @@ interface StatsProps {
 }
 
 const Stats: React.FC<StatsProps> = (props) => {
-  const statsToShow = () => {
+  const StatsToShow = () => {
     if(props.currentGame === "menu"){
       return (
         <>
@@ -31,11 +31,19 @@ const Stats: React.FC<StatsProps> = (props) => {
           <p>Total points: {props.userInfo.user3CardPoints}</p>
         </>
       )
+    }else {
+      return (
+        <>
+          <p>Games won: {props.userInfo.gamesWon + props.userInfo.games3CardWon}</p>
+          <p>Total points: {props.userInfo.userPoints + props.userInfo.user3CardPoints}</p>
+        </>
+      )
     }
+    
   }
   return(
     <div className={styles.stats}>
-      {statsToShow()}
+      <StatsToShow/>
       <div onClick={props.saveUserInfo} className={styles.btn}>Save Info?</div>
       {props.savedRecently && <p className={styles.saveMarker}>  Saved!</p>}
     </div>
