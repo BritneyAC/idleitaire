@@ -14,6 +14,10 @@
   justify-content: space-around;
   isolation: isolate;
 }
+.playspace svg {
+  transform: translateX(0) translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
 
 .top {
   grid-row-start: 1;
@@ -23,7 +27,7 @@
   height: 15vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 1.5fr 1fr;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -33,64 +37,65 @@
 }
 
 .winPiles {
-  position: relative;
-  grid-column-start: 1;
-  grid-column-end: 2;
   padding: 0;
   margin: 0;
   height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: calc(4.3 * clamp(2.5rem, 10vw, 10vh));
+  position: relative;
+  left: 0;
 }
 
 .clubs, .spades, .hearts, .diamonds {
-  height: 100%;
-  width: 100%;
-  position: relative;
+  width: clamp(2.5rem, 11vw, 14vh);
 }
 
 .deck {
-  grid-column-start: 2;
-  grid-column-end: 3;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin-left: 10%;
 }
 
 .playable {
-  grid-column-start: 3;
-  grid-column-end: -1;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
   width: 100%;
 }
 
 .main {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 2;
-  grid-row-end: -1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
-  width: 100%;
   padding: 0;
 }
 
 .column0, .column1, .column2, .column3, .column4, .column5, .column6 {
-  width: 14vw;
+  width: calc((100vw - 4rem) / 7);
   height: 100%;
-  position: relative;
-  transition: 0.15s ease-in-out;
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+.column0 svg, .column1 svg, .column2 svg, .column3 svg, .column4 svg, .column5 svg, .column6 svg {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+.column0 {
+  transform: translateX(0);
+}
+.column1 {
+  transform: translateX(100%);
+}
+.column2 {
+  transform: translateX(200%);
+}
+.column3 {
+  transform: translateX(300%);
+}
+.column4 {
+  transform: translateX(400%);
+}
+.column5 {
+  transform: translateX(500%);
+}
+.column6 {
+  transform: translateX(600%);
 }
 
 .undo {

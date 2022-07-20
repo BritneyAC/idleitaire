@@ -15,6 +15,10 @@
   grid-template-rows: 1fr 9fr;
   justify-content: space-around;
   isolation: isolate;
+  & svg{
+    transform: translateX(0) translateY(0);
+    transition: transform .5s ease-in-out;
+  }
 }
 
 
@@ -26,7 +30,7 @@
   height: 15vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 1.5fr 1fr;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
   align-items: flex-start;
   justify-content: flex-start;
   &[data-game-type="spider"]{
@@ -36,54 +40,30 @@
 }
 
 .winPiles {
-  position: relative;
-  grid-column-start: 1;
-  grid-column-end: 2;
   padding: 0;
   margin: 0;
   height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
+  width: calc(4.3 * $topCardWidth);
+  position: relative;
+  left: 0;
 }
 
 .clubs, .spades, .hearts, .diamonds {
-  height: 100%;
-  width: 100%;
-  position: relative;
+  width: $cardWidth;
 }
 
 .deck {
-  grid-column-start: 2;
-  grid-column-end: 3;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin-left: 10%;
 }
 
 .playable {
-  grid-column-start: 3;
-  grid-column-end: -1;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
   width: 100%;
 }
 
 .main {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 2;
-  grid-row-end: -1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
-  width: 100%;
   padding: 0;
   
 }
@@ -91,13 +71,37 @@
 .column {
 
   &0, &1, &2, &3, &4, &5, &6 {
-    width: 14vw;
+    width: calc((100vw - 4rem) / 7);
     height: 100%;
-    position: relative;
-    transition: .15s ease-in-out;
+    position: absolute;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    transition: transform .5s ease-in-out;
+    & svg {
+      transform: translateX(0);
+      transition: transform .5s ease-in-out;
+    }
+  }
+  &0{
+    transform: translateX(0);
+  }
+  &1{
+    transform: translateX(100%);
+  }
+  &2{
+    transform: translateX(200%);
+  }
+  &3{
+    transform: translateX(300%);
+  }
+  &4{
+    transform: translateX(400%);
+  }
+  &5{
+    transform: translateX(500%);
+  }
+  &6{
+    transform: translateX(600%);
   }
 }
   

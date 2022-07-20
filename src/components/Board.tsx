@@ -93,9 +93,9 @@ const Board: React.FC<BoardProps> = (props) => {
   useEffect(()=>{
     if(cards){
       cards.forEach(card => {
-        card.addEventListener("dragstart", ()=>{
+        card.addEventListener("pointerdown", ()=>{
           handleDragStart(Number(card.id))})
-        card.addEventListener("dragend", handleDragEnd)
+        card.addEventListener("pointerup", handleDragEnd)
   })}}, [cards])
 
 

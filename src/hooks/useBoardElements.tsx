@@ -4,58 +4,59 @@ import styles from "@/styles/css/BoardElement.module.css"
 
 
 import Cardback from "@/cards/cardback.svg"
-import AceOfClubs from "@/cards/1.svg"
-import TwoOfClubs from "@/cards/2.svg"
-import ThreeOfClubs from "@/cards/3.svg"
-import FourOfClubs from "@/cards/4.svg"
-import FiveOfClubs from "@/cards/5.svg"
-import SixOfClubs from "@/cards/6.svg"
-import SevenOfClubs from "@/cards/7.svg"
-import EightOfClubs from "@/cards/8.svg"
-import NineOfClubs from "@/cards/9.svg"
-import TenOfClubs from "@/cards/10.svg"
-import JackOfClubs from "@/cards/11.svg"
-import QueenOfClubs from "@/cards/12.svg"
-import KingOfClubs from "@/cards/13.svg"
-import AceOfSpades from "@/cards/14.svg"
-import TwoOfSpades from "@/cards/15.svg"
-import ThreeOfSpades from "@/cards/16.svg"
-import FourOfSpades from "@/cards/17.svg"
-import FiveOfSpades from "@/cards/18.svg"
-import SixOfSpades from "@/cards/19.svg"
-import SevenOfSpades from "@/cards/20.svg"
-import EightOfSpades from "@/cards/21.svg"
-import NineOfSpades from "@/cards/22.svg"
-import TenOfSpades from "@/cards/23.svg"
-import JackOfSpades from "@/cards/24.svg"
-import QueenOfSpades from "@/cards/25.svg"
-import KingOfSpades from "@/cards/26.svg"
-import AceOfHearts from "@/cards/27.svg"
-import TwoOfHearts from "@/cards/28.svg"
-import ThreeOfHearts from "@/cards/29.svg"
-import FourOfHearts from "@/cards/30.svg"
-import FiveOfHearts from "@/cards/31.svg"
-import SixOfHearts from "@/cards/32.svg"
-import SevenOfHearts from "@/cards/33.svg"
-import EightOfHearts from "@/cards/34.svg"
-import NineOfHearts from "@/cards/35.svg"
-import TenOfHearts from "@/cards/36.svg"
-import JackOfHearts from "@/cards/37.svg"
-import QueenOfHearts from "@/cards/38.svg"
-import KingOfHearts from "@/cards/39.svg"
-import AceOfDiamonds from "@/cards/40.svg"
-import TwoOfDiamonds from "@/cards/41.svg"
-import ThreeOfDiamonds from "@/cards/42.svg"
-import FourOfDiamonds from "@/cards/43.svg"
-import FiveOfDiamonds from "@/cards/44.svg"
-import SixOfDiamonds from "@/cards/45.svg"
-import SevenOfDiamonds from "@/cards/46.svg"
-import EightOfDiamonds from "@/cards/47.svg"
-import NineOfDiamonds from "@/cards/48.svg"
-import TenOfDiamonds from "@/cards/49.svg"
-import JackOfDiamonds from "@/cards/50.svg"
-import QueenOfDiamonds from "@/cards/51.svg"
-import KingOfDiamonds from "@/cards/52.svg"
+import AceOfClubs from "@/components/cardComponents/AceOfClubs"
+import TwoOfClubs from "@/components/cardComponents/TwoOfClubs"
+import ThreeOfClubs from "@/components/cardComponents/ThreeOfClubs"
+import FourOfClubs from "@/components/cardComponents/FourOfClubs"
+import FiveOfClubs from "@/components/cardComponents/FiveOfClubs"
+import SixOfClubs from "@/components/cardComponents/SixOfClubs"
+import SevenOfClubs from "@/components/cardComponents/SevenOfClubs"
+import EightOfClubs from "@/components/cardComponents/EightOfClubs"
+import NineOfClubs from "@/components/cardComponents/NineOfClubs"
+import TenOfClubs from "@/components/cardComponents/TenOfClubs"
+import JackOfClubs from "@/components/cardComponents/JackOfClubs"
+import QueenOfClubs from "@/components/cardComponents/QueenOfClubs"
+import KingOfClubs from "@/components/cardComponents/KingOfClubs"
+import AceOfSpades from "@/components/cardComponents/AceOfSpades"
+import TwoOfSpades from "@/components/cardComponents/TwoOfSpades"
+import ThreeOfSpades from "@/components/cardComponents/ThreeOfSpades"
+import FourOfSpades from "@/components/cardComponents/FourOfSpades"
+import FiveOfSpades from "@/components/cardComponents/FiveOfSpades"
+import SixOfSpades from "@/components/cardComponents/SixOfSpades"
+import SevenOfSpades from "@/components/cardComponents/SevenOfSpades"
+import EightOfSpades from "@/components/cardComponents/EightOfSpades"
+import NineOfSpades from "@/components/cardComponents/NineOfSpades"
+import TenOfSpades from "@/components/cardComponents/TenOfSpades"
+import JackOfSpades from "@/components/cardComponents/JackOfSpades"
+import QueenOfSpades from "@/components/cardComponents/QueenOfSpades"
+import KingOfSpades from "@/components/cardComponents/KingOfSpades"
+import AceOfHearts from "@/components/cardComponents/AceOfHearts"
+import TwoOfHearts from "@/components/cardComponents/TwoOfHearts"
+import ThreeOfHearts from "@/components/cardComponents/ThreeOfHearts"
+import FourOfHearts from "@/components/cardComponents/FourOfHearts"
+import FiveOfHearts from "@/components/cardComponents/FiveOfHearts"
+import SixOfHearts from "@/components/cardComponents/SixOfHearts"
+import SevenOfHearts from "@/components/cardComponents/SevenOfHearts"
+import EightOfHearts from "@/components/cardComponents/EightOfHearts"
+import NineOfHearts from "@/components/cardComponents/NineOfHearts"
+import TenOfHearts from "@/components/cardComponents/TenOfHearts"
+import JackOfHearts from "@/components/cardComponents/JackOfHearts"
+import QueenOfHearts from "@/components/cardComponents/QueenOfHearts"
+import KingOfHearts from "@/components/cardComponents/KingOfHearts"
+import AceOfDiamonds from "@/components/cardComponents/AceOfDiamonds"
+import TwoOfDiamonds from "@/components/cardComponents/TwoOfDiamonds"
+import ThreeOfDiamonds from "@/components/cardComponents/ThreeOfDiamonds"
+import FourOfDiamonds from "@/components/cardComponents/FourOfDiamonds"
+import FiveOfDiamonds from "@/components/cardComponents/FiveOfDiamonds"
+import SixOfDiamonds from "@/components/cardComponents/SixOfDiamonds"
+import SevenOfDiamonds from "@/components/cardComponents/SevenOfDiamonds"
+import EightOfDiamonds from "@/components/cardComponents/EightOfDiamonds"
+import NineOfDiamonds from "@/components/cardComponents/NineOfDiamonds"
+import TenOfDiamonds from "@/components/cardComponents/TenOfDiamonds"
+import JackOfDiamonds from "@/components/cardComponents/JackOfDiamonds"
+import QueenOfDiamonds from "@/components/cardComponents/QueenOfDiamonds"
+import KingOfDiamonds from "@/components/cardComponents/KingOfDiamonds"
+import { NextPage } from "next"
 
 interface UseBoardElementsProps {
   gamesWonIncreased: ()=>void,
@@ -105,81 +106,68 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(index === gameCards.Clubs.length - 1){ 
         if(C === 1){
           element = <AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 2){
           element = <TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 3){
           element = <ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 4){
           element = <FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 5){
           element = <FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 6){
           element = <SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 7){
           element = <SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 8){
           element = <EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 9){
           element = <NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 10){
           element = <TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 11){
           element = <JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 12){
           element = <QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 13){
           element = <KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }} return <div className={`${styles.clubs} card`} id={C.toString()} key={C} draggable="true">{element}</div> 
     })
@@ -190,81 +178,68 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(index === gameCards.Spades.length - 1){
         if(C === 14){
           element = <AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 15){
           element = <TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 16){
           element = <ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 17){
           element = <FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 18){
           element = <FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 19){
           element = <SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 20){
           element = <SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 21){
           element = <EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 22){
           element = <NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 23){
           element = <TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 24){
           element = <JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 25){
           element = <QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 26){
           element = <KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }} return <div className={`${styles.spades} card`} id={C.toString()} key={C} draggable="true">{element}</div>
     })
@@ -275,81 +250,68 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(index === gameCards.Hearts.length - 1){
         if(C === 27){
           element = <AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 28){
           element = <TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 29){
           element = <ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 30){
           element = <FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 31){
           element = <FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 32){
           element = <SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 33){
           element = <SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 34){
           element = <EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 35){
           element = <NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 36){
           element = <TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 37){
           element = <JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 38){
           element = <QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 39){
           element = <KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }} return <div className={`${styles.hearts} card`} id={C.toString()} draggable="true" key={C}>{element}</div>
     })
@@ -360,81 +322,68 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(index === gameCards.Diamonds.length - 1){ 
         if(C === 40){
           element = <AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 41){
           element = <TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 42){
           element = <ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 43){
           element = <FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 44){
           element = <FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 45){
           element = <SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 46){
           element = <SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 47){
           element = <EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 48){
           element = <NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 49){
           element = <TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 50){
           element = <JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 51){
           element = <QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 52){
           element = <KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
       />}} return <div className={`${styles.diamonds} card`} id={C.toString()} key={C} draggable="true">{element}</div>
     })
 
@@ -465,19 +414,19 @@ const useBoardElements= (props: UseBoardElementsProps) => {
             style = styles.deck4
           }
           if(gameType === "normal"){
-            return <div className={`${style} card`} id={C.toString()} key={C} draggable="true">
+            return <div className={style} key={C} draggable="true">
               <Cardback
                 onClick={flipCard}
                 alt="cardback"
           /></div>} else if(gameType === "3card"){
-            return <div className={`${style} card`} id={C.toString()} key={C} draggable="true">
+            return <div className={style} key={C} draggable="true">
               <Cardback
                 onClick={flip3Cards}
                 alt="cardback"
             /></div>
           }
   }})}} else{
-      DeckElements = gameType !== "spider" && <div key={0} className={styles.deckEmpty} onClick={resetDeck}></div>
+      DeckElements = gameType !== "spider" && <div key={150} className={styles.deckEmpty} onClick={resetDeck}></div>
     }
 
 
@@ -495,578 +444,526 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         } 
         if(C === 1){
           element = <AceOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 2){
           element = <TwoOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 3){
           element = <ThreeOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 4){
           element = <FourOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 5){
           element = <FiveOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 6){
           element = <SixOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 7){
           element = <SevenOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 8){
           element = <EightOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 9){
           element = <NineOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 10){
           element = <TenOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 11){
           element = <JackOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 12){
           element = <QueenOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 13){
           element = <KingOfClubs
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 14){
           element = <AceOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 15){
           element = <TwoOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 16){
           element = <ThreeOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 17){
           element = <FourOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 18){
           element = <FiveOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 19){
           element = <SixOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 20){
           element = <SevenOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 21){
           element = <EightOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 22){
           element = <NineOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 23){
           element = <TenOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 24){
           element = <JackOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 25){
           element = <QueenOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 26){
           element = <KingOfSpades
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 27){
           element = <AceOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 28){
           element = <TwoOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 29){
           element = <ThreeOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 30){
           element = <FourOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 31){
           element = <FiveOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 32){
           element = <SixOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 33){
           element = <SevenOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 34){
           element = <EightOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 35){
           element = <NineOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 36){
           element = <TenOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 37){
           element = <JackOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 38){
           element = <QueenOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 39){
           element = <KingOfHearts
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 40){
           element = <AceOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 41){
           element = <TwoOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 42){
           element = <ThreeOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 43){
           element = <FourOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 44){
           element = <FiveOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 45){
           element = <SixOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 46){
           element = <SevenOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 47){
           element = <EightOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 48){
           element = <NineOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 49){
           element = <TenOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 50){
           element = <JackOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 51){
           element = <QueenOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
           />
         }else if(C === 52){
           element = <KingOfDiamonds
-            id={`${C}`}
-            alt={`${C}`}
+            id={C}
+            onClick={()=>{}}
         />}
         return <div className={style} key={C}>{element}</div>
   } else if(index === gameCards.Playable.length - 1){
         let element
         if(C === 1){
           element = <AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 2){
           element = <TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 3){
           element = <ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 4){
           element = <FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 5){
           element = <FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 6){
           element = <SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 7){
           element = <SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 8){
           element = <EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 9){
           element = <NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 10){
           element = <TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 11){
           element = <JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 12){
           element = <QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 13){
           element = <KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 14){
           element = <AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 15){
           element = <TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 16){
           element = <ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 17){
           element = <FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 18){
           element = <FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 19){
           element = <SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 20){
           element = <SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 21){
           element = <EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 22){
           element = <NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 23){
           element = <TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 24){
           element = <JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 25){
           element = <QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 26){
           element = <KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 27){
           element = <AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 28){
           element = <TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 29){
           element = <ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 30){
           element = <FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 31){
           element = <FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 32){
           element = <SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 33){
           element = <SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 34){
           element = <EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 35){
           element = <NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 36){
           element = <TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 37){
           element = <JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 38){
           element = <QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 39){
           element = <KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 40){
           element = <AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 41){
           element = <TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 42){
           element = <ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 43){
           element = <FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 44){
           element = <FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 45){
           element = <SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 46){
           element = <SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 47){
           element = <EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 48){
           element = <NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 49){
           element = <TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 50){
           element = <JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 51){
           element = <QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />
         }else if(C === 52){
           element = <KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
           />} 
       return <div className={`${styles.playable3} card`} id={C.toString()} key={C} draggable="true">{element}</div>
   }})
@@ -1119,264 +1016,212 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 2){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 3){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 4){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 5){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 6){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 7){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 8){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 9){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 10){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 11){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 12){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 13){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 14){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 15){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 16){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 17){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 18){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 19){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 20){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 21){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 22){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 23){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 24){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 25){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 26){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 27){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 28){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 29){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 30){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 31){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 32){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 33){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 34){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 35){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 36){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 37){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 38){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 39){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 40){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 41){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 42){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 43){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 44){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 45){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 46){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 47){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 48){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 49){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 50){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 51){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 52){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}}else{
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
             alt="cardback"
@@ -1430,264 +1275,212 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 2){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 3){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 4){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 5){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 6){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 7){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 8){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 9){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 10){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 11){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 12){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 13){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 14){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 15){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 16){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 17){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 18){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 19){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 20){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 21){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 22){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 23){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 24){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 25){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 26){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 27){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 28){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 29){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 30){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 31){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 32){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 33){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 34){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 35){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 36){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 37){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 38){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 39){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 40){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 41){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 42){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 43){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 44){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 45){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 46){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 47){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 48){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 49){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 50){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 51){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 52){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}}else{
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
             alt="cardback"
@@ -1741,266 +1534,214 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 2){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 3){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 4){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 5){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 6){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 7){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 8){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 9){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 10){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 11){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 12){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 13){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 14){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 15){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 16){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 17){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 18){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 19){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 20){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 21){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 22){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 23){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 24){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 25){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 26){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 27){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 28){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 29){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 30){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 31){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 32){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 33){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 34){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 35){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 36){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 37){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 38){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 39){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 40){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 41){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 42){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 43){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 44){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 45){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 46){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 47){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 48){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 49){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 50){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 51){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 52){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}}else{
-          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
+          return <div className={`${style} card`} key={C} draggable="true"><Cardback
             alt="cardback"
     /></div>}})
 
@@ -2052,264 +1793,212 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 2){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 3){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 4){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 5){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 6){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 7){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 8){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 9){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 10){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 11){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 12){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 13){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 14){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 15){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 16){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 17){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 18){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 19){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 20){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 21){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 22){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 23){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 24){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 25){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 26){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 27){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 28){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 29){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 30){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 31){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 32){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 33){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 34){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 35){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 36){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 37){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 38){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 39){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 40){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 41){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 42){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 43){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 44){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 45){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 46){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 47){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 48){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 49){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 50){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 51){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 52){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}}else{
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
             alt="cardback"
@@ -2363,264 +2052,212 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 2){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 3){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 4){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 5){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 6){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 7){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 8){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 9){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 10){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 11){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 12){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 13){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 14){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 15){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 16){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 17){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 18){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 19){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 20){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 21){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 22){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 23){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 24){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 25){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 26){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 27){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 28){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 29){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 30){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 31){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 32){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 33){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 34){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 35){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 36){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 37){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 38){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 39){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 40){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 41){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 42){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 43){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 44){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 45){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 46){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 47){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 48){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 49){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 50){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 51){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 52){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}}else{
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
             alt="cardback"
@@ -2674,264 +2311,212 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 2){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 3){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 4){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 5){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 6){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 7){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 8){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 9){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 10){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 11){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 12){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 13){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 14){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 15){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 16){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 17){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 18){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 19){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 20){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 21){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 22){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 23){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 24){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 25){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 26){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 27){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 28){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 29){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 30){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 31){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 32){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 33){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 34){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 35){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 36){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 37){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 38){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 39){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 40){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 41){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 42){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 43){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 44){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 45){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 46){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 47){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 48){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 49){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 50){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 51){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 52){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}}else{
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
             alt="cardback"
@@ -2985,264 +2570,212 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 2){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 3){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 4){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 5){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 6){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 7){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 8){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 9){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 10){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 11){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 12){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 13){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfClubs
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 14){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 15){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 16){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 17){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 18){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 19){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 20){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 21){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 22){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 23){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 24){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 25){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 26){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfSpades
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 27){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 28){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 29){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 30){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 31){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 32){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 33){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 34){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 35){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 36){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 37){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 38){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 39){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfHearts
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 40){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 41){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TwoOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 42){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><ThreeOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 43){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FourOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 44){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><FiveOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 45){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SixOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 46){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><SevenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 47){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><EightOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 48){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><NineOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 49){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><TenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 50){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><JackOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 51){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><QueenOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}else if(C === 52){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><KingOfDiamonds
+            id={C}
             onClick={()=>handleClick(C)}
-            draggable="true"
-            alt={`${C}`}
         /></div>}}else{
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
             alt="cardback"

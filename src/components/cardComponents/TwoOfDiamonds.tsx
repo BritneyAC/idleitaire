@@ -1,0 +1,19 @@
+import TwoOfDiamondsCard from '@/cards/TwoofDiamonds.svg'
+
+interface TwoOfDiamondsProps {
+  id: number;
+  onClick: (id: number) => void;
+}
+
+const TwoOfDiamonds = (props: TwoOfDiamondsProps) =>{
+  return (
+    <TwoOfDiamondsCard
+      id={props.id}
+      onClick={props.onClick}
+      draggable="true"
+      alt="Two of Diamonds"
+    />
+  )
+}
+
+export default TwoOfDiamonds;

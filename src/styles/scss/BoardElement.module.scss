@@ -1,3 +1,5 @@
+@use "abstracts" as *;
+
 .cardHolder{
   overflow: visible;
   display: flex;
@@ -34,48 +36,59 @@
 }
 
 .clubs, .spades, .hearts, .diamonds {
-  & svg {
-    max-height: 100%;
-    width: auto;
-    position: absolute;
-    inset: 0;
-  }
-  width: fit-content;
-  height: fit-content;
+  aspect-ratio: 592/800;
+  width: $topCardWidth;
+  position: absolute;
+  left: 0;
+  transform: translateY(0);
+  transition: transform .1s ease-in-out;
+}
+
+.clubs {
+  transform: translateX(0);
+  z-index: 1003;
+}
+.spades {
+  transform: translateX(calc(.1rem + $topCardWidth));
+  z-index: 1001;
+}
+.hearts {
+  transform: translateX(calc(.2rem + 2 * $topCardWidth));
+  z-index: 1002;
+}
+.diamonds {
+  transform: translateX(calc(.3rem + 3 * $topCardWidth));
+  z-index: 1003;
 }
 
 .deck {
   &0, &1, &2, &3, &4 {
-    width: 166%;
+    position: absolute;
+    width: $topCardWidth;
+    & svg {
+      width: 100%;
+    }
+    transition: transform .1s ease-in-out;
+  }
+  &0 {
+    transform: translateX(0);
   }
   
-  &0 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
   &1 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    margin-left: -50%;
+    transform: translateX(calc(.5 * $topCardWidth));
   }
-
+  
   &2 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    margin-left: -100%;
+    transform: translateX(calc(1 * $topCardWidth));
   }
-
+  
   &3 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    margin-left: -150%;
+    transform: translateX(calc(1.5 * $topCardWidth));
   }
-
+  
   &4 {
-    grid-column-start: 5;
-    grid-column-end: 6;
-    margin-left: -200%;
+    transform: translateX(calc(2 * $topCardWidth));
+
   }
 }
 
@@ -92,144 +105,143 @@
 }
 
 .deckEmpty {
-  grid-column-start: 1;
-  grid-column-end: 2;
   aspect-ratio: 592/800;
-  border: 3px solid white;
-  height: clamp(2rem, 100%, 14vw);
-  padding: 2px;
+  box-shadow: inset 0 0 0 3px white;
+  width: $topCardWidth;
   border-radius: 5px;
 }
 
 .playable {
 
   &1, &2, &3 {
-    width: 150%;
+    position: absolute;
+    width: $topCardWidth;
+    & svg {
+      width: 100%;
+    }
+    transform: translateY(0);
+    transition: transform .1s ease-in-out;
   }
   
   &1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
+    transform: translateX(calc(-.25 * $topCardWidth));
   }
   
   &2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    margin-left: -25%;
+    transform: translateX(calc(.25 * $topCardWidth));
   }
   
   &3 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    margin-left: -50%;
+    transform: translateX(calc(.75 * $topCardWidth));
   }
 }
 
 .card {
   &0, &1, &2, &3, &4, &5, &6, &7, &8, &9, &10, &11, &12, &13, &14, &15, &16, &17, &18, &19 {
-    width: Clamp(2.5rem, 90%, 12vh);
+    width: $cardWidth;
     position: absolute;
-    margin-top: 1vh;
+    transform: translateX(50%);
+    transition: transform .1s ease-in-out;
   }
   
   &0 {
     z-index: 1000;
-    top: 0;
+    transform: translateY(0);
   }
-
+  
   &1 {
     z-index: 1001;
-    top: Min(3vh, 4%);
+    transform: translateY(3vh);
   }
-
+  
   &2 {
     z-index: 1002;
-    top: Min(6vh, 8%);
+    transform: translateY(6vh);
   }
-
+  
   &3 {
     z-index: 1003;
-    top: Min(9vh, 12%);
+    transform: translateY(9vh);
   }
-
+  
   &4 {
     z-index: 1004;
-    top: Min(12vh, 16%);
+    transform: translateY(12vh);
   }
-
+  
   &5 {
     z-index: 1005;
-    top: Min(15vh, 20%);
+    transform: translateY(15vh);
   }
-
+  
   &6 {
     z-index: 1006;
-    top: Min(18vh, 24%);
+    transform: translateY(18vh);
   }
-
+  
   &7 {
     z-index: 1007;
-    top: Min(21vh, 28%);
+    transform: translateY(21vh);
   }
-
+  
   &8 {
     z-index: 1008;
-    top: Min(24vh, 32%);
+    transform: translateY(24vh);
   }
-
+  
   &9 {
     z-index: 1009;
-    top: Min(27vh, 36%);
+    transform: translateY(27vh);
   }
-
+  
   &10 {
     z-index: 1010;
-    top: Min(30vh, 40%);
+    transform: translateY(30vh);
   }
-
+  
   &11 {
     z-index: 1011;
-    top: Min(33vh, 44%);
+    transform: translateY(33vh);
   }
-
+  
   &12 {
     z-index: 1012;
-    top: Min(36vh, 48%);
+    transform: translateY(36vh);
   }
-
+  
   &13 {
     z-index: 1013;
-    top: Min(39vh, 52%);
+    transform: translateY(39vh);
   }
-
+  
   &14 {
     z-index: 1014;
-    top: Min(42vh, 56%);
+    transform: translateY(42vh);
   }
-
+  
   &15 {
     z-index: 1015;
-    top: Min(45vh, 60%);
+    transform: translateY(45vh);
   }
-
+  
   &16 {
     z-index: 1016;
-    top: Min(48vh, 64%);
+    transform: translateY(48vh);
   }
-
+  
   &17 {
     z-index: 1017;
-    top: Min(51vh, 68%);
+    transform: translateY(51vh);
   }
-
+  
   &18 {
     z-index: 1018;
-    top: Min(54vh, 72%);
+    transform: translateY(54vh);
   }
-
+  
   &19 {
     z-index: 1019;
-    top: Min(57vh, 76%);
+    transform: translateY(57vh);
   }
 }
 
