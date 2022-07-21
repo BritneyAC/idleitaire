@@ -1,4 +1,4 @@
-import EightOfDiamondsCard from '@/cards/EightofDiamonds.svg'
+import EightOfDiamondsCard from '@/cards/EightOfDiamonds.svg'
 
 interface EightOfDiamondsProps {
   id: number;

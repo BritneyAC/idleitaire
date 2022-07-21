@@ -1,4 +1,4 @@
-import NineOfSpadesCard from '@/cards/NineofSpades.svg'
+import NineOfSpadesCard from '@/cards/NineOfSpades.svg'
 
 interface NineOfSpadesProps {
   id: number;

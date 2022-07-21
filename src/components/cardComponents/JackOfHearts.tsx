@@ -1,4 +1,4 @@
-import JackOfHeartsCard from '@/cards/JackofHearts.svg'
+import JackOfHeartsCard from '@/cards/JackOfHearts.svg'
 
 interface JackOfHeartsProps {
   id: number;

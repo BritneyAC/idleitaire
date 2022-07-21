@@ -1,4 +1,4 @@
-import SevenOfHeartsCard from '@/cards/SevenofHearts.svg'
+import SevenOfHeartsCard from '@/cards/SevenOfHearts.svg'
 
 interface SevenOfHeartsProps {
   id: number;

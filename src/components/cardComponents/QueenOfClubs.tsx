@@ -1,4 +1,4 @@
-import QueenOfClubsCard from '@/cards/QueenofClubs.svg'
+import QueenOfClubsCard from '@/cards/QueenOfClubs.svg'
 
 interface QueenOfClubsProps {
   id: number;
