@@ -63,12 +63,11 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
         <h1>RoboPlayer</h1>
         <h2>(Owned: {roboPlayer})</h2>
         {currentDescription !== "robo" && <FaQuestionCircle onClick={() => changeCurrentDesription("robo")}/>}
-            {currentDescription === "robo" && 
-              <div className={styles.description}> 
-                <GrClose onClick={() => changeCurrentDesription("none")}/>
-                <h2>Plays games for you in the backgroud</h2>
-              </div>
-            }
+             
+          <div className={`${styles.description} ${currentDescription === "robo" && styles.active}`}> 
+            <GrClose onClick={() => changeCurrentDesription("none")}/>
+            <h2>Plays games for you in the backgroud</h2>
+          </div>
         <h3>cost {roboPlayerCost}</h3>
         <button onClick={roboPlayerIncreased}>Upgrade</button>
         <p>Points in current game</p>
@@ -80,12 +79,10 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
         <h1>Play For Me</h1>
         <h2>(Owned: {playForYou})</h2>
         {currentDescription !== "pFY" && <FaQuestionCircle onClick={() => changeCurrentDesription("pFY")}/>}
-        {currentDescription === "pFY" && 
-          <div className={styles.description}> 
-            <GrClose onClick={() => changeCurrentDesription("none")}/>
-            <h2>Plays the main game for you</h2>
-          </div>
-        }
+        <div className={`${styles.description} ${currentDescription === "pFY" && styles.active}`}> 
+          <GrClose onClick={() => changeCurrentDesription("none")}/>
+          <h2>Plays the main game for you</h2>
+        </div>
         <h3>cost {playForYouCost}</h3>
         <button onClick={playForYouIncreased}>Upgrade</button>
         {playForYou > 0 && 
@@ -102,12 +99,10 @@ const UpgradesPage: React.FC<UpgradesPageProps> = (props) => {
       <div className={styles.upgrade}>
         <h1>Auto Upgrade</h1>
         {currentDescription !== "auto" && <FaQuestionCircle onClick={() => changeCurrentDesription("auto")}/>}
-        {currentDescription === "auto" && 
-          <div className={styles.description}>
-            <GrClose onClick={() => changeCurrentDesription("none")}/>
-            <p>Buys upgrades when you can afford them</p> 
-          </div>
-        }
+        <div className={`${styles.description} ${currentDescription === "auto" && styles.active}`}>
+          <GrClose onClick={() => changeCurrentDesription("none")}/>
+          <h2>Buys upgrades when you can afford them</h2> 
+        </div>
         {autoUpgradeUnlocked ? 
           <>
             <div className={autoUpgrade ? styles.radioBtnOn : styles.radioBtnOff} onClick={autoUpgradeToggle}>
