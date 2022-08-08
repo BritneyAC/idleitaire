@@ -100,6 +100,18 @@
   box-shadow: inset 0 0 0 3px white;
   width: clamp(2.5rem, 10vw, 10vh);
   border-radius: 5px;
+  position: relative;
+  display: flex;
+}
+
+.reset {
+  font-size: clamp(0.7rem, 3vw, 3vh);
+  line-height: 1;
+  transform: rotateZ(-52deg);
+  position: absolute;
+  top: 20%;
+  left: 12%;
+  margin: auto;
 }
 
 .playable1, .playable2, .playable3 {

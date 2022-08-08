@@ -425,8 +425,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
                 alt="cardback"
             /></div>
           }
-  }})}} else{
-      DeckElements = gameType !== "spider" && <div key={150} className={styles.deckEmpty} onClick={resetDeck}></div>
+  }})}} else if((gameType === "normal" && gameCards.Playable.length > 1) || (gameType === "3card" && gameCards.Playable.length > 3)){
+      DeckElements = <div key={150} className={`${styles.deckEmpty}`} onClick={resetDeck}>{gameCards.Playable.length > 0 && <p className={styles.reset}>Reset Deck</p>}</div>
     }
 
 
