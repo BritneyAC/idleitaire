@@ -74,7 +74,7 @@ export default function useUserInfo(props: useUserInfoProps) {
   
   //changes document title every 4 seconds if an upgrade is available on 3 card game
   useEffect(() => {
-    if(props.currentGame !== "3card"){
+    if(props.currentGame === "3card"){
       if(userInfo.pricesSetting !== "free") {
         if(userInfo.user3CardPoints > play3CardForYouCost 
           || userInfo.user3CardPoints > robo3CardPlayerCost){
