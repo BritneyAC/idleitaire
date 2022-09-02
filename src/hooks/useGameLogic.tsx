@@ -72,15 +72,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
   }, [gameCards])
   
   // useEffect(() => {
-  //   // const ShownCards = gameCards.AllCards.filter(card => card.shown).filter(card => gameCards.ShownCards.includes(card) === false)
-  //   // if(ShownCards.length > 0){
-  //   //   const newGameCards = {...gameCards}
-  //   //   while(ShownCards.length > 0){
-  //   //     const card = ShownCards.pop()
-  //   //     card && newGameCards.ShownCards.push(card)
-  //   //   }
-  //   //   setGameCards(newGameCards)
-  //   // }
   //   // if(deck.length > 1 && gameCards.Playable.length === 0){
   //   //   if(gameType === "normal"){ 
   //   //     flipCard()
@@ -192,9 +183,12 @@ const useGameLogic = (props: UseGameLogicProps) => {
         }
       }
     }
+    for(let i = 0; i < newDeck.length; i++){
+      newGameCards.ShownCards.push(newDeck[i])
+    }
     newGameCards.Columns.forEach((column) => {
-      column[column.length - 1].shown = true
       newGameCards.ShownCards.push(column[column.length - 1])
+      column[column.length - 1].shown = true
     })
     if(type === "normal" || type === "robo"){
       const newCard = newDeck.pop()
@@ -211,21 +205,19 @@ const useGameLogic = (props: UseGameLogicProps) => {
         newCard.shown = true
         newCard.location = "playable"
         newGameCards.Playable.push(newCard)
-        newGameCards.ShownCards.push(newCard)
       }
       if(newCardTwo){
         newCardTwo.shown = true
         newCardTwo.location = "playable"
         newGameCards.Playable.push(newCardTwo)
-        newGameCards.ShownCards.push(newCardTwo)
       }
       if(newCardThree){
         newCardThree.shown = true
         newCardThree.location = "playable"
         newGameCards.Playable.push(newCardThree)
-        newGameCards.ShownCards.push(newCardThree)
       }
     }
+    
     setDeck(newDeck)
     setGameCards(newGameCards)
   }
@@ -320,8 +312,11 @@ const useGameLogic = (props: UseGameLogicProps) => {
       ))
       newGameCards.previousMoves.push({cardsMoved: [...removedCards.flat()], location: `column${columnNum}`})
       if(newGameCards.Columns[columnNum].length > 0){
-        newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1].shown = true
-        !newGameCards.ShownCards.includes(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1]) && newGameCards.ShownCards.push(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1])
+        const lastCard = newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1]
+        lastCard.shown = true
+        if(!newGameCards.ShownCards.includes(lastCard)){
+          newGameCards.ShownCards.push(lastCard)
+        }
       }
     }
     setGameCards(newGameCards)
@@ -498,7 +493,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
       newCard.shown = true
       newCard.location = "playable"
       newGameCards.Playable.push(newCard)
-      newGameCards.ShownCards.push(newCard)
       newGameCards.previousMoves.push({cardsMoved: [newCard], location: "deck"})
     } 
     setDeck(newDeck)
@@ -516,7 +510,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
         newCard.location = "playable"
         moved.push(newCard)
         newGameCards.Playable.push(newCard)
-        newGameCards.ShownCards.push(newCard)
       } 
 
     }
@@ -609,14 +602,14 @@ const useGameLogic = (props: UseGameLogicProps) => {
       const {cardsMoved, location} = previousMove
       if(location.slice(0, 6) === "column"){
         const columnNum = Number(location.slice(6,7))
-        const newGameCards = {...gameCards}
-        let removed = [removeFromPile(cardsMoved[0])].flat()
+        
         if(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1] 
           === newGameCards.ShownCards[newGameCards.ShownCards.length - 1]){
             newGameCards.ShownCards[newGameCards.ShownCards.length - 1].shown = false
             newGameCards.ShownCards.pop()
-        }
-
+          }
+          
+        let removed = [removeFromPile(cardsMoved[0])].flat()
         //hide card if it was the last card in the column
         
 
@@ -690,7 +683,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
             const newCard = removed.pop()
             if(newCard){
               newDeck.push(newCard)
-              newGameCards.ShownCards.pop()
             }
             
         }
@@ -711,7 +703,6 @@ const useGameLogic = (props: UseGameLogicProps) => {
             newCard.location = "playable"
             newCard.shown = true
             newGameCards.Playable.push(newCard)
-            !newGameCards.ShownCards.includes(newCard) && newGameCards.ShownCards.push(newCard)
           }
         }
       }
