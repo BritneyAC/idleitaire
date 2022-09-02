@@ -554,9 +554,11 @@ const useGameLogic = (props: UseGameLogicProps) => {
   const resetDeck = () => {
     const newDeck = [...deck]
     const newGameCards = {...gameCards}
+    const playable: card[] = []
     while(newGameCards.Playable.length > 0){
       const remove = newGameCards.Playable.shift()
       if(remove){
+        
         remove.location = "deck"
         remove.shown = false
         newDeck.unshift(remove)
@@ -565,6 +567,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
     if(gameType === "normal"){
       const newCard = newDeck.pop()
       if(newCard){
+        playable.push(newCard)
         newCard.shown = true
         newCard.location = "playable"
         newGameCards.Playable.push(newCard)
@@ -574,22 +577,26 @@ const useGameLogic = (props: UseGameLogicProps) => {
       const newCardTwo = newDeck.pop()
       const newCardThree = newDeck.pop()
       if(newCard){
+        playable.push(newCard)
         newCard.shown = true
         newCard.location = "playable"
         newGameCards.Playable.push(newCard)
       }
       if(newCardTwo){
+        playable.push(newCardTwo)
         newCardTwo.shown = true
         newCardTwo.location = "playable"
         newGameCards.Playable.push(newCardTwo)
       }
       if(newCardThree){
+        playable.push(newCardThree)
         newCardThree.shown = true
         newCardThree.location = "playable"
         newGameCards.Playable.push(newCardThree)
       }
     }
     newGameCards.previousMoves.push({cardsMoved: [], location: "reset"})
+    newGameCards.previousMoves.push({cardsMoved: playable, location: "deck"})
     setDeck(newDeck)
     setGameCards(newGameCards)
   }
