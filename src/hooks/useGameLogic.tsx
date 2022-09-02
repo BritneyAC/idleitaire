@@ -71,13 +71,26 @@ const useGameLogic = (props: UseGameLogicProps) => {
     
   }, [gameCards])
   
-  useEffect(() => {
-    const ShownCards = gameCards.AllCards.filter(card => card.shown).filter(card => gameCards.ShownCards.includes(card) === false)
-    if(ShownCards.length > 0){
-      setGameCards(prevCards => ({...prevCards, ShownCards: [...prevCards.ShownCards, ...ShownCards]}))
-    }
-  }
-  , [gameCards, deck])
+  // useEffect(() => {
+  //   // const ShownCards = gameCards.AllCards.filter(card => card.shown).filter(card => gameCards.ShownCards.includes(card) === false)
+  //   // if(ShownCards.length > 0){
+  //   //   const newGameCards = {...gameCards}
+  //   //   while(ShownCards.length > 0){
+  //   //     const card = ShownCards.pop()
+  //   //     card && newGameCards.ShownCards.push(card)
+  //   //   }
+  //   //   setGameCards(newGameCards)
+  //   // }
+  //   // if(deck.length > 1 && gameCards.Playable.length === 0){
+  //   //   if(gameType === "normal"){ 
+  //   //     flipCard()
+  //   //   }
+  //   //   if(gameType === "3card"){ 
+  //   //     flip3Cards()
+  //   //   }
+  //   // }
+  // }
+  // , [gameCards, deck])
 
   useEffect(() => {
     if(!isGameRunning){
@@ -179,12 +192,13 @@ const useGameLogic = (props: UseGameLogicProps) => {
         }
       }
     }
-    newGameCards.Columns.forEach((column, index) => {
+    newGameCards.Columns.forEach((column) => {
       column[column.length - 1].shown = true
+      newGameCards.ShownCards.push(column[column.length - 1])
     })
     if(type === "normal" || type === "robo"){
       const newCard = newDeck.pop()
-      if(!!newCard){
+      if(newCard){
         newCard.shown = true
         newCard.location = "playable"
         newGameCards.Playable.push(newCard)
@@ -193,16 +207,23 @@ const useGameLogic = (props: UseGameLogicProps) => {
       const newCard = newDeck.pop()
       const newCardTwo = newDeck.pop()
       const newCardThree = newDeck.pop()
-      if(!!newCard && !!newCardTwo && !!newCardThree){
+      if(newCard){
         newCard.shown = true
         newCard.location = "playable"
         newGameCards.Playable.push(newCard)
+        newGameCards.ShownCards.push(newCard)
+      }
+      if(newCardTwo){
         newCardTwo.shown = true
         newCardTwo.location = "playable"
         newGameCards.Playable.push(newCardTwo)
+        newGameCards.ShownCards.push(newCardTwo)
+      }
+      if(newCardThree){
         newCardThree.shown = true
         newCardThree.location = "playable"
         newGameCards.Playable.push(newCardThree)
+        newGameCards.ShownCards.push(newCardThree)
       }
     }
     setDeck(newDeck)
@@ -300,6 +321,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
       newGameCards.previousMoves.push({cardsMoved: [...removedCards.flat()], location: `column${columnNum}`})
       if(newGameCards.Columns[columnNum].length > 0){
         newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1].shown = true
+        !newGameCards.ShownCards.includes(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1]) && newGameCards.ShownCards.push(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1])
       }
     }
     setGameCards(newGameCards)
@@ -472,10 +494,11 @@ const useGameLogic = (props: UseGameLogicProps) => {
     const newDeck = [...deck]
     const newGameCards = {...gameCards}
     const newCard = newDeck.pop()
-    if(typeof newCard !== "undefined"){
+    if(newCard){
       newCard.shown = true
       newCard.location = "playable"
       newGameCards.Playable.push(newCard)
+      newGameCards.ShownCards.push(newCard)
       newGameCards.previousMoves.push({cardsMoved: [newCard], location: "deck"})
     } 
     setDeck(newDeck)
@@ -488,11 +511,12 @@ const useGameLogic = (props: UseGameLogicProps) => {
     const moved = []
     for(let i = 0; i < Math.min(3, newDeck.length + i); i++){
       const newCard = newDeck.pop()
-      if(!!newCard){
+      if(newCard){
         newCard.shown = true
         newCard.location = "playable"
         moved.push(newCard)
         newGameCards.Playable.push(newCard)
+        newGameCards.ShownCards.push(newCard)
       } 
 
     }
@@ -532,30 +556,57 @@ const useGameLogic = (props: UseGameLogicProps) => {
     const newGameCards = {...gameCards}
     while(newGameCards.Playable.length > 0){
       const remove = newGameCards.Playable.shift()
-      if(!!remove){
+      if(remove){
         remove.location = "deck"
         remove.shown = false
         newDeck.unshift(remove)
+      }
+    }
+    if(gameType === "normal"){
+      const newCard = newDeck.pop()
+      if(newCard){
+        newCard.shown = true
+        newCard.location = "playable"
+        newGameCards.Playable.push(newCard)
+      }
+    } else if(gameType === "3card"){
+      const newCard = newDeck.pop()
+      const newCardTwo = newDeck.pop()
+      const newCardThree = newDeck.pop()
+      if(newCard){
+        newCard.shown = true
+        newCard.location = "playable"
+        newGameCards.Playable.push(newCard)
+      }
+      if(newCardTwo){
+        newCardTwo.shown = true
+        newCardTwo.location = "playable"
+        newGameCards.Playable.push(newCardTwo)
+      }
+      if(newCardThree){
+        newCardThree.shown = true
+        newCardThree.location = "playable"
+        newGameCards.Playable.push(newCardThree)
       }
     }
     newGameCards.previousMoves.push({cardsMoved: [], location: "reset"})
     setDeck(newDeck)
     setGameCards(newGameCards)
   }
-
+  
   const undoMove = () => {
     const newGameCards = {...gameCards}
+    const newDeck = [...deck]
     const previousMove = newGameCards.previousMoves.pop()
     if(previousMove){
       const {cardsMoved, location} = previousMove
       if(location.slice(0, 6) === "column"){
-        let removed = [removeFromPile(cardsMoved[0])].flat()
         const columnNum = Number(location.slice(6,7))
         const newGameCards = {...gameCards}
-
+        let removed = [removeFromPile(cardsMoved[0])].flat()
         if(newGameCards.Columns[columnNum][newGameCards.Columns[columnNum].length - 1] 
-          === gameCards.ShownCards[gameCards.ShownCards.length - 1]){
-            newGameCards.ShownCards[gameCards.ShownCards.length - 1].shown = false
+          === newGameCards.ShownCards[newGameCards.ShownCards.length - 1]){
+            newGameCards.ShownCards[newGameCards.ShownCards.length - 1].shown = false
             newGameCards.ShownCards.pop()
         }
 
@@ -596,7 +647,7 @@ const useGameLogic = (props: UseGameLogicProps) => {
           if(gameType === "normal"){
             const CM = cardsMoved.pop()
             
-            if(!!CM){
+            if(CM){
               CM.location = "deck"
               CM.shown = false
               removed.push(removeFromPile(CM)[0])
@@ -604,10 +655,10 @@ const useGameLogic = (props: UseGameLogicProps) => {
           }else if(gameType === "3card"){
             while(cardsMoved.length > 0){
               const CM = cardsMoved.pop()
-              if(!!CM){
+              if(CM){
                 CM.location = "deck"
                 CM.shown = false
-                removed.push(removeFromPile(CM)[0])
+                removed.unshift(removeFromPile(CM)[0])
               }
               if(cardsMoved.length > 0){
                 newGameCards.previousMoves.pop()
@@ -616,46 +667,48 @@ const useGameLogic = (props: UseGameLogicProps) => {
           }else if(gameType === "spider"){
             for(let i = 0; i < 7; i++){
               const CM = cardsMoved.pop()
-              if(!!CM){
+              if(CM){
                 CM.location = "deck"
                 CM.shown = false
                 removed.push(removeFromPile(CM)[0])
               }
             }
-            if(cardsMoved.length > 1){
+            if(cardsMoved.length > 0){
               newGameCards.previousMoves.pop()
             }
           }
-          const newDeck = [...deck]
+
+          
           while(removed.length > 0){
             const newCard = removed.pop()
-            if(typeof newCard !== "undefined"){
+            if(newCard){
               newDeck.push(newCard)
               newGameCards.ShownCards.pop()
             }
             
         }
-        setDeck(newDeck)
-      } else if(location === "reset"){
-        const newDeck = [...deck]
+      }
+
+      newGameCards.previousMoves.pop()
+      
+      setPrevClicked(prev => {
+        prev.pop()
+        return [...prev]
+      })
+
+      if(newGameCards.previousMoves[newGameCards.previousMoves.length - 1]?.location === "reset"){
+        newGameCards.previousMoves.pop()
         while(newDeck.length > 0){
           const newCard = newDeck.pop()
-          if(!!newCard){
+          if(newCard){
             newCard.location = "playable"
             newCard.shown = true
             newGameCards.Playable.push(newCard)
             !newGameCards.ShownCards.includes(newCard) && newGameCards.ShownCards.push(newCard)
           }
         }
-        setDeck(newDeck)
       }
-      if(location !== "reset"){
-        newGameCards.previousMoves.pop()
-      }
-      setPrevClicked(prev => {
-        prev.pop()
-        return [...prev]
-      })
+      setDeck(newDeck)
       setGameCards(newGameCards)
     }
   }
