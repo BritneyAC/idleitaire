@@ -146,7 +146,7 @@
   width: clamp(2.5rem, 11vw, 22vh);
 }
 .card0.largeCard, .card1.largeCard, .card2.largeCard, .card3.largeCard, .card4.largeCard, .card5.largeCard, .card6.largeCard, .card7.largeCard, .card8.largeCard, .card9.largeCard, .card10.largeCard, .card11.largeCard, .card12.largeCard, .card13.largeCard, .card14.largeCard, .card15.largeCard, .card16.largeCard, .card17.largeCard, .card18.largeCard, .card19.largeCard {
-  width: clamp(2.5rem, 11vw, 18vh);
+  width: clamp(2.5rem, 11vw, 20vh);
 }
 .card0.smallCard, .card1.smallCard, .card2.smallCard, .card3.smallCard, .card4.smallCard, .card5.smallCard, .card6.smallCard, .card7.smallCard, .card8.smallCard, .card9.smallCard, .card10.smallCard, .card11.smallCard, .card12.smallCard, .card13.smallCard, .card14.smallCard, .card15.smallCard, .card16.smallCard, .card17.smallCard, .card18.smallCard, .card19.smallCard {
   width: clamp(2.5rem, 11vw, 14vh);
@@ -157,62 +157,128 @@
 }
 .card1 {
   z-index: 1001;
+  transform: translateY(4vh);
+}
+.card1.largestCard {
+  transform: translateY(5vh);
+}
+.card1.smallCard {
   transform: translateY(3vh);
 }
 .card2 {
   z-index: 1002;
+  transform: translateY(8vh);
+}
+.card2.largestCard {
+  transform: translateY(10vh);
+}
+.card2.smallCard {
   transform: translateY(6vh);
 }
 .card3 {
   z-index: 1003;
+  transform: translateY(12vh);
+}
+.card3.largestCard {
+  transform: translateY(15vh);
+}
+.card3.smallCard {
   transform: translateY(9vh);
 }
 .card4 {
   z-index: 1004;
+  transform: translateY(16vh);
+}
+.card4.largestCard {
+  transform: translateY(20vh);
+}
+.card4.smallCard {
   transform: translateY(12vh);
 }
 .card5 {
   z-index: 1005;
+  transform: translateY(20vh);
+}
+.card5.largestCard {
+  transform: translateY(25vh);
+}
+.card5.smallCard {
   transform: translateY(15vh);
 }
 .card6 {
   z-index: 1006;
+  transform: translateY(24vh);
+}
+.card6.largestCard {
+  transform: translateY(30vh);
+}
+.card6.smallCard {
   transform: translateY(18vh);
 }
 .card7 {
   z-index: 1007;
+  transform: translateY(28vh);
+}
+.card7.largestCard {
+  transform: translateY(35vh);
+}
+.card7.smallCard {
   transform: translateY(21vh);
 }
 .card8 {
   z-index: 1008;
+  transform: translateY(32vh);
+}
+.card8.smallCard {
   transform: translateY(24vh);
 }
 .card9 {
   z-index: 1009;
+  transform: translateY(36vh);
+}
+.card9.smallCard {
   transform: translateY(27vh);
 }
 .card10 {
   z-index: 1010;
+  transform: translateY(40vh);
+}
+.card10.smallCard {
   transform: translateY(30vh);
 }
 .card11 {
   z-index: 1011;
+  transform: translateY(44vh);
+}
+.card11.smallCard {
   transform: translateY(33vh);
 }
 .card12 {
   z-index: 1012;
+  transform: translateY(48vh);
+}
+.card12.smallCard {
   transform: translateY(36vh);
 }
 .card13 {
   z-index: 1013;
+  transform: translateY(52vh);
+}
+.card13.smallCard {
   transform: translateY(39vh);
 }
 .card14 {
   z-index: 1014;
+  transform: translateY(56vh);
+}
+.card14.smallCard {
   transform: translateY(42vh);
 }
 .card15 {
   z-index: 1015;
+  transform: translateY(60vh);
+}
+.card15.smallCard {
   transform: translateY(45vh);
 }
 .card16 {

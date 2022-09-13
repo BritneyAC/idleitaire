@@ -1017,7 +1017,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = `${style} ${styles.largestCard}`
       } else if(gameCards.Columns[0].length < 10){
         style = `${style} ${styles.largeCard}`
-      } else if(gameCards.Columns[0].length > 13){
+      } else if(gameCards.Columns[0].length > 12){
         style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
@@ -1283,7 +1283,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = `${style} ${styles.largestCard}`
       } else if(gameCards.Columns[1].length < 10){
         style = `${style} ${styles.largeCard}`
-      } else if(gameCards.Columns[1].length > 15){
+      } else if(gameCards.Columns[1].length > 12){
         style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
@@ -1549,7 +1549,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = `${style} ${styles.largestCard}`
       } else if(gameCards.Columns[2].length < 10){
         style = `${style} ${styles.largeCard}`
-      } else if(gameCards.Columns[2].length > 15){
+      } else if(gameCards.Columns[2].length > 12){
         style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
@@ -1815,7 +1815,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = `${style} ${styles.largestCard}`
       } else if(gameCards.Columns[3].length < 10){
         style = `${style} ${styles.largeCard}`
-      } else if(gameCards.Columns[3].length > 15){
+      } else if(gameCards.Columns[3].length > 12){
         style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
@@ -2081,7 +2081,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = `${style} ${styles.largestCard}`
       } else if(gameCards.Columns[4].length < 10){
         style = `${style} ${styles.largeCard}`
-      } else if(gameCards.Columns[4].length > 15){
+      } else if(gameCards.Columns[4].length > 12){
         style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
@@ -2347,7 +2347,7 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = `${style} ${styles.largestCard}`
       } else if(gameCards.Columns[5].length < 10){
         style = `${style} ${styles.largeCard}`
-      } else if(gameCards.Columns[5].length > 15){
+      } else if(gameCards.Columns[5].length > 12){
         style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
@@ -2611,9 +2611,9 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       }
       if(gameCards.Columns[6].length < 8){
         style = `${style} ${styles.largestCard}`
-      } else if(gameCards.Columns[6].length < 10){
+      } else if(gameCards.Columns[6].length < 11){
         style = `${style} ${styles.largeCard}`
-      } else if(gameCards.Columns[6].length > 15){
+      } else if(gameCards.Columns[6].length > 12){
         style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){

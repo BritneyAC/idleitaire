@@ -166,87 +166,155 @@
     &.smallCard {
       width: $smallCardWidth;
     }
-    
+
   }
   
   &0 {
     z-index: 1000;
     transform: translateY(0);
+    
   }
   
   &1 {
     z-index: 1001;
-    transform: translateY(3vh);
+    transform: translateY(4vh);
+    &.largestCard {
+      transform: translateY(5vh);
+    }
+    &.smallCard {
+      transform: translateY(3vh);
+    }
   }
   
   &2 {
     z-index: 1002;
-    transform: translateY(6vh);
+    transform: translateY(8vh);
+    &.largestCard {
+      transform: translateY(10vh);
+    }
+    &.smallCard {
+      transform: translateY(6vh);
+    }
   }
   
   &3 {
     z-index: 1003;
-    transform: translateY(9vh);
+    transform: translateY(12vh);
+    &.largestCard {
+      transform: translateY(15vh);
+    }
+    &.smallCard {
+      transform: translateY(9vh);
+    }
   }
   
   &4 {
     z-index: 1004;
-    transform: translateY(12vh);
+    transform: translateY(16vh);
+    &.largestCard {
+      transform: translateY(20vh);
+    }
+    &.smallCard {
+      transform: translateY(12vh);
+    }
   }
   
   &5 {
     z-index: 1005;
-    transform: translateY(15vh);
+    transform: translateY(20vh);
+    &.largestCard {
+      transform: translateY(25vh);
+    }
+    &.smallCard {
+      transform: translateY(15vh);
+    }
   }
   
   &6 {
     z-index: 1006;
-    transform: translateY(18vh);
+    transform: translateY(24vh);
+    &.largestCard {
+      transform: translateY(30vh);
+    }
+    &.smallCard {
+      transform: translateY(18vh);
+    }
   }
   
   &7 {
     z-index: 1007;
-    transform: translateY(21vh);
+    transform: translateY(28vh);
+    &.largestCard {
+      transform: translateY(35vh);
+    }
+    &.smallCard {
+      transform: translateY(21vh);
+    }
   }
   
   &8 {
     z-index: 1008;
-    transform: translateY(24vh);
+    transform: translateY(32vh);
+    &.smallCard {
+      transform: translateY(24vh);
+    }
   }
   
   &9 {
     z-index: 1009;
-    transform: translateY(27vh);
+    transform: translateY(36vh);
+    &.smallCard {
+      transform: translateY(27vh);
+    }
   }
   
   &10 {
     z-index: 1010;
-    transform: translateY(30vh);
+    
+    transform: translateY(40vh);
+    &.smallCard {
+      transform: translateY(30vh);
+    }
   }
   
   &11 {
     z-index: 1011;
-    transform: translateY(33vh);
+    transform: translateY(44vh);
+    &.smallCard {
+      transform: translateY(33vh);
+    }
   }
   
   &12 {
     z-index: 1012;
-    transform: translateY(36vh);
+    transform: translateY(48vh);
+    &.smallCard {
+      transform: translateY(36vh);
+    }
   }
   
   &13 {
     z-index: 1013;
-    transform: translateY(39vh);
+    transform: translateY(52vh);
+    &.smallCard {
+      transform: translateY(39vh);
+    }
   }
   
   &14 {
     z-index: 1014;
-    transform: translateY(42vh);
+    transform: translateY(56vh);
+    &.smallCard {
+      transform: translateY(42vh);
+    }
   }
   
   &15 {
     z-index: 1015;
-    transform: translateY(45vh);
+    transform: translateY(60vh);
+    &.smallCard {
+      transform: translateY(45vh);
+    }
   }
   
   &16 {
