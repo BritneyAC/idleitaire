@@ -46,7 +46,7 @@
 }
 
 .clubs, .spades, .hearts, .diamonds {
-  width: clamp(2.5rem, 11vw, 14vh);
+  width: clamp(2.5rem, 11vw, 16vh);
 }
 
 .deck {

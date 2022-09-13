@@ -154,6 +154,19 @@
     position: absolute;
     transform: translateX(50%);
     transition: transform .1s ease-in-out;
+    &.largerCard {
+      width: $largerCardWidth;
+    }
+    &.largestCard {
+      width: $largestCardWidth;
+    }
+    &.largeCard {
+      width: $largeCardWidth;
+    }
+    &.smallCard {
+      width: $smallCardWidth;
+    }
+    
   }
   
   &0 {

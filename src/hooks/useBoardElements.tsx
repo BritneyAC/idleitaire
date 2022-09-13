@@ -1013,6 +1013,13 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       } else if(index === 19){
         style = styles.card19
       }
+      if(gameCards.Columns[0].length < 8){
+        style = `${style} ${styles.largestCard}`
+      } else if(gameCards.Columns[0].length < 10){
+        style = `${style} ${styles.largeCard}`
+      } else if(gameCards.Columns[0].length > 13){
+        style = `${style} ${styles.smallCard}`
+      }
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
@@ -1271,6 +1278,13 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = styles.card18
       } else if(index === 19){
         style = styles.card19
+      }
+      if(gameCards.Columns[1].length < 8){
+        style = `${style} ${styles.largestCard}`
+      } else if(gameCards.Columns[1].length < 10){
+        style = `${style} ${styles.largeCard}`
+      } else if(gameCards.Columns[1].length > 15){
+        style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
         if(C === 1){
@@ -1531,6 +1545,13 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       } else if(index === 19){
         style = styles.card19
       }
+      if(gameCards.Columns[2].length < 8){
+        style = `${style} ${styles.largestCard}`
+      } else if(gameCards.Columns[2].length < 10){
+        style = `${style} ${styles.largeCard}`
+      } else if(gameCards.Columns[2].length > 15){
+        style = `${style} ${styles.smallCard}`
+      }
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
@@ -1789,6 +1810,13 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = styles.card18
       } else if(index === 19){
         style = styles.card19
+      }
+      if(gameCards.Columns[3].length < 8){
+        style = `${style} ${styles.largestCard}`
+      } else if(gameCards.Columns[3].length < 10){
+        style = `${style} ${styles.largeCard}`
+      } else if(gameCards.Columns[3].length > 15){
+        style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
         if(C === 1){
@@ -2049,6 +2077,13 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       } else if(index === 19){
         style = styles.card19
       }
+      if(gameCards.Columns[4].length < 8){
+        style = `${style} ${styles.largestCard}`
+      } else if(gameCards.Columns[4].length < 10){
+        style = `${style} ${styles.largeCard}`
+      } else if(gameCards.Columns[4].length > 15){
+        style = `${style} ${styles.smallCard}`
+      }
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
@@ -2308,6 +2343,13 @@ const useBoardElements= (props: UseBoardElementsProps) => {
       } else if(index === 19){
         style = styles.card19
       }
+      if(gameCards.Columns[5].length < 8){
+        style = `${style} ${styles.largestCard}`
+      } else if(gameCards.Columns[5].length < 10){
+        style = `${style} ${styles.largeCard}`
+      } else if(gameCards.Columns[5].length > 15){
+        style = `${style} ${styles.smallCard}`
+      }
       if(!!Card.shown){
         if(C === 1){
           return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><AceOfClubs
@@ -2566,6 +2608,13 @@ const useBoardElements= (props: UseBoardElementsProps) => {
         style = styles.card18
       } else if(index === 19){
         style = styles.card19
+      }
+      if(gameCards.Columns[6].length < 8){
+        style = `${style} ${styles.largestCard}`
+      } else if(gameCards.Columns[6].length < 10){
+        style = `${style} ${styles.largeCard}`
+      } else if(gameCards.Columns[6].length > 15){
+        style = `${style} ${styles.smallCard}`
       }
       if(!!Card.shown){
         if(C === 1){
