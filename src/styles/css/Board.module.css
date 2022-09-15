@@ -201,6 +201,7 @@
   align-self: flex-start;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
   border-radius: 999%;
   aspect-ratio: 1;
   width: clamp(4rem, 20vw, 20vh);
