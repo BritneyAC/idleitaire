@@ -99,16 +99,27 @@
 }
 
 .undo {
-  position: absolute;
+  position: fixed;
+  bottom: 18vh;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
-  bottom: 5rem;
-  left: 1rem;
+  background-color: hsl(210deg, 33%, 10%);
+  border-radius: 1rem;
+  border: 1px solid white;
+  font-size: clamp(1rem, 4vw, 4vh);
+  box-shadow: 0 0 0.75rem 0 hsla(0deg, 0%, 0%, 0.5);
+  cursor: pointer;
+  color: white;
 }
 
 .points {
-  position: absolute;
-  bottom: 2rem;
-  left: 1rem;
+  position: fixed;
+  bottom: 8vh;
+  left: 2rem;
+  font-size: clamp(1rem, 4vw, 4vh);
 }
 
 .buttons {
@@ -230,12 +241,12 @@
     bottom: 4rem;
   }
   .points {
-    bottom: 5rem;
-    left: 1rem;
+    bottom: calc(5rem + 8vh);
+    left: 2rem;
   }
   .undo {
-    bottom: 8rem;
-    left: 1rem;
+    bottom: calc(5rem + 14vh);
+    left: 2rem;
   }
   .confirmation {
     height: calc(46vh + 4rem);
