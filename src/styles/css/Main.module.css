@@ -92,6 +92,11 @@
 .header.current, .header:hover {
   background-color: hsl(210deg, 33%, 20%);
 }
+.header.selfPromo {
+  overflow: visible;
+  width: 44vw;
+  font-size: clamp(0.6rem, 2vw, 1.9vh);
+}
 
 .upgradeNotif {
   font-size: clamp(1rem, 2vw, 4vh);

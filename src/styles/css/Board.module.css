@@ -162,11 +162,11 @@
 .btn.current, .btn:hover {
   background-color: hsl(210deg, 33%, 20%);
 }
-.btn:first-child {
+.btn:not(:first-child) {
   font-size: clamp(0.5rem, 2vw, 2.5vh);
   line-height: clamp(1rem, 4vw, 5vh);
 }
-.btn:not(:first-child) {
+.btn:first-child {
   font-size: clamp(0.6rem, 2vw, 3vh);
   line-height: clamp(1rem, 4vw, 6vh);
 }

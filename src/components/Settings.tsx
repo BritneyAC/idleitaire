@@ -96,7 +96,7 @@ const Settings = (props: settingsProps) => {
   }
 
   return (
-    <div className={`${styles.menu} ${props.whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown !== "info" && styles.shown}`}>
+    <div className={`${styles.menu} ${props.whichInfoSettingShown !== "none" && styles.open} ${props.whichInfoSettingShown === "settings" && styles.shown}`}>
       <div className={styles.tabs}>
         <div className={`${currentTab === "general" && styles.current} ${styles.tab}`} onClick={() => changeTab("general")}>
           <h2>general</h2>

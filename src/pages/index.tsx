@@ -9,6 +9,7 @@ const Board = dynamic(()=>import("@/components/Board"))
 import useUserInfo from "@/hooks/useUserInfo"
 import Settings from '@/components/Settings'
 import Info from '@/components/Info'
+import SelfPromo from '@/components/SelfPromo'
 
 
 const Home: NextPage = () => {
@@ -130,7 +131,7 @@ const Home: NextPage = () => {
           content="Idleitaire is a version of solitaire turned into an idle game.
           Play solitaire, buy upgrades, have solitaire play itself"
         />
-        <link rel="icon" href="14.svg" />
+        <link rel="icon" href="14.ico" />
       </Head>
 
       
@@ -141,10 +142,16 @@ const Home: NextPage = () => {
         </div>
         <div className={`${styles.infoSettingsTabs} ${whichInfoSettingShown !== "none" && styles.open}`}>
           <h1 className={`${styles.header} ${whichInfoSettingShown === "info" && styles.current} ${whichInfoSettingShown !== "info" && name === "Upgrade Available" && styles.upgradeNotif}`}  onClick={()=>{toggleInfoSetting("info")}}>{infoTabTitle()}</h1>
+          {currentGame === "menu" && 
+            <div className={`${styles.header} ${styles.selfPromo}`}>
+              <h1 onClick={()=>{toggleInfoSetting("selfPromo")}}>Made By Britney Conley</h1>
+            </div>
+          }
           <h1 className={`${styles.header} ${whichInfoSettingShown === "settings" && styles.current}`}  onClick={()=>{toggleInfoSetting("settings")}}>{whichInfoSettingShown === "settings" ? "Close" : "Settings"}</h1>
         </div>
         <div className={`${styles.menus} ${whichInfoSettingShown !== "none" && styles.open}`}>
           {InfoPageToShow()}
+          <SelfPromo toggleInfoSetting={toggleInfoSetting} whichInfoSettingShown={whichInfoSettingShown}/>
           <Settings userInfo={userInfo} deleteSave={deleteSave} whichInfoSettingShown={whichInfoSettingShown} toggleInfoSetting={toggleInfoSetting} autoSaveToggle={autoSaveToggle} priceSettingToggle={priceSettingToggle}/>
         </div>
       </main>

@@ -6,19 +6,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  justify-self: center;
+  justify-self: flex-start;
 }
-.stats p:last-child {
+.stats * {
+  overflow: visible;
   padding: 0;
   margin: 0;
-  justify-self: flex-end;
+}
+.stats > p {
+  font-size: clamp(1.25rem, 4vw, 5vh);
 }
 
 .btn {
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 3vh);
   background-color: hsl(210deg, 33%, 20%);
   border-radius: 1rem;
   border: 1px solid white;
   box-shadow: 0 0 0.75rem 0 hsla(0deg, 0%, 0%, 0.5);
+  font-size: clamp(1.5rem, 5vw, 6vh);
   cursor: pointer;
 }

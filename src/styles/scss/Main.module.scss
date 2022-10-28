@@ -78,6 +78,12 @@
 
 .header {
   @include header;
+
+  &.selfPromo {
+    overflow: visible;
+    width: 44vw;
+    font-size: clamp(.6rem, 2vw, 1.9vh);
+  }
 }
 
 .upgradeNotif {

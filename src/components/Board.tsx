@@ -109,10 +109,10 @@ const Board: React.FC<BoardProps> = (props) => {
     } else if(confirmationShown === "end"){
       confirm = <div>
         <h1>
-          Are you sure you want to end the game?
+          Are you sure you want to end the game,
         </h1>
         <h1>
-          And go back to the main menu?
+          and go back to the main menu?
         </h1>
       </div>
     }
@@ -352,9 +352,9 @@ const Board: React.FC<BoardProps> = (props) => {
       </div>
       <div className={isOpen()}>
         <div className={`${styles.btn} ${props.whichInfoSettingShown === "restart" && styles.current}`} onClick={()=>props.toggleInfoSetting("restart")}>
-          <h1>Restart Game</h1>
+          <h1>Reset</h1>
         </div>
-        <div className={`${styles.btn} ${props.whichInfoSettingShown === "end" && styles.current}`} onClick={()=>props.toggleInfoSetting("end")}><h1>End Game</h1></div>
+        <div className={`${styles.btn} ${props.whichInfoSettingShown === "end" && styles.current}`} onClick={()=>props.toggleInfoSetting("end")}><h1>Main Menu</h1></div>
       </div>
       <div className={confirmOpen()}>
         {(props.whichInfoSettingShown === "end" || props.whichInfoSettingShown === "restart") && <Confirmation/>}

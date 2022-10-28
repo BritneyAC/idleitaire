@@ -152,11 +152,11 @@
   @include header;
 
 
-  &:first-child{
+  &:not(:first-child){
     font-size: clamp(.5rem, 2vw, 2.5vh);
     line-height: clamp(1rem, 4vw, 5vh);
   }
-  &:not(:first-child){
+  &:first-child{
     font-size: clamp(.6rem, 2vw, 3vh);
     line-height: clamp(1rem, 4vw, 6vh);
   }
