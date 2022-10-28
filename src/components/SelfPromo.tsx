@@ -42,7 +42,7 @@ export default function SelfPromo(props: SelfPromoProps) {
         <div className={`${currentTab === "about" && styles.current} ${styles.tab}`} onClick={() => changeTab("about")}>
           <h2>About this game</h2>
         </div>
-        <div className={`${currentTab === "link" && styles.current} ${styles.tab}`} onClick={() => changeTab("links")}>
+        <div className={`${currentTab === "links" && styles.current} ${styles.tab}`} onClick={() => changeTab("links")}>
           <h2>Links</h2>
         </div>
       </div>
