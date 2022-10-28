@@ -34,9 +34,9 @@
     position: absolute;
     top: 5%;
     right: 5%;
-    height: 2rem;
-    width: 2rem;
-    aspect-ratio: 1;
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1/1;
     cursor: pointer;
   }
   & button {
@@ -88,5 +88,18 @@
 @media (max-width: 820px) {
   .description {
     justify-content: flex-start;
+  }
+
+  .upgrade {
+    padding: 2rem 1rem;
+    & svg {
+      position: absolute;
+      top: 2.5%;
+      right: 2.5%;
+      width: 1.5rem;
+      height: 1.5rem;
+      aspect-ratio: 1/1;
+      cursor: pointer;
+    }
   }
 }
