@@ -14,12 +14,13 @@ a {
 * {
   box-sizing: border-box;
   overflow: hidden;
-  
   user-select: none;
+  -webkit-text-stroke: 2px hsla(0, 0%, 0%, 20%);
 }
 
 button {
   cursor: pointer;
+  -webkit-text-stroke: 0 !important;
 }
 
 

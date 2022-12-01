@@ -30,6 +30,7 @@ export default function SelfPromo(props: SelfPromoProps) {
         <div className={styles.tabContent}>
           <div className={styles.setting}>
             <h3><a href="https://github.com/BritneyAC/idleitaire">Github repo</a></h3>
+            <h3><a href="https://britneyconley.com">BritneyConley.com</a></h3>
           </div>
         </div>
       )
