@@ -14,7 +14,7 @@
   justify-content: space-around;
   isolation: isolate;
 }
-.playspace svg {
+.playspace svg, .playspace .cardback {
   transform: translateX(0) translateY(0);
   transition: transform 0.5s ease-in-out;
 }
@@ -72,7 +72,7 @@
   justify-content: center;
   transition: transform 0.5s ease-in-out;
 }
-.column0 svg, .column1 svg, .column2 svg, .column3 svg, .column4 svg, .column5 svg, .column6 svg {
+.column0 svg, .column0 .cardback, .column1 svg, .column1 .cardback, .column2 svg, .column2 .cardback, .column3 svg, .column3 .cardback, .column4 svg, .column4 .cardback, .column5 svg, .column5 .cardback, .column6 svg, .column6 .cardback {
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }

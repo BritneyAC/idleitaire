@@ -15,7 +15,7 @@
   grid-template-rows: 1fr 9fr;
   justify-content: space-around;
   isolation: isolate;
-  & svg{
+  & svg, & .cardback{
     transform: translateX(0) translateY(0);
     transition: transform .5s ease-in-out;
   }
@@ -77,7 +77,7 @@
     display: flex;
     justify-content: center;
     transition: transform .5s ease-in-out;
-    & svg {
+    & svg, & .cardback {
       transform: translateX(0);
       transition: transform .5s ease-in-out;
     }

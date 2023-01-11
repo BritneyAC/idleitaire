@@ -3,7 +3,6 @@ import { User } from "./useUserInfo"
 import styles from "@/styles/css/BoardElement.module.css"
 
 
-import Cardback from "@/cards/cardback.svg"
 import AceOfClubs from "@/components/cardComponents/AceOfClubs"
 import TwoOfClubs from "@/components/cardComponents/TwoOfClubs"
 import ThreeOfClubs from "@/components/cardComponents/ThreeOfClubs"
@@ -393,9 +392,9 @@ const useBoardElements= (props: UseBoardElementsProps) => {
     if(deck.length > 0){
       if(gameType === "spider"){
         DeckElements = <div className={styles.spiderDeck} key={999}>
-        <Cardback
+        <div
           onClick={flipSpider}
-          alt="cardback"
+          className={styles.cardback}
         /></div>
       }else {
       DeckElements = deck.map((Card: card, index: number) => {
@@ -415,14 +414,14 @@ const useBoardElements= (props: UseBoardElementsProps) => {
           }
           if(gameType === "normal"){
             return <div className={style} key={C} draggable="true">
-              <Cardback
+              <div
                 onClick={flipCard}
-                alt="cardback"
+                className={styles.cardback}
           /></div>} else if(gameType === "3card"){
             return <div className={style} key={C} draggable="true">
-              <Cardback
+              <div
                 onClick={flip3Cards}
-                alt="cardback"
+                className={styles.cardback}
             /></div>
           }
   }})}} else if((gameType === "normal" && gameCards.Playable.length > 1) || (gameType === "3card" && gameCards.Playable.length > 3)){
@@ -1230,8 +1229,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
             id={C}
             onClick={()=>handleClick(C)}
         /></div>}}else{
-          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
-            alt="cardback"
+          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><div
+          className={styles.cardback}
     /></div>}})
 
 
@@ -1496,8 +1495,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
             id={C}
             onClick={()=>handleClick(C)}
         /></div>}}else{
-          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
-            alt="cardback"
+          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><div
+            className={styles.cardback}
     /></div>}})
 
 
@@ -1762,8 +1761,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
             id={C}
             onClick={()=>handleClick(C)}
         /></div>}}else{
-          return <div className={`${style} card`} key={C} draggable="true"><Cardback
-            alt="cardback"
+          return <div className={`${style} card`} key={C} draggable="true"><div
+            className={styles.cardback}
     /></div>}})
 
 
@@ -2028,8 +2027,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
             id={C}
             onClick={()=>handleClick(C)}
         /></div>}}else{
-          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
-            alt="cardback"
+          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><div
+            className={styles.cardback}
     /></div>}})
 
 
@@ -2294,8 +2293,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
             id={C}
             onClick={()=>handleClick(C)}
         /></div>}}else{
-          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
-            alt="cardback"
+          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><div
+            className={styles.cardback}
     /></div>}})
 
 
@@ -2560,8 +2559,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
             id={C}
             onClick={()=>handleClick(C)}
         /></div>}}else{
-          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
-            alt="cardback"
+          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><div
+          className={styles.cardback}
     /></div>}})
 
     
@@ -2826,8 +2825,8 @@ const useBoardElements= (props: UseBoardElementsProps) => {
             id={C}
             onClick={()=>handleClick(C)}
         /></div>}}else{
-          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><Cardback
-            alt="cardback"
+          return <div className={`${style} card`} id={C.toString()} key={C} draggable="true"><div
+            className={styles.cardback}
     /></div>}})
     
     return({
