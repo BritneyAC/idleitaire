@@ -1,13 +1,17 @@
 .card {
   position: relative;
-  left: 0;
-  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   width: 100%;
   background-color: white;
   border: .25vmax solid black;
   aspect-ratio: 592/800;
   border-radius: .5rem;
   & * {
+    -webkit-text-stroke: 1px hsl(0, 0%, 0%);
     display: inline-block;
     margin: 0;
     padding: 0;
