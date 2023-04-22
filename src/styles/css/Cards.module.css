@@ -1,0 +1,201 @@
+.card {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border: 2px solid black;
+  aspect-ratio: 592/800;
+  border-radius: 0.5rem;
+}
+.card * {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.diamond {
+  display: inline-block;
+}
+.diamond::after {
+  content: "";
+  position: absolute;
+  top: 7.5%;
+  right: 7.5%;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg);
+}
+.diamond::before {
+  content: "";
+  position: absolute;
+  bottom: 7.5%;
+  left: 7.5%;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg);
+}
+
+.heart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 10%;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg);
+}
+.heart::before {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 10%;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg);
+}
+
+.spade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.spade::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 10%;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg);
+}
+.spade::before {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 10%;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg);
+}
+
+.club {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.club::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 5%;
+  right: 5%;
+  width: 10%;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg);
+}
+.club::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  bottom: 5%;
+  left: 5%;
+  width: 10%;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg);
+}
+
+.redAce::before, .redTwo::before, .redThree::before, .redFour::before, .redFive::before, .redSix::before, .redSeven::before, .redEight::before, .redNine::before, .redTen::before {
+  position: absolute;
+  color: red;
+  top: 0;
+  left: 5%;
+  line-height: 100%;
+}
+.redAce::after, .redTwo::after, .redThree::after, .redFour::after, .redFive::after, .redSix::after, .redSeven::after, .redEight::after, .redNine::after, .redTen::after {
+  position: absolute;
+  color: red;
+  bottom: 0;
+  right: 5%;
+}
+.redAce::before {
+  content: "A";
+}
+.redAce::after {
+  content: "A";
+}
+.redTwo::before {
+  content: "2";
+}
+.redTwo::after {
+  content: "2";
+}
+.redThree::before {
+  content: "3";
+}
+.redThree::after {
+  content: "3";
+}
+.redFour::before {
+  content: "4";
+}
+.redFour::after {
+  content: "4";
+}
+.redFive::before {
+  content: "5";
+}
+.redFive::after {
+  content: "5";
+}
+.redSix::before {
+  content: "6";
+}
+.redSix::after {
+  content: "6";
+}
+.redSeven::before {
+  content: "7";
+}
+.redSeven::after {
+  content: "7";
+}
+.redEight::before {
+  content: "8";
+}
+.redEight::after {
+  content: "8";
+}
+.redNine::before {
+  content: "9";
+}
+.redNine::after {
+  content: "9";
+}
+.redTen::before {
+  content: "10";
+}
+.redTen::after {
+  content: "10";
+}
+
+.twoOfDiamonds {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+}
