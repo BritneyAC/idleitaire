@@ -148,6 +148,7 @@
   transform: translateX(50%);
   transition: transform 0.1s ease-in-out;
   aspect-ratio: 592/800;
+  font-size: clamp(1.5rem, 3.5vmin, 2.5rem);
 }
 .card0.largestCard, .card1.largestCard, .card2.largestCard, .card3.largestCard, .card4.largestCard, .card5.largestCard, .card6.largestCard, .card7.largestCard, .card8.largestCard, .card9.largestCard, .card10.largestCard, .card11.largestCard, .card12.largestCard, .card13.largestCard, .card14.largestCard, .card15.largestCard, .card16.largestCard, .card17.largestCard, .card18.largestCard, .card19.largestCard {
   width: clamp(2.5rem, 11vw, 22vh);

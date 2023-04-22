@@ -164,6 +164,7 @@
     transform: translateX(50%);
     transition: transform .1s ease-in-out;
     aspect-ratio: 592/800;
+    font-size: clamp(1.5rem, 3.5vmin, 2.5rem);
     &.largestCard {
       width: $largestCardWidth;
       font-size: clamp(2rem, 3.5vmin, 3rem);
