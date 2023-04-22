@@ -326,10 +326,10 @@ const Board: React.FC<BoardProps> = (props) => {
       <div className={styles.playspace}>
         <div data-game-type={gameType} className={styles.top}>
           <div className={styles.winPiles} onDragOver={() => handleDragOver(7)}>
-            <div className={styles.clubs} draggable="true">{ClubsElements}</div>
-            <div className={styles.spades} draggable="true">{SpadesElements}</div>
-            <div className={styles.hearts} draggable="true">{HeartsElements}</div>
-            <div className={styles.diamonds} draggable="true">{DiamondsElements}</div>
+            <div className={styles.clubs} draggable="true">{ClubsElements.length > 0 ? ClubsElements : <div className={styles.ghost}><div className={styles.ghostClub}></div></div>}</div>
+            <div className={styles.spades} draggable="true">{SpadesElements.length > 0 ? SpadesElements : <div className={styles.ghost}><div className={styles.ghostSpades}></div></div>}</div>
+            <div className={styles.hearts} draggable="true">{HeartsElements.length > 0 ? HeartsElements : <div className={styles.ghost}><div className={styles.ghostHeart}></div></div>}</div>
+            <div className={styles.diamonds} draggable="true">{DiamondsElements.length > 0 ? DiamondsElements : <div className={styles.ghost}><div className={styles.ghostDiamond}></div></div>}</div>
           </div>
           <div className={styles.deck}>
             {DeckElements}

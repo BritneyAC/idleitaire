@@ -163,17 +163,22 @@
     position: absolute;
     transform: translateX(50%);
     transition: transform .1s ease-in-out;
-    &.largerCard {
-      width: $largerCardWidth;
-    }
+    aspect-ratio: 592/800;
     &.largestCard {
       width: $largestCardWidth;
+      font-size: 5vmin;
+    }
+    &.largerCard {
+      width: $largerCardWidth;
+      font-size: 4.5vmin;
     }
     &.largeCard {
       width: $largeCardWidth;
+      font-size: 4vmin;
     }
     &.smallCard {
       width: $smallCardWidth;
+      font-size: 3.5vmin;
     }
 
   }
