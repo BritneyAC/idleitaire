@@ -30,6 +30,7 @@
   grid-template-columns: 1.5fr 1.5fr 1fr;
   align-items: flex-start;
   justify-content: flex-start;
+  font-size: 3.5vmin;
 }
 .top[data-game-type=spider] {
   grid-template-columns: 1fr 1fr;
@@ -49,7 +50,6 @@
   width: clamp(2.5rem, 10vw, 10vh);
   aspect-ratio: 592/800;
   display: inline-block;
-  font-size: 3.5vmin;
 }
 .clubs .ghost, .spades .ghost, .hearts .ghost, .diamonds .ghost {
   position: relative;
