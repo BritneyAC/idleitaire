@@ -166,19 +166,19 @@
     aspect-ratio: 592/800;
     &.largestCard {
       width: $largestCardWidth;
-      font-size: 5vmin;
+      font-size: clamp(2rem, 3.5vmin, 3rem);
     }
     &.largerCard {
       width: $largerCardWidth;
-      font-size: 4.5vmin;
+      font-size: clamp(1.75rem, 3.5vmin, 2.75rem);
     }
     &.largeCard {
       width: $largeCardWidth;
-      font-size: 4vmin;
+      font-size: clamp(1.5rem, 3.5vmin, 2.5rem);
     }
     &.smallCard {
       width: $smallCardWidth;
-      font-size: 3.5vmin;
+      font-size: clamp(1.25rem, 3.5vmin, 2.25rem);
     }
 
   }

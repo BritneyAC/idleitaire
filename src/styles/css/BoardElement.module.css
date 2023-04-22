@@ -151,19 +151,19 @@
 }
 .card0.largestCard, .card1.largestCard, .card2.largestCard, .card3.largestCard, .card4.largestCard, .card5.largestCard, .card6.largestCard, .card7.largestCard, .card8.largestCard, .card9.largestCard, .card10.largestCard, .card11.largestCard, .card12.largestCard, .card13.largestCard, .card14.largestCard, .card15.largestCard, .card16.largestCard, .card17.largestCard, .card18.largestCard, .card19.largestCard {
   width: clamp(2.5rem, 11vw, 22vh);
-  font-size: 5vmin;
+  font-size: clamp(2rem, 3.5vmin, 3rem);
 }
 .card0.largerCard, .card1.largerCard, .card2.largerCard, .card3.largerCard, .card4.largerCard, .card5.largerCard, .card6.largerCard, .card7.largerCard, .card8.largerCard, .card9.largerCard, .card10.largerCard, .card11.largerCard, .card12.largerCard, .card13.largerCard, .card14.largerCard, .card15.largerCard, .card16.largerCard, .card17.largerCard, .card18.largerCard, .card19.largerCard {
   width: clamp(2.5rem, 11vw, 20vh);
-  font-size: 4.5vmin;
+  font-size: clamp(1.75rem, 3.5vmin, 2.75rem);
 }
 .card0.largeCard, .card1.largeCard, .card2.largeCard, .card3.largeCard, .card4.largeCard, .card5.largeCard, .card6.largeCard, .card7.largeCard, .card8.largeCard, .card9.largeCard, .card10.largeCard, .card11.largeCard, .card12.largeCard, .card13.largeCard, .card14.largeCard, .card15.largeCard, .card16.largeCard, .card17.largeCard, .card18.largeCard, .card19.largeCard {
   width: clamp(2.5rem, 11vw, 20vh);
-  font-size: 4vmin;
+  font-size: clamp(1.5rem, 3.5vmin, 2.5rem);
 }
 .card0.smallCard, .card1.smallCard, .card2.smallCard, .card3.smallCard, .card4.smallCard, .card5.smallCard, .card6.smallCard, .card7.smallCard, .card8.smallCard, .card9.smallCard, .card10.smallCard, .card11.smallCard, .card12.smallCard, .card13.smallCard, .card14.smallCard, .card15.smallCard, .card16.smallCard, .card17.smallCard, .card18.smallCard, .card19.smallCard {
   width: clamp(2.5rem, 11vw, 14vh);
-  font-size: 3.5vmin;
+  font-size: clamp(1.25rem, 3.5vmin, 2.25rem);
 }
 .card0 {
   z-index: 1000;
