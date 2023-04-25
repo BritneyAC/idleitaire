@@ -6,9 +6,9 @@
   align-items: center;
   justify-items: center;
   width: 100%;
+  aspect-ratio: 592/800;
   background-color: white;
   border: .25vmax solid black;
-  aspect-ratio: 592/800;
   border-radius: .5rem;
   & * {
     -webkit-text-stroke: 0;
@@ -36,7 +36,7 @@
   }
   & .spadeLeft {
     top: 5%;
-    right: calc(5% + .2em);
+    right: 17.5%;
 
   }
   & .spadeRight {
@@ -44,8 +44,8 @@
     right: 5%;
   }
   & .spadeBottom {
-    top: calc(10% + .50em);
-    right: calc(5% + .29em);
+    top: 30%;
+    right: 22.5%;
   }
 }
 .bottomSuit {
@@ -59,11 +59,11 @@
   }
   & .spadeRight {
     bottom: 10%;
-    left: calc(5% + .2em);
+    left: 17.5%;
   }
   & .spadeBottom {
     bottom: 0;
-    left: calc(5% + .29em);
+    left: 22.5%;
   }
 }
 
@@ -75,7 +75,7 @@
     content: "";
     position: absolute;
     display: inline-block;
-    width: .75em;
+    width: 50%;
     aspect-ratio: 1;
     background-color: red;
     transform: rotate(45deg);
@@ -122,7 +122,7 @@
   height: 100%;
   & .spadeLeft{
     position: absolute;
-    width: .65em;
+    width: 45%;
     aspect-ratio: 1/1.33;
     background-color: black;
     border-radius: 999% 999% 0 0;
@@ -131,7 +131,7 @@
   & .spadeRight {
     position: absolute;
     
-    width: .65em;
+    width: 45%;
     aspect-ratio: 1/1.33;
     background-color: black;
     border-radius: 999% 999% 0 0;
@@ -140,8 +140,8 @@
   & .spadeBottom {
     position: absolute;
     
-    width: .25em;
-    height: .5em;
+    width: 20%;
+    height: 30%;
     background-color: black;
   }
 }
@@ -179,7 +179,7 @@
     position: relative;
     color: red;
     line-height: 100%;
-
+    font-size: clamp(1rem, 150%, 5vmin);
     &:first-of-type {
       align-self: flex-start;
       justify-self: flex-start;
@@ -198,6 +198,7 @@
     position: relative;
     color: black;
     line-height: 100%;
+    font-size: clamp(1rem, 150%, 5vmin);
     &:first-of-type {
 
       align-self: flex-start;

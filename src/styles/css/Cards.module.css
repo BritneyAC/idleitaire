@@ -6,9 +6,9 @@
   align-items: center;
   justify-items: center;
   width: 100%;
+  aspect-ratio: 592/800;
   background-color: white;
   border: 0.25vmax solid black;
-  aspect-ratio: 592/800;
   border-radius: 0.5rem;
 }
 .card * {
@@ -36,15 +36,15 @@
 }
 .topSuit .spadeLeft {
   top: 5%;
-  right: calc(5% + 0.2em);
+  right: 17.5%;
 }
 .topSuit .spadeRight {
   top: 5%;
   right: 5%;
 }
 .topSuit .spadeBottom {
-  top: calc(10% + 0.5em);
-  right: calc(5% + 0.29em);
+  top: 30%;
+  right: 22.5%;
 }
 
 .bottomSuit .suitPositioner {
@@ -57,11 +57,11 @@
 }
 .bottomSuit .spadeRight {
   bottom: 10%;
-  left: calc(5% + 0.2em);
+  left: 17.5%;
 }
 .bottomSuit .spadeBottom {
   bottom: 0;
-  left: calc(5% + 0.29em);
+  left: 22.5%;
 }
 
 .diamond {
@@ -73,7 +73,7 @@
   content: "";
   position: absolute;
   display: inline-block;
-  width: 0.75em;
+  width: 50%;
   aspect-ratio: 1;
   background-color: red;
   transform: rotate(45deg);
@@ -120,7 +120,7 @@
 }
 .spade .spadeLeft {
   position: absolute;
-  width: 0.65em;
+  width: 45%;
   aspect-ratio: 1/1.33;
   background-color: black;
   border-radius: 999% 999% 0 0;
@@ -128,7 +128,7 @@
 }
 .spade .spadeRight {
   position: absolute;
-  width: 0.65em;
+  width: 45%;
   aspect-ratio: 1/1.33;
   background-color: black;
   border-radius: 999% 999% 0 0;
@@ -136,8 +136,8 @@
 }
 .spade .spadeBottom {
   position: absolute;
-  width: 0.25em;
-  height: 0.5em;
+  width: 20%;
+  height: 30%;
   background-color: black;
 }
 
@@ -174,6 +174,7 @@
   position: relative;
   color: red;
   line-height: 100%;
+  font-size: clamp(1rem, 150%, 5vmin);
 }
 .redAce:first-of-type, .redTwo:first-of-type, .redThree:first-of-type, .redFour:first-of-type, .redFive:first-of-type, .redSix:first-of-type, .redSeven:first-of-type, .redEight:first-of-type, .redNine:first-of-type, .redTen:first-of-type {
   align-self: flex-start;
@@ -190,6 +191,7 @@
   position: relative;
   color: black;
   line-height: 100%;
+  font-size: clamp(1rem, 150%, 5vmin);
 }
 .blackAce:first-of-type, .blackTwo:first-of-type, .blackThree:first-of-type, .blackFour:first-of-type, .blackFive:first-of-type, .blackSix:first-of-type, .blackSeven:first-of-type, .blackEight:first-of-type, .blackNine:first-of-type, .blackTen:first-of-type {
   align-self: flex-start;
