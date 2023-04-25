@@ -57,7 +57,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    border: 2px solid hsla(0%, 0%, 80%, 80%);
+    border: 2px solid hsla(0deg, 0%, 80%, 80%);
     border-radius: .5rem;
     &::before {
       content: "A";
@@ -73,9 +73,9 @@
     }
     & .ghost{
       &Club {
-  
+        
       }
-      &Club {
+      &Spade {
   
       }
       &Club {
@@ -90,7 +90,7 @@
           right: 7.5%;
           width: .5em;
           aspect-ratio: 1;
-          background-color: hsla(0%, 0%, 80%, 80%);
+          background-color: hsla(0deg, 0%, 80%, 80%);
           transform: rotate(45deg);
         }
         &::before {
@@ -100,7 +100,7 @@
           left: 7.5%;
           width: .5em;
           aspect-ratio: 1;
-          background-color: hsla(0%, 0%, 80%, 80%);
+          background-color: hsla(0deg, 0%, 80%, 80%);
           transform: rotate(45deg);
         }
       }

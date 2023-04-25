@@ -1,4 +1,6 @@
 import AceOfSpadesCard from '@/cards/AceOfSpades.svg'
+import styles from '@/styles/css/Cards.module.css'
+import Spade from './Spade';
 
 interface AceOfSpadesProps {
   id: number;
@@ -7,12 +9,32 @@ interface AceOfSpadesProps {
 
 const AceOfSpades = (props: AceOfSpadesProps) =>{
   return (
-    <AceOfSpadesCard
-      id={props.id}
-      onClick={props.onClick}
+    // <AceOfSpadesCard
+    //   id={props.id}
+    //   onClick={props.onClick}
+    //   draggable="true"
+    //   alt="Ace of Spades"
+    // />
+    <div
+      id={`${props.id}`}
+      className={styles.card}
+      onClick={()=>props.onClick(props.id)}
       draggable="true"
-      alt="Ace of Spades"
-    />
+    >
+      <div className={styles.blackAce}>A</div>
+      <div />
+      <div className={styles.topSuit}>
+        <Spade/>
+      </div>
+      <div />
+      <div />
+      <div />
+      <div className={styles.bottomSuit}>
+        <Spade/>
+      </div>
+      <div />
+      <div className={styles.blackAce}>A</div>
+    </div>
   )
 }
 

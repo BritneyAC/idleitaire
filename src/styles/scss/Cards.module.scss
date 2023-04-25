@@ -11,34 +11,82 @@
   aspect-ratio: 592/800;
   border-radius: .5rem;
   & * {
-    -webkit-text-stroke: 1px hsl(0, 0%, 0%);
+    -webkit-text-stroke: 0;
     display: inline-block;
     margin: 0;
     padding: 0;
+    overflow: visible;
+  }
+}
+
+.topSuit, .bottomSuit, .topGhostSuit, .bottomGhostSuit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  & .suitPositioner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+.topSuit {
+  & .suitPositioner{
+    top: 5%;
+    right: 5%;
+  }
+  & .spadeLeft {
+    top: 5%;
+    right: calc(5% + .2em);
+
+  }
+  & .spadeRight {
+    top: 5%;
+    right: 5%;
+  }
+  & .spadeBottom {
+    top: calc(10% + .50em);
+    right: calc(5% + .29em);
+  }
+}
+.bottomSuit {
+  & .suitPositioner{
+    bottom: 5%;
+    left: 5%;
+  }
+  & .spadeLeft {
+    bottom: 10%;
+    left: 5%;
+  }
+  & .spadeRight {
+    bottom: 10%;
+    left: calc(5% + .2em);
+  }
+  & .spadeBottom {
+    bottom: 0;
+    left: calc(5% + .29em);
   }
 }
 
 .diamond {
-  display: inline-block;
-  &::after{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &::after {
     content: "";
     position: absolute;
-    top: 5%;
-    right: 5%;
-    width: .5em;
+    display: inline-block;
+    width: .75em;
     aspect-ratio: 1;
     background-color: red;
     transform: rotate(45deg);
   }
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    width: .5em;
-    aspect-ratio: 1;
-    background-color: red;
-    transform: rotate(45deg);
+  &:nth-of-type(odd)::after {
+    top: 10%;
+    right: 15%;
+  }
+  &:nth-of-type(even)::after {
+    bottom: 10%;
+    left: 15%;
   }
 }
 .heart {
@@ -66,29 +114,35 @@
     transform: rotate(45deg);
   }
 }
+
+
 .spade {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
-  &::after{
-    content: "";
+  & .spadeLeft{
     position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 10%;
-    aspect-ratio: 1;
-    background-color: red;
-    transform: rotate(45deg);
+    width: .65em;
+    aspect-ratio: 1/1.33;
+    background-color: black;
+    border-radius: 999% 999% 0 0;
+    transform: rotate(-132.5deg);
   }
-  &::before {
-    content: "";
+  & .spadeRight {
     position: absolute;
-    bottom: 5%;
-    left: 5%;
-    width: 10%;
-    aspect-ratio: 1;
-    background-color: red;
-    transform: rotate(45deg);
+    
+    width: .65em;
+    aspect-ratio: 1/1.33;
+    background-color: black;
+    border-radius: 999% 999% 0 0;
+    transform: rotate(132.5deg);
+  }
+  & .spadeBottom {
+    position: absolute;
+    
+    width: .25em;
+    height: .5em;
+    background-color: black;
   }
 }
 .club {
@@ -122,98 +176,38 @@
 
 .red {
   &Ace, &Two, &Three, &Four, &Five, &Six, &Seven, &Eight, &Nine, &Ten{
-    &::before {
-      position: absolute;
-      color: red;
-      top: 0;
-      left: 5%;
-      line-height: 100%;
+    position: relative;
+    color: red;
+    line-height: 100%;
+
+    &:first-of-type {
+      align-self: flex-start;
+      justify-self: flex-start;
+      left: 10%;
     }
-    &::after {
-      position: absolute;
-      color: red;
-      bottom: 0;
-      right: 5%;
-    }
-  }
-  &Ace {
-    &::before {
-      content: "A";
-    }
-    &::after {
-      content: "A";
+    &:last-of-type {
+      align-self: flex-end;
+      justify-self: flex-end;
+      right: 10%;
     }
   }
-  &Two {
-    &::before {
-      content: "2";
+}
+
+.black {
+  &Ace, &Two, &Three, &Four, &Five, &Six, &Seven, &Eight, &Nine, &Ten{
+    position: relative;
+    color: black;
+    line-height: 100%;
+    &:first-of-type {
+
+      align-self: flex-start;
+      justify-self: flex-start;
+      left: 10%;
     }
-    &::after {
-      content: "2";
-    }
-  }
-  &Three {
-    &::before {
-      content: "3";
-    }
-    &::after {
-      content: "3";
-    }
-  }
-  &Four {
-    &::before {
-      content: "4";
-    }
-    &::after {
-      content: "4";
-    }
-  }
-  &Five {
-    &::before {
-      content: "5";
-    }
-    &::after {
-      content: "5";
-    }
-  }
-  &Six {
-    &::before {
-      content: "6";
-    }
-    &::after {
-      content: "6";
-    }
-  }
-  &Seven {
-    &::before {
-      content: "7";
-    }
-    &::after {
-      content: "7";
-    }
-  }
-  &Eight {
-    &::before {
-      content: "8";
-    }
-    &::after {
-      content: "8";
-    }
-  }
-  &Nine {
-    &::before {
-      content: "9";
-    }
-    &::after {
-      content: "9";
-    }
-  }
-  &Ten {
-    &::before {
-      content: "10";
-    }
-    &::after {
-      content: "10";
+    &:last-of-type {
+      align-self: flex-end;
+      justify-self: flex-end;
+      right: 10%;
     }
   }
 }

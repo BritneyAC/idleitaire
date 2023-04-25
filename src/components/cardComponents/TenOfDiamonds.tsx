@@ -14,14 +14,21 @@ const TenOfDiamonds = (props: TenOfDiamondsProps) =>{
     //   draggable="true"
     //   alt="Ten of Diamonds"
     // />
-    <div 
+    <div
       id={`${props.id}`}
+      className={styles.card}
       onClick={()=>props.onClick(props.id)}
-      className={`${styles.card}`} 
-      draggable="true">
-        <div className={styles.diamond}/>
-        <div className={styles.redTen}></div>
-        <div className={styles.tenOfDiamonds}/>
+      draggable="true"
+    >
+      <div className={styles.redTen}>10</div>
+      <div />
+      <span className={styles.diamond}/>
+      <div />
+      <div />
+      <div />
+      <span className={styles.diamond}/>
+      <div />
+      <div className={styles.redTen}>10</div>
     </div>
   )
 }
